@@ -1,0 +1,30 @@
+.WorkView {
+}
+
+
+.WorkView__pic {
+  margin: 0.25rem;
+  height: 11.5rem;
+  background-color: #eee;
+}
+
+.WorkView__text {
+  width: 18rem;
+  display: inline-block;
+}
+
+
+.WorkView__text__title {
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.WorkView__text__desc {
+  /*padding: 1rem;*/
+  font-size: 16px;
+}
+
+.WorkView__text__desc p {
+  line-height: 28px;
+  text-align: justify;
+}
