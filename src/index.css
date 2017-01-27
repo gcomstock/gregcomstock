@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  background-color: #333;
+  background-color: #111;
   background-size: 100%;
   background-attachment: fixed;
   background-position: bottom center;
@@ -32,4 +32,18 @@ header {
   position: relative;
   height: 120px;
   background-color: #f8f8f8;
+}
+
+
+
+@media screen and (max-width: 1640px){
+  html {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 540px){
+  html {
+    font-size: 16px;
+  }
 }

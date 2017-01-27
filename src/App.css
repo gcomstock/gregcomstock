@@ -1,24 +1,43 @@
 .App {
+  height: 100%;
+}
+
+
+
+.App__header {
+  position: fixed;
+  height: 2rem;
+  width: 100%;
+  z-index: 9999;
+}
+
+
+.App__body {
   transform-style: preserve-3d;
 
-  perspective-origin: 50% 65%; /* x-center y-top */
+  perspective-origin: 50% 80%; /* x-center y-top */
   /*perspective-origin: 50% 0;*/
 
   height: 100%;
   perspective: 40rem; /* matches width of App__wrapper */
 
   overflow-y: scroll;
+  overflow-x: hidden;
   font-size: 0; /* so whitespace doesnt mess with inline elements */
 }
 
 
 .App__wrapper {
   position: relative;
-  width: 40rem;
+  width: 44rem;
   margin: 0 auto;
 
   transform-style: preserve-3d;
 }
+
+
+
+
 
 
 .App__wrapper__leftFrame {

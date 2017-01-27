@@ -4,6 +4,7 @@
   transform-style: preserve-3d;
   display: inline-block;
   vertical-align: top;
+  backface-visibility: hidden;
 }
 .Block3d--absolute {
   position: absolute;
@@ -18,9 +19,15 @@
   height: 100%;
   background-color: #000000;
   transform: translateZ(0);
-  display: none;
+  display: none; /* shading is expensive */
 }
 
+
+.Block3d__content {
+  transform: translateZ(0); /* to prevent flicker */
+  height: 100%; /* height set by js */
+  padding: 1.5rem;
+}
 
 .Block3d__face {
   position: absolute;
@@ -45,7 +52,7 @@
 
 
 .Block3d__face--top {
-  transform: rotateX(90deg) rotateZ(180deg);
+  transform: rotateX(90deg) rotateZ(180deg) translateZ(0);
 }
 
 .Block3d__face--bottom {
@@ -55,39 +62,11 @@
 
 .Block3d__face--left {
   transform-origin: left;
-  transform: rotateY(-90deg) translateX(-100%);
+  transform: rotateY(-90deg) translateX(-100%) translateZ(0);
 }
 .Block3d__face--right {
   left: auto;
   right: 0;
   transform-origin: right;
-  transform: rotateY(90deg) translateX(100%);
-}
-
-
-
-
-
-
-/* BEGIN MOCK THEME STYLES */
-
-.Block3d {
-
-  /* alternate for cool glass effect */
-  /*background-attachment: fixed;*/
-  /*background-size: 100%;*/
-  /*background-position: bottom center;*/
-
-  background-color: rgba(255,255,255,1); /* change, make z index-based map of values for shading? and classnames */
-}
-
-.Block3d__face--top {
-  background-color: #eee;
-}
-.Block3d__face--left,
-.Block3d__face--right {
-  background-color: #ccc;
-}
-.Block3d__face--bottom {
-  background-color: #999;
+  transform: rotateY(90deg) translateX(100%) translateZ(0);
 }

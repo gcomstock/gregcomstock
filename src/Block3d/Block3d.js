@@ -23,6 +23,8 @@ class Block3d extends Component {
 
     //find default props for react
 
+    //get smart about excluding faces to increase performance
+
     if (typeof this.props.cssClass !== 'undefined') {
       classes += ' ' + this.props.cssClass;
     }
@@ -34,13 +36,15 @@ class Block3d extends Component {
         width: this.props.width,
         height: this.modulateHeight(),
         zIndex: this.props.z,
-        transform: 'translateZ(' + this.props.z + 'rem)',
-        padding: this.determinePadding()
+        transform: 'translateZ(' + this.props.z + 'rem)'
+        //padding: this.determinePadding()
         }}>
 
-        {this.props.children}
-
         <div className="Block3d__shading" style={{opacity: Math.abs(this.props.z/40)}}></div>
+
+        <div className="Block3d__content">
+          {this.props.children}
+        </div>
 
         <div className="Block3d__face Block3d__face--top" style={{height: this.props.depth + 'rem'}}></div>
         <div className="Block3d__face Block3d__face--left" style={{width: this.props.depth + 'rem'}}></div>

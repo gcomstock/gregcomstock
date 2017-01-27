@@ -3,20 +3,29 @@
 
 
 .WorkView__pic {
-  margin: 0.25rem;
-  height: 11.5rem;
+  height: 100%;
   background-color: #eee;
 }
 
 .WorkView__text {
-  width: 18rem;
+  width: 22rem;
   display: inline-block;
+
+  margin-bottom: 10rem;
+  text-align: right;
 }
 
 
 .WorkView__text__title {
-  font-size: 16px;
+  font-size: 24px;
+  letter-spacing: 4px;
   text-transform: uppercase;
+  font-family: 'title';
+  color: red;
+}
+
+.WorkView__text__title h1 {
+  margin-right: -10px;
 }
 
 .WorkView__text__desc {

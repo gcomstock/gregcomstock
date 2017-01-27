@@ -3,26 +3,36 @@ import WorkView from './WorkView/WorkView';
 import Block3d from './Block3d/Block3d';
 import './App.css';
 
+import '../public/theme--tech/theme.css';
+
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App__wrapper">
-
-          <div className="App__wrapper__leftFrame">
-            <Block3d width='8rem' height='100%' depth='20' z='-2'>
-            </Block3d>
-          </div>
-
-          {/* route content goes here */}
-          <WorkView/>
-
-          <div className="App__wrapper__rightFrame">
-            <Block3d width='8rem' height='100%' depth='20' z='-2'>
-            </Block3d>
-          </div>
+        <div className="App__header">
 
         </div>
+
+        <div className="App__body">
+          <div className="App__wrapper">
+
+            <div className="App__wrapper__leftFrame">
+              <Block3d width='8rem' height='100%' depth='20' z='-2'>
+              </Block3d>
+            </div>
+
+            {/* route content goes here */}
+            <WorkView/>
+
+            <div className="App__wrapper__rightFrame">
+              <Block3d width='8rem' height='100%' depth='20' z='-2'>
+              </Block3d>
+            </div>
+
+          </div>
+        </div>
+
+
       </div>
     );
   }
