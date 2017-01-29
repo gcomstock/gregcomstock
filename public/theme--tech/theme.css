@@ -1,5 +1,5 @@
 @font-face {
-  font-family: 'title';
+  font-family: 'voyager-grotesque';
   src: url('voyager-grotesque.woff2') format('woff2'),
   url('voyager-grotesque.woff') format('woff');
   font-weight: normal;
@@ -8,7 +8,7 @@
 
 
 @font-face {
-  font-family: 'title';
+  font-family: 'voyager-grotesque--light';
   src: url('voyager-grotesque--light.woff2') format('woff2'),
   url('voyager-grotesque--light.woff') format('woff');
   font-weight: lighter;
@@ -37,8 +37,6 @@
   /*background-attachment: fixed;*/
   /*background-size: 100%;*/
   /*background-position: bottom center;*/
-
-
 
   /*background-image: url('../../public/theme--rpg/rock-face.gif');*/
 }
@@ -79,9 +77,10 @@
 .Block3d__face--bottom {
   border-right: 1px solid red;
   border-left: 1px solid red;
+  border-bottom: 2px solid red;
 
   background-image: url('diagonal.png');
-  background-color: rgba(0,0,0,0.1);
+  background-color: #1e0000;
 }
 
 .Block3d__face--bottom:after {
@@ -96,53 +95,3 @@
 
 
 
-.WorkView__project__learnMore {
-  font-size: 18px;
-  padding: 0.75rem;
-  color: red;
-}
-
-
-
-.WorkView__project__title {
-  background-image: url('content.png');
-  padding: 1.5rem;
-  font-size: 24px;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  font-family: 'title';
-  color: red;
-}
-
-.WorkView__project__title h1 {
-  margin-right: -10px;
-}
-
-
-
-
-
-.WorkView__project__desc {
-  background-image: url('content2.png');
-  color: #be0000;
-  padding: 1.5rem;
-}
-
-.WorkView__project__desc p {
-  line-height: 28px;
-  text-align: justify;
-  font-size: 16px;
-}
-
-
-
-
-
-.WorkView__project__pic {
-  padding: 1.5rem;
-  background-image: url('content.png');
-}
-
-.WorkView__project__pic img {
-  border: 1px solid red;
-}

@@ -3,7 +3,11 @@ import WorkView from './WorkView/WorkView';
 import Block3d from './Block3d/Block3d';
 import './App.css';
 
+
+//TODO: sass rules to squash theme css files into one, load them on state change
 import '../public/theme--tech/theme.css';
+import '../public/theme--tech/theme__workview.css';
+
 
 class App extends Component {
   render() {
