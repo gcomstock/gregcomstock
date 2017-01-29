@@ -3,13 +3,6 @@ import './Block3d.css';
 
 class Block3d extends Component {
 
-  determinePadding() {
-    // 0.1 is the multiplier to increase padding as element recedes further
-    //return (1 + Math.abs(this.props.z) * 0.1) + 'rem';
-
-    return '1.5rem';
-  }
-
   modulateHeight() {
     if (this.props.height === 'auto') {
       console.debug('modulate here')
@@ -18,8 +11,21 @@ class Block3d extends Component {
     return this.props.height;
   }
 
+  applyTranslation() {
+    let translation = '';
+
+    if (this.props.z) {
+      translation += 'translateZ(' + this.props.z + 'rem)';
+    }
+    if (this.props.x) {
+      translation += ' translateX(' + this.props.x + 'rem)';
+    }
+
+    return translation
+  }
+
   render() {
-    let Block3d__content = 'Block3d__content';
+    let classes = 'Block3d';
 
     //TODO
     //find default props for react
@@ -27,23 +33,21 @@ class Block3d extends Component {
     //get smart about excluding faces to increase performance
 
     if (typeof this.props.cssClass !== 'undefined') {
-      Block3d__content += ' ' + this.props.cssClass;
+      classes += ' ' + this.props.cssClass;
     }
 
 
-
     return (
-      <div className='Block3d' style={{
+      <div className={classes} style={{
         width: this.props.width,
         height: this.modulateHeight(),
         zIndex: this.props.z,
-        transform: 'translateZ(' + this.props.z + 'rem)'
-        //padding: this.determinePadding()
+        transform: this.applyTranslation()
         }}>
 
         <div className="Block3d__shading" style={{opacity: Math.abs(this.props.z/40)}}></div>
 
-        <div className={Block3d__content}>
+        <div className="Block3d__content">
           {this.props.children}
         </div>
 

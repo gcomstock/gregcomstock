@@ -1,4 +1,4 @@
-.WorkView__project__title {
+.WorkView__project__title .Block3d__content {
   background-image: url('content.png');
   padding: 1.5rem;
   font-size: 24px;
@@ -8,20 +8,20 @@
   color: red;
 }
 
-.WorkView__project__title h1 {
+.WorkView__project__title .Block3d__content h1 {
   margin-right: -10px;
 }
 
 
 
 
-.WorkView__project__desc {
+.WorkView__project__desc .Block3d__content {
   background-image: url('content2.png');
   color: #be0000;
   padding: 1.5rem;
 }
 
-.WorkView__project__desc p {
+.WorkView__project__desc .Block3d__content p {
   line-height: 28px;
   text-align: justify;
   font-size: 16px;
@@ -30,19 +30,19 @@
 
 
 
-.WorkView__project__pic {
+.WorkView__project__pic .Block3d__content {
   padding: 1.5rem;
   background-image: url('content.png');
 }
 
-.WorkView__project__pic img {
+.WorkView__project__pic .Block3d__content img {
   border: 1px solid red;
 }
 
 
 
 
-.WorkView__project__learnMore {
+.WorkView__project__learnMore .Block3d__content {
   font-size: 14px;
   padding: 0.75rem;
   letter-spacing: 2px;

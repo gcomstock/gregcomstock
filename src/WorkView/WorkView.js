@@ -31,7 +31,7 @@ class WorkView extends BaseView {
               <img width='100%' height='100%' src='../placeholder.png'/>
             </Block3d>
 
-            <Block3d cssClass='WorkView__project__learnMore' height='auto' depth='1' z='-2'>
+            <Block3d cssClass='WorkView__project__learnMore' height='auto' depth='1' z='-2' x='-0.75'>
               <h1>learn more ></h1>
             </Block3d>
           </div>
