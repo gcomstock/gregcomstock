@@ -1,39 +1,20 @@
 .WorkView {
 }
 
-
-.WorkView__pic {
-  height: 100%;
-  background-color: #eee;
+.WorkView__project {
+  margin-bottom: 10rem;
 }
 
-.WorkView__text {
+.WorkView__project--leftCol {
   width: 22rem;
   display: inline-block;
-
-  margin-bottom: 10rem;
   text-align: right;
+  vertical-align: top;
 }
 
-
-.WorkView__text__title {
-  font-size: 24px;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  font-family: 'title';
-  color: red;
-}
-
-.WorkView__text__title h1 {
-  margin-right: -10px;
-}
-
-.WorkView__text__desc {
-  /*padding: 1rem;*/
-  font-size: 16px;
-}
-
-.WorkView__text__desc p {
-  line-height: 28px;
-  text-align: justify;
+.WorkView__project--rightCol {
+  width: 22rem;
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
 }

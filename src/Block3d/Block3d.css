@@ -19,14 +19,14 @@
   height: 100%;
   background-color: #000000;
   transform: translateZ(0);
-  display: none; /* shading is expensive */
+  z-index: 9999;
+  display: none; /* shading is expensive, for now */
 }
 
 
 .Block3d__content {
   transform: translateZ(0); /* to prevent flicker */
-  height: 100%; /* height set by js */
-  padding: 1.5rem;
+  height: 100%; /* always fill the height of the block, which is set in the jsx */
 }
 
 .Block3d__face {

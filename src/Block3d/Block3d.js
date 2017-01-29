@@ -19,20 +19,21 @@ class Block3d extends Component {
   }
 
   render() {
-    let classes = 'Block3d';
+    let Block3d__content = 'Block3d__content';
 
+    //TODO
     //find default props for react
 
     //get smart about excluding faces to increase performance
 
     if (typeof this.props.cssClass !== 'undefined') {
-      classes += ' ' + this.props.cssClass;
+      Block3d__content += ' ' + this.props.cssClass;
     }
 
 
 
     return (
-      <div className={classes} style={{
+      <div className='Block3d' style={{
         width: this.props.width,
         height: this.modulateHeight(),
         zIndex: this.props.z,
@@ -42,7 +43,7 @@ class Block3d extends Component {
 
         <div className="Block3d__shading" style={{opacity: Math.abs(this.props.z/40)}}></div>
 
-        <div className="Block3d__content">
+        <div className={Block3d__content}>
           {this.props.children}
         </div>
 
