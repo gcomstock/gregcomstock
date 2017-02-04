@@ -3,6 +3,7 @@
   padding: 1.5rem;
   font-size: 24px;
   letter-spacing: 4px;
+  line-height: 50px;
   text-transform: uppercase;
   font-family: 'voyager-grotesque--light';
   color: red;
@@ -42,6 +43,45 @@
 
 
 
+
+
+.WorkView__project__picStrip {
+  margin-top: 1.5rem;
+}
+
+.WorkView__project__picStrip .WorkView__project__pic {
+  margin-right: 1.5rem;
+}
+
+.WorkView__project__picStrip .WorkView__project__pic:last-child {
+  margin-right: 0;
+}
+
+
+
+
+
+
+
+
+.WorkView__project__learnMore {
+  /*margin-top: 0.75rem;*/
+  /*z-index: 9999;*/
+  cursor: pointer;
+  /*background-color: rgba(0,255,0,0.1);*/
+  /*transform: translateZ(0) translateX(-0.75rem) !important;*/
+}
+
+.WorkView__project__learnMore:hover {
+  /*transform: translateZ(-2rem) translateX(-0.75rem) !important;*/
+}
+
+.WorkView__project__learnMore:hover .Block3d {
+  transform: translateZ(-3rem) !important;
+}
+
+
+
 .WorkView__project__learnMore .Block3d__content {
   font-size: 14px;
   padding: 0.75rem;
@@ -51,3 +91,4 @@
   color: red;
   background-image: url('content2.png');
 }
+
