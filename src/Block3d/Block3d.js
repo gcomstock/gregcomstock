@@ -43,7 +43,6 @@ const Block3d = React.createClass({
     const z = parseInt(this.props.z, 10);
     let classes = 'Block3d__content';
 
-
     if (z < -12) {
       classes += ' Block3d__content--12';
     } else if (z < -10) {
@@ -74,26 +73,22 @@ const Block3d = React.createClass({
 
 
     return (
-      <div className={wrapperClasses} onClick={this.props.clickHandler} style={{
-        transform: this.applyXYTranslation()
-        }}>
-
-        <div className="Block3d" style={{
+      <div className={wrapperClasses} onClick={this.props.clickHandler} style={{transform: this.applyXYTranslation()}}>
+        <div className='Block3d' style={{
           width: this.props.width,
           height: this.modulateHeight(),
           zIndex: this.props.z,
           transform: this.applyZTranslation()
           }}>
-          <div className="Block3d__shading" style={{opacity: Math.abs(this.props.z/40)}}></div>
+          <div className='Block3d__shading' style={{opacity: Math.abs(this.props.z/40)}}></div>
           <div className={contentClasses}>
             {this.props.children}
           </div>
-          <div className="Block3d__face Block3d__face--top" style={{height: this.props.depth + 'rem'}}></div>
-          <div className="Block3d__face Block3d__face--left" style={{width: this.props.depth + 'rem'}}></div>
-          <div className="Block3d__face Block3d__face--right" style={{width: this.props.depth + 'rem'}}></div>
-          <div className="Block3d__face Block3d__face--bottom" style={{height: this.props.depth + 'rem'}}></div>
+          <div className='Block3d__face Block3d__face--top' style={{height: this.props.depth + 'rem'}}></div>
+          <div className='Block3d__face Block3d__face--left' style={{width: this.props.depth + 'rem'}}></div>
+          <div className='Block3d__face Block3d__face--right' style={{width: this.props.depth + 'rem'}}></div>
+          <div className='Block3d__face Block3d__face--bottom' style={{height: this.props.depth + 'rem'}}></div>
         </div>
-
       </div>
     )
   }

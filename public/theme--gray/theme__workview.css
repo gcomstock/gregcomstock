@@ -2,9 +2,9 @@
   padding: 1.5rem;
   font-size: 28px;
   letter-spacing: 4px;
+  font-family: 'bebas-neue--book';
   line-height: 50px;
   text-transform: uppercase;
-  font-family: 'bebas-neue--book';
   color: rgb(220,0,0);
 }
 
@@ -15,7 +15,6 @@
 
 
 .WorkView__project__desc .Block3d__content {
-  color: #111;
   padding: 1.5rem;
 }
 
@@ -77,7 +76,7 @@
 }
 
 
-
+/*
 .WorkView__project__learnMore .Block3d__content {
   font-size: 14px;
   padding: 0.75rem;
@@ -86,4 +85,5 @@
   text-transform: uppercase;
   color: red;
 }
+*/
 

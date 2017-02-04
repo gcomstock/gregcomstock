@@ -19,16 +19,14 @@ class App extends Component {
           <div className="App__wrapper">
 
             <div className="App__wrapper__leftFrame">
-              <Block3d width='8rem' height='100%' depth='20' z='-2'>
-              </Block3d>
+              <Block3d width='20rem' height='100%' depth='10' z='-4' />
             </div>
 
-            {/* route content goes here */}
+            {/* route content goes here, when routes are added */}
             <WorkView/>
 
             <div className="App__wrapper__rightFrame">
-              <Block3d width='8rem' height='100%' depth='20' z='-2'>
-              </Block3d>
+              <Block3d width='20rem' height='100%' depth='10' z='-4' />
             </div>
 
           </div>

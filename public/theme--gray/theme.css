@@ -32,16 +32,23 @@
 
 
 
+.App__wrapper__leftFrame .Block3d__content,
+.App__wrapper__rightFrame .Block3d__content {
+  background-image: url('bg.png');
+}
+
 .App__header {
   background-image: url('diagonal.png');
   border-bottom: 1px dotted red;
   background-color: #111;
+  display: none;
 }
 
 
 .App__body {
   background-color: rgb(180,180,180);
   background-image: url(bg.png);
+  color: #333;
 }
 
 
@@ -68,10 +75,10 @@
   background-color: rgb(200,200,200);
 }
 .Block3d__face--right {
-  border-right: 1px solid red;
+  border-right: 2px solid #888; /* bottom border */
 }
 .Block3d__face--left {
-  border-left: 1px solid red;
+  border-left: 2px solid #888; /* bottom border */
 }
 
 
@@ -79,7 +86,7 @@
   background-color: rgb(190,190,190);
   border-left: 1px solid rgb(150,150,150);
   border-right: 1px solid rgb(150,150,150);
-  border-bottom: 2px solid rgb(150,150,150);
+  border-bottom: 4px solid #888; /* bottom border */
 }
 .Block3d__face--bottom:after {
   content: '';
@@ -93,6 +100,37 @@
 
 /* TODO: be smarter about calculating these values later...keep it loose for now */
 
+.Block3d__content {
+  border: 1px solid rgb(235,235,235);
+  background-color: rgb(255,255,255);
+}
+.Block3d__content--12 {
+  border: 1px solid rgb(175,175,175);
+  background-color: rgb(213,213,213);
+}
+.Block3d__content--10 {
+  border: 1px solid rgb(185,185,185);
+  background-color: rgb(220,220,220);
+}
+.Block3d__content--8 {
+  border: 1px solid rgb(195,195,195);
+  background-color: rgb(227,227,227);
+}
+.Block3d__content--6 {
+  border: 1px solid rgb(205,205,205);
+  background-color: rgb(234,234,234);
+}
+.Block3d__content--4 {
+  border: 1px solid rgb(215,215,215);
+  background-color: rgb(241,241,241);
+}
+.Block3d__content--2 {
+  border: 1px solid rgb(225,225,225);
+  background-color: rgb(248,248,248);
+}
+
+
+/*
 .Block3d__content {
   border: 1px solid rgb(235,235,235);
   background-color: rgb(255,255,255);
@@ -121,4 +159,5 @@
   border: 1px solid rgb(225,225,225);
   background-color: rgb(245,245,245);
 }
+*/
 

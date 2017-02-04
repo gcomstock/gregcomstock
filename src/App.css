@@ -44,13 +44,10 @@
   position: absolute;
   top: 0;
   height: 100%;
-  left: -8rem;
-  width: 8rem;
+  left: -20rem;
+  width: 20rem;
 
   text-align: right;
-  /*z-index: -1;*/
-  /* why does this overlay right side if set? */
-
   z-index: -1;
   transform-style: preserve-3d;
 }
@@ -60,8 +57,8 @@
   position: absolute;
   top: 0;
   height: 100%;
-  right: -8rem;
-  width: 8rem;
+  right: -20rem;
+  width: 20rem;
 
   text-align: left;
 

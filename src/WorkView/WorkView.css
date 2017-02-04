@@ -18,3 +18,35 @@
   text-align: left;
   vertical-align: top;
 }
+
+
+
+.WorkView__project__note {
+  width: 10rem;
+  margin-left: 1rem;
+  display: inline-block;
+  vertical-align: top;
+}
+.WorkView__project__note__title .Block3d__content {
+  padding: 0.75rem;
+  font-size: 18px;
+  letter-spacing: 3px;
+  font-family: 'bebas-neue--book';
+  line-height: 28px;
+  text-transform: uppercase;
+  color: rgb(220,0,0);
+}
+.WorkView__project__note__text .Block3d__content {
+  padding: 0.75rem;
+  font-size: 16px;
+  color: #333;
+}
+.WorkView__project__note__text .Block3d__content ul {
+  list-style: none;
+}
+.WorkView__project__note__text .Block3d__content ul li {
+  margin-bottom: 0.5rem;
+}
+.WorkView__project__note__text .Block3d__content ul li:last-child {
+  margin-bottom: 0;
+}
