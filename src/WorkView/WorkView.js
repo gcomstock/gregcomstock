@@ -43,6 +43,8 @@ class WorkView extends BaseView {
 
 
         <div className='WorkView__project'>
+
+
           <div className='WorkView__project--leftCol'>
             <Block3d cssClass='WorkView__project__title' height='auto' depth='8' z='-4'>
               <h1>pandora display</h1>
@@ -55,9 +57,6 @@ class WorkView extends BaseView {
               </p>
             </Block3d>
 
-            <Block3d cssClass='WorkView__project__learnMore' clickHandler={routeUser} route='/pandora' height='auto' depth='1' z='-2' y='-0.75' x='-0.75'>
-              <h1>learn more ></h1>
-            </Block3d>
           </div>
 
 
@@ -81,9 +80,9 @@ class WorkView extends BaseView {
               <img width='100%' height='100%' src='../placeholder.png'/>
             </Block3d>
           </div>
+
+
         </div>
-
-
       </div>
     );
   }
