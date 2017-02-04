@@ -24,8 +24,8 @@ class WorkView extends BaseView {
                 like React and Redux, solving complex asynchronous behavior between audio playback, video, and display ads using Redux Saga.
               </p>
             </Block3d>
-            <Block3d cssClass='WorkView__project__pic' width='14rem' height='auto' depth='2' z='-4'>
-              <img width='100%' src='../work/pandora/pandora-hero-2.jpg'/>
+            <Block3d cssClass='WorkView__project__pic' width='16rem' height='auto' depth='2' z='-4'>
+              <img width='416' height='254' src='../work/pandora/pandora-hero-2.jpg'/>
             </Block3d>
           </div>
 

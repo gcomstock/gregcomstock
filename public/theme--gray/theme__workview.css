@@ -5,7 +5,7 @@
   line-height: 50px;
   text-transform: uppercase;
   font-family: 'bebas-neue--book';
-  color: #111;
+  color: rgb(220,0,0);
 }
 
 .WorkView__project__title .Block3d__content h1 {
@@ -33,7 +33,7 @@
 }
 
 .WorkView__project__pic .Block3d__content img {
-  outline: 1px solid #ddd;
+  outline: 1px solid #666;
 }
 
 

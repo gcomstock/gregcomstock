@@ -13,9 +13,9 @@ html {
 }
 
 body {
-  background-size: 100%;
-  background-attachment: fixed;
-  background-position: bottom center;
+  /*background-size: 100%;*/
+  /*background-attachment: fixed;*/
+  /*background-position: bottom center;*/
 
   overflow: hidden;
   height: 100%;
