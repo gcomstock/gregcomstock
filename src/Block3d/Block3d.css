@@ -5,6 +5,7 @@
   display: inline-block;
   vertical-align: top;
   backface-visibility: hidden;
+  height: 100%;
 }
 
 .Block3d {

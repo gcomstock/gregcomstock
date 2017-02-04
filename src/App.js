@@ -5,8 +5,8 @@ import './App.css';
 
 
 //TODO: sass rules to squash theme css files into one, load them on state change
-import '../public/theme--tech/theme.css';
-import '../public/theme--tech/theme__workview.css';
+import '../public/theme--gray/theme.css';
+import '../public/theme--gray/theme__workview.css';
 
 
 class App extends Component {

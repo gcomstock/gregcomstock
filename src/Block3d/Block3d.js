@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Block3d.css';
 
 //class Block3d extends Component {
@@ -38,22 +38,43 @@ const Block3d = React.createClass({
     return this.props.z ? 'translateZ(' + this.props.z + 'rem)' : null;
   },
 
-  render() {
-    // wrapper does not translate and intercepts user input
-    let classes = 'Block3d--wrapper';
+  applyDefaultContentClasses() {
+    // the class added here determines default background and border css properties for the element, so lower elements appear darker
+    const z = parseInt(this.props.z, 10);
+    let classes = 'Block3d__content';
 
-    //TODO
-    //get smart about excluding faces to increase performance
 
-    if (typeof this.props.cssClass !== 'undefined') {
-      classes += ' ' + this.props.cssClass;
+    if (z < -12) {
+      classes += ' Block3d__content--12';
+    } else if (z < -10) {
+      classes += ' Block3d__content--10';
+    } else if (z < -8) {
+      classes += ' Block3d__content--8';
+    } else if (z < -6) {
+      classes += ' Block3d__content--6';
+    } else if (z < -4) {
+      classes += ' Block3d__content--4';
+    } else if (z < -2) {
+      classes += ' Block3d__content--2';
     }
 
-    console.debug('this.props.clickHandler');
-    console.debug(this.props);
+    return classes;
+  },
+
+
+  //TODO: get smart about excluding faces to increase performance
+
+  render() {
+    let wrapperClasses = 'Block3d--wrapper'; // wrapper does not have translation and intercepts user input
+    if (typeof this.props.cssClass !== 'undefined') {
+      wrapperClasses += ' ' + this.props.cssClass;
+    }
+
+    let contentClasses = this.applyDefaultContentClasses();
+
 
     return (
-      <div className={classes} onClick={this.props.clickHandler} style={{
+      <div className={wrapperClasses} onClick={this.props.clickHandler} style={{
         transform: this.applyXYTranslation()
         }}>
 
@@ -64,7 +85,7 @@ const Block3d = React.createClass({
           transform: this.applyZTranslation()
           }}>
           <div className="Block3d__shading" style={{opacity: Math.abs(this.props.z/40)}}></div>
-          <div className="Block3d__content">
+          <div className={contentClasses}>
             {this.props.children}
           </div>
           <div className="Block3d__face Block3d__face--top" style={{height: this.props.depth + 'rem'}}></div>
