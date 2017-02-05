@@ -14,16 +14,14 @@
 
 .App__body {
   transform-style: preserve-3d;
-
   perspective-origin: 50% 80%; /* x-center y-top */
-  /*perspective-origin: 50% 0;*/
-
+  perspective: 44rem;          /* should match width of App__wrapper for best cube appearance */
+  font-size: 0;                /* so whitespace doesnt mess with inline elements */
   height: 100%;
-  perspective: 40rem; /* matches width of App__wrapper */
 
   overflow-y: scroll;
   overflow-x: hidden;
-  font-size: 0; /* so whitespace doesnt mess with inline elements */
+  -webkit-overflow-scrolling: touch;
 }
 
 
