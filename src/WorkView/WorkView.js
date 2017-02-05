@@ -7,11 +7,34 @@ import './WorkView.css';
 
 class WorkView extends BaseView {
 
+  randomizeLetterAnimation() {
+    const title = ['G','R','E','G','C','O','M','S','T','O','C','K'];
+
+    let blocks = [];
+    title.forEach( (letter, i) => {
+      const min = 100 * i;
+      const max = 200 * i;
+      const rnd = Math.floor(Math.random() * (max - min)) + min;
+
+      if (i == 4) {
+        blocks.push(<br/>);
+      }
+      blocks.push(<Block3d cssClass='WorkView__title__letter' width='3.5rem' depth='2.75' animationDelay={rnd + 'ms'}>{letter}</Block3d>);
+    });
+    return blocks;
+  }
 
   render() {
     return (
       <div className='BaseView WorkView'>
 
+        <div className='WorkView__title'>
+          {this.randomizeLetterAnimation()}
+        </div>
+
+        <div className='WorkView__subtitle'>
+          DESIGN + DEVELOPMENT
+        </div>
 
         <div className='WorkView__project'>
           <div className='WorkView__project--leftCol'>
@@ -41,7 +64,8 @@ class WorkView extends BaseView {
               </Block3d>
               <Block3d cssClass='WorkView__project__note__text' width='10rem' height='auto' depth='5' z='-9'>
                 <ul>
-                  <li>Core UI decisions and development</li>
+                  <li>Core UI decision-making with product design team</li>
+                  <li>React component development for main application views</li>
                   <li>UI animations</li>
                   <li>Display ad integrations</li>
                 </ul>

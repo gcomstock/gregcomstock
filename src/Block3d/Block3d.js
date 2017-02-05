@@ -5,12 +5,13 @@ import './Block3d.css';
 const Block3d = React.createClass({
   propTypes: {
     width: React.PropTypes.string,
-    height: React.PropTypes.string.isRequired,
+    height: React.PropTypes.string,
     depth: React.PropTypes.string.isRequired,
     z: React.PropTypes.string,
     cssClass: React.PropTypes.string,
     clickHandler: React.PropTypes.func,
-    route: React.PropTypes.string
+    route: React.PropTypes.string,
+    animationDelay: React.PropTypes.string
   },
 
   modulateHeight() {
@@ -73,14 +74,17 @@ const Block3d = React.createClass({
 
 
     return (
-      <div className={wrapperClasses} onClick={this.props.clickHandler} style={{transform: this.applyXYTranslation()}}>
+      <div className={wrapperClasses} onClick={this.props.clickHandler} style={{
+        transform: this.applyXYTranslation()
+        }}>
         <div className='Block3d' style={{
           width: this.props.width,
           height: this.modulateHeight(),
           zIndex: this.props.z,
-          transform: this.applyZTranslation()
+          transform: this.applyZTranslation(),
+          animationDelay: this.props.animationDelay
           }}>
-          <div className='Block3d__shading' style={{opacity: Math.abs(this.props.z/40)}}></div>
+          {/* <div className='Block3d__shading' style={{opacity: Math.abs(this.props.z/40)}}></div> */}
           <div className={contentClasses}>
             {this.props.children}
           </div>

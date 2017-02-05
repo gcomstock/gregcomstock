@@ -29,7 +29,7 @@
   position: relative;
   width: 44rem;
   margin: 0 auto;
-
+  margin-top: -10rem;
   transform-style: preserve-3d;
 }
 
@@ -59,7 +59,6 @@
   width: 20rem;
 
   text-align: left;
-
 
   z-index: -1;
   transform-style: preserve-3d;
