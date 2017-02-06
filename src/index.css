@@ -46,3 +46,10 @@ header {
     font-size: 28px;
   }
 }
+
+
+@media screen and (max-width: 1330px){
+  html {
+    font-size: 26px;
+  }
+}
