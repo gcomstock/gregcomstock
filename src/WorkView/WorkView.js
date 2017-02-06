@@ -217,14 +217,14 @@ class WorkView extends BaseView {
                 not a large project, it is a welcome opportunity to have full creative freedom over the website and photography.
               </p>
             </Block3d>
-            <Block3d cssClass='WorkView__project__pic' width='22rem' height='16rem' depth='10' z='-8'>
+            <Block3d cssClass='WorkView__project__pic' width='22rem' height='auto' depth='6' z='-8'>
               <img width='100%' height='100%' src='work/christynatsumi/cn-2.jpg'/>
             </Block3d>
           </div>
 
 
           <div className='WorkView__project--rightCol'>
-            <Block3d cssClass='WorkView__project__pic' width='22rem' height='16rem' depth='14' z='0'>
+            <Block3d cssClass='WorkView__project__pic' width='22rem' height='auto' depth='14' z='0'>
               <img width='100%' height='100%' src='work/christynatsumi/cn-1.jpg'/>
             </Block3d>
 
@@ -277,7 +277,7 @@ class WorkView extends BaseView {
                 a responsive layout and visual refreshes.
               </p>
             </Block3d>
-            <Block3d cssClass='WorkView__project__pic' width='22rem' height='auto' depth='10' z='-8'>
+            <Block3d cssClass='WorkView__project__pic' width='22rem' height='auto' depth='6' z='-8'>
               <img width='100%' height='100%' src='work/riddickart/riddick-2.jpg'/>
             </Block3d>
           </div>
