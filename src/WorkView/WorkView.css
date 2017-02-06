@@ -11,14 +11,19 @@
     background-color: #fff;
     transform: translate3d(0,0,0);
   }
+  10% {
+    color: #fff;
+    background-color: #000;
+    transform: translate3d(0,0,-8rem);
+  }
   50% {
     color: #fff;
     background-color: #000;
-    transform: translate3d(0,0,-8rem) rotateY(0deg);
+    transform: translate3d(0,0,-8rem);
   }
-  100% {
+  60% {
     background-color: #fff;
-    transform: translate3d(0,0,0) rotateY(0deg);
+    transform: translate3d(0,0,0);
   }
 }
 
@@ -85,9 +90,10 @@
 
 .WorkView__project__note {
   width: 10rem;
-  margin-left: 1rem;
   display: inline-block;
   vertical-align: top;
+  margin-left: 1rem;
+  text-align: left;
 }
 .WorkView__project__note__title .Block3d__content {
   padding: 0.75rem;

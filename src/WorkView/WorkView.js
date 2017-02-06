@@ -12,7 +12,7 @@ class WorkView extends BaseView {
 
     let blocks = [];
     title.forEach( (letter, i) => {
-      const min = 100 * i;
+      const min = 100;
       const max = 200 * i;
       const rnd = Math.floor(Math.random() * (max - min)) + min;
 
@@ -94,18 +94,20 @@ class WorkView extends BaseView {
 
 
 
+
+
+
+
         <div className='WorkView__project'>
-
-
           <div className='WorkView__project--leftCol'>
-            <Block3d cssClass='WorkView__project__title' height='auto' depth='8' z='-4'>
-              <h1>pandora display</h1>
-              <h1>ad architecture</h1>
+            <Block3d cssClass='WorkView__project__title' height='auto' depth='10' z='-4'>
+              <h1>christy natsumi</h1>
             </Block3d>
-            <Block3d cssClass='WorkView__project__desc' height='auto' depth='6' z='-6'>
+            <Block3d cssClass='WorkView__project__desc' height='auto' depth='8' z='-6'>
               <p>
-                As one member of a very talented team, we rewrote the Pandora.com web client from the ground up using the latest web technologies,
-                like React and Redux, solving complex asynchronous behavior between audio playback, video, and display ads using Redux Saga.
+                Christy Natsumi is a San Francisco CA based independent design studio that creates modern jewelry essentials.
+                It is my wife's small business and I am always happy to lend my spare time to contributing to it. Though it may
+                not be a large project, it is a welcome opportunity to have full creative freedom over the website and photography.
               </p>
             </Block3d>
 
@@ -113,24 +115,39 @@ class WorkView extends BaseView {
 
 
           <div className='WorkView__project--rightCol'>
-            <Block3d cssClass='WorkView__project__pic' width='22rem' height='14rem' depth='12' z='0'>
-              <img width='100%' height='100%' src='placeholder.png'/>
-            </Block3d>
-          </div>
-
-
-          <div className='WorkView__project__picStrip'>
-            <Block3d cssClass='WorkView__project__pic' width='13.66rem' height='10rem' depth='12' z='-2'>
-              <img width='100%' height='100%' src='placeholder.png'/>
+            <Block3d cssClass='WorkView__project__pic' width='22rem' height='16rem' depth='14' z='0'>
+              <img width='100%' height='100%' src='work/christynatsumi/cn-1.jpg'/>
             </Block3d>
 
-            <Block3d cssClass='WorkView__project__pic' width='13.66rem' height='10rem' depth='12' z='-2'>
-              <img width='100%' height='100%' src='placeholder.png'/>
-            </Block3d>
 
-            <Block3d cssClass='WorkView__project__pic' width='13.66rem' height='10rem' depth='12' z='-2'>
-              <img width='100%' height='100%' src='placeholder.png'/>
-            </Block3d>
+            <div className='WorkView__project__note'>
+              <Block3d cssClass='WorkView__project__note__title' width='10rem' height='auto' depth='6' z='-8'>
+                <h2>key responsibilities</h2>
+              </Block3d>
+              <Block3d cssClass='WorkView__project__note__text' width='10rem' height='auto' depth='5' z='-9'>
+                <ul>
+                  <li>Sole designer and product photographer</li>
+                  <li>Sole front-end developer</li>
+                  <li>API integration with Squarespace backend</li>
+                </ul>
+              </Block3d>
+            </div>
+
+
+            <div className='WorkView__project__note'>
+              <Block3d cssClass='WorkView__project__note__title' width='10rem' height='auto' depth='6' z='-8'>
+                <h2>technologies used</h2>
+              </Block3d>
+              <Block3d cssClass='WorkView__project__note__text' width='10rem' height='auto' depth='5' z='-9'>
+                <ul>
+                  <li>Javascript, CSS, LESS</li>
+                  <li>Photoshop, Illustrator</li>
+                  <li>Squarespace templating engine, API, and dev environment</li>
+                </ul>
+              </Block3d>
+            </div>
+
+
           </div>
 
 
