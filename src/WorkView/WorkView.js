@@ -12,9 +12,10 @@ class WorkView extends BaseView {
 
     let blocks = [];
     title.forEach( (letter, i) => {
-      const min = 100;
-      const max = 200 * i;
-      const rnd = Math.floor(Math.random() * (max - min)) + min;
+      //const min = 100;
+      //const max = 200 * i;
+      //const rnd = Math.floor(Math.random() * (max - min)) + min;
+      const rnd = i * 150;
 
       if (i == 4) {
         blocks.push(<br/>);
@@ -43,18 +44,20 @@ class WorkView extends BaseView {
             </Block3d>
             <Block3d cssClass='WorkView__project__desc' height='auto' depth='8' z='-6'>
               <p>
-                As one member of a very talented team, we rewrote the Pandora.com web client from the ground up using the latest web technologies,
-                like React and Redux, solving complex asynchronous behavior between audio playback, video, and display ads using Redux Saga.
+                As a member of the web applications team, I am actively working on the new pandora.com. I collaborate
+                closely with the design and product teams on core UI decisions, and help ensure that we bring production-quality
+                code to millions of monthly listeners that handles complex asynchronous use cases between audio playback
+                and advertising. Full release coming soon. <b>To opt in, go to your Pandora settings page.</b>
               </p>
             </Block3d>
-            <Block3d cssClass='WorkView__project__pic' width='16rem' height='auto' depth='10' z='-4'>
-              <img width='416' height='254' src='work/pandora/pandora-hero-2.jpg'/>
+            <Block3d cssClass='WorkView__project__pic' width='22rem' height='auto' depth='6' z='-8'>
+              <img width='100%' src='work/pandora/pandora-hero-2.jpg'/>
             </Block3d>
           </div>
 
           <div className='WorkView__project--rightCol'>
             <Block3d cssClass='WorkView__project__pic' width='22rem' height='auto' depth='14' z='0'>
-              <img width='606' height='370' src='work/pandora/pandora-hero-1.jpg'/>
+              <img width='100%' src='work/pandora/pandora-hero-1.jpg'/>
             </Block3d>
 
 
@@ -88,14 +91,53 @@ class WorkView extends BaseView {
             </div>
 
 
+            <Block3d cssClass='WorkView__project__launch' externalUrl='//pandora.com' width='auto' height='auto' depth='0.75' z='0'>
+              <h2>launch project ></h2>
+            </Block3d>
+
 
           </div>
         </div>
 
 
+{/*
+        <div className='WorkView__project'>
+          <div className='WorkView__project--leftCol'>
+            <Block3d cssClass='WorkView__project__title' height='auto' depth='10' z='-4'>
+              <h1>pandora display</h1>
+              <h1>ad architecture</h1>
+            </Block3d>
+            <Block3d cssClass='WorkView__project__desc' height='auto' depth='8' z='-6'>
+              <p>
+                As one member of a very talented team, we rewrote the Pandora.com web client from the ground up using the latest web technologies,
+                like React and Redux, solving complex asynchronous behavior between audio playback, video, and display ads using Redux Saga.
+              </p>
+            </Block3d>
+          </div>
 
 
+          <div className='WorkView__project--rightCol'>
+            <Block3d cssClass='WorkView__project__pic' width='22rem' height='14rem' depth='14' z='0'>
+              <img width='100%' height='100%' src='placeholder.png'/>
+            </Block3d>
+          </div>
 
+
+          <div className='WorkView__project__picStrip'>
+            <Block3d cssClass='WorkView__project__pic' width='13.66rem' height='10rem' depth='12' z='-2'>
+              <img width='100%' height='100%' src='placeholder.png'/>
+            </Block3d>
+
+            <Block3d cssClass='WorkView__project__pic' width='13.66rem' height='10rem' depth='12' z='-2'>
+              <img width='100%' height='100%' src='placeholder.png'/>
+            </Block3d>
+
+            <Block3d cssClass='WorkView__project__pic' width='13.66rem' height='10rem' depth='12' z='-2'>
+              <img width='100%' height='100%' src='placeholder.png'/>
+            </Block3d>
+          </div>
+        </div>
+*/}
 
 
         <div className='WorkView__project'>
@@ -106,11 +148,13 @@ class WorkView extends BaseView {
             <Block3d cssClass='WorkView__project__desc' height='auto' depth='8' z='-6'>
               <p>
                 Christy Natsumi is a San Francisco CA based independent design studio that creates modern jewelry essentials.
-                It is my wife's small business and I am always happy to lend my spare time to contributing to it. Though it may
-                not be a large project, it is a welcome opportunity to have full creative freedom over the website and photography.
+                It is my wife's small business and I am always happy to lend my spare time contributing to it. Though
+                not a large project, it is a welcome opportunity to have full creative freedom over the website and photography.
               </p>
             </Block3d>
-
+            <Block3d cssClass='WorkView__project__pic' width='22rem' height='16rem' depth='10' z='-8'>
+              <img width='100%' height='100%' src='work/christynatsumi/cn-2.jpg'/>
+            </Block3d>
           </div>
 
 
@@ -126,7 +170,7 @@ class WorkView extends BaseView {
               </Block3d>
               <Block3d cssClass='WorkView__project__note__text' width='10rem' height='auto' depth='5' z='-9'>
                 <ul>
-                  <li>Sole designer and product photographer</li>
+                  <li>Sole designer and photographer</li>
                   <li>Sole front-end developer</li>
                   <li>API integration with Squarespace backend</li>
                 </ul>
@@ -146,6 +190,10 @@ class WorkView extends BaseView {
                 </ul>
               </Block3d>
             </div>
+
+            <Block3d cssClass='WorkView__project__launch' externalUrl='//christynatsumi.com' width='auto' height='auto' depth='1' z='0'>
+              <h2>launch project ></h2>
+            </Block3d>
 
 
           </div>

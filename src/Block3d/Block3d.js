@@ -9,7 +9,7 @@ const Block3d = React.createClass({
     depth: React.PropTypes.string.isRequired,
     z: React.PropTypes.string,
     cssClass: React.PropTypes.string,
-    clickHandler: React.PropTypes.func,
+    externalUrl: React.PropTypes.string,
     route: React.PropTypes.string,
     animationDelay: React.PropTypes.string
   },
@@ -61,10 +61,20 @@ const Block3d = React.createClass({
     return classes;
   },
 
+  handleClick() {
+    if (this.props.externalUrl) {
+      window.open(this.props.externalUrl);
+    }
+  },
+
 
   //TODO: get smart about excluding faces to increase performance
 
   render() {
+    if ( Math.abs(parseInt(this.props.z)) + Math.abs(parseInt(this.props.depth)) != 14) {
+      console.warn(this.props.cssClass + ' has improper total depth');
+    }
+
     let wrapperClasses = 'Block3d--wrapper'; // wrapper does not have translation and intercepts user input
     if (typeof this.props.cssClass !== 'undefined') {
       wrapperClasses += ' ' + this.props.cssClass;
@@ -74,7 +84,7 @@ const Block3d = React.createClass({
 
 
     return (
-      <div className={wrapperClasses} onClick={this.props.clickHandler} style={{
+      <div className={wrapperClasses} onClick={this.handleClick} style={{
         transform: this.applyXYTranslation()
         }}>
         <div className='Block3d' style={{

@@ -88,14 +88,6 @@
   border-right: 1px solid rgb(150,150,150);
   border-bottom: 4px solid #888; /* bottom border */
 }
-.Block3d__face--bottom:after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 128px;
-}
 
 
 /* TODO: be smarter about calculating these values later...keep it loose for now */
