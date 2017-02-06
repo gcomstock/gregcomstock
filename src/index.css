@@ -37,12 +37,12 @@ header {
 
 @media screen and (max-width: 1640px){
   html {
-    font-size: 28px;
+    font-size: 30px;
   }
 }
 
-@media screen and (max-width: 540px){
+@media screen and (max-width: 1430px){
   html {
-    font-size: 16px;
+    font-size: 28px;
   }
 }

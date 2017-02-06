@@ -140,6 +140,71 @@ class WorkView extends BaseView {
 */}
 
 
+
+
+        <div className='WorkView__project'>
+          <div className='WorkView__project--leftCol'>
+            <Block3d cssClass='WorkView__project__title' height='auto' depth='10' z='-4'>
+              <h1>pandora for windows 10</h1>
+            </Block3d>
+            <Block3d cssClass='WorkView__project__desc' height='auto' depth='8' z='-6'>
+              <p>
+                Working with a small team, we leveraged front-end development with the WinJS framework to create a
+                touch-friendly desktop application available for all Windows 10 users. Available for download in the Microsoft store
+              </p>
+            </Block3d>
+            <Block3d cssClass='WorkView__project__pic' width='22rem' height='auto' depth='7' z='-4'>
+              <img width='100%' height='100%' src='work/pandora-windows10/win10-2.jpg'/>
+            </Block3d>
+
+
+            <div className='WorkView__project__note'>
+              <Block3d cssClass='WorkView__project__note__title' width='10rem' height='auto' depth='6' z='-8'>
+                <h2>technologies used</h2>
+              </Block3d>
+              <Block3d cssClass='WorkView__project__note__text' width='10rem' height='auto' depth='5' z='-9'>
+                <ul>
+                  <li>Javascript, backbone.js, WinJS</li>
+                  <li>Moustache templating</li>
+                  <li>CSS, SASS</li>
+                </ul>
+              </Block3d>
+            </div>
+
+
+            <div className='WorkView__project__note'>
+              <Block3d cssClass='WorkView__project__note__title' width='10rem' height='auto' depth='6' z='-8'>
+                <h2>key responsibilities</h2>
+              </Block3d>
+              <Block3d cssClass='WorkView__project__note__text' width='10rem' height='auto' depth='5' z='-9'>
+                <ul>
+                  <li>Core UI decision-making with the product design team</li>
+                  <li>UI animations</li>
+                  <li>Main application view development using backbone.js</li>
+                </ul>
+              </Block3d>
+            </div>
+          </div>
+
+
+          <div className='WorkView__project--rightCol'>
+            <Block3d cssClass='WorkView__project__pic' width='22rem' height='auto' depth='14' z='0'>
+              <img width='100%' height='100%' src='work/pandora-windows10/win10-1.jpg'/>
+            </Block3d>
+
+            <Block3d cssClass='WorkView__project__pic' width='18rem' height='auto' depth='12' z='-2'>
+              <img width='100%' height='100%' src='work/pandora-windows10/win10-3.jpg'/>
+            </Block3d>
+
+            <Block3d cssClass='WorkView__project__launch' externalUrl='//www.microsoft.com/en-us/store/p/pandora/9wzdncrfj46v' width='auto' height='auto' depth='1' z='0'>
+              <h2>launch project ></h2>
+            </Block3d>
+          </div>
+        </div>
+
+
+
+
         <div className='WorkView__project'>
           <div className='WorkView__project--leftCol'>
             <Block3d cssClass='WorkView__project__title' height='auto' depth='10' z='-4'>
@@ -194,12 +259,70 @@ class WorkView extends BaseView {
             <Block3d cssClass='WorkView__project__launch' externalUrl='//christynatsumi.com' width='auto' height='auto' depth='1' z='0'>
               <h2>launch project ></h2>
             </Block3d>
+          </div>
+        </div>
 
 
+
+
+        <div className='WorkView__project'>
+          <div className='WorkView__project--leftCol'>
+            <Block3d cssClass='WorkView__project__title' height='auto' depth='10' z='-4'>
+              <h1>riddickart</h1>
+            </Block3d>
+            <Block3d cssClass='WorkView__project__desc' height='auto' depth='8' z='-6'>
+              <p>
+                Mark Riddick has been doing death metal illustration since 1991, and garnered a devoted following within
+                the community. I have been maintaining his modest site for 8 years now, occasionally adding new features like
+                a responsive layout and visual refreshes.
+              </p>
+            </Block3d>
+            <Block3d cssClass='WorkView__project__pic' width='22rem' height='auto' depth='10' z='-8'>
+              <img width='100%' height='100%' src='work/riddickart/riddick-2.jpg'/>
+            </Block3d>
           </div>
 
 
+          <div className='WorkView__project--rightCol'>
+            <Block3d cssClass='WorkView__project__pic' width='22rem' height='auto' depth='14' z='0'>
+              <img width='100%' height='100%' src='work/riddickart/riddick-1.jpg'/>
+            </Block3d>
+
+
+            <div className='WorkView__project__note'>
+              <Block3d cssClass='WorkView__project__note__title' width='10rem' height='auto' depth='6' z='-8'>
+                <h2>key responsibilities</h2>
+              </Block3d>
+              <Block3d cssClass='WorkView__project__note__text' width='10rem' height='auto' depth='5' z='-9'>
+                <ul>
+                  <li>Co-designed with Mark Riddick</li>
+                  <li>Sole front-end developer</li>
+                  <li>Custom, responsive Wordpress theme</li>
+                </ul>
+              </Block3d>
+            </div>
+
+
+            <div className='WorkView__project__note'>
+              <Block3d cssClass='WorkView__project__note__title' width='10rem' height='auto' depth='6' z='-8'>
+                <h2>technologies used</h2>
+              </Block3d>
+              <Block3d cssClass='WorkView__project__note__text' width='10rem' height='auto' depth='5' z='-9'>
+                <ul>
+                  <li>Javascript, CSS, SASS</li>
+                  <li>Photoshop, Illustrator</li>
+                  <li>Wordpress</li>
+                </ul>
+              </Block3d>
+            </div>
+
+            <Block3d cssClass='WorkView__project__launch' externalUrl='//riddickart.com' width='auto' height='auto' depth='1' z='0'>
+              <h2>launch project ></h2>
+            </Block3d>
+          </div>
         </div>
+
+
       </div>
     );
   }
