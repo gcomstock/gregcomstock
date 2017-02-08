@@ -44,17 +44,17 @@ const Block3d = React.createClass({
     const z = parseInt(this.props.z, 10);
     let classes = 'Block3d__content';
 
-    if (z < -12) {
+    if (z < -11) {
       classes += ' Block3d__content--12';
-    } else if (z < -10) {
+    } else if (z < -9) {
       classes += ' Block3d__content--10';
-    } else if (z < -8) {
+    } else if (z < -5) {
       classes += ' Block3d__content--8';
-    } else if (z < -6) {
-      classes += ' Block3d__content--6';
     } else if (z < -4) {
+      classes += ' Block3d__content--6';
+    } else if (z < -3) {
       classes += ' Block3d__content--4';
-    } else if (z < -2) {
+    } else if (z < -1) {
       classes += ' Block3d__content--2';
     }
 
@@ -94,7 +94,7 @@ const Block3d = React.createClass({
           transform: this.applyZTranslation(),
           animationDelay: this.props.animationDelay
           }}>
-          {/* <div className='Block3d__shading' style={{opacity: Math.abs(this.props.z/40)}}></div> */}
+          {/* shading is expensive - <div className='Block3d__shading' style={{opacity: Math.abs(this.props.z/40)}}></div> */}
           <div className={contentClasses}>
             {this.props.children}
           </div>

@@ -28,7 +28,6 @@
 }
 
 .WorkView__title {
-  /*background-color: rgba(255,0,0,0.2);*/
   margin-left: 6rem;
   margin-bottom: 4rem;
 }
@@ -90,12 +89,23 @@
 
 
 .WorkView__project__note {
-  width: 10rem;
+  width: 9.5rem;
   display: inline-block;
   vertical-align: top;
-  margin-left: 1rem;
+  margin-top: 1.5rem;
   text-align: left;
 }
+.WorkView__project__note--marginRight {
+  margin-right: 1.5rem;
+}
+
+
+.WorkView__project__note__title,
+.WorkView__project__note__text {
+  width: 100%;
+}
+
+
 .WorkView__project__note__title .Block3d__content {
   padding: 0.75rem;
   font-size: 18px;
@@ -105,16 +115,19 @@
   text-transform: uppercase;
   color: rgb(220,0,0);
 }
+
+
 .WorkView__project__note__text .Block3d__content {
   padding: 0.75rem;
   font-size: 16px;
+  line-height: 22px;
   color: #333;
 }
 .WorkView__project__note__text .Block3d__content ul {
   list-style: none;
 }
 .WorkView__project__note__text .Block3d__content ul li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
 }
 .WorkView__project__note__text .Block3d__content ul li:last-child {
   margin-bottom: 0;
@@ -124,43 +137,75 @@
 
 
 @keyframes floatLaunch {
-  0% {
-    transform: translate3d(0,0,-4rem);
-  }
-  50% {
-    transform: translate3d(0,0,-5rem);
-  }
-  100% {
-    transform: translate3d(0,0,-4rem);
-  }
+  0% { transform: translate3d(0,0,0rem); }
+  50% { transform: translate3d(0,0,-1.5rem); }
+  100% { transform: translate3d(0,0,0rem); }
 }
 
 
 .WorkView__project__launch {
-  margin: 1.5rem 0 0 0.9rem;
+  margin: 1.5rem 0 0 0;
   cursor: pointer;
 }
 
-.WorkView__project__launch:hover .Block3d {
-  /*animation-name: none;*/
-  /*transform: translate3d(0,0,0rem);*/
+/* arrow */
+.WorkView__project__launch h2:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -0.44rem;
+  margin-top: -0.22rem;
+  width: 1rem;
+
+  border-top: 0.22rem solid transparent;
+  border-bottom: 0.22rem solid transparent;
+  border-left: 0.28rem solid rgb(220,0,0);
+  transition: all 80ms linear;
 }
 
-.WorkView__project__launch .Block3d {
-  /*transition: transform 200ms ease-in-out;*/
-  /*transform: translate3d(0,0,-4.5rem);*/
 
+
+
+.WorkView__project__launch .Block3d {
   animation-name: floatLaunch;
   animation-duration: 4s;
   animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out; /* easeInOutQuart */
+  animation-timing-function: ease-in-out;
+}
+.WorkView__project__launch .Block3d__face--bottom {
+  border-size: 1px;
 }
 
 .WorkView__project__launch .Block3d__content {
-  padding: 0.75rem;
-  font-size: 0.75rem;
+  padding: 0.6rem 1rem 0.6rem 0.6rem;
+  border-width: 3px;
+  font-size: 0.55rem;
   color: rgb(220,0,0);
   letter-spacing: 2px;
   background-color: #fff;
   font-family: 'bebas-neue--regular';
+  transition: all 80ms linear;
+}
+.WorkView__project__launch:hover .Block3d__content {
+  color: #fff;
+  background-color: rgb(220,0,0);
+}
+/* arrow hover */
+.WorkView__project__launch:hover h2:after {
+  border-left: 0.3rem solid #fff;
+}
+
+
+/* shadow */
+.WorkView__project__launch:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.1);
+  transform: translate3d(0,0,-14rem);
+  z-index: -999;
+  pointer-events: none;
 }

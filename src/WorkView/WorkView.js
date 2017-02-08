@@ -50,22 +50,28 @@ class WorkView extends BaseView {
                 and advertising. Full release coming soon. <b>To opt in, go to your Pandora settings page.</b>
               </p>
             </Block3d>
-            <Block3d cssClass='WorkView__project__pic' width='22rem' height='auto' depth='6' z='-8'>
-              <img width='100%' src='work/pandora/pandora-hero-2.jpg'/>
-            </Block3d>
-          </div>
-
-          <div className='WorkView__project--rightCol'>
-            <Block3d cssClass='WorkView__project__pic' width='22rem' height='auto' depth='14' z='0'>
-              <img width='100%' src='work/pandora/pandora-hero-1.jpg'/>
-            </Block3d>
 
 
-            <div className='WorkView__project__note'>
-              <Block3d cssClass='WorkView__project__note__title' width='10rem' height='auto' depth='6' z='-8'>
+            <div className='WorkView__project__note WorkView__project__note--marginRight'>
+              <Block3d cssClass='WorkView__project__note__title' width='100%' height='auto' depth='6' z='-8'>
+                <h2>technologies used</h2>
+              </Block3d>
+              <Block3d cssClass='WorkView__project__note__text' width='100%' height='auto' depth='5' z='-9'>
+                <ul>
+                  <li>React, Redux, ES6/2015</li>
+                  <li>NPM, Webpack, SASS</li>
+                  <li>Mocha, Enzyme</li>
+                  <li>Photoshop, Illustrator</li>
+                </ul>
+              </Block3d>
+            </div>
+            
+
+            <div className='WorkView__project__note WorkView__project__note--marginRight'>
+              <Block3d cssClass='WorkView__project__note__title' width='100%' depth='6' z='-8'>
                 <h2>key responsibilities</h2>
               </Block3d>
-              <Block3d cssClass='WorkView__project__note__text' width='10rem' height='auto' depth='5' z='-9'>
+              <Block3d cssClass='WorkView__project__note__text' width='100%' depth='5' z='-9'>
                 <ul>
                   <li>Core UI decision-making with product design team</li>
                   <li>React component development for main application views</li>
@@ -76,26 +82,20 @@ class WorkView extends BaseView {
             </div>
 
 
-            <div className='WorkView__project__note'>
-              <Block3d cssClass='WorkView__project__note__title' width='10rem' height='auto' depth='6' z='-8'>
-                <h2>technologies used</h2>
-              </Block3d>
-              <Block3d cssClass='WorkView__project__note__text' width='10rem' height='auto' depth='5' z='-9'>
-                <ul>
-                  <li>React, Redux, ES6/2015</li>
-                  <li>NPM, Webpack, SASS</li>
-                  <li>Mocha, Enzyme</li>
-                  <li>Photoshop, Illustrator</li>
-                </ul>
-              </Block3d>
-            </div>
-
-
-            <Block3d cssClass='WorkView__project__launch' externalUrl='//pandora.com' width='auto' height='auto' depth='0.75' z='0'>
-              <h2>launch project ></h2>
+            <Block3d cssClass='WorkView__project__launch' externalUrl='//pandora.com' width='auto' height='auto' depth='0.75' z='0' y='0' x='-1.5'>
+              <h2>launch project</h2>
             </Block3d>
 
 
+          </div>
+
+          <div className='WorkView__project--rightCol'>
+            <Block3d cssClass='WorkView__project__pic' width='22rem' height='auto' depth='14' z='0'>
+              <img width='100%' src='work/pandora/pandora-hero-1.jpg'/>
+            </Block3d>
+            <Block3d cssClass='WorkView__project__pic' width='22rem' height='auto' depth='12' z='-2'>
+              <img width='100%' src='work/pandora/pandora-hero-2.jpg'/>
+            </Block3d>
           </div>
         </div>
 
