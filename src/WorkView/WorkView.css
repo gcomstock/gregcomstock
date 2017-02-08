@@ -253,3 +253,25 @@
   z-index: -999;
   pointer-events: none;
 }
+
+
+
+
+
+.WorkView__about {
+  font-size: 1rem;
+}
+
+.WorkView__about__title h1 {
+  font-size: 3rem;
+  padding: 1rem 1.5rem;
+  color: rgb(220,0,0);
+  font-family: 'bebas-neue--regular';
+}
+
+.WorkView__about__text .Block3d__content {
+  padding: 1.5rem;
+  line-height: 28px;
+  text-align: justify;
+  font-size: 16px;
+}

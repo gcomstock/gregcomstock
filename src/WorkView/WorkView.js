@@ -326,6 +326,38 @@ class WorkView extends BaseView {
         </div>
 
 
+
+        <div className='WorkView__about'>
+          <Block3d cssClass='WorkView__about__title' depth='8' width='auto' z='-6'>
+            <h1>about me</h1>
+          </Block3d>
+          <br/>
+          <Block3d cssClass='WorkView__about__text' depth='6' width='22rem' z='-8'>
+            <p>
+              Thank you for taking the time to view some of my work! I apologize for this site being sparse at the moment. It is important to me
+              to show some of the projects that have been dearest to me in the best manner, and that means there is still
+              much work to be done here! A new portfolio site was a 2017 New Year's resolution that I am in the process of fulfilling.
+            </p>
+            <br/>
+            <p>
+              ----------
+            </p>
+            <br/>
+            <p>
+              I hold a lifelong passion for good design. With several years of industry experience as a graphic designer, it became
+              increasingly important to me to preserve the integrity and vision of a product. How a product feels, its inertia,
+              and its flow, is best communicated with actual code. As means to an end, I became a developer, and fell equally in love
+              with the practice.
+            </p>
+            <br/>
+            <p>
+              I'm not striving to be the most knowledgeable scale engineer, or command the highest salary through technical sorcery.
+              I have a solid working knowledge of the full stack, but remain firmly committed to the user experience, and all the
+              intricacies that go into making a product feel "just right."
+            </p>
+          </Block3d>
+        </div>
+
       </div>
     );
   }
