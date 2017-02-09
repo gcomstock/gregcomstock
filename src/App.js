@@ -22,8 +22,9 @@ class App extends Component {
               <Block3d width='20rem' height='100%' depth='10' z='-4' />
             </div>
 
-            {/* route content goes here, when routes are added */}
-            <WorkView/>
+            {/* route component */}
+            {this.props.children}
+
 
             <div className="App__wrapper__rightFrame">
               <Block3d width='20rem' height='100%' depth='10' z='-4' />
