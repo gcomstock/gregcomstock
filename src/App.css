@@ -9,6 +9,7 @@
   height: 2rem;
   width: 100%;
   z-index: 9999;
+  font-size: 2rem;
 }
 
 
@@ -25,12 +26,17 @@
 }
 
 
+
+
+
 .App__wrapper {
-  position: relative;
+  position: absolute;
   width: 44rem;
   margin: 0 auto;
   margin-top: -10rem;
   transform-style: preserve-3d;
+  left: 50%;
+  transform: translate3d(-50%,0,0);
 }
 
 

@@ -38,10 +38,9 @@
 }
 
 .App__header {
-  background-image: url('diagonal.png');
+  /*background-image: url('diagonal.png');*/
   border-bottom: 1px dotted red;
-  background-color: #111;
-  display: none;
+  background-color: #666;
 }
 
 

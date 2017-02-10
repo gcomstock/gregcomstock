@@ -1,0 +1,18 @@
+.route-enter {
+  transition: transform 500ms linear;
+  transform: translate3d(-150%,0,0);
+}
+
+.route-enter-active {
+  transform: translate3d(-50%,0,0);
+}
+
+
+.route-leave {
+  transition: transform 500ms linear;
+  transform: translate3d(-50%,0,0);
+}
+
+.route-leave-active {
+  transform: translate3d(50%,0,0);
+}

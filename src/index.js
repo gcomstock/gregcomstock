@@ -1,23 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-
 import WorkView from './WorkView/WorkView';
+import ProjectView from './ProjectView/ProjectView';
 
-
-//<Route path="*" component={NoMatch}/>
 
 import './index.css';
+import { Router, Route, hashHistory, IndexRoute } from 'react-router'
 
-import { Router, Route, hashHistory } from 'react-router'
 
 ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={App}>
-      <Route path="/work" component={WorkView}/>
+      <IndexRoute component={WorkView}/>
+      <Route path="/project/:projectName" component={ProjectView}/>
+      <Route path="*" component={WorkView}/>
     </Route>
-  </Router>,
+  </Router>
+  ,
   document.getElementById('root')
 );
-
-

@@ -18,17 +18,24 @@ class WorkView extends BaseView {
       const rnd = i * 150;
 
       if (i == 4) {
-        blocks.push(<br/>);
+        blocks.push(<br key={i+'br'}/>);
       }
-      blocks.push(<Block3d cssClass='WorkView__title__letter' width='3.5rem' depth='2.75' animationDelay={rnd + 'ms'}>{letter}</Block3d>);
+      blocks.push(<Block3d key={i} cssClass='WorkView__title__letter' width='3.5rem' depth='2.75' animationDelay={rnd + 'ms'}>{letter}</Block3d>);
     });
     return blocks;
   }
 
   render() {
     return (
-      <div className='BaseView WorkView'>
+    <div className="App__wrapper">
+      <div className="App__wrapper__leftFrame">
+        <Block3d width='20rem' height='100%' depth='10' z='-4' />
+      </div>
 
+
+
+
+      <div className='BaseView WorkView'>
         <div className='WorkView__title'>
           {this.randomizeLetterAnimation()}
         </div>
@@ -86,8 +93,6 @@ class WorkView extends BaseView {
             <Block3d cssClass='WorkView__project__launch' externalUrl='//pandora.com' width='auto' height='auto' depth='0.75' z='0' y='0' x='-1.5'>
               <h2>launch project</h2>
             </Block3d>
-
-
           </div>
 
           <div className='WorkView__project--rightCol'>
@@ -356,8 +361,15 @@ class WorkView extends BaseView {
             </p>
           </Block3d>
         </div>
-
       </div>
+
+
+
+
+      <div className="App__wrapper__rightFrame">
+        <Block3d width='20rem' height='100%' depth='10' z='-4' />
+      </div>
+    </div>
     );
   }
 }
