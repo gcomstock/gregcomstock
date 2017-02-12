@@ -16,7 +16,6 @@ ReactDOM.render(
       <Route path="/project/:projectName" component={ProjectView}/>
       <Route path="*" component={WorkView}/>
     </Route>
-  </Router>
-  ,
+  </Router>,
   document.getElementById('root')
 );

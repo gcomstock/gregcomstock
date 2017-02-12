@@ -26,7 +26,7 @@
   animation-iteration-count: infinite;
   animation-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550);
 
-  background-color: #fff;
+  /*background-color: #fff;*/
 }
 
 .WorkView__title__letter .Block3d__content {

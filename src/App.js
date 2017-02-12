@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import WorkView from './WorkView/WorkView';
 import Block3d from './Block3d/Block3d';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+import ReactTransitionGroup from 'react-addons-transition-group'
 import './App.css';
 import './route.css';
 import { Link } from 'react-router'
@@ -28,14 +28,9 @@ class App extends Component {
 
 
           {/* route component renders here */}
-          <ReactCSSTransitionGroup
-            component="div"
-            transitionName="route"
-            transitionEnterTimeout={1000}
-            transitionLeaveTimeout={1000}
-          >
+          <ReactTransitionGroup component="div">
             {React.cloneElement(this.props.children, {key: location.hash})}
-          </ReactCSSTransitionGroup>
+          </ReactTransitionGroup>
 
 
         </div>
