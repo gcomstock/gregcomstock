@@ -18,18 +18,10 @@
   padding: 1.5rem;
 }
 
-.WorkView__project__desc .Block3d__content p {
-  line-height: 28px;
-  text-align: justify;
-  font-size: 16px;
-}
 
 
 
 
-.WorkView__project__pic .Block3d__content {
-  padding: 1.5rem;
-}
 
 .WorkView__project__pic .Block3d__content img {
   outline: 1px solid #666;

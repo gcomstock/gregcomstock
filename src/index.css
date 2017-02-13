@@ -32,6 +32,22 @@ header {
 
 
 
+p {
+  font-size: 0.4rem;
+  line-height: 1rem;
+  text-align: justify;
+}
+
+
+h2 {
+  font-size: 1.2rem;
+}
+h3 {
+  font-size: 0.8rem;
+}
+
+
+
 @media screen and (max-width: 1640px){
   html {
     font-size: 30px;

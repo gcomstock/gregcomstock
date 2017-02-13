@@ -17,6 +17,8 @@
   transform: translateZ(0); /* to prevent flicker */
   height: 100%; /* always fill the height of the block, which is set in the jsx */
 
+
+  padding: 1.5rem;
   transition: opacity 1s cubic-bezier(0.860, 0.000, 0.070, 1.000);
 }
 

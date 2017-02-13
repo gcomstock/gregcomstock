@@ -10,6 +10,7 @@ import { Link } from 'react-router'
 //TODO: sass rules to squash theme css files into one, load them on state change
 import '../public/theme--gray/theme.css';
 import '../public/theme--gray/theme__workview.css';
+import '../public/theme--gray/theme__projectview.css';
 
 
 class App extends Component {
@@ -28,7 +29,7 @@ class App extends Component {
 
 
           {/* route component renders here */}
-          <ReactTransitionGroup component="div">
+          <ReactTransitionGroup>
             {React.cloneElement(this.props.children, {key: location.hash})}
           </ReactTransitionGroup>
 
