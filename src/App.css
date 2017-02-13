@@ -11,7 +11,7 @@
 }
 
 .App__body {
-  transform-style: preserve-3d;
+  /*transform-style: preserve-3d;*/
   perspective-origin: 50% 80%; /* x-center y-top */
   perspective: 44rem;          /* should match width of App__wrapper for best cube appearance */
   font-size: 0;                /* so whitespace doesnt mess with inline elements */
@@ -19,18 +19,19 @@
 }
 
 .App__body__content {
-  transform-style: preserve-3d;
+  /*transform-style: preserve-3d;*/
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  /*height: 100vh;*/
 }
 
 .App__body__content__scrollable {
+  transform-style: preserve-3d;
   overflow-y: scroll;
   overflow-x: hidden;
-  height: 100%;
+  /*height: 100%;*/
   /*-webkit-overflow-scrolling: touch;*/
 }
 
