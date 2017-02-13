@@ -33,8 +33,10 @@ header {
 
 
 p {
-  font-size: 0.4rem;
-  line-height: 1rem;
+  /*font-size: 0.4rem;*/
+  /*line-height: 1rem;*/
+  font-size: 14px;
+  line-height: 32px;
   text-align: justify;
 }
 
@@ -48,9 +50,19 @@ h3 {
 
 
 
+
+@media screen and (max-width: 1740px){
+  html {
+    font-size: 28px;
+  }
+  .App__body {
+    perspective: 54rem;
+  }
+}
+
 @media screen and (max-width: 1640px){
   html {
-    font-size: 30px;
+    font-size: 24px;
   }
   .App__body {
     perspective: 54rem;
@@ -59,7 +71,7 @@ h3 {
 
 @media screen and (max-width: 1430px){
   html {
-    font-size: 28px;
+    font-size: 22px;
   }
   .App__body {
     perspective: 64rem;
@@ -69,7 +81,7 @@ h3 {
 
 @media screen and (max-width: 1330px){
   html {
-    font-size: 26px;
+    font-size: 21px;
   }
   .App__body {
     perspective: 74rem;
@@ -78,7 +90,7 @@ h3 {
 
 @media screen and (max-width: 1230px){
   html {
-    font-size: 22px;
+    font-size: 12px;
   }
   .App__body {
     perspective: 84rem;

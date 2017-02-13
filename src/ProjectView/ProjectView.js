@@ -51,15 +51,15 @@ const ProjectView = React.createClass({
 
             <div className='BaseView ProjectView'>
               <div className='ProjectView--leftCol'>
-                <Block3d cssClass='WorkView__project__pic' width='100%' height='auto' depth='14' z='0'>
+                <Block3d cssClass='ProjectView__pic' width='100%' height='auto' depth='14' z='0'>
                   <img width='100%' src='work/pandora/pandora-hero-1.jpg'/>
                 </Block3d>
 
-                <Block3d cssClass='WorkView__project__pic' width='100%' height='auto' depth='14' z='0'>
+                <Block3d cssClass='ProjectView__pic' width='100%' height='auto' depth='14' z='0'>
                   <img width='100%' src='work/pandora/pandora-hero-1.jpg'/>
                 </Block3d>
 
-                <Block3d cssClass='WorkView__project__pic' width='100%' height='auto' depth='14' z='0'>
+                <Block3d cssClass='ProjectView__pic' width='100%' height='auto' depth='14' z='0'>
                   <img width='100%' src='work/pandora/pandora-hero-1.jpg'/>
                 </Block3d>
               </div>
@@ -77,7 +77,7 @@ const ProjectView = React.createClass({
         <div className='ProjectView--rightCol'>
           <Block3d cssClass='ProjectView__title' width='100%' height='auto' depth='2' z='-2'>
             {/*this.props.params.projectName*/}
-            <h2>Pandora.com</h2>
+            <h2>Project name</h2>
           </Block3d>
 
           <Block3d cssClass='ProjectView__text' width='100%' height='auto' depth='1' z='-3'>
@@ -96,6 +96,19 @@ const ProjectView = React.createClass({
               page and follow the link at the bottom.</b>
             </p>
           </Block3d>
+
+          <div className='ProjectView__note ProjectView__note--marginRight'>
+            <Block3d cssClass='ProjectView__note__title' width='100%' depth='6' z='-8'>
+              <h2>technologies used</h2>
+            </Block3d>
+            <Block3d cssClass='ProjectView__note__text' width='100%' depth='5' z='-9'>
+              <ul>
+                <li>Javascript, backbone.js, WinJS</li>
+                <li>Moustache templating</li>
+                <li>CSS, SASS</li>
+              </ul>
+            </Block3d>
+          </div>
         </div>
 
 
