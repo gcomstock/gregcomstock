@@ -71,7 +71,7 @@ const Block3d = React.createClass({
   //TODO: get smart about excluding faces to increase performance
 
   render() {
-    if ( Math.abs(parseInt(this.props.z)) + Math.abs(parseInt(this.props.depth)) != 14) {
+    if ( Math.abs(parseInt(this.props.z, 10)) + Math.abs(parseInt(this.props.depth, 10)) !== 14) {
       console.warn(this.props.cssClass + ' has improper total depth');
     }
 

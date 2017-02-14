@@ -1,40 +1,38 @@
-.ProjectView {
+.ProjectPics {
   margin-top: 2rem;
-}
-
-.ProjectView__title .Block3d,
-.ProjectView__title .Block3d--wrapper {
-  display: block;
-}
-
-.ProjectView__note {
-  width: 4rem;
-  display: inline-block;
-}
-
-
-.ProjectView--leftCol {
   width: 36rem;
   display: inline-block;
   text-align: left;
   vertical-align: top;
-  transform-style: preserve-3d;
 }
 
-.ProjectView--rightCol {
-  width: 16rem;
-  top: 4rem;
-  left: calc(50% + 22rem);
-  transform: translate3d(-50%,0,0);
-  display: inline-block;
-  text-align: left;
-  vertical-align: top;
-  position: fixed;
-  transform-style: preserve-3d;
-  pointer-events: none;
-}
-
-
-.ProjectView__pic {
+.ProjectPics__pic {
   margin-bottom: 6rem;
 }
+
+
+
+
+.ProjectDesc {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  pointer-events: none;
+
+  perspective-origin: 50% 80%; /* x-center y-top */
+  perspective: 50rem;          /* should match width of App__wrapper for best cube appearance */
+}
+
+.ProjectDesc__content {
+  background-color: rgba(255,255,0,0.1);
+
+  top: 2rem;
+  left: calc(50% + 22rem);
+  width: 16rem;
+  position: absolute;
+  transform-style: preserve-3d;
+  transform: translate3d(-50%,0,0);
+}
+

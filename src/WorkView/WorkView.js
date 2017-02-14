@@ -36,7 +36,7 @@ const WorkView = React.createClass({
       //const rnd = Math.floor(Math.random() * (max - min)) + min;
       const rnd = i * 150;
 
-      if (i == 4) {
+      if (i === 4) {
         blocks.push(<br key={i+'br'}/>);
       }
       blocks.push(<Block3d key={i} cssClass='WorkView__title__letter' width='3.5rem' depth='2.75' animationDelay={rnd + 'ms'}>{letter}</Block3d>);
@@ -64,7 +64,7 @@ const WorkView = React.createClass({
             </div>
 
 
-            <div className='BaseView WorkView'>
+            <div className='WorkView'>
               <div className='WorkView__title'>
                 {this.randomizeLetterAnimation()}
               </div>

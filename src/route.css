@@ -1,4 +1,6 @@
-.App__wrapper {
+/* predefined animation styles */
+
+.App__body__scrollable__wrapper {
   transition: transform 500ms cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
 }
 .Block3d__face,
@@ -8,24 +10,25 @@
 
 
 
-.App__wrapper--outro {
+
+/* animations */
+
+.App__body__scrollable__wrapper--outro {
   transition: transform 500ms cubic-bezier(0.550, 0.055, 0.675, 0.190); /* easeInCubic */
   transform:  translate3d(0,0,14rem);
 }
 
-.App__wrapper--outro .Block3d__face,
-.App__wrapper--outro .Block3d__content {
+.App__body__scrollable__wrapper--outro .Block3d__face,
+.App__body__scrollable__wrapper--outro .Block3d__content {
   transition: opacity 400ms cubic-bezier(0.550, 0.055, 0.675, 0.190); /* easeInCubic */
   opacity: 0;
 }
 
-
-
-.App__wrapper--intro {
+.App__body__scrollable__wrapper--intro {
   transform: translate3d(0,0,-14rem);
 }
 
-.App__wrapper--intro .Block3d__face,
-.App__wrapper--intro .Block3d__content {
+.App__body__scrollable__wrapper--intro .Block3d__face,
+.App__body__scrollable__wrapper--intro .Block3d__content {
   opacity: 0;
 }

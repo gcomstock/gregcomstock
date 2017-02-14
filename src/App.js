@@ -1,6 +1,4 @@
 import React, { PropTypes } from 'react';
-import WorkView from './WorkView/WorkView';
-import Block3d from './Block3d/Block3d';
 import ReactTransitionGroup from 'react-addons-transition-group'
 import './App.css';
 import './route.css';
