@@ -10,11 +10,16 @@
   font-size: 2rem;
 }
 
+/* containing element to allow scrollable and non-scrollable content on a view */
 .App__body {
-  perspective-origin: 50% 80%; /* x-center y-top */
-  perspective: 44rem;          /* should match width of App__wrapper for best cube appearance */
-  font-size: 0;                /* so whitespace doesnt mess with inline elements */
+  font-size: 0; /* so whitespace doesnt mess with inline elements */
+}
 
+
+/* magical element that gives 3d scrolling */
+.App__body__scrollable {
+  perspective-origin: 50% 80%; /* x-center y-top */
+  perspective: 50rem;          /* should match width of App__wrapper for best cube appearance */
   transform-style: preserve-3d;
   overflow-y: scroll;
   overflow-x: hidden;
@@ -22,15 +27,17 @@
 }
 
 
-.App__wrapper {
-  width: 52rem;
+/* maintains fixed width for layout */
+.App__body__scrollable__wrapper {
+  position: relative;
+  width: 50rem;
   margin: 0 auto;
-  /*margin-top: -10rem;*/
-  transform-style: preserve-3d;
 }
 
-.App__wrapper__leftFrame,
-.App__wrapper__rightFrame {
+
+/* ancillary visual fluff goes in these */
+.App__body__scrollable__wrapper__leftFrame,
+.App__body__scrollable__wrapper__rightFrame {
   top: 0;
   width: 20rem;
   height: 100%;
@@ -38,11 +45,11 @@
   z-index: -1;
   transform-style: preserve-3d;
 }
-.App__wrapper__leftFrame {
+.App__body__scrollable__wrapper__leftFrame {
   left: -20rem;
   text-align: right;
 }
-.App__wrapper__rightFrame {
+.App__body__scrollable__wrapper__rightFrame {
   right: -20rem;
   text-align: left;
 }

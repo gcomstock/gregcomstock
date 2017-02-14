@@ -63,15 +63,12 @@ const App = React.createClass({
           <Link to="/project/immaproject">project link</Link>
         </div>
 
-        <div className="App__body" onScroll={(e) => { this.handleScroll(e)} }>
+
+        <ReactTransitionGroup>
+          {React.cloneElement(this.props.children, {key: location.hash})}
+        </ReactTransitionGroup>
 
 
-          <ReactTransitionGroup>
-            {/*                 route component, {props}, children */}
-            {React.cloneElement(this.props.children, {key: location.hash, scrollY: this.state.scrollY})}
-          </ReactTransitionGroup>
-
-        </div>
       </div>
     );
   }
