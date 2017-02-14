@@ -15,9 +15,6 @@ import '../public/theme--gray/theme__projectview.css';
 
 class App extends Component {
   render() {
-
-    //console.debug('App render: ' + location.hash);
-
     return (
       <div className="App">
         <div className="App__header">
@@ -27,12 +24,10 @@ class App extends Component {
 
         <div className="App__body">
 
-
           {/* route component renders here */}
           <ReactTransitionGroup>
             {React.cloneElement(this.props.children, {key: location.hash})}
           </ReactTransitionGroup>
-
 
         </div>
       </div>
