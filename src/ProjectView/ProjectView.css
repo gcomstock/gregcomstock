@@ -1,6 +1,5 @@
 .ProjectView {
   margin-top: 2rem;
-  transform-style: preserve-3d;
 }
 
 .ProjectView__title .Block3d,
@@ -30,7 +29,7 @@
   display: inline-block;
   text-align: left;
   vertical-align: top;
-  position: absolute;
+  position: fixed;
   transform-style: preserve-3d;
   pointer-events: none;
 }

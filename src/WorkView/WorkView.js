@@ -45,15 +45,15 @@ const WorkView = React.createClass({
   },
 
   render() {
-    const App__body__content = classNames(
-      'App__body__content', {
-        'App__body__content--intro': this.state.routeTransition === 'intro',
-        'App__body__content--outro': this.state.routeTransition === 'outro'
+    const App__wrapper = classNames(
+      'App__wrapper', {
+        'App__wrapper--intro': this.state.routeTransition === 'intro',
+        'App__wrapper--outro': this.state.routeTransition === 'outro'
       }
     );
 
     return (
-      <div className={App__body__content}>
+      <div className={App__wrapper}>
         <div className='App__body__content__scrollable'>
 
 
