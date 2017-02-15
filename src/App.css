@@ -34,7 +34,7 @@
 /* maintains fixed width for layout */
 .App__body__scrollable__wrapper {
   position: relative;
-  width: 50rem;
+  width: 54rem;
   margin: 0 auto;
   transform-style: preserve-3d;
 }

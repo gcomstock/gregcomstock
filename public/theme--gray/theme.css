@@ -25,7 +25,8 @@
 /* FONT STYLES */
 
 @font-face {
-  font-family: 'bebas-neue--regular';
+  font-family: 'title';
+  /*font-family: 'bebas-neue--regular';*/
   src: url('bebasneue_regular-webfont.woff2') format('woff2'),
   url('bebasneue_regular-webfont.woff') format('woff');
   font-weight: normal;
@@ -33,7 +34,7 @@
 }
 
 @font-face {
-  font-family: 'bebas-neue--light';
+  font-family: 'title--light';
   src: url('bebasneue_light-webfont.woff2') format('woff2'),
   url('bebasneue_light-webfont.woff') format('woff');
   font-weight: normal;
@@ -64,8 +65,12 @@
 .Block3d__face--top {
   background-color: rgb(220,220,220);
 }
-
-
+.Block3d__face--bottom {
+  background-color: rgb(190,190,190);
+  border-left: 1px solid rgb(150,150,150);
+  border-right: 1px solid rgb(150,150,150);
+  border-bottom: 4px solid #888; /* bottom border */
+}
 .Block3d__face--left,
 .Block3d__face--right {
   background-color: rgb(200,200,200);
@@ -75,14 +80,6 @@
 }
 .Block3d__face--left {
   border-left: 2px solid #888; /* bottom border */
-}
-
-
-.Block3d__face--bottom {
-  background-color: rgb(190,190,190);
-  border-left: 1px solid rgb(150,150,150);
-  border-right: 1px solid rgb(150,150,150);
-  border-bottom: 4px solid #888; /* bottom border */
 }
 
 

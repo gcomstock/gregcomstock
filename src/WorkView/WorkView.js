@@ -20,7 +20,7 @@ const WorkView = React.createClass({
     setTimeout(() => {
       this.setState({routeTransition: null});
       callback();
-    }, 500);
+    }, 600);
   },
 
   componentWillLeave(callback) {
@@ -28,7 +28,7 @@ const WorkView = React.createClass({
     setTimeout(() => {
       this.setState({routeTransition: null});
       callback();
-    }, 500);
+    }, 600);
   },
 
   randomizeLetterAnimation() {

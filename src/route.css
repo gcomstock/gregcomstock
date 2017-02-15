@@ -1,11 +1,11 @@
 /* intro animation styles */
 
 .App__body__scrollable__wrapper {
-  transition: transform 500ms cubic-bezier(0.250, 0.460, 0.450, 0.940); /* easeOutQuad */
+  transition: transform 500ms cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
 }
 .Block3d__face,
 .Block3d__content {
-  transition: opacity 350ms 50ms linear; /* easeOutCubic */
+  transition: opacity 450ms 100ms cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
 }
 
 
@@ -14,18 +14,18 @@
 /* animations */
 
 .App__body__scrollable__wrapper--outro {
-  transition: transform 500ms cubic-bezier(0.550, 0.085, 0.680, 0.530); /* easeInQuad */
-  transform:  translate3d(0,0,14rem);
+  transition: transform 500ms cubic-bezier(0.550, 0.055, 0.675, 0.190); /* easeInCubic */
+  transform:  translate3d(0,0,24rem);
 }
 
 .App__body__scrollable__wrapper--outro .Block3d__face,
 .App__body__scrollable__wrapper--outro .Block3d__content {
-  transition: opacity 350ms linear;
+  transition: opacity 450ms cubic-bezier(0.550, 0.055, 0.675, 0.190); /* easeInCubic */
   opacity: 0;
 }
 
 .App__body__scrollable__wrapper--intro {
-  transform: translate3d(0,0,-14rem);
+  transform: translate3d(0,0,-34rem);
 }
 
 .App__body__scrollable__wrapper--intro .Block3d__face,
