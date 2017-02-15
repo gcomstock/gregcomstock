@@ -20,10 +20,9 @@
 
 
 
+/* TODO: each theme use same font family name so we declare names outside of themes? */
 
-
-
-
+/* FONT STYLES */
 
 @font-face {
   font-family: 'bebas-neue--regular';

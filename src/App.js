@@ -18,37 +18,6 @@ const App = React.createClass({
     }
   },
 
-  componentDidMount() {
-    console.log('moutned');
-    //this.appBody.addEventListener('scroll', this.handleScroll);
-  },
-
-  /*
-   paneDidMount = (node) => {
-   if (node) {
-   node.addEventListener('scroll', () => console.log('scroll!'));
-   }
-   };
-
-   renderMediaBrowser = () => {
-   if (!this.state.open) return null;
-
-   return <div style={styles.mediaBrowserContainer}>
-   <h2 style={styles.dialogTitle}>Media Library</h2>
-
-   <div ref={this.paneDidMount} style={styles.pane}>
-   <div style={styles.thumbs}>
-   {this.renderImages()}
-   </div>
-   </div>
-   </div>
-   };
-
-
-   <div className="App__body" ref={(el) => { el.addEventListener('scroll', this.handleScroll )} }>
-  */
-
-
   handleScroll(e) {
     this.setState({scrollY: e.target.scrollTop});
   },
