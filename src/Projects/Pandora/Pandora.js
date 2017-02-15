@@ -29,5 +29,14 @@ export default PandoraView;
 
 
 export const PandoraConsts = Object.freeze({
-  TITLE: 'pandora.com'
+  TITLE: 'pandora.com',
+  TEXT: [
+    'As a member of the web applications team, I am actively working on the new pandora.com. I collaborate closely with the design and product teams on core UI decisions, and help ensure that we bring production-quality code to millions of monthly listeners that handles complex asynchronous use cases between audio playback and advertising. Full release coming soon!'
+  ],
+  RESPONSIBILITIES: [
+    'one','two','three'
+  ],
+  TECHNOLOGIES: [
+    'one','two','three'
+  ]
 });

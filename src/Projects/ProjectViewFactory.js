@@ -33,6 +33,10 @@ export default function projectViewFactory(WrappedComponent, projectData) {
       }, 600);
     },
 
+    getProjectText() {
+
+    },
+
 
     render() {
       const App__body__scrollable__wrapper = classNames(
@@ -69,27 +73,38 @@ export default function projectViewFactory(WrappedComponent, projectData) {
               </Block3d>
 
               <Block3d cssClass='ProjectDesc__content__text' width='100%' height='auto' depth='1' z='-3'>
-                <p>
-                  As a member of the web applications team, I am actively working on the new pandora.com. I collaborate
-                  closely with the design and product teams on core UI decisions, and help ensure that we bring production-quality
-                  code to millions of monthly listeners that handles complex asynchronous use cases between audio playback
-                  and advertising. Full release coming soon! <b>To opt in to the public beta, go to your Pandora.com settings
-                  page and follow the link at the bottom.</b>
-                </p>
+                {projectData.TEXT.map((item) => {
+                  return <p>{item}</p>;
+                })}
               </Block3d>
 
-              <div className='ProjectDesc__content__note'>
-                <Block3d cssClass='ProjectDesc__content__note__title' width='100%' depth='6' z='-8'>
-                  <h2>technologies used</h2>
+              <div className='ProjectDesc__content__note ProjectDesc__content__note--responsibilities'>
+                <Block3d cssClass='ProjectDesc__content__note__title' width='100%' depth='2' z='-2'>
+                  <h3>responsibilities</h3>
                 </Block3d>
-                <Block3d cssClass='ProjectDesc__content__note__text' width='100%' depth='5' z='-9'>
+                <Block3d cssClass='ProjectDesc__content__note__text' width='100%' depth='1' z='-3'>
                   <ul>
-                    <li>Javascript, backbone.js, WinJS</li>
-                    <li>Moustache templating</li>
-                    <li>CSS, SASS</li>
+                    {projectData.RESPONSIBILITIES.map((item) => {
+                      return <li>{item}</li>;
+                    })}
                   </ul>
                 </Block3d>
               </div>
+
+              <div className='ProjectDesc__content__note'>
+                <Block3d cssClass='ProjectDesc__content__note__title' width='100%' depth='2' z='-2'>
+                  <h3>technologies</h3>
+                </Block3d>
+                <Block3d cssClass='ProjectDesc__content__note__text' width='100%' depth='1' z='-3'>
+                  <ul>
+                    {projectData.TECHNOLOGIES.map((item) => {
+                      return <li>{item}</li>;
+                    })}
+                  </ul>
+                </Block3d>
+              </div>
+
+
             </div>
           </div>
 

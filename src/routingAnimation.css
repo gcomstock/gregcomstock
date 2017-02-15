@@ -15,7 +15,7 @@
 
 .App__body__scrollable__wrapper--outro {
   transition: transform 500ms cubic-bezier(0.550, 0.055, 0.675, 0.190); /* easeInCubic */
-  transform:  translate3d(0,0,24rem);
+  transform:  translate3d(0,0,14rem);
 }
 
 .App__body__scrollable__wrapper--outro .Block3d__face,
