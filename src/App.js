@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 import ReactTransitionGroup from 'react-addons-transition-group'
 import './App.css';
-import './route.css';
+import './routingAnimation.css';
 import { Link } from 'react-router'
 
 
@@ -27,7 +27,7 @@ const App = React.createClass({
       <div className="App">
         <div className="App__header">
           <Link to="/">home link</Link>
-          <Link to="/project/immaproject">project link</Link>
+          <Link to="/project/pandora">project link</Link>
         </div>
 
 
