@@ -46,6 +46,13 @@ export default function projectViewFactory(WrappedComponent, projectData) {
         }
       );
 
+      const ProjectDesc__content = classNames(
+        'ProjectDesc__content', {
+          'ProjectDesc__content--intro': this.state.routeTransition === 'intro',
+          'ProjectDesc__content--outro': this.state.routeTransition === 'outro'
+        }
+      );
+
       return (
         <div className='App__body'>
 
@@ -67,7 +74,7 @@ export default function projectViewFactory(WrappedComponent, projectData) {
 
 
           <div className='ProjectDesc'>
-            <div className='ProjectDesc__content'>
+            <div className={ProjectDesc__content}>
               <Block3d cssClass='ProjectDesc__content__title' width='100%' height='auto' depth='2' z='-2'>
                 <h2>{ projectData.TITLE }</h2>
               </Block3d>
@@ -80,7 +87,7 @@ export default function projectViewFactory(WrappedComponent, projectData) {
 
               <div className='ProjectDesc__content__note ProjectDesc__content__note--responsibilities'>
                 <Block3d cssClass='ProjectDesc__content__note__title' width='100%' depth='2' z='-2'>
-                  <h3>responsibilities</h3>
+                  <h3>key responsibilities</h3>
                 </Block3d>
                 <Block3d cssClass='ProjectDesc__content__note__text' width='100%' depth='1' z='-3'>
                   <ul>
@@ -93,7 +100,7 @@ export default function projectViewFactory(WrappedComponent, projectData) {
 
               <div className='ProjectDesc__content__note'>
                 <Block3d cssClass='ProjectDesc__content__note__title' width='100%' depth='2' z='-2'>
-                  <h3>technologies</h3>
+                  <h3>technology</h3>
                 </Block3d>
                 <Block3d cssClass='ProjectDesc__content__note__text' width='100%' depth='1' z='-3'>
                   <ul>

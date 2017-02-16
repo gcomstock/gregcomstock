@@ -34,9 +34,14 @@ export const PandoraConsts = Object.freeze({
     'As a member of the web applications team, I am actively working on the new pandora.com. I collaborate closely with the design and product teams on core UI decisions, and help ensure that we bring production-quality code to millions of monthly listeners that handles complex asynchronous use cases between audio playback and advertising. Full release coming soon!'
   ],
   RESPONSIBILITIES: [
-    'one','two','three'
+    'Collaborate with design and product on key UI decisions',
+    'Development of react components for main application views',
+    'Display ad integration',
+    'UI animations'
   ],
   TECHNOLOGIES: [
-    'one','two','three'
+    'React, Redux, ES6',
+    'Webpack, npm, SASS',
+    'Photoshop, Illustrator'
   ]
 });

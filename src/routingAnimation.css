@@ -1,4 +1,4 @@
-/* intro animation styles */
+/* BASE ANIMATION RULES */
 
 .App__body__scrollable__wrapper {
   transition: transform 500ms cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
@@ -8,10 +8,15 @@
   transition: opacity 450ms 100ms cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
 }
 
+.ProjectDesc__content .ProjectDesc__content__title,
+.ProjectDesc__content .ProjectDesc__content__text {
+  transition: transform 500ms cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
+}
 
 
 
-/* animations */
+
+/* MAIN AREA ANIMATIONS */
 
 .App__body__scrollable__wrapper--outro {
   transition: transform 500ms cubic-bezier(0.550, 0.055, 0.675, 0.190); /* easeInCubic */
@@ -30,5 +35,19 @@
 
 .App__body__scrollable__wrapper--intro .Block3d__face,
 .App__body__scrollable__wrapper--intro .Block3d__content {
+  opacity: 0;
+}
+
+
+
+/* PROJECT DESCRIPTION ANIMATIONS */
+
+.ProjectDesc__content--intro .ProjectDesc__content__title,
+.ProjectDesc__content--intro .ProjectDesc__content__text {
+  transform: translate3d(0,0,-14rem);
+}
+
+.ProjectDesc__content--intro .Block3d__face,
+.ProjectDesc__content--intro .Block3d__content {
   opacity: 0;
 }
