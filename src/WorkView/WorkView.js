@@ -6,6 +6,7 @@ import './WorkView.css';
 const WorkView = React.createClass({
   propTypes: {
     params: PropTypes.object.isRequired,
+    handleScroll: PropTypes.func,
     scrollY: PropTypes.number
   },
 
@@ -29,6 +30,11 @@ const WorkView = React.createClass({
       this.setState({routeTransition: null});
       callback();
     }, 600);
+  },
+
+  componentDidMount() {
+    // set scroll position to where it was when user navigated away
+    this.scrollableWrapper.scrollTop = this.props.scrollY;
   },
 
   randomizeLetterAnimation() {
@@ -59,7 +65,7 @@ const WorkView = React.createClass({
 
     return (
       <div className='App__body'>
-        <div className='App__body__scrollable'>
+        <div className='App__body__scrollable' ref={(scrollableWrapper) => { this.scrollableWrapper = scrollableWrapper; }} onScroll={this.props.handleScroll}>
           <div className={App__body__scrollable__wrapper}>
             <div className='App__body__scrollable__wrapper__leftFrame'>
               <Block3d width='20rem' height='100%' depth='10' z='-4' />

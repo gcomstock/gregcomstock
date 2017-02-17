@@ -13,7 +13,6 @@ import WorkView from './WorkView/WorkView';
 import { PandoraLayout, PandoraConsts } from './Projects/Pandora/Pandora';
 
 
-
 ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={App}>

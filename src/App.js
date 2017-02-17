@@ -11,16 +11,26 @@ import '../public/theme--gray/theme__workview.css';
 import '../public/theme--gray/theme__projectview.css';
 
 
+
+// This is intentionally not part of state, because we only need to update it on mount. Avoid un-necessary re-renders.
+let scrollY = 0;
+
 const App = React.createClass({
   getInitialState() {
+    // Setup application state. if this were a more complication app we'd use react, however for this project let's just
+    // pass handlers into children to update this state when needed
     return {
-      scrollY: 0
+      //activeTheme: ''
     }
   },
 
   handleScroll(e) {
-    this.setState({scrollY: e.target.scrollTop});
+    // WorkView calls this when it scrolls, and we store it here, so we can scroll back to it when WorkView is re-mounted
+    e.preventDefault();
+    scrollY = e.target.scrollTop;
   },
+
+  //TODO: set theme
 
   render() {
     return (
@@ -32,10 +42,8 @@ const App = React.createClass({
 
 
         <ReactTransitionGroup>
-          {React.cloneElement(this.props.children, {key: location.hash})}
+          {React.cloneElement(this.props.children, {key: location.hash, handleScroll: this.handleScroll, scrollY} )}
         </ReactTransitionGroup>
-
-
       </div>
     );
   }
