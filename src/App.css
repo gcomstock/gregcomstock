@@ -34,6 +34,7 @@
 /* maintains fixed width for layout */
 .App__body__scrollable__wrapper {
   position: relative;
+  padding-top: 3rem;
   width: 54rem;
   margin: 0 auto;
   transform-style: preserve-3d;
@@ -43,7 +44,7 @@
 /* ancillary visual fluff goes in these */
 .App__body__scrollable__wrapper__leftFrame,
 .App__body__scrollable__wrapper__rightFrame {
-  top: 0;
+  top: -10rem;
   width: 20rem;
   height: 100%;
   position: absolute;
