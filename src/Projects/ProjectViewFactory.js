@@ -33,11 +33,6 @@ export default function projectViewFactory(WrappedComponent, projectData) {
       }, 600);
     },
 
-    getProjectText() {
-
-    },
-
-
     render() {
       const App__body__scrollable__wrapper = classNames(
         'App__body__scrollable__wrapper', {
