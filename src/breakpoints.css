@@ -1,0 +1,75 @@
+
+
+@media screen and (max-width: 1800px){
+  html {
+    font-size: 30px;
+  }
+  .App__body__scrollable {
+    /*perspective: 60rem;*/
+  }
+}
+
+@media screen and (max-width: 1700px){
+  html {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 13px;
+    line-height: 27px;
+  }
+  li {
+    font-size: 13px;
+    line-height: 22px;
+    margin-bottom: 14px;
+  }
+}
+
+@media screen and (max-width: 1600px){
+  html {
+    font-size: 26px;
+  }
+
+}
+
+
+@media screen and (max-width: 1500px){
+  html {
+    font-size: 24px;
+  }
+  p {
+    font-size: 12px;
+    line-height: 24px;
+  }
+  li {
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 14px;
+  }
+}
+
+@media screen and (max-width: 1400px){
+  html {
+    font-size: 22px;
+  }
+
+}
+
+
+/*
+@media screen and (max-width: 1020px){
+  .WorkView__project--leftCol {
+    width: 100%;
+    display: inline-block;
+    text-align: right;
+    vertical-align: top;
+  }
+
+  .WorkView__project--rightCol {
+    width: 100%;
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+  }
+}
+*/

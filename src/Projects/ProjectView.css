@@ -31,8 +31,8 @@
 
 .ProjectDesc__content {
   top: 2rem;
-  left: calc(50% + 22rem);
-  width: 16rem;
+  left: calc(50% + 20rem);
+  width: 17rem;
   position: absolute;
   transform-style: preserve-3d;
   transform: translate3d(-50%,0,0);
@@ -48,15 +48,18 @@
 
 
 
-.ProjectDesc__content__note {
+.ProjectDesc__content__note--technology {
   margin-top: 0.75rem;
   display: inline-block;
   vertical-align: top;
-  width: 5.75rem;
+  width: 6rem;
 }
 .ProjectDesc__content__note--responsibilities {
+  margin-top: 0.75rem;
   margin-right: 0.5rem;
-  width: 9.5rem;
+  display: inline-block;
+  vertical-align: top;
+  width: 10.25rem;
 }
 
 

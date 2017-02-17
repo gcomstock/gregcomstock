@@ -3,9 +3,7 @@ import classNames from 'classnames';
 import Block3d from '../../Block3d/Block3d';
 
 
-const PandoraView = React.createClass({
-
-
+export const PandoraLayout = React.createClass({
   render() {
     return (
       <div className='ProjectView'>
@@ -25,8 +23,6 @@ const PandoraView = React.createClass({
   }
 });
 
-export default PandoraView;
-
 
 export const PandoraConsts = Object.freeze({
   TITLE: 'pandora.com',
@@ -34,7 +30,7 @@ export const PandoraConsts = Object.freeze({
     'As a member of the web applications team, I am actively working on the new pandora.com. I collaborate closely with the design and product teams on core UI decisions, and help ensure that we bring production-quality code to millions of monthly listeners that handles complex asynchronous use cases between audio playback and advertising. Full release coming soon!'
   ],
   RESPONSIBILITIES: [
-    'Collaborate with design and product on key UI decisions',
+    'Collaborate closely with design and product on core UI decisions',
     'Development of react components for main application views',
     'Display ad integration',
     'UI animations'

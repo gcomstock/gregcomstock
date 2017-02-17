@@ -80,7 +80,7 @@ export default function projectViewFactory(WrappedComponent, projectData) {
                 })}
               </Block3d>
 
-              <div className='ProjectDesc__content__note ProjectDesc__content__note--responsibilities'>
+              <div className='ProjectDesc__content__note--responsibilities'>
                 <Block3d cssClass='ProjectDesc__content__note__title' width='100%' depth='2' z='-2'>
                   <h3>key responsibilities</h3>
                 </Block3d>
@@ -93,7 +93,7 @@ export default function projectViewFactory(WrappedComponent, projectData) {
                 </Block3d>
               </div>
 
-              <div className='ProjectDesc__content__note'>
+              <div className='ProjectDesc__content__note--technology'>
                 <Block3d cssClass='ProjectDesc__content__note__title' width='100%' depth='2' z='-2'>
                   <h3>technology</h3>
                 </Block3d>
