@@ -91,11 +91,6 @@
 }
 
 
-
-
-
-
-
 .WorkView__subtitle {
   font-size: 2rem;
   font-family: 'bebas-neue--book';
@@ -106,88 +101,52 @@
 
 
 
-.WorkView__project {
-  margin-bottom: 8rem;
-}
-
-.WorkView__project--leftCol {
-  width: 22rem;
-  display: inline-block;
-  text-align: right;
-  vertical-align: top;
-}
-
-.WorkView__project--rightCol {
-  width: 22rem;
-  display: inline-block;
-  text-align: left;
-  vertical-align: top;
-}
 
 
+/* BEGIN PROJECT LAYOUT TODO: move into component? */
 
-.WorkView__project__note {
-  width: 9.5rem;
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 1.5rem;
-  text-align: left;
-}
-.WorkView__project__note--marginRight {
-  margin-right: 1.5rem;
-}
-
-
-.WorkView__project__note__title,
-.WorkView__project__note__text {
-  width: 100%;
-}
-
-
-.WorkView__project__note__title .Block3d__content {
-  padding: 0.75rem;
-  font-size: 18px;
-  letter-spacing: 3px;
-  font-family: 'bebas-neue--book';
-  line-height: 28px;
-  text-transform: uppercase;
-  color: rgb(220,0,0);
-}
-
-
-.WorkView__project__note__text .Block3d__content {
-  padding: 0.75rem;
-  font-size: 16px;
-  line-height: 22px;
-  color: #333;
-}
-.WorkView__project__note__text .Block3d__content ul {
-  list-style: none;
-}
-.WorkView__project__note__text .Block3d__content ul li {
-  margin-bottom: 0.6rem;
-}
-.WorkView__project__note__text .Block3d__content ul li:last-child {
-  margin-bottom: 0;
-}
-
-
-
-
-@keyframes floatLaunch {
+@keyframes floatLearnMore {
   0% { transform: translate3d(0,0,0rem); }
   50% { transform: translate3d(0,0,-1.5rem); }
   100% { transform: translate3d(0,0,0rem); }
 }
 
+.WorkView__project {
+  margin-bottom: 8rem;
+}
 
-.WorkView__project__launch {
-  margin: 1.5rem 0 0 0;
+.WorkView__project__leftCol {
+  width: 22rem;
+  display: inline-block;
+  text-align: right;
+  vertical-align: top;
+
+  /*background-color: rgba(255,0,0,0.2);*/
+}
+
+.WorkView__project__rightCol {
+  width: 24rem;
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
+
+  /*background-color: rgba(0,255,0,0.2);*/
+}
+
+
+
+
+
+
+.WorkView__project__leftCol__learnMore {
+  margin: 0 1.25rem 0 0;
   cursor: pointer;
 }
 
+
+
 /* arrow */
-.WorkView__project__launch h2:after {
+.WorkView__project__leftCol__learnMore h2:after {
   content: '';
   position: absolute;
   top: 50%;
@@ -204,17 +163,17 @@
 
 
 
-.WorkView__project__launch .Block3d {
-  animation-name: floatLaunch;
+.WorkView__project__leftCol__learnMore .Block3d {
+  animation-name: floatLearnMore;
   animation-duration: 4s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
-.WorkView__project__launch .Block3d__face--bottom {
+.WorkView__project__leftCol__learnMore .Block3d__face--bottom {
   border-size: 1px;
 }
 
-.WorkView__project__launch .Block3d__content {
+.WorkView__project__leftCol__learnMore .Block3d__content {
   padding: 0.6rem 1rem 0.6rem 0.6rem;
   border-width: 3px;
   font-size: 0.55rem;
@@ -224,18 +183,21 @@
   font-family: 'bebas-neue--regular';
   transition: all 80ms linear;
 }
-.WorkView__project__launch:hover .Block3d__content {
+.WorkView__project__leftCol__learnMore:hover .Block3d__content {
   color: #fff;
   background-color: rgb(220,0,0);
 }
+.WorkView__project__leftCol__learnMore:hover h2 {
+  color: #fff;
+}
 /* arrow hover */
-.WorkView__project__launch:hover h2:after {
+.WorkView__project__leftCol__learnMore:hover h2:after {
   border-left: 0.3rem solid #fff;
 }
 
 
 /* shadows */
-.WorkView__project__launch:before {
+.WorkView__project__leftCol__learnMore:before {
   content: '';
   position: absolute;
   top: 0;
@@ -247,6 +209,16 @@
   z-index: -999;
   pointer-events: none;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 

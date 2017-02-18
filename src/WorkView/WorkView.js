@@ -57,7 +57,7 @@ const WorkView = React.createClass({
 
   render() {
     const App__body__scrollable__wrapper = classNames(
-      'App__body__scrollable__wrapper', {
+      'App__body__scrollable__wrapper', 'App__body__scrollable__wrapper--WorkView', {
         'App__body__scrollable__wrapper--intro': this.state.routeTransition === 'intro',
         'App__body__scrollable__wrapper--outro': this.state.routeTransition === 'outro'
       }
@@ -82,35 +82,31 @@ const WorkView = React.createClass({
               DESIGN + DEVELOPMENT
             </div>
 
+
+
+
+
             <div className='WorkView__project'>
-              <div className='WorkView__project--leftCol'>
-                <Block3d cssClass='WorkView__project__title' height='auto' depth='10' z='-4'>
+              <div className='WorkView__project__leftCol'>
+                <Block3d cssClass='WorkView__project__leftCol__title' height='auto' depth='10' z='-4'>
                   <h1>christy natsumi</h1>
                 </Block3d>
-                <Block3d cssClass='WorkView__project__desc' height='auto' depth='8' z='-6'>
+                <Block3d cssClass='WorkView__project__leftCol__text' height='auto' depth='8' z='-6'>
                   <p>
                     Christy Natsumi is a San Francisco CA based independent design studio that creates modern jewelry essentials.
                     It is my wife's small business and I am always happy to lend my spare time contributing to it. Though
                     not a large project, it is a welcome opportunity to have full creative freedom over the website and photography.
                   </p>
                 </Block3d>
-
-
-
-
-
-                <Block3d cssClass='WorkView__project__launch' externalUrl='//christynatsumi.com' width='auto' height='auto' depth='1' z='0' x='-1.5'>
-                  <h2>launch project</h2>
+                <Block3d cssClass='WorkView__project__leftCol__learnMore' route='/project/pandora' width='auto' height='auto' depth='1' z='0' y='-1' x='0'>
+                  <h2>learn more</h2>
                 </Block3d>
+
               </div>
 
-
-              <div className='WorkView__project--rightCol'>
-                <Block3d cssClass='WorkView__project__pic' width='22rem' depth='14' z='0'>
-                  <img width='100%' src='work/christynatsumi/cn-1.jpg'/>
-                </Block3d>
-                <Block3d cssClass='WorkView__project__pic' width='22rem' depth='8' z='-6'>
-                  <img width='100%' src='work/christynatsumi/cn-2.jpg'/>
+              <div className='WorkView__project__rightCol'>
+                <Block3d width='100%' depth='14' z='0'>
+                  <img width='100%' src='work/christynatsumi/workview-christy-natsumi.jpg'/>
                 </Block3d>
               </div>
             </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import './Block3d.css';
+import { hashHistory, browserHistory } from 'react-router';
 
 //class Block3d extends Component {
 const Block3d = React.createClass({
@@ -62,6 +63,10 @@ const Block3d = React.createClass({
   },
 
   handleClick() {
+    if (this.props.route) {
+      hashHistory.push(this.props.route);
+    }
+
     if (this.props.externalUrl) {
       window.open(this.props.externalUrl);
     }
@@ -75,12 +80,12 @@ const Block3d = React.createClass({
       console.warn(this.props.cssClass + ' has improper total depth');
     }
 
-    let wrapperClasses = 'Block3d--wrapper'; // wrapper does not have translation and intercepts user input
+    let wrapperClasses = 'Block3d--wrapper'; // wrapper element does not have translation and intercepts user input
     if (typeof this.props.cssClass !== 'undefined') {
       wrapperClasses += ' ' + this.props.cssClass;
     }
 
-    let contentClasses = this.applyDefaultContentClasses();
+    let contentClasses = this.applyDefaultContentClasses(); // styles applied based off of element's depth
 
 
     return (

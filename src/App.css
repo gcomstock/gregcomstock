@@ -40,6 +40,10 @@
   transform-style: preserve-3d;
 }
 
+.App__body__scrollable__wrapper--WorkView {
+  width: 46rem;
+}
+
 
 /* ancillary visual fluff goes in these */
 .App__body__scrollable__wrapper__leftFrame,

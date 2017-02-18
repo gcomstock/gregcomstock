@@ -52,22 +52,6 @@ export default function projectViewFactory(WrappedComponent, projectData) {
         <div className='App__body'>
 
 
-          <div className='App__body__scrollable'>
-            <div className={App__body__scrollable__wrapper}>
-              <div className='App__body__scrollable__wrapper__leftFrame'>
-                <Block3d width='20rem' height='100%' depth='10' z='-4'/>
-              </div>
-
-              {/* TODO: pass in props (theme?) */}
-              <WrappedComponent />
-
-              <div className='App__body__scrollable__wrapper__rightFrame'>
-                <Block3d width='20rem' height='100%' depth='10' z='-4'/>
-              </div>
-            </div>
-          </div>
-
-
           <div className='ProjectDesc'>
             <div className={ProjectDesc__content}>
               <Block3d cssClass='ProjectDesc__content__title' width='100%' height='auto' depth='2' z='-2'>
@@ -105,8 +89,22 @@ export default function projectViewFactory(WrappedComponent, projectData) {
                   </ul>
                 </Block3d>
               </div>
+            </div>
+          </div>
 
 
+          <div className='App__body__scrollable'>
+            <div className={App__body__scrollable__wrapper}>
+              <div className='App__body__scrollable__wrapper__leftFrame'>
+                <Block3d width='20rem' height='100%' depth='10' z='-4'/>
+              </div>
+
+              {/* TODO: pass in props (theme?) */}
+              <WrappedComponent />
+
+              <div className='App__body__scrollable__wrapper__rightFrame'>
+                <Block3d width='20rem' height='100%' depth='10' z='-4'/>
+              </div>
             </div>
           </div>
 
