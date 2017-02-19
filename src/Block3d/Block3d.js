@@ -15,14 +15,6 @@ const Block3d = React.createClass({
     animationDelay: React.PropTypes.string
   },
 
-  modulateHeight() {
-    if (this.props.height === 'auto') {
-      //console.debug('modulate here')
-    }
-
-    return this.props.height;
-  },
-
   applyXYTranslation() {
     let translation = '';
 
@@ -94,7 +86,7 @@ const Block3d = React.createClass({
         }}>
         <div className='Block3d' style={{
           width: this.props.width,
-          height: this.modulateHeight(),
+          height: this.props.height,
           zIndex: this.props.z,
           transform: this.applyZTranslation(),
           animationDelay: this.props.animationDelay

@@ -1,0 +1,116 @@
+@keyframes floatLearnMore {
+  0% { transform: translate3d(0,0,0rem); }
+  50% { transform: translate3d(0,0,-1.5rem); }
+  100% { transform: translate3d(0,0,0rem); }
+}
+
+.ProjectPreview {
+  margin-bottom: 8rem;
+}
+
+.ProjectPreview__leftCol {
+  width: 22rem;
+  display: inline-block;
+  text-align: right;
+  vertical-align: top;
+}
+
+
+
+
+.ProjectPreview__leftCol__snippet {
+  display: block;
+  text-align: left;
+}
+
+
+
+/* BEGIN ROUTE BUTTON STYLES */
+
+.ProjectPreview__leftCol__route {
+  margin: 0 1.35rem 0 0;
+  cursor: pointer;
+}
+.ProjectPreview__leftCol__route .Block3d {
+  animation-name: floatLearnMore;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+
+/* arrow */
+.ProjectPreview__leftCol__route h2:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -0.44rem;
+  margin-top: -0.22rem;
+  width: 1rem;
+
+  border-top: 0.22rem solid transparent;
+  border-bottom: 0.22rem solid transparent;
+  border-left: 0.28rem solid rgb(180,0,0);
+}
+/* arrow hover */
+.ProjectPreview__leftCol__route:hover h2:after {
+  border-left: 0.3rem solid #fff;
+  transition: border-color 80ms linear;
+}
+
+
+/* background */
+.ProjectPreview__leftCol__route .Block3d__content {
+  padding: 0.6rem 1rem 0.6rem 0.6rem;
+  border-width: 3px;
+  border-color: #fff;
+  transition: background-color 80ms linear;
+}
+/* background hover */
+.ProjectPreview__leftCol__route:hover .Block3d__content {
+  background-color: rgb(180,0,0);
+  transition: background-color 80ms linear;
+}
+
+
+/* text hover */
+.ProjectPreview__leftCol__route:hover h2 {
+  color: #fff;
+  transition: color 80ms linear;
+}
+
+
+
+
+
+
+
+/* shadows */
+.ProjectPreview__leftCol__route:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.1);
+  transform: translate3d(0,0,-14rem);
+  z-index: -999;
+  pointer-events: none;
+}
+
+
+/* END ROUTE BUTTON STYLES */
+
+
+
+
+
+.ProjectPreview__rightCol {
+  width: 24rem;
+  display: inline-block;
+  text-align: left;
+  vertical-align: top;
+
+  /*background-color: rgba(0,255,0,0.2);*/
+}

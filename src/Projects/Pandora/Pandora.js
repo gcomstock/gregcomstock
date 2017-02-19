@@ -25,9 +25,13 @@ export const PandoraLayout = React.createClass({
 
 
 export const PandoraConsts = Object.freeze({
+  ROUTE: '/project/pandora',
   TITLE: 'pandora.com',
+  SNIPPET: 'In preparation for on-demand listening, the new Pandora.com has been re-written from the ground up using the latest front-end technologies. Working with a skilled, tight-knit team, we\'re solving complex asynchronous use cases between audio playback and advertising.',
+  CREDITS: 'front-end development, ad design architecture',
+  THUMBNAIL_PATH: 'work/christynatsumi/workview-christy-natsumi.jpg',
   TEXT: [
-    'As a member of the web applications team, I am actively working on the new pandora.com. I collaborate closely with the design and product teams on core UI decisions, and help ensure that we bring production-quality code to millions of monthly listeners that handles complex asynchronous use cases between audio playback and advertising. Full release coming soon!'
+    'asd'
   ],
   RESPONSIBILITIES: [
     'Collaborate closely with design and product on core UI decisions',

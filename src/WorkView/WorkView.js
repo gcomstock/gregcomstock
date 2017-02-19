@@ -1,7 +1,13 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 import Block3d from '../Block3d/Block3d';
+import { ProjectPreview } from '../ProjectPreview/ProjectPreview';
+
 import './WorkView.css';
+
+import { PandoraConsts } from '../Projects/Pandora/Pandora';
+
+
 
 const WorkView = React.createClass({
   propTypes: {
@@ -71,9 +77,6 @@ const WorkView = React.createClass({
               <Block3d width='20rem' height='100%' depth='10' z='-4' />
             </div>
 
-
-
-
             <div className='WorkView__title'>
               {this.randomizeLetterAnimation()}
             </div>
@@ -83,35 +86,13 @@ const WorkView = React.createClass({
             </div>
 
 
-
-
-
-            <div className='WorkView__project'>
-              <div className='WorkView__project__leftCol'>
-                <Block3d cssClass='WorkView__project__leftCol__title' height='auto' depth='10' z='-4'>
-                  <h1>christy natsumi</h1>
-                </Block3d>
-                <Block3d cssClass='WorkView__project__leftCol__text' height='auto' depth='8' z='-6'>
-                  <p>
-                    Christy Natsumi is a San Francisco CA based independent design studio that creates modern jewelry essentials.
-                    It is my wife's small business and I am always happy to lend my spare time contributing to it. Though
-                    not a large project, it is a welcome opportunity to have full creative freedom over the website and photography.
-                  </p>
-                </Block3d>
-                <Block3d cssClass='WorkView__project__leftCol__learnMore' route='/project/pandora' width='auto' height='auto' depth='1' z='0' y='-1' x='0'>
-                  <h2>learn more</h2>
-                </Block3d>
-
-              </div>
-
-              <div className='WorkView__project__rightCol'>
-                <Block3d width='100%' depth='14' z='0'>
-                  <img width='100%' src='work/christynatsumi/workview-christy-natsumi.jpg'/>
-                </Block3d>
-              </div>
-            </div>
-
-
+            <ProjectPreview
+              route={PandoraConsts.ROUTE}
+              title={PandoraConsts.TITLE}
+              snippet={PandoraConsts.SNIPPET}
+              credits={PandoraConsts.CREDITS}
+              thumbnailPath={PandoraConsts.THUMBNAIL_PATH}
+            />
 
 
             <div className='App__body__scrollable__wrapper__rightFrame'>

@@ -25,7 +25,7 @@ const App = React.createClass({
   },
 
   handleScroll(e) {
-    // WorkView calls this when it scrolls, and we store it here, so we can scroll back to it when WorkView is re-mounted
+    // WorkView calls this when it scrolls, and we store it here, so we can scroll back to position when WorkView is re-mounted
     e.preventDefault();
     scrollY = e.target.scrollTop;
   },
@@ -39,7 +39,6 @@ const App = React.createClass({
           <Link to="/">home link</Link>
           <Link to="/project/pandora">project link</Link>
         </div>
-
 
         <ReactTransitionGroup>
           {React.cloneElement(this.props.children, {key: location.hash, handleScroll: this.handleScroll, scrollY} )}
