@@ -31,9 +31,12 @@
 }
 
 
-
-.App__body__scrollable__wrapper--outro .ProjectPreview__leftCol__route {
-
+/* button shadow TODO: rename to shared class if there are going to be more shadows */
+.App__body__scrollable__wrapper--outro .ProjectPreview__leftCol__route:before {
+  opacity: 0;
+}
+.App__body__scrollable__wrapper--intro .ProjectPreview__leftCol__route:before {
+  opacity: 0.1;
 }
 
 

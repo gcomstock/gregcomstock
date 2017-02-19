@@ -55,7 +55,7 @@
 /* arrow hover */
 .ProjectPreview__leftCol__route:hover h2:after {
   border-left: 0.3rem solid #fff;
-  transition: border-color 80ms linear;
+  transition: border-color 100ms linear;
 }
 
 
@@ -64,28 +64,22 @@
   padding: 0.6rem 1rem 0.6rem 0.6rem;
   border-width: 3px;
   border-color: #fff;
-  transition: background-color 80ms linear;
+  transition: background-color 100ms linear, opacity 450ms cubic-bezier(0.550, 0.055, 0.675, 0.190);
 }
 /* background hover */
 .ProjectPreview__leftCol__route:hover .Block3d__content {
   background-color: rgb(180,0,0);
-  transition: background-color 80ms linear;
 }
 
 
 /* text hover */
 .ProjectPreview__leftCol__route:hover h2 {
   color: #fff;
-  transition: color 80ms linear;
+  transition: color 100ms linear;
 }
 
 
-
-
-
-
-
-/* shadows */
+/* shadow */
 .ProjectPreview__leftCol__route:before {
   content: '';
   position: absolute;
@@ -93,12 +87,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.1);
+  background-color: rgb(0,0,0);
+  opacity: 0.1;
   transform: translate3d(0,0,-14rem);
   z-index: -999;
   pointer-events: none;
 }
-
 
 /* END ROUTE BUTTON STYLES */
 
