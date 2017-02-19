@@ -8,6 +8,7 @@
   width: 100%;
   z-index: 9999;
   font-size: 2rem;
+  display: none;
 }
 
 /* containing element to allow scrollable and non-scrollable content on a view */
@@ -34,7 +35,7 @@
 /* maintains fixed width for layout */
 .App__body__scrollable__wrapper {
   position: relative;
-  padding-top: 3rem;
+  /*padding-top: 3rem;*/
   width: 54rem;
   margin: 0 auto;
   transform-style: preserve-3d;
@@ -62,4 +63,9 @@
 .App__body__scrollable__wrapper__rightFrame {
   right: -20rem;
   text-align: left;
+}
+
+.App__body__scrollable__wrapper__leftFrame--WorkView,
+.App__body__scrollable__wrapper__rightFrame--WorkView {
+  top: 80vh;
 }

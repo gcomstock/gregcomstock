@@ -14,6 +14,11 @@
   background-image: url(bg.png);
 }
 
+.App__body__scrollable__siteIntro__operatorWrapper {
+  /*background-image: url(bg2.png);*/
+  background-color: rgb(160,160,160);
+}
+
 
 
 
@@ -26,7 +31,6 @@
 
 @font-face {
   font-family: 'title';
-  /*font-family: 'bebas-neue--regular';*/
   src: url('bebasneue_regular-webfont.woff2') format('woff2'),
   url('bebasneue_regular-webfont.woff') format('woff');
   font-weight: normal;
@@ -42,7 +46,7 @@
 }
 
 @font-face {
-  font-family: 'bebas-neue--bold';
+  font-family: 'title--bold';
   src: url('bebasneue_bold-webfont.woff2') format('woff2'),
   url('bebasneue_bold-webfont.woff') format('woff');
   font-weight: normal;
@@ -50,7 +54,7 @@
 }
 
 @font-face {
-  font-family: 'bebas-neue--book';
+  font-family: 'title--book';
   src: url('bebasneue_book-webfont.woff2') format('woff2'),
   url('bebasneue_book-webfont.woff') format('woff');
   font-weight: normal;

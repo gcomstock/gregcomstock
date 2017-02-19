@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
-import Block3d from '../../Block3d/Block3d';
+import Block3d from '../Block3d/Block3d';
 
 
 export const PandoraLayout = React.createClass({

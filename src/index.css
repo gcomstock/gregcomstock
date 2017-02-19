@@ -33,14 +33,14 @@ header {
 
 
 p {
-  /*font-size: 14px;*/
-  /*line-height: 32px;*/
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 16px;
   line-height: 34px;
   text-align: justify;
   color: #666;
 }
 li {
+  font-family: 'Source Sans Pro', sans-serif;
   font-size: 14px;
   line-height: 24px;
   margin-bottom: 14px;

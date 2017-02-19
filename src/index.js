@@ -10,7 +10,8 @@ import './breakpoints.css';
 // all the content that gets composed into views
 import WorkView from './WorkView/WorkView';
 
-import { PandoraLayout, PandoraConsts } from './Projects/Pandora/Pandora';
+import { PandoraLayout, PandoraConsts } from './Projects/Project-pandora';
+import { ChristynNatsumiLayout, ChristyNatsumiConsts } from './Projects/Project-christynatsumi';
 
 
 ReactDOM.render(
@@ -18,6 +19,7 @@ ReactDOM.render(
     <Route path="/" component={App}>
       <IndexRoute component={WorkView}/>
       <Route path="/project/pandora" component={projectViewFactory(PandoraLayout, PandoraConsts)}/>
+      <Route path="/project/christynatsumi" component={projectViewFactory(ChristynNatsumiLayout, ChristyNatsumiConsts)}/>
       <Route path="*" component={WorkView}/>
     </Route>
   </Router>,
