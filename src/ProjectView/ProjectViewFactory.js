@@ -1,7 +1,6 @@
 import React from 'react';
 import classNames from 'classnames';
 import Block3d from './../Block3d/Block3d';
-import './ProjectView.css';
 
 
 export default function projectViewFactory(WrappedComponent, projectData) {

@@ -1,7 +1,5 @@
 import React, { PropTypes } from 'react';
 import ReactTransitionGroup from 'react-addons-transition-group'
-import './App.css';
-import './routingAnimation.css';
 import { Link } from 'react-router'
 
 

@@ -1,6 +1,5 @@
 import React, { PropTypes } from 'react';
 import Block3d from '../Block3d/Block3d';
-import './SiteIntro.css';
 
 
 export const SiteIntro = React.createClass({

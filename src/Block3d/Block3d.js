@@ -1,5 +1,4 @@
 import React from 'react';
-import './Block3d.css';
 import { hashHistory, browserHistory } from 'react-router';
 
 //class Block3d extends Component {

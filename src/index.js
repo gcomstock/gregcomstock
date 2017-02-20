@@ -3,9 +3,7 @@ import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory, IndexRoute } from 'react-router'
 import App from './App';
 import projectViewFactory from './ProjectView/ProjectViewFactory';
-import './index.css';
-import './breakpoints.css';
-
+import './css/base.css';
 
 // all the content that gets composed into views
 import WorkView from './WorkView/WorkView';
