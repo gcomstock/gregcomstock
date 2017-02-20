@@ -28,96 +28,55 @@
   width: 100%;
   height: 80vh;
   position: relative;
-  z-index: -2;
-  
-  background-color: rgba(0,0,0,0.5);
+  /*z-index: -2;*/
+  transform-style: preserve-3d;
+
+  margin-bottom: 8rem;
 }
 
-
-.WorkView__siteIntro__operatorWrapper {
-  top: -6rem;
-  left: -10rem;
-  width: calc(100% + 20rem);
-  height: calc(100% + 6rem);
+.WorkView__siteIntro__bg {
+  top: -20rem;
+  left: -100%;
+  width: 300%;
+  height: calc(100% + 20rem);
 
   position: absolute;
   overflow: hidden;
-  transform: translate3d(0,0,-14rem);
 
-  border-bottom: 2px solid #999;
+  transform-style: preserve-3d;
+  transform: translate3d(0,0,-40rem);
 
-  z-index: -2;
-
-  display: none;
+  border-bottom: 0.25rem solid #fff;
+  background-color: rgba(0,0,0,0.2);
 }
-
-
-.WorkView__siteIntro__operator1 {
-  width: 80rem;
-  height: 80rem;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  font-size: 1rem;
-  line-height: 2rem;
-
-  transform-origin: center;
-  transform: translate3d(-50%,-28rem,0) rotateZ(45deg) !important;
-  font-family: 'Source Code Pro', monospace, sans-serif;
-}
-
-
-
-/*.App__body__scrollable__siteIntro__operator:nth-child(even)  { transform: translate3d(0,0,-2rem); }*/
-
-/*.App__body__scrollable__siteIntro__operator:nth-child(1)  { transform: translate3d(50vw,20vh,0rem); }*/
-/*.App__body__scrollable__siteIntro__operator:nth-child(2)  { transform: translate3d(0,0,0rem); }*/
-/*.App__body__scrollable__siteIntro__operator:nth-child(3)  { transform: translate3d(0,0,0rem); }*/
-/*.App__body__scrollable__siteIntro__operator:nth-child(4)  { transform: translate3d(0,0,0rem); }*/
-/*.App__body__scrollable__siteIntro__operator:nth-child(5)  { transform: translate3d(0,0,0rem); }*/
-/*.App__body__scrollable__siteIntro__operator:nth-child(6)  { transform: translate3d(0,0,0rem); }*/
-/*.App__body__scrollable__siteIntro__operator:nth-child(7)  { transform: translate3d(0,0,0rem); }*/
-/*.App__body__scrollable__siteIntro__operator:nth-child(8)  { transform: translate3d(0,0,0rem); }*/
-
 
 
 
 .WorkView__siteIntro__title {
-  background-color: rgba(0,0,0,0.2);
-  height: 50vh;
-  padding-top: 10vh;
+  position: absolute;
   text-align: left;
-  /*text-align: center;*/
-  /*height: 80vh;*/
-  /*margin-left: 6rem;*/
-  /*margin-bottom: 4rem;*/
+  top: 50%;
+  transform-style: preserve-3d;
+  transform: translate3d(0,-70%,0);
 }
-
 .WorkView__siteIntro__title__letter {
   font-family: 'title';
-  font-size: 12vh;
-  margin: 0 3vh 3vh 0;
+  font-size: 3rem;
+  line-height: 2.5rem;
+  margin: 0 0.75rem 0.75rem 0;
   height: auto;
-
-
-  line-height: 10vh;
 }
-
 .WorkView__siteIntro__title__letter .Block3d {
   /*animation-name: floatTitle;*/
   animation-duration: 8s;
   animation-iteration-count: infinite;
   animation-timing-function: cubic-bezier(0.680, -0.550, 0.265, 1.550);
-
   background-color: #fff;
 }
-
 .WorkView__siteIntro__title__letter .Block3d__content {
-  padding: 3vh 0 1.5vh 1.5vh;
+  padding: 1rem 0 0.5rem 0.5rem;
+  width: 2.75rem;
 }
-
-
 /* letter shadow */
 .WorkView__siteIntro__title__letter:before {
   content: '';
@@ -126,21 +85,48 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.1);
-  transform: translate3d(0,0,-14rem);
-  z-index: -999;
+  transform: translate3d(0,0,-6rem);
+  z-index: -9999;
   pointer-events: none;
+  background-color: rgba(0,0,0,0.1);
 }
 
 
-.WorkView__siteIntro__subtitle {
+.WorkView__siteIntro__title__subtitle {
   font-size: 2rem;
-  font-family: 'title--book';
+  font-family: 'title';
   text-align: left;
-  margin-bottom: 4rem;
+  margin-top: 1rem;
+  margin-left: 0.55rem;
+  color: #fff;
 }
 
 
+
+
+.WorkView__viewWork {
+  position: absolute;
+  top: calc(80vh - 1.5rem);
+  left: 50%;
+  transform: translate3d(-50%,0,0);
+  height:auto;
+}
+/* arrow */
+.WorkView__viewWork:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0.6rem;
+  margin-left: -0.5rem;
+
+  border-top: 0.4rem solid rgb(180,0,0);
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+}
+
+.WorkView__viewWork .Block3d__content {
+  padding: 0.75rem 1rem 1rem 1rem;
+}
 
 
 

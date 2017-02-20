@@ -37,7 +37,9 @@ const Block3d = React.createClass({
     const z = parseInt(this.props.z, 10);
     let classes = 'Block3d__content';
 
-    if (z < -11) {
+    if (z < -13) {
+      classes += ' Block3d__content--14';
+    } else if (z < -11) {
       classes += ' Block3d__content--12';
     } else if (z < -9) {
       classes += ' Block3d__content--10';

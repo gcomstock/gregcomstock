@@ -20,9 +20,25 @@
 }
 
 
+.App__body__scrollable__wrapper__floor .Block3d__content {
+  background-image: url(bg2.png);
+}
 
 
+.WorkView__siteIntro__bg {
+  background-image: url(siteIntro__bg.png);
+  background-size: 40%;
+  background-position: -7rem 0;
+}
 
+.WorkView__siteIntro__title__subtitle h1 {
+  color: #222;
+  text-shadow:
+    -2px -2px 0 #909090,
+    2px -2px 0 #909090,
+    -2px 2px 0 #909090,
+    2px 2px 0 #909090;
+}
 
 
 /* TODO: each theme use same font family name so we declare names outside of themes? */
@@ -93,27 +109,31 @@
   border: 1px solid rgb(235,235,235);
   background-color: rgb(255,255,255);
 }
+.Block3d__content--14 {
+  border: 1px solid rgb(165,165,165);
+  background-color: rgb(192,192,192);
+}
 .Block3d__content--12 {
   border: 1px solid rgb(175,175,175);
-  background-color: rgb(213,213,213);
+  background-color: rgb(201,201,201);
 }
 .Block3d__content--10 {
   border: 1px solid rgb(185,185,185);
-  background-color: rgb(220,220,220);
+  background-color: rgb(210,210,210);
 }
 .Block3d__content--8 {
   border: 1px solid rgb(195,195,195);
-  background-color: rgb(227,227,227);
+  background-color: rgb(219,219,219);
 }
 .Block3d__content--6 {
   border: 1px solid rgb(205,205,205);
-  background-color: rgb(234,234,234);
+  background-color: rgb(228,228,228);
 }
 .Block3d__content--4 {
   border: 1px solid rgb(215,215,215);
-  background-color: rgb(241,241,241);
+  background-color: rgb(237,237,237);
 }
 .Block3d__content--2 {
   border: 1px solid rgb(225,225,225);
-  background-color: rgb(248,248,248);
+  background-color: rgb(246,246,246);
 }

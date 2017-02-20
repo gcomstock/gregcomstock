@@ -26,7 +26,7 @@
   height: 100vh;
 
   perspective-origin: 50% 80%; /* x-center y-top */
-  perspective: 50rem;          /* should match width of App__wrapper for best cube appearance */
+  perspective: 54rem;          /* should match width of App__wrapper for best cube appearance */
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -44,6 +44,18 @@
 .App__body__scrollable__wrapper--WorkView {
   width: 46rem;
 }
+
+
+.App__body__scrollable__wrapper__floor {
+  position: absolute !important;
+  top: 80vh;
+  left: 0;
+  right: 0;
+  display: block;
+}
+
+
+
 
 
 /* ancillary visual fluff goes in these */
