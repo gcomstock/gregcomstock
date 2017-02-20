@@ -99,8 +99,6 @@
   transform: translate3d(0,0,-14rem);
   z-index: -999;
   pointer-events: none;
-  /* for intro/outro */
-  transition: opacity 450ms cubic-bezier(0.550, 0.055, 0.675, 0.190);
 }
 
 /* END ROUTE BUTTON STYLES */

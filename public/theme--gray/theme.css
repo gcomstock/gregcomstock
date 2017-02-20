@@ -18,9 +18,10 @@
 
 
 /* wrapper floor bg */
-.App__body__scrollable__wrapper__floor .Block3d__content {
+.App__body__scrollable__wrapper__floor {
   background-image: url(bg-10x10.png);
   background-size: 5px;
+  background-color: rgb(192,192,192);
 }
 
 

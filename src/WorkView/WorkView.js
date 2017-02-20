@@ -59,11 +59,11 @@ const WorkView = React.createClass({
       <div className='App__body'>
         <div className='App__body__scrollable' ref={(scrollableWrapper) => { this.scrollableWrapper = scrollableWrapper; }} onScroll={this.props.handleScroll}>
           <div className={App__body__scrollable__wrapper}>
+            <div className='App__body__scrollable__wrapper__floor App__body__scrollable__wrapper__floor--WorkView'></div>
             <div className='App__body__scrollable__wrapper__leftFrame App__body__scrollable__wrapper__leftFrame--WorkView'>
               <Block3d width='20rem' height='100%' depth='10' z='-4' />
             </div>
 
-            <Block3d cssClass='App__body__scrollable__wrapper__floor' width='100%' height='100%' depth='10' z='-14' />
 
             <SiteIntro/>
 

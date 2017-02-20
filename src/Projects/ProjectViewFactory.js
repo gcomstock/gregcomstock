@@ -94,20 +94,21 @@ export default function projectViewFactory(WrappedComponent, projectData) {
 
           <div className='App__body__scrollable'>
             <div className={App__body__scrollable__wrapper}>
+              <div className='App__body__scrollable__wrapper__floor'></div>
               <div className='App__body__scrollable__wrapper__leftFrame'>
                 <Block3d width='20rem' height='100%' depth='10' z='-4'/>
               </div>
+              <div className='App__body__scrollable__wrapper__rightFrame'>
+                <Block3d width='20rem' height='100%' depth='10' z='-4'/>
+              </div>
+
 
               {/* TODO: pass in props (theme?) */}
               <WrappedComponent />
 
-              <div className='App__body__scrollable__wrapper__rightFrame'>
-                <Block3d width='20rem' height='100%' depth='10' z='-4'/>
-              </div>
+
             </div>
           </div>
-
-
         </div>
       )
     }

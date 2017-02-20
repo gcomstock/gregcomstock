@@ -1,33 +1,49 @@
 /* MAIN AREA ANIMATIONS */
 
+$transformOut: transform 500ms cubic-bezier(0.550, 0.055, 0.675, 0.190); /* easeInCubic */
+$transformIn:  transform 500ms cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
+
+$opacityOut: opacity 450ms 100ms cubic-bezier(0.550, 0.055, 0.675, 0.190); /* easeInCubic */
+$opacityIn:  opacity 450ms 100ms cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
+
+
 /* default */
 .App__body__scrollable__wrapper {
-  transition: transform 500ms cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
+  transition: $transformIn;
+
+  .Block3d__face,
+  .Block3d__content,
+  .App__body__scrollable__wrapper__floor {
+    transition: $opacityIn;
+  }
 }
-.Block3d__face,
-.Block3d__content {
-  transition: opacity 450ms 100ms cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
-}
+
 
 /* intro */
 .App__body__scrollable__wrapper--intro {
   transform: translate3d(0,0,-34rem);
+
+  .Block3d__face,
+  .Block3d__content,
+  .App__body__scrollable__wrapper__floor,
+  .ProjectPreview__leftCol__route:before {
+    opacity: 0;
+  }
 }
-.App__body__scrollable__wrapper--intro .Block3d__face,
-.App__body__scrollable__wrapper--intro .Block3d__content {
-  opacity: 0;
-}
+
 
 /* outro */
 .App__body__scrollable__wrapper--outro {
-  transition: transform 500ms cubic-bezier(0.550, 0.055, 0.675, 0.190); /* easeInCubic */
-  transform:  translate3d(0,0,14rem);
-}
+  transition: $transformOut;
+  transform: translate3d(0,0,14rem);
 
-.App__body__scrollable__wrapper--outro .Block3d__face,
-.App__body__scrollable__wrapper--outro .Block3d__content {
-  transition: opacity 450ms cubic-bezier(0.550, 0.055, 0.675, 0.190); /* easeInCubic */
-  opacity: 0;
+  .Block3d__face,
+  .Block3d__content,
+  .App__body__scrollable__wrapper__floor,
+  .ProjectPreview__leftCol__route:before {
+    transition: $opacityOut;
+    opacity: 0;
+  }
 }
 
 
@@ -35,28 +51,12 @@
 
 
 /* button shadow TODO: rename to shared class if there are going to be more shadows */
-.App__body__scrollable__wrapper--outro .ProjectPreview__leftCol__route:before {
-  opacity: 0;
-}
-.App__body__scrollable__wrapper--intro .ProjectPreview__leftCol__route:before {
-  opacity: 0.1;
-}
-
-
-/*.App__body__scrollable__wrapper--intro img,*/
-/*.App__body__scrollable__wrapper--outro img {*/
-  /*opacity: 0;*/
-/*}*/
-
-
-
-.WorkView__siteIntro__bg {
-  transition: opacity 450ms cubic-bezier(0.550, 0.055, 0.675, 0.190); /* easeInCubic */
-}
-.App__body__scrollable__wrapper--outro .WorkView__siteIntro__bg,
-.App__body__scrollable__wrapper--intro .WorkView__siteIntro__bg {
-  opacity: 0;
-}
+//.App__body__scrollable__wrapper--outro .ProjectPreview__leftCol__route:before {
+//  opacity: 0;
+//}
+//.App__body__scrollable__wrapper--intro .ProjectPreview__leftCol__route:before {
+//  opacity: 0.1;
+//}
 
 
 
@@ -70,7 +70,7 @@
 .ProjectDesc__content .ProjectDesc__content__note--technology .ProjectDesc__content__note__text,
 .ProjectDesc__content .ProjectDesc__content__note--responsibilities .ProjectDesc__content__note__title,
 .ProjectDesc__content .ProjectDesc__content__note--responsibilities .ProjectDesc__content__note__text {
-  transition: transform 500ms cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
+  transition: $transformIn;
 }
 
 
@@ -81,7 +81,7 @@
 }
 .ProjectDesc__content--outro .ProjectDesc__content__title,
 .ProjectDesc__content--outro .ProjectDesc__content__text {
-  transition: transform 500ms cubic-bezier(0.550, 0.055, 0.675, 0.190); /* easeInCubic */
+  transition: $transformOut;
   transform: translate3d(0,0,8rem);
 }
 
@@ -93,7 +93,7 @@
 }
 .ProjectDesc__content--outro .ProjectDesc__content__note--responsibilities .ProjectDesc__content__note__title,
 .ProjectDesc__content--outro .ProjectDesc__content__note--responsibilities .ProjectDesc__content__note__text {
-  transition: transform 500ms cubic-bezier(0.550, 0.055, 0.675, 0.190); /* easeInCubic */
+  transition: $transformOut;
   transform: translate3d(0,0,12rem);
 }
 
@@ -105,7 +105,7 @@
 }
 .ProjectDesc__content--outro .ProjectDesc__content__note--technology .ProjectDesc__content__note__title,
 .ProjectDesc__content--outro .ProjectDesc__content__note--technology .ProjectDesc__content__note__text {
-  transition: transform 500ms cubic-bezier(0.550, 0.055, 0.675, 0.190); /* easeInCubic */
+  transition: $transformOut;
   transform: translate3d(0,0,16rem);
 }
 
@@ -117,6 +117,6 @@
 }
 .ProjectDesc__content--outro .Block3d__face,
 .ProjectDesc__content--outro .Block3d__content {
-  transition: opacity 450ms cubic-bezier(0.550, 0.055, 0.675, 0.190); /* easeInCubic */
+  transition: $opacityOut;
   opacity: 0;
 }
