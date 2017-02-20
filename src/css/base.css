@@ -1,199 +1,3 @@
-.floatingButton, .ProjectPreview__leftCol__route .Block3d, .SiteIntro__viewWork .Block3d {
-  animation-name: floatingButtonAnimation;
-  animation-duration: 4s;
-  animation-delay: 1s;
-  animation-iteration-count: infinite;
-  animation-timing-function: ease-in-out; }
-
-@keyframes floatingButtonAnimation {
-  0% {
-    transform: translate3d(0, 0, 0rem); }
-  50% {
-    transform: translate3d(0, 0, -1.5rem); }
-  100% {
-    transform: translate3d(0, 0, 0rem); } }
-
-@media screen and (max-width: 1800px) {
-  html {
-    font-size: 30px; }
-  .App__body__scrollable {
-    /*perspective: 60rem;*/ } }
-
-@media screen and (max-width: 1700px) {
-  html {
-    font-size: 28px; }
-  p {
-    font-size: 15px;
-    line-height: 28px; }
-  li {
-    font-size: 14px;
-    line-height: 22px;
-    margin-bottom: 14px; } }
-
-@media screen and (max-width: 1600px) {
-  html {
-    font-size: 26px; } }
-
-@media screen and (max-width: 1500px) {
-  html {
-    font-size: 24px; }
-  p {
-    font-size: 14px;
-    line-height: 26px; }
-  li {
-    font-size: 12px;
-    line-height: 18px;
-    margin-bottom: 14px; } }
-
-@media screen and (max-width: 1400px) {
-  html {
-    font-size: 22px; } }
-
-@media screen and (max-width: 1260px) {
-  html {
-    font-size: 20px; } }
-
-@media screen and (max-width: 1100px) {
-  html {
-    font-size: 18px; } }
-
-/**
- *  MOBILE BREAKPOINTS
- *
- *  Mobile doesn't work well with the 3d effect, so lets bring everything into the doc flow and make .App scrollable
- */
-@media screen and (max-width: 1020px) {
-  .App {
-    overflow-y: scroll;
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch; }
-  .App__body__scrollable {
-    position: relative;
-    height: auto;
-    /* -webkit-perspective-origin: 50% 80%; */
-    /* perspective-origin: 50% 80%; */
-    /* -webkit-perspective: 50rem; */
-    /* perspective: 50rem; */
-    perspective: none;
-    overflow-y: auto;
-    overflow-x: hidden; }
-  .App__body__scrollable__wrapper {
-    width: 100%; }
-  .App__body__scrollable__wrapper__leftFrame,
-  .App__body__scrollable__wrapper__rightFrame {
-    display: none; }
-  .ProjectDesc {
-    perspective: none;
-    position: relative;
-    transform: none; }
-  .ProjectDesc__content {
-    width: 100%;
-    position: static;
-    transform: none; }
-  .ProjectView {
-    width: 100%;
-    margin: 0 10px; } }
-
-/*
-@media screen and (max-width: 1020px){
-  .WorkView__project--leftCol {
-    width: 100%;
-    display: inline-block;
-    text-align: right;
-    vertical-align: top;
-  }
-
-  .WorkView__project--rightCol {
-    width: 100%;
-    display: inline-block;
-    text-align: left;
-    vertical-align: top;
-  }
-}
-*/
-/* easeInCubic */
-/* easeOutCubic */
-/* easeInCubic */
-/* easeOutCubic */
-/* MAIN AREA ANIMATIONS */
-.App__body__scrollable__wrapper {
-  transition: transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1); }
-  .App__body__scrollable__wrapper .Block3d__face,
-  .App__body__scrollable__wrapper .Block3d__content,
-  .App__body__scrollable__wrapper .App__body__scrollable__wrapper__floor {
-    transition: opacity 450ms 100ms cubic-bezier(0.215, 0.61, 0.355, 1); }
-
-.App__body__scrollable__wrapper--intro {
-  transform: translate3d(0, 0, -34rem); }
-  .App__body__scrollable__wrapper--intro .Block3d__face,
-  .App__body__scrollable__wrapper--intro .Block3d__content,
-  .App__body__scrollable__wrapper--intro .App__body__scrollable__wrapper__floor,
-  .App__body__scrollable__wrapper--intro .ProjectPreview__leftCol__route:before {
-    opacity: 0; }
-
-.App__body__scrollable__wrapper--outro {
-  transition: transform 500ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  transform: translate3d(0, 0, 14rem); }
-  .App__body__scrollable__wrapper--outro .Block3d__face,
-  .App__body__scrollable__wrapper--outro .Block3d__content,
-  .App__body__scrollable__wrapper--outro .App__body__scrollable__wrapper__floor,
-  .App__body__scrollable__wrapper--outro .ProjectPreview__leftCol__route:before {
-    transition: opacity 450ms 100ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    opacity: 0; }
-
-/* PROJECT DESCRIPTION ANIMATIONS */
-.ProjectDesc__content .Block3d__face,
-.ProjectDesc__content .Block3d__content {
-  transform: opacity 450ms 100ms cubic-bezier(0.215, 0.61, 0.355, 1); }
-
-.ProjectDesc__content .ProjectDesc__content__title,
-.ProjectDesc__content .ProjectDesc__content__text {
-  transition: transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1); }
-
-.ProjectDesc__content .ProjectDesc__content__note--responsibilities .ProjectDesc__content__note__title,
-.ProjectDesc__content .ProjectDesc__content__note--responsibilities .ProjectDesc__content__note__text {
-  transition: transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1); }
-
-.ProjectDesc__content .ProjectDesc__content__note--technology .ProjectDesc__content__note__title,
-.ProjectDesc__content .ProjectDesc__content__note--technology .ProjectDesc__content__note__text {
-  transition: transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1); }
-
-.ProjectDesc__content--intro .Block3d__face,
-.ProjectDesc__content--intro .Block3d__content {
-  opacity: 0; }
-
-.ProjectDesc__content--intro .ProjectDesc__content__title,
-.ProjectDesc__content--intro .ProjectDesc__content__text {
-  transform: translate3d(0, 0, -8rem); }
-
-.ProjectDesc__content--intro .ProjectDesc__content__note--responsibilities .ProjectDesc__content__note__title,
-.ProjectDesc__content--intro .ProjectDesc__content__note--responsibilities .ProjectDesc__content__note__text {
-  transform: translate3d(0, 0, -12rem); }
-
-.ProjectDesc__content--intro .ProjectDesc__content__note--technology .ProjectDesc__content__note__title,
-.ProjectDesc__content--intro .ProjectDesc__content__note--technology .ProjectDesc__content__note__text {
-  transform: translate3d(0, 0, -16rem); }
-
-.ProjectDesc__content--outro .Block3d__face,
-.ProjectDesc__content--outro .Block3d__content {
-  transition: opacity 450ms 100ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  opacity: 0; }
-
-.ProjectDesc__content--outro .ProjectDesc__content__title,
-.ProjectDesc__content--outro .ProjectDesc__content__text {
-  transition: transform 500ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  transform: translate3d(0, 0, 8rem); }
-
-.ProjectDesc__content--outro .ProjectDesc__content__note--responsibilities .ProjectDesc__content__note__title,
-.ProjectDesc__content--outro .ProjectDesc__content__note--responsibilities .ProjectDesc__content__note__text {
-  transition: transform 500ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  transform: translate3d(0, 0, 12rem); }
-
-.ProjectDesc__content--outro .ProjectDesc__content__note--technology .ProjectDesc__content__note__title,
-.ProjectDesc__content--outro .ProjectDesc__content__note--technology .ProjectDesc__content__note__text {
-  transition: transform 500ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  transform: translate3d(0, 0, 16rem); }
-
 * {
   margin: 0;
   padding: 0;
@@ -641,3 +445,199 @@ h4 {
     border-top: 0.4rem solid #b40000;
     border-left: 0.5rem solid transparent;
     border-right: 0.5rem solid transparent; }
+
+.floatingButton, .ProjectPreview__leftCol__route .Block3d, .SiteIntro__viewWork .Block3d {
+  animation-name: floatingButtonAnimation;
+  animation-duration: 4s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out; }
+
+@keyframes floatingButtonAnimation {
+  0% {
+    transform: translate3d(0, 0, 0rem); }
+  50% {
+    transform: translate3d(0, 0, -1.5rem); }
+  100% {
+    transform: translate3d(0, 0, 0rem); } }
+
+@media screen and (max-width: 1800px) {
+  html {
+    font-size: 30px; }
+  .App__body__scrollable {
+    /*perspective: 60rem;*/ } }
+
+@media screen and (max-width: 1700px) {
+  html {
+    font-size: 28px; }
+  p {
+    font-size: 15px;
+    line-height: 28px; }
+  li {
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 14px; } }
+
+@media screen and (max-width: 1600px) {
+  html {
+    font-size: 26px; } }
+
+@media screen and (max-width: 1500px) {
+  html {
+    font-size: 24px; }
+  p {
+    font-size: 14px;
+    line-height: 26px; }
+  li {
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 14px; } }
+
+@media screen and (max-width: 1400px) {
+  html {
+    font-size: 22px; } }
+
+@media screen and (max-width: 1260px) {
+  html {
+    font-size: 20px; } }
+
+@media screen and (max-width: 1100px) {
+  html {
+    font-size: 18px; } }
+
+/**
+ *  MOBILE BREAKPOINTS
+ *
+ *  Mobile doesn't work well with the 3d effect, so lets bring everything into the doc flow and make .App scrollable
+ */
+@media screen and (max-width: 1020px) {
+  .App {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch; }
+  .App__body__scrollable {
+    position: relative;
+    height: auto;
+    /* -webkit-perspective-origin: 50% 80%; */
+    /* perspective-origin: 50% 80%; */
+    /* -webkit-perspective: 50rem; */
+    /* perspective: 50rem; */
+    perspective: none;
+    overflow-y: auto;
+    overflow-x: hidden; }
+  .App__body__scrollable__wrapper {
+    width: 100%; }
+  .App__body__scrollable__wrapper__leftFrame,
+  .App__body__scrollable__wrapper__rightFrame {
+    display: none; }
+  .ProjectDesc {
+    perspective: none;
+    position: relative;
+    transform: none; }
+  .ProjectDesc__content {
+    width: 100%;
+    position: static;
+    transform: none; }
+  .ProjectView {
+    width: 100%;
+    margin: 0 10px; } }
+
+/*
+@media screen and (max-width: 1020px){
+  .WorkView__project--leftCol {
+    width: 100%;
+    display: inline-block;
+    text-align: right;
+    vertical-align: top;
+  }
+
+  .WorkView__project--rightCol {
+    width: 100%;
+    display: inline-block;
+    text-align: left;
+    vertical-align: top;
+  }
+}
+*/
+/* easeInCubic */
+/* easeOutCubic */
+/* easeInCubic */
+/* easeOutCubic */
+/* MAIN AREA ANIMATIONS */
+.App__body__scrollable__wrapper {
+  transition: transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1); }
+  .App__body__scrollable__wrapper .Block3d__face,
+  .App__body__scrollable__wrapper .Block3d__content,
+  .App__body__scrollable__wrapper .App__body__scrollable__wrapper__floor {
+    transition: opacity 450ms 100ms cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+.App__body__scrollable__wrapper--intro {
+  transform: translate3d(0, 0, -34rem); }
+  .App__body__scrollable__wrapper--intro .Block3d__face,
+  .App__body__scrollable__wrapper--intro .Block3d__content,
+  .App__body__scrollable__wrapper--intro .App__body__scrollable__wrapper__floor,
+  .App__body__scrollable__wrapper--intro .ProjectPreview__leftCol__route:before {
+    opacity: 0; }
+
+.App__body__scrollable__wrapper--outro {
+  transition: transform 500ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transform: translate3d(0, 0, 14rem); }
+  .App__body__scrollable__wrapper--outro .Block3d__face,
+  .App__body__scrollable__wrapper--outro .Block3d__content,
+  .App__body__scrollable__wrapper--outro .App__body__scrollable__wrapper__floor,
+  .App__body__scrollable__wrapper--outro .ProjectPreview__leftCol__route:before {
+    transition: opacity 450ms 100ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    opacity: 0; }
+
+/* PROJECT DESCRIPTION ANIMATIONS */
+.ProjectDesc__content .Block3d__face,
+.ProjectDesc__content .Block3d__content {
+  transform: opacity 450ms 100ms cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+.ProjectDesc__content .ProjectDesc__content__title,
+.ProjectDesc__content .ProjectDesc__content__text {
+  transition: transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+.ProjectDesc__content .ProjectDesc__content__note--responsibilities .ProjectDesc__content__note__title,
+.ProjectDesc__content .ProjectDesc__content__note--responsibilities .ProjectDesc__content__note__text {
+  transition: transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+.ProjectDesc__content .ProjectDesc__content__note--technology .ProjectDesc__content__note__title,
+.ProjectDesc__content .ProjectDesc__content__note--technology .ProjectDesc__content__note__text {
+  transition: transform 500ms cubic-bezier(0.215, 0.61, 0.355, 1); }
+
+.ProjectDesc__content--intro .Block3d__face,
+.ProjectDesc__content--intro .Block3d__content {
+  opacity: 0; }
+
+.ProjectDesc__content--intro .ProjectDesc__content__title,
+.ProjectDesc__content--intro .ProjectDesc__content__text {
+  transform: translate3d(0, 0, -8rem); }
+
+.ProjectDesc__content--intro .ProjectDesc__content__note--responsibilities .ProjectDesc__content__note__title,
+.ProjectDesc__content--intro .ProjectDesc__content__note--responsibilities .ProjectDesc__content__note__text {
+  transform: translate3d(0, 0, -12rem); }
+
+.ProjectDesc__content--intro .ProjectDesc__content__note--technology .ProjectDesc__content__note__title,
+.ProjectDesc__content--intro .ProjectDesc__content__note--technology .ProjectDesc__content__note__text {
+  transform: translate3d(0, 0, -16rem); }
+
+.ProjectDesc__content--outro .Block3d__face,
+.ProjectDesc__content--outro .Block3d__content {
+  transition: opacity 450ms 100ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  opacity: 0; }
+
+.ProjectDesc__content--outro .ProjectDesc__content__title,
+.ProjectDesc__content--outro .ProjectDesc__content__text {
+  transition: transform 500ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transform: translate3d(0, 0, 8rem); }
+
+.ProjectDesc__content--outro .ProjectDesc__content__note--responsibilities .ProjectDesc__content__note__title,
+.ProjectDesc__content--outro .ProjectDesc__content__note--responsibilities .ProjectDesc__content__note__text {
+  transition: transform 500ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transform: translate3d(0, 0, 12rem); }
+
+.ProjectDesc__content--outro .ProjectDesc__content__note--technology .ProjectDesc__content__note__title,
+.ProjectDesc__content--outro .ProjectDesc__content__note--technology .ProjectDesc__content__note__text {
+  transition: transform 500ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  transform: translate3d(0, 0, 16rem); }
