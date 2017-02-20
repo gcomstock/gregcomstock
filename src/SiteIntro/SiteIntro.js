@@ -31,6 +31,9 @@ export const SiteIntro = React.createClass({
             <h1>DESIGN + DEVELOPMENT</h1>
           </div>
         </div>
+        <Block3d cssClass='SiteIntro__viewWork' width='auto' height='auto' depth='1' z='0'>
+          <h2>view work</h2>
+        </Block3d>
       </div>
     )
   }

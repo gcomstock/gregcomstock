@@ -5,7 +5,6 @@ import classNames from 'classnames';
 import Block3d from '../Block3d/Block3d';
 import { SiteIntro } from '../SiteIntro/SiteIntro';
 import { ProjectPreview } from '../ProjectPreview/ProjectPreview';
-import './WorkView.css';
 
 
 import { PandoraConsts } from '../Projects/Project-pandora';
@@ -63,14 +62,12 @@ const WorkView = React.createClass({
             <div className='App__body__scrollable__wrapper__leftFrame App__body__scrollable__wrapper__leftFrame--WorkView'>
               <Block3d width='20rem' height='100%' depth='10' z='-4' />
             </div>
+            <div className='App__body__scrollable__wrapper__rightFrame App__body__scrollable__wrapper__rightFrame--WorkView'>
+              <Block3d width='20rem' height='100%' depth='10' z='-4' />
+            </div>
 
 
             <SiteIntro/>
-
-            <Block3d cssClass='WorkView__viewWork' width='auto' height='auto' depth='1' z='0'>
-              <h2>view work</h2>
-            </Block3d>
-
 
 
             <ProjectPreview
@@ -89,10 +86,6 @@ const WorkView = React.createClass({
               thumbnailPath={ChristyNatsumiConsts.THUMBNAIL_PATH}
             />
 
-
-            <div className='App__body__scrollable__wrapper__rightFrame App__body__scrollable__wrapper__rightFrame--WorkView'>
-              <Block3d width='20rem' height='100%' depth='10' z='-4' />
-            </div>
           </div>
         </div>
       </div>
