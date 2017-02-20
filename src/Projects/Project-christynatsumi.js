@@ -8,15 +8,15 @@ export const ChristynNatsumiLayout = React.createClass({
     return (
       <div className='ProjectView'>
         <Block3d cssClass='ProjectView__pic' width='100%' height='auto' depth='14' z='0'>
-          <img width='100%' src='work/pandora/pandora-hero-1.jpg' alt='portfolio'/>
+          <img width='100%' src='work/christynatsumi/christynatsumi-1.jpg' alt='portfolio'/>
         </Block3d>
 
         <Block3d cssClass='ProjectView__pic' width='100%' height='auto' depth='14' z='0'>
-          <img width='100%' src='work/pandora/pandora-hero-2.jpg' alt='portfolio'/>
+          <img width='100%' src='work/christynatsumi/christynatsumi-2.jpg' alt='portfolio'/>
         </Block3d>
 
         <Block3d cssClass='ProjectView__pic' width='100%' height='auto' depth='14' z='0'>
-          <img width='100%' src='work/pandora/pandora-hero-2.jpg' alt='portfolio'/>
+          <img width='100%' src='work/christynatsumi/christynatsumi-2.jpg' alt='portfolio'/>
         </Block3d>
       </div>
     );
@@ -27,21 +27,19 @@ export const ChristynNatsumiLayout = React.createClass({
 export const ChristyNatsumiConsts = Object.freeze({
   ROUTE: '/project/christynatsumi',
   TITLE: 'christy natsumi',
-  SNIPPET: 'In preparation for on-demand listening, the new Pandora.com has been re-written from the ground up using the latest front-end technologies. Working with a skilled, tight-knit team, we\'re solving complex asynchronous use cases between audio playback and advertising.',
-  CREDITS: 'front-end development, ad design architecture',
+  SNIPPET: 'A San Francisco based independent design studio that creates modern jewelry essentials. I design, build, and maintain all of the site\'s front-end, adding updates regularly in my spare time. I also shoot most of the photography.',
   THUMBNAIL_PATH: 'work/christynatsumi/workview-christy-natsumi.jpg',
   TEXT: [
     'asd'
   ],
   RESPONSIBILITIES: [
-    'Collaborate closely with design and product on core UI decisions',
-    'Development of react components for main application views',
-    'Display ad integration',
-    'UI animations'
+    'Sole designer and front-end developer',
+    'Squarespace API integration and templating',
+    'All product photography'
   ],
   TECHNOLOGIES: [
-    'React, Redux, ES6',
-    'Webpack, npm, SASS',
-    'Photoshop, Illustrator'
+    'Javascript, CSS/LESS',
+    'Photoshop, Illustrator',
+    'Sony A7 Mirrorless DSLR'
   ]
 });

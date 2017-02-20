@@ -69,9 +69,9 @@ const Block3d = React.createClass({
   //TODO: get smart about excluding faces to increase performance
 
   render() {
-    if ( Math.abs(parseInt(this.props.z, 10)) + Math.abs(parseInt(this.props.depth, 10)) !== 14) {
-      console.warn(this.props.cssClass + ' has improper total depth');
-    }
+    //if ( Math.abs(parseInt(this.props.z, 10)) + Math.abs(parseInt(this.props.depth, 10)) !== 14) {
+    //  console.warn(this.props.cssClass + ' has improper total depth');
+    //}
 
     let wrapperClasses = 'Block3d--wrapper'; // wrapper element does not have translation and intercepts user input
     if (typeof this.props.cssClass !== 'undefined') {
