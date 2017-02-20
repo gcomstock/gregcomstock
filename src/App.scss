@@ -11,13 +11,13 @@
   display: none;
 }
 
-/* containing element to allow scrollable and non-scrollable content on a view */
+// containing element to allow scrollable and non-scrollable content on a view
 .App__body {
-  font-size: 0; /* so whitespace doesnt mess with inline elements */
+  font-size: 0; // so whitespace doesnt mess with inline elements
 }
 
 
-/* magical element that gives 3d scrolling */
+// magical element that gives 3d scrolling
 .App__body__scrollable {
   position: absolute;
   top: 0;
@@ -25,14 +25,14 @@
   width: 100%;
   height: 100vh;
 
-  perspective-origin: 50% 80%; /* x-center y-top */
-  perspective: 54rem;          /* should match width of App__wrapper for best cube appearance */
+  perspective-origin: 50% 80%; // x-center y-top
+  perspective: 54rem;          // should match width of App__wrapper for best cube appearance
   overflow-y: scroll;
   overflow-x: hidden;
 }
 
 
-/* maintains fixed width for layout */
+// maintains fixed width for layout
 .App__body__scrollable__wrapper {
   position: relative;
   /*padding-top: 3rem;*/

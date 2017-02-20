@@ -31,7 +31,6 @@ export const SiteIntro = React.createClass({
             <h1>DESIGN + DEVELOPMENT</h1>
           </div>
         </div>
-        <div className='SiteIntro__bg'></div>
       </div>
     )
   }

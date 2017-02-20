@@ -1,6 +1,7 @@
 .App__body__scrollable__wrapper__leftFrame .Block3d__content,
 .App__body__scrollable__wrapper__rightFrame .Block3d__content {
-  background-image: url('bg.png');
+  background-image: url(bg-8x8--back.png);
+  background-size: 4px;
 }
 
 .App__header {
@@ -10,22 +11,18 @@
 /* main bg */
 .App__body__scrollable {
   color: #333;
-  background-color: rgb(180,180,180);
-  background-image: url(bg.png);
+  background-color: rgb(150,150,150);
+  background-image: url(siteIntro__bg.png), url(bg-8x8.png);
+  background-size: 50%, 4px;
 }
 
 
 /* wrapper floor bg */
 .App__body__scrollable__wrapper__floor .Block3d__content {
-  background-image: url(bg2.png);
+  background-image: url(bg-10x10.png);
+  background-size: 5px;
 }
 
-
-.SiteIntro__bg {
-  background-image: url(siteIntro__bg.png);
-  background-position: center;
-  background-size: 40%;
-}
 
 .SiteIntro__title__subtitle h1 {
   color: #222;
