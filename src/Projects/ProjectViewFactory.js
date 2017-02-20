@@ -6,10 +6,6 @@ import './ProjectView.css';
 
 export default function projectViewFactory(WrappedComponent, projectData) {
   return React.createClass({
-    //propTypes: {
-    //  params: PropTypes.object
-    //},
-
     getInitialState() {
       return {
         routeTransition: null
