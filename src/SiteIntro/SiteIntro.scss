@@ -1,0 +1,68 @@
+.SiteIntro {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  transform-style: preserve-3d;
+  margin-bottom: 10rem;
+}
+
+.SiteIntro__bg {
+  position: absolute;
+  top: -40rem;
+  left: -100%;
+  width: 300%;
+  height: calc(100% + 40rem);
+  overflow: hidden;
+
+  transform-style: preserve-3d;
+  transform: translate3d(0,0,-40rem);
+
+  border-bottom: 1px solid #666;
+  background-color: rgba(0,0,0,0.15);
+}
+
+
+
+
+.SiteIntro__title {
+  position: absolute;
+  text-align: left;
+  top: 50%;
+  transform-style: preserve-3d;
+  transform: translate3d(0,-70%,0);
+}
+.SiteIntro__title__letter {
+  font-family: 'title';
+  font-size: 3rem;
+  line-height: 2.5rem;
+  margin: 0 0.75rem 0.75rem 0;
+  height: auto;
+}
+.SiteIntro__title__letter .Block3d__content {
+  padding: 1rem 0 0.5rem 0.5rem;
+  width: 2.75rem;
+}
+/* letter shadow */
+.SiteIntro__title__letter:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translate3d(0,0,-6rem);
+  z-index: -9999;
+  pointer-events: none;
+  background-color: rgba(0,0,0,0.1);
+}
+
+
+
+
+.SiteIntro__title__subtitle {
+  font-size: 2rem;
+  font-family: 'title';
+  text-align: left;
+  margin-top: 1rem;
+  margin-left: 0.55rem;
+}

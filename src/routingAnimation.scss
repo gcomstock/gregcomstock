@@ -31,6 +31,9 @@
 }
 
 
+
+
+
 /* button shadow TODO: rename to shared class if there are going to be more shadows */
 .App__body__scrollable__wrapper--outro .ProjectPreview__leftCol__route:before {
   opacity: 0;
@@ -39,6 +42,21 @@
   opacity: 0.1;
 }
 
+
+/*.App__body__scrollable__wrapper--intro img,*/
+/*.App__body__scrollable__wrapper--outro img {*/
+  /*opacity: 0;*/
+/*}*/
+
+
+
+.WorkView__siteIntro__bg {
+  transition: opacity 450ms cubic-bezier(0.550, 0.055, 0.675, 0.190); /* easeInCubic */
+}
+.App__body__scrollable__wrapper--outro .WorkView__siteIntro__bg,
+.App__body__scrollable__wrapper--intro .WorkView__siteIntro__bg {
+  opacity: 0;
+}
 
 
 

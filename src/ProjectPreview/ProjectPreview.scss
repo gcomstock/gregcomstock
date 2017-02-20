@@ -40,6 +40,7 @@
 .ProjectPreview__leftCol__route .Block3d {
   animation-name: floatLearnMore;
   animation-duration: 4s;
+  animation-delay: 1.5s; /* to allow routing animation to complete */
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }

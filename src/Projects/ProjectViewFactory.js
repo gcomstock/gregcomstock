@@ -7,8 +7,7 @@ import './ProjectView.css';
 export default function projectViewFactory(WrappedComponent, projectData) {
   return React.createClass({
     //propTypes: {
-    //  params: PropTypes.object,
-    //  scrollY: PropTypes.number
+    //  params: PropTypes.object
     //},
 
     getInitialState() {

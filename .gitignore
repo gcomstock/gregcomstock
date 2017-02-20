@@ -13,3 +13,6 @@ build
 .DS_Store
 .env
 npm-debug.log
+
+# using sass, so ignore generated css files
+src/**/*.css

@@ -7,37 +7,33 @@
   background-color: #ccc;
 }
 
-
+/* main bg */
 .App__body__scrollable {
   color: #333;
   background-color: rgb(180,180,180);
   background-image: url(bg.png);
 }
 
-.App__body__scrollable__siteIntro__operatorWrapper {
-  /*background-image: url(bg2.png);*/
-  background-color: rgb(160,160,160);
-}
 
-
+/* wrapper floor bg */
 .App__body__scrollable__wrapper__floor .Block3d__content {
   background-image: url(bg2.png);
 }
 
 
-.WorkView__siteIntro__bg {
+.SiteIntro__bg {
   background-image: url(siteIntro__bg.png);
+  background-position: center;
   background-size: 40%;
-  background-position: -7rem 0;
 }
 
-.WorkView__siteIntro__title__subtitle h1 {
+.SiteIntro__title__subtitle h1 {
   color: #222;
   text-shadow:
-    -2px -2px 0 #909090,
-    2px -2px 0 #909090,
-    -2px 2px 0 #909090,
-    2px 2px 0 #909090;
+    -0.05rem -0.05rem 0 #909090,
+    0.05rem -0.05rem 0 #909090,
+    -0.05rem 0.05rem 0 #909090,
+    0.05rem 0.05rem 0 #909090;
 }
 
 
