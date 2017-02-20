@@ -1,3 +1,5 @@
+@import '../sass/shared.scss';
+
 .SiteIntro {
   width: 100%;
   height: 80vh;
@@ -5,27 +7,6 @@
   transform-style: preserve-3d;
   margin-bottom: 10rem;
 }
-
-
-/*
-.SiteIntro__bg {
-  position: absolute;
-  top: -40rem;
-  left: -100%;
-  width: 300%;
-  height: calc(100% + 40rem);
-  overflow: hidden;
-
-  transform-style: preserve-3d;
-  transform: translate3d(0,0,-40rem);
-
-  border-bottom: 1px solid #666;
-}
-*/
-
-
-
-
 .SiteIntro__title {
   position: absolute;
   text-align: left;
@@ -39,26 +20,15 @@
   line-height: 2.5rem;
   margin: 0 0.75rem 0.75rem 0;
   height: auto;
+
+  &:before {
+    @include blockShadow(-6rem);
+  }
 }
 .SiteIntro__title__letter .Block3d__content {
   padding: 1rem 0 0.5rem 0.5rem;
   width: 2.75rem;
 }
-/* letter shadow */
-.SiteIntro__title__letter:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform: translate3d(0,0,-6rem);
-  z-index: -9999;
-  pointer-events: none;
-  background-color: rgba(0,0,0,0.1);
-}
-
-
 
 
 .SiteIntro__title__subtitle {
@@ -77,8 +47,19 @@
   top: calc(80vh - 1.5rem);
   left: 50%;
   transform: translate3d(-50%,0,0);
-  height:auto;
+  height: auto;
 
+
+
+  &:before {
+    @include blockShadow(-14rem);
+    margin-top: 1.5rem;
+    height: calc(100% - 0.75rem);
+  }
+
+  .Block3d {
+    @extend .floatingButton;
+  }
 
   .Block3d__content {
     padding: 0.75rem 1rem 1rem 1rem;

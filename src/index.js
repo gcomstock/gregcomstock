@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Router, Route, hashHistory, IndexRoute } from 'react-router'
 import App from './App';
-import projectViewFactory from './Projects/ProjectViewFactory';
+import projectViewFactory from './ProjectView/ProjectViewFactory';
 import './index.css';
 import './breakpoints.css';
 
