@@ -56,7 +56,7 @@ export const RiddickartConsts = Object.freeze({
   ROUTE: '/project/riddickart',
   TITLE: 'riddickart.com',
   SNIPPET: 'Riddick has been creating grotesquely gorgeous illustrations since 1991, and has garnered a devoted following within the death metal community. I have been maintaining his site since 2009, occasionally adding new features and visual refreshes.',
-  THUMBNAIL_PATH: 'work/riddickart/tn.gif',
+  THUMBNAIL_PATH: 'work/riddickart/tn.jpg',
   TEXT: [
     'Death metal thrives in the underground, with low-quality xeroxed posters stapled to grungy note boards. My aim was to create a site that best tapped into the culture of the scene, while placing Mark\'s work front and center.'
   ],
