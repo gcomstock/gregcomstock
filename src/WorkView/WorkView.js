@@ -8,7 +8,9 @@ import { ProjectPreview } from '../ProjectPreview/ProjectPreview';
 
 
 import { PandoraConsts } from '../Projects/Project-pandora';
+import { PandoraWin10Consts } from '../Projects/Project-pandoraWin10';
 import { ChristyNatsumiConsts } from '../Projects/Project-christynatsumi';
+import { RiddickartConsts } from '../Projects/Project-riddickart';
 
 
 
@@ -66,15 +68,12 @@ const WorkView = React.createClass({
               <Block3d width='20rem' height='100%' depth='10' z='-4' />
             </div>
 
-
             <SiteIntro/>
-
 
             <ProjectPreview
               route={PandoraConsts.ROUTE}
               title={PandoraConsts.TITLE}
               snippet={PandoraConsts.SNIPPET}
-              credits={PandoraConsts.CREDITS}
               thumbnailPath={PandoraConsts.THUMBNAIL_PATH}
             />
 
@@ -82,8 +81,21 @@ const WorkView = React.createClass({
               route={ChristyNatsumiConsts.ROUTE}
               title={ChristyNatsumiConsts.TITLE}
               snippet={ChristyNatsumiConsts.SNIPPET}
-              credits={ChristyNatsumiConsts.CREDITS}
               thumbnailPath={ChristyNatsumiConsts.THUMBNAIL_PATH}
+            />
+
+            <ProjectPreview
+              route={PandoraWin10Consts.ROUTE}
+              title={PandoraWin10Consts.TITLE}
+              snippet={PandoraWin10Consts.SNIPPET}
+              thumbnailPath={PandoraWin10Consts.THUMBNAIL_PATH}
+            />
+
+            <ProjectPreview
+              route={RiddickartConsts.ROUTE}
+              title={RiddickartConsts.TITLE}
+              snippet={RiddickartConsts.SNIPPET}
+              thumbnailPath={RiddickartConsts.THUMBNAIL_PATH}
             />
 
           </div>

@@ -9,7 +9,9 @@ import './css/base.css';
 import WorkView from './WorkView/WorkView';
 
 import { PandoraLayout, PandoraConsts } from './Projects/Project-pandora';
+import { PandoraWin10Layout, PandoraWin10Consts } from './Projects/Project-pandoraWin10';
 import { ChristynNatsumiLayout, ChristyNatsumiConsts } from './Projects/Project-christynatsumi';
+import { RiddickartLayout, RiddickartConsts } from './Projects/Project-riddickart';
 
 
 ReactDOM.render(
@@ -17,7 +19,9 @@ ReactDOM.render(
     <Route path="/" component={App}>
       <IndexRoute component={WorkView}/>
       <Route path="/project/pandora" component={projectViewFactory(PandoraLayout, PandoraConsts)}/>
+      <Route path="/project/pandora-windows10" component={projectViewFactory(PandoraWin10Layout, PandoraWin10Consts)}/>
       <Route path="/project/christynatsumi" component={projectViewFactory(ChristynNatsumiLayout, ChristyNatsumiConsts)}/>
+      <Route path="/project/riddickart" component={projectViewFactory(RiddickartLayout, RiddickartConsts)}/>
       <Route path="*" component={WorkView}/>
     </Route>
   </Router>,
