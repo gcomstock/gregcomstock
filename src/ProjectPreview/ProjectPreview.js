@@ -29,7 +29,11 @@ export const ProjectPreview = React.createClass({
 
         <div className='ProjectPreview__rightCol'>
           <Block3d width='100%' depth='14' z='0'>
-            <img width='100%' src={this.props.thumbnailPath}/>
+            <div className='Block3d__content__imgFrame' style={{
+              width: '21rem',
+              height: '13rem',
+              backgroundImage: 'url(' + this.props.thumbnailPath + ')'
+            }}></div>
           </Block3d>
         </div>
       </div>

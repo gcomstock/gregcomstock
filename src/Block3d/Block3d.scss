@@ -24,6 +24,11 @@
   outline: 1px solid #666;
 }
 
+// prevents partial pixels for crisper images
+.Block3d__content__imgFrame {
+  outline: 1px solid red;
+  background-size: contain;
+}
 
 
 .Block3d__face {
@@ -67,20 +72,3 @@
   transform-origin: right;
   transform: rotateY(90deg) translateX(100%) translateZ(0);
 }
-
-
-
-/*
-.Block3d__shading {
-  position: absolute;
-  pointer-events: none;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #000000;
-  transform: translateZ(0);
-  z-index: 9999;
-  display: none;
-}
-*/

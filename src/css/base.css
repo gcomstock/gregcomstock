@@ -92,7 +92,8 @@ h4 {
   /*padding-top: 3rem;*/
   width: 54rem;
   margin: 0 auto;
-  transform-style: preserve-3d; }
+  transform-style: preserve-3d;
+  padding-bottom: 20rem; }
 
 .App__body__scrollable__wrapper--WorkView {
   width: 46rem; }
@@ -152,6 +153,10 @@ h4 {
 .Block3d__content img {
   outline: 1px solid #666; }
 
+.Block3d__content__imgFrame {
+  outline: 1px solid red;
+  background-size: contain; }
+
 .Block3d__face {
   position: absolute;
   backface-visibility: hidden;
@@ -187,20 +192,6 @@ h4 {
   transform-origin: right;
   transform: rotateY(90deg) translateX(100%) translateZ(0); }
 
-/*
-.Block3d__shading {
-  position: absolute;
-  pointer-events: none;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #000000;
-  transform: translateZ(0);
-  z-index: 9999;
-  display: none;
-}
-*/
 .floatingButton, .ProjectPreview__leftCol__route .Block3d, .SiteIntro__viewWork .Block3d {
   animation-name: floatingButtonAnimation;
   animation-duration: 4s;
@@ -288,6 +279,21 @@ h4 {
   pointer-events: none; }
 
 /* END ROUTE BUTTON STYLES */
+.floatingButton, .ProjectPreview__leftCol__route .Block3d, .SiteIntro__viewWork .Block3d {
+  animation-name: floatingButtonAnimation;
+  animation-duration: 4s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out; }
+
+@keyframes floatingButtonAnimation {
+  0% {
+    transform: translate3d(0, 0, 0rem); }
+  50% {
+    transform: translate3d(0, 0, -1.5rem); }
+  100% {
+    transform: translate3d(0, 0, 0rem); } }
+
 /* LEFT SIDE LAYOUT AREA */
 .ProjectView {
   margin-top: 2rem;
@@ -297,7 +303,23 @@ h4 {
   vertical-align: top; }
 
 .ProjectView__pic {
-  margin-bottom: 6rem; }
+  margin-bottom: 4.5rem; }
+
+.ProjectView__pic--mobile:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.1;
+  transform: translate3d(0, 0, -14rem);
+  z-index: -999;
+  pointer-events: none; }
+
+.ProjectView__pic--margin {
+  margin-left: 4.5rem; }
 
 /* RIGHT SIDE DESCRIPTION PANEL */
 .ProjectDesc {
@@ -314,7 +336,7 @@ h4 {
   /* should match width of App__wrapper for best cube appearance */ }
 
 .ProjectDesc__content {
-  top: 2rem;
+  top: 0;
   left: calc(50% + 20.4rem);
   width: 17rem;
   position: absolute;
@@ -326,9 +348,8 @@ h4 {
 
 .ProjectDesc__content__text {
   display: block; }
-
-.ProjectDesc__content__text .Block3d__content {
-  padding: 0.75rem 1.4rem; }
+  .ProjectDesc__content__text .Block3d__content {
+    padding: 0.75rem 1.4rem; }
 
 .ProjectDesc__content__note--technology {
   margin-top: 0.75rem;

@@ -92,7 +92,6 @@ const Block3d = React.createClass({
           transform: this.applyZTranslation(),
           animationDelay: this.props.animationDelay
           }}>
-          {/* shading is expensive - <div className='Block3d__shading' style={{opacity: Math.abs(this.props.z/40)}}></div> */}
           <div className={contentClasses}>
             {this.props.children}
           </div>

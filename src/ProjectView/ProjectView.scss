@@ -1,3 +1,5 @@
+@import '../scss/shared.scss';
+
 /* LEFT SIDE LAYOUT AREA */
 
 .ProjectView {
@@ -9,7 +11,17 @@
 }
 
 .ProjectView__pic {
-  margin-bottom: 6rem;
+  margin-bottom: 4.5rem;
+}
+
+.ProjectView__pic--mobile {
+  &:before {
+    @include blockShadow(-14rem);
+  }
+}
+
+.ProjectView__pic--margin {
+  margin-left: 4.5rem;
 }
 
 
@@ -31,7 +43,7 @@
 }
 
 .ProjectDesc__content {
-  top: 2rem;
+  top: 0;
   left: calc(50% + 20.4rem);
   width: 17rem;
   position: absolute;
@@ -39,17 +51,21 @@
   transform: translate3d(-50%,0,0);
 }
 
-.ProjectDesc__content__title .Block3d__content {
-  padding: 0.75rem 1.3rem;
-}
+.ProjectDesc__content__title {
 
+  .Block3d__content {
+    padding: 0.75rem 1.3rem;
+  }
+}
 
 .ProjectDesc__content__text {
   display: block;
+
+  .Block3d__content {
+    padding: 0.75rem 1.4rem;
+  }
 }
-.ProjectDesc__content__text .Block3d__content {
-  padding: 0.75rem 1.4rem;
-}
+
 
 
 

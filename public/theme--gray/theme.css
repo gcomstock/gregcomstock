@@ -100,34 +100,34 @@
 /* TODO: be smarter about calculating these values later...keep it loose for now */
 
 .Block3d__content {
-  border: 1px solid rgb(235,235,235);
+  /*outline: 1px solid rgb(235,235,235);*/
   background-color: rgb(255,255,255);
 }
 .Block3d__content--14 {
-  border: 1px solid rgb(165,165,165);
+  /*outline: 1px solid rgb(165,165,165);*/
   background-color: rgb(192,192,192);
 }
 .Block3d__content--12 {
-  border: 1px solid rgb(175,175,175);
+  /*outline: 1px solid rgb(175,175,175);*/
   background-color: rgb(201,201,201);
 }
 .Block3d__content--10 {
-  border: 1px solid rgb(185,185,185);
+  /*outline: 1px solid rgb(185,185,185);*/
   background-color: rgb(210,210,210);
 }
 .Block3d__content--8 {
-  border: 1px solid rgb(195,195,195);
+  /*outline: 1px solid rgb(195,195,195);*/
   background-color: rgb(219,219,219);
 }
 .Block3d__content--6 {
-  border: 1px solid rgb(205,205,205);
+  /*outline: 1px solid rgb(205,205,205);*/
   background-color: rgb(228,228,228);
 }
 .Block3d__content--4 {
-  border: 1px solid rgb(215,215,215);
+  /*outline: 1px solid rgb(215,215,215);*/
   background-color: rgb(237,237,237);
 }
 .Block3d__content--2 {
-  border: 1px solid rgb(225,225,225);
+  /*outline: 1px solid rgb(225,225,225);*/
   background-color: rgb(246,246,246);
 }
