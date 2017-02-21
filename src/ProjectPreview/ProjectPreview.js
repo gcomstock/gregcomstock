@@ -22,18 +22,21 @@ export const ProjectPreview = React.createClass({
           <Block3d cssClass='ProjectPreview__leftCol__snippet' width='100%' height='auto' depth='8' z='-6'>
             <p>{this.props.snippet}</p>
           </Block3d>
-          <Block3d cssClass='ProjectPreview__leftCol__route' route={this.props.route} width='auto' height='auto' depth='1' z='0' y='-0.75' x='0'>
+          <Block3d cssClass='ProjectPreview__leftCol__route' route={this.props.route} width='auto' height='auto' depth='1' z='0' y='1.5' x='0'>
             <h2>learn more</h2>
           </Block3d>
         </div>
 
         <div className='ProjectPreview__rightCol'>
           <Block3d width='100%' depth='14' z='0'>
+            <img width='100%' src={this.props.thumbnailPath} alt='portfolio'/>
+            {/*
             <div className='Block3d__content__imgFrame' style={{
               width: '21rem',
               height: '13rem',
               backgroundImage: 'url(' + this.props.thumbnailPath + ')'
             }}></div>
+            */}
           </Block3d>
         </div>
       </div>

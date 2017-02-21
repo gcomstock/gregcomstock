@@ -11,6 +11,7 @@ import { PandoraConsts } from '../Projects/Project-pandora';
 import { PandoraWin10Consts } from '../Projects/Project-pandoraWin10';
 import { ChristyNatsumiConsts } from '../Projects/Project-christynatsumi';
 import { RiddickartConsts } from '../Projects/Project-riddickart';
+import { ScreensimConsts } from '../Projects/Project-screensim';
 
 
 
@@ -96,6 +97,13 @@ const WorkView = React.createClass({
               title={RiddickartConsts.TITLE}
               snippet={RiddickartConsts.SNIPPET}
               thumbnailPath={RiddickartConsts.THUMBNAIL_PATH}
+            />
+
+            <ProjectPreview
+              route={ScreensimConsts.ROUTE}
+              title={ScreensimConsts.TITLE}
+              snippet={ScreensimConsts.SNIPPET}
+              thumbnailPath={ScreensimConsts.THUMBNAIL_PATH}
             />
 
           </div>
