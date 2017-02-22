@@ -30,12 +30,12 @@ export const PandoraAdsConsts = Object.freeze({
   SNIPPET: 'I have been closely tied to the display ad workflow during my tenure at Pandora. On Pandora.com, we had a unique opportunity to do things that have never been done before with display advertising.',
   THUMBNAIL_PATH: 'work/pandora-ads/tn.jpg',
   TEXT: [
-    'Display ads on Pandora.com now have the ability to re-color key areas of the UI, creating an immersive, branded experience without obstructing a user from interacting with the site. This is accomplished by an internal tool that I authored that allows designers to upload, position, and add interactivity to their assets, without ever touching code.'
+    'Display ads on Pandora.com now have the ability to re-color key areas of the UI, creating an immersive, branded experience without obstructing a user from interacting with the site. This is accomplished by an internal tool that I authored that allows designers to size, position, and add interactivity to their assets, without ever touching code.'
   ],
   RESPONSIBILITIES: [
     'Work closely with designers to build tools they need',
-    'Hands on the display ad workflow from Photoshop templates to rendering code in the client',
-    'Ensure 3rd party tracking and viewability of all display ads',
+    'Hands on the display ad workflow from Photoshop templates to rendering code in the web client',
+    'Ensure 3rd party tracking and view-ability of all display ads',
     'Establishment of guidelines and best practices'
   ],
   TECHNOLOGIES: [
