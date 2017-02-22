@@ -1,5 +1,46 @@
+.App__body__scrollable__wrapper__leftFrame .Block3d__content,
+.App__body__scrollable__wrapper__rightFrame .Block3d__content {
+  background-image: url(bg-8x8--back.png);
+  background-size: 4px;
+}
+
+.App__header {
+  background-color: #ccc;
+}
+
+/* main bg */
+.App__body__scrollable {
+  color: #333;
+  background-color: rgb(150,150,150);
+  background-image: url(siteIntro__bg.png), url(bg-8x8.png);
+  background-size: 50%, 4px;
+}
+
+
+/* wrapper floor bg */
+.App__body__scrollable__wrapper__floor {
+  background-image: url(bg-10x10.png);
+  background-size: 5px;
+  background-color: rgb(192,192,192);
+}
+
+
+.SiteIntro__title__subtitle h1 {
+  color: #222;
+  text-shadow:
+    -0.05rem -0.05rem 0 #909090,
+    0.05rem -0.05rem 0 #909090,
+    -0.05rem 0.05rem 0 #909090,
+    0.05rem 0.05rem 0 #909090;
+}
+
+
+/* TODO: each theme use same font family name so we declare names outside of themes? */
+
+/* FONT STYLES */
+
 @font-face {
-  font-family: 'bebas-neue--regular';
+  font-family: 'title';
   src: url('bebasneue_regular-webfont.woff2') format('woff2'),
   url('bebasneue_regular-webfont.woff') format('woff');
   font-weight: normal;
@@ -7,7 +48,7 @@
 }
 
 @font-face {
-  font-family: 'bebas-neue--light';
+  font-family: 'title--light';
   src: url('bebasneue_light-webfont.woff2') format('woff2'),
   url('bebasneue_light-webfont.woff') format('woff');
   font-weight: normal;
@@ -15,7 +56,7 @@
 }
 
 @font-face {
-  font-family: 'bebas-neue--bold';
+  font-family: 'title--bold';
   src: url('bebasneue_bold-webfont.woff2') format('woff2'),
   url('bebasneue_bold-webfont.woff') format('woff');
   font-weight: normal;
@@ -23,7 +64,7 @@
 }
 
 @font-face {
-  font-family: 'bebas-neue--book';
+  font-family: 'title--book';
   src: url('bebasneue_book-webfont.woff2') format('woff2'),
   url('bebasneue_book-webfont.woff') format('woff');
   font-weight: normal;
@@ -32,46 +73,20 @@
 
 
 
-.App__wrapper__leftFrame .Block3d__content,
-.App__wrapper__rightFrame .Block3d__content {
-  background-image: url('bg.png');
-}
-
-.App__header {
-  background-image: url('diagonal.png');
-  border-bottom: 1px dotted red;
-  background-color: #111;
-  display: none;
-}
-
-
-.App__body {
-  background-color: rgb(180,180,180);
-  background-image: url(bg.png);
-  color: #333;
-}
-
-
 
 /* BLOCK 3D STYLES */
-
-.Block3d {
-}
-
-.Block3d:hover {
-}
-
 
 .Block3d__face--top {
   background-color: rgb(220,220,220);
 }
-
-
+.Block3d__face--bottom {
+  background-color: rgb(190,190,190);
+  border-left: 1px solid rgb(150,150,150);
+  border-right: 1px solid rgb(150,150,150);
+  border-bottom: 4px solid #888; /* bottom border */
+}
 .Block3d__face--left,
 .Block3d__face--right {
-  /*border-top: 1px solid red;*/
-  /*border-bottom: 1px solid red;*/
-
   background-color: rgb(200,200,200);
 }
 .Block3d__face--right {
@@ -82,74 +97,37 @@
 }
 
 
-.Block3d__face--bottom {
-  background-color: rgb(190,190,190);
-  border-left: 1px solid rgb(150,150,150);
-  border-right: 1px solid rgb(150,150,150);
-  border-bottom: 4px solid #888; /* bottom border */
-}
-
-
 /* TODO: be smarter about calculating these values later...keep it loose for now */
 
 .Block3d__content {
-  border: 1px solid rgb(235,235,235);
+  /*outline: 1px solid rgb(235,235,235);*/
   background-color: rgb(255,255,255);
 }
-.Block3d__content--12 {
-  border: 1px solid rgb(175,175,175);
-  background-color: rgb(213,213,213);
-}
-.Block3d__content--10 {
-  border: 1px solid rgb(185,185,185);
-  background-color: rgb(220,220,220);
-}
-.Block3d__content--8 {
-  border: 1px solid rgb(195,195,195);
-  background-color: rgb(227,227,227);
-}
-.Block3d__content--6 {
-  border: 1px solid rgb(205,205,205);
-  background-color: rgb(234,234,234);
-}
-.Block3d__content--4 {
-  border: 1px solid rgb(215,215,215);
-  background-color: rgb(241,241,241);
-}
-.Block3d__content--2 {
-  border: 1px solid rgb(225,225,225);
-  background-color: rgb(248,248,248);
-}
-
-
-/*
-.Block3d__content {
-  border: 1px solid rgb(235,235,235);
-  background-color: rgb(255,255,255);
+.Block3d__content--14 {
+  /*outline: 1px solid rgb(165,165,165);*/
+  background-color: rgb(192,192,192);
 }
 .Block3d__content--12 {
-  border: 1px solid rgb(175,175,175);
-  background-color: rgb(195,195,195);
+  /*outline: 1px solid rgb(175,175,175);*/
+  background-color: rgb(201,201,201);
 }
 .Block3d__content--10 {
-  border: 1px solid rgb(185,185,185);
-  background-color: rgb(205,205,205);
+  /*outline: 1px solid rgb(185,185,185);*/
+  background-color: rgb(210,210,210);
 }
 .Block3d__content--8 {
-  border: 1px solid rgb(195,195,195);
-  background-color: rgb(215,215,215);
+  /*outline: 1px solid rgb(195,195,195);*/
+  background-color: rgb(219,219,219);
 }
 .Block3d__content--6 {
-  border: 1px solid rgb(205,205,205);
-  background-color: rgb(225,225,225);
+  /*outline: 1px solid rgb(205,205,205);*/
+  background-color: rgb(228,228,228);
 }
 .Block3d__content--4 {
-  border: 1px solid rgb(215,215,215);
-  background-color: rgb(235,235,235);
+  /*outline: 1px solid rgb(215,215,215);*/
+  background-color: rgb(237,237,237);
 }
 .Block3d__content--2 {
-  border: 1px solid rgb(225,225,225);
-  background-color: rgb(245,245,245);
+  /*outline: 1px solid rgb(225,225,225);*/
+  background-color: rgb(246,246,246);
 }
-*/
-
