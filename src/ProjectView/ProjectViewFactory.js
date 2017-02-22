@@ -27,6 +27,18 @@ export default function projectViewFactory(WrappedComponent, projectData) {
       }, 600);
     },
 
+    renderLaunchButton() {
+      if (projectData.EXTERNAL_URL) {
+        return (
+          <div className='ProjectDesc__content__buttonWrapper'>
+            <Block3d cssClass='ProjectDesc__content__buttonWrapper__button button' externalUrl={projectData.EXTERNAL_URL} width='auto' height='auto' depth='1' z='0'>
+              <h3>launch project</h3>
+            </Block3d>
+          </div>
+        )
+      }
+    },
+
     render() {
       const App__body__scrollable__wrapper = classNames(
         'App__body__scrollable__wrapper', {
@@ -91,11 +103,7 @@ export default function projectViewFactory(WrappedComponent, projectData) {
                 </Block3d>
               </div>
 
-              <div className='ProjectDesc__content__buttonWrapper'>
-                <Block3d cssClass='ProjectDesc__content__buttonWrapper__button button' externalUrl={projectData.EXTERNAL_URL} width='auto' height='auto' depth='1' z='0'>
-                  <h3>launch project</h3>
-                </Block3d>
-              </div>
+              {this.renderLaunchButton()}
             </div>
           </div>
 

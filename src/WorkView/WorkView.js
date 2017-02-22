@@ -8,6 +8,7 @@ import { ProjectPreview } from '../ProjectPreview/ProjectPreview';
 
 
 import { PandoraConsts } from '../Projects/Project-pandora';
+import { PandoraAdsConsts } from '../Projects/Project-pandora-ads';
 import { PandoraWin10Consts } from '../Projects/Project-pandoraWin10';
 import { ChristyNatsumiConsts } from '../Projects/Project-christynatsumi';
 import { RiddickartConsts } from '../Projects/Project-riddickart';
@@ -76,6 +77,13 @@ const WorkView = React.createClass({
               title={PandoraConsts.TITLE}
               snippet={PandoraConsts.SNIPPET}
               thumbnailPath={PandoraConsts.THUMBNAIL_PATH}
+            />
+
+            <ProjectPreview
+              route={PandoraAdsConsts.ROUTE}
+              title={PandoraAdsConsts.TITLE}
+              snippet={PandoraAdsConsts.SNIPPET}
+              thumbnailPath={PandoraAdsConsts.THUMBNAIL_PATH}
             />
 
             <ProjectPreview
