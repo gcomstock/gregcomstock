@@ -38,8 +38,8 @@
   z-index: 9999;
   pointer-events: none;
 
-  perspective-origin: 50% 80%; /* x-center y-top */
-  perspective: 50rem;          /* should match width of App__wrapper for best cube appearance */
+  perspective-origin: 50% 80%; // x-center y-top
+  perspective: 50rem;          // should match width of App__wrapper for best cube appearance
 }
 
 .ProjectDesc__content {

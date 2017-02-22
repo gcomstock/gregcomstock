@@ -32,55 +32,41 @@
 .ProjectPreview__leftCol__route {
   margin: 0 1.35rem 0 0;
   cursor: pointer;
-}
-.ProjectPreview__leftCol__route .Block3d {
-  @extend .floatingButton;
-}
 
+  .Block3d {
+    @extend .floatingButton;
+  }
 
-/* arrow */
-.ProjectPreview__leftCol__route h2:after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: -0.44rem;
-  margin-top: -0.22rem;
-  width: 1rem;
+  .Block3d__content {
+    padding: 0.6rem 1rem 0.6rem 0.6rem;
+    box-shadow: $buttonBoxShadow;
+    transition: $buttonHoverTransition;
+  }
 
-  border-top: 0.22rem solid transparent;
-  border-bottom: 0.22rem solid transparent;
-  border-left: 0.28rem solid rgb(180,0,0);
-}
-/* arrow hover */
-.ProjectPreview__leftCol__route:hover h2:after {
-  border-left: 0.3rem solid #fff;
-  transition: border-color 100ms linear;
-}
+  h2 {
+    transition: $buttonHoverTransition;
+  }
 
+  h2:after {
+    @include rightArrow(0.22);
+    transition: $buttonHoverTransition;
+  }
 
-/* background */
-.ProjectPreview__leftCol__route .Block3d__content {
-  padding: 0.6rem 1rem 0.6rem 0.6rem;
-  border-width: 3px;
-  border-color: #fff;
-  transition: background-color 100ms linear, opacity 450ms cubic-bezier(0.550, 0.055, 0.675, 0.190);
-}
-/* background hover */
-.ProjectPreview__leftCol__route:hover .Block3d__content {
-  background-color: rgb(180,0,0);
-}
+  // shadow
+  &:before {
+    @include blockShadow(-14rem);
+  }
 
+  &:hover {
+    // background + border
+    .Block3d__content { background-color: $highlightColor; }
 
-/* text hover */
-.ProjectPreview__leftCol__route:hover h2 {
-  color: #fff;
-  transition: color 100ms linear;
-}
+    // text
+    h2 { color: #fff; }
 
-
-/* shadow */
-.ProjectPreview__leftCol__route:before {
-  @include blockShadow(-14rem);
+    // arrow
+    h2:after { border-left-color: #fff; }
+  }
 }
 
 /* END ROUTE BUTTON STYLES */

@@ -1,6 +1,8 @@
 
+$highlightColor: rgb(180,0,0);
 $buttonBoxShadow: inset 0 0 0 0.1rem #fff;
-$buttonHoverTransition: background-color 100ms linear, stroke 100ms linear;
+// button background, text, outline, and arrow
+$buttonHoverTransition: background-color 100ms linear, color 100ms linear, stroke 100ms linear, border-color 100ms linear;
 
 
 
@@ -16,6 +18,19 @@ $buttonHoverTransition: background-color 100ms linear, stroke 100ms linear;
   transform: translate3d(0,0,$depth);
   z-index: -999;
   pointer-events: none;
+}
+
+@mixin rightArrow($size) {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -($size*2)+rem;
+  margin-top: -($size/1.5)+rem;
+  width: 1rem;
+
+  border-top: $size+rem solid transparent;
+  border-bottom: $size+rem solid transparent;
+  border-left: ($size*1.25)+rem solid $highlightColor;
 }
 
 
@@ -43,9 +58,9 @@ $buttonHoverTransition: background-color 100ms linear, stroke 100ms linear;
   cursor: pointer;
   pointer-events: all;
 
-  &:before {
-    @include blockShadow(-7rem);
-  }
+  //&:before {
+  //  @include blockShadow(-14rem);
+  //}
 
   .Block3d {
     @extend .floatingButton;
@@ -54,36 +69,27 @@ $buttonHoverTransition: background-color 100ms linear, stroke 100ms linear;
   // background
   .Block3d__content {
     padding: 0.6rem 1rem 0.6rem 0.6rem;
-    box-shadow: inset 0 0 0 0.1rem #fff;
-    transition: background-color 100ms linear, opacity 450ms cubic-bezier(0.550, 0.055, 0.675, 0.190);
+    box-shadow: $buttonBoxShadow;
+    transition: $buttonHoverTransition;
   }
 
   // arrow
   h3:after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    right: -0.44rem;
-    margin-top: -0.22rem;
-    width: 1rem;
-
-    border-top: 0.22rem solid transparent;
-    border-bottom: 0.22rem solid transparent;
-    border-left: 0.28rem solid rgb(180,0,0);
+    @include rightArrow(0.22);
   }
 
   &:hover {
     .Block3d__content {
-      background-color: rgb(180,0,0);
+      background-color: $highlightColor;
     }
 
     h3 {
       color: #fff;
-      transition: color 100ms linear;
+      transition: $buttonHoverTransition;
     }
     h3:after {
-      border-left: 0.3rem solid #fff;
-      transition: border-color 100ms linear;
+      border-left-color: #fff;
+      transition: $buttonHoverTransition;
     }
   }
 }
