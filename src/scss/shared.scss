@@ -1,3 +1,9 @@
+
+$buttonBoxShadow: inset 0 0 0 0.1rem #fff;
+$buttonHoverTransition: background-color 100ms linear, stroke 100ms linear;
+
+
+
 @mixin blockShadow($depth) {
   content: '';
   position: absolute;
@@ -37,6 +43,10 @@
   cursor: pointer;
   pointer-events: all;
 
+  &:before {
+    @include blockShadow(-7rem);
+  }
+
   .Block3d {
     @extend .floatingButton;
   }
@@ -75,10 +85,5 @@
       border-left: 0.3rem solid #fff;
       transition: border-color 100ms linear;
     }
-  }
-
-  // shadow
-  &:before {
-    @include blockShadow(-7rem);
   }
 }

@@ -59,9 +59,31 @@
   pointer-events: all;
 
   .Block3d__content {
-    background-image: url(../../public/x.png);
-    background-size: 100%;
     padding: 0;
+    box-shadow: $buttonBoxShadow;
+    transition: $buttonHoverTransition;
+  }
+
+  // TODO: get smarter with svg management
+  #close {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  #close1,
+  #close2 {
+    stroke: rgb(180,0,0);
+    transition: stroke 100ms linear;
+  }
+
+  &:hover {
+    .Block3d__content {
+      background-color: rgb(180,0,0);
+    }
+
+    #close1,
+    #close2 {
+      stroke: rgb(255,255,255);
+    }
   }
 }
 
@@ -112,5 +134,6 @@
 
 
 .ProjectDesc__content__buttonWrapper {
+  margin-top: 0.75rem;
   text-align: center;
 }

@@ -5,7 +5,7 @@
   display: inline-block;
   vertical-align: top;
   backface-visibility: hidden;
-  height: 100%;
+  //height: 100%;
 }
 
 .Block3d {
@@ -15,8 +15,6 @@
 
 .Block3d__content {
   transform: translateZ(0); /* to prevent flicker */
-  height: 100%; /* always fill the height of the block, which is set in the jsx */
-
   padding: 1.5rem;
 }
 

@@ -71,6 +71,11 @@
   position: absolute;
   z-index: -1;
   transform-style: preserve-3d;
+
+  .Block3d--wrapper,
+  .Block3d__content {
+    height: 100%;
+  }
 }
 .App__body__scrollable__wrapper__leftFrame {
   left: -20rem;
