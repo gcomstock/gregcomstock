@@ -11,7 +11,11 @@ const Block3d = React.createClass({
     cssClass: React.PropTypes.string,
     externalUrl: React.PropTypes.string,
     route: React.PropTypes.string,
-    animationDelay: React.PropTypes.string
+    animationDelay: React.PropTypes.string,
+    noTop: React.PropTypes.bool,
+    noLeft: React.PropTypes.bool,
+    noRight: React.PropTypes.bool,
+    noBottom: React.PropTypes.bool
   },
 
   applyXYTranslation() {
@@ -95,10 +99,10 @@ const Block3d = React.createClass({
           <div className={contentClasses}>
             {this.props.children}
           </div>
-          <div className='Block3d__face Block3d__face--top' style={{height: this.props.depth + 'rem'}}></div>
-          <div className='Block3d__face Block3d__face--left' style={{width: this.props.depth + 'rem'}}></div>
-          <div className='Block3d__face Block3d__face--right' style={{width: this.props.depth + 'rem'}}></div>
-          <div className='Block3d__face Block3d__face--bottom' style={{height: this.props.depth + 'rem'}}></div>
+          { !this.props.noTop && <div className='Block3d__face Block3d__face--top' style={{height: this.props.depth + 'rem'}}></div> }
+          { !this.props.noLeft && <div className='Block3d__face Block3d__face--left' style={{width: this.props.depth + 'rem'}}></div> }
+          { !this.props.noRight && <div className='Block3d__face Block3d__face--right' style={{width: this.props.depth + 'rem'}}></div> }
+          { !this.props.noBottom && <div className='Block3d__face Block3d__face--bottom' style={{height: this.props.depth + 'rem'}}></div> }
         </div>
       </div>
     )

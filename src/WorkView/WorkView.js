@@ -64,10 +64,10 @@ const WorkView = React.createClass({
           <div className={App__body__scrollable__wrapper}>
             <div className='App__body__scrollable__wrapper__floor App__body__scrollable__wrapper__floor--WorkView'></div>
             <div className='App__body__scrollable__wrapper__leftFrame App__body__scrollable__wrapper__leftFrame--WorkView'>
-              <Block3d width='20rem' height='100%' depth='10' z='-4' />
+              <Block3d width='20rem' height='100%' depth='10' z='-4' noTop={true} noLeft={true} />
             </div>
             <div className='App__body__scrollable__wrapper__rightFrame App__body__scrollable__wrapper__rightFrame--WorkView'>
-              <Block3d width='20rem' height='100%' depth='10' z='-4' />
+              <Block3d width='20rem' height='100%' depth='10' z='-4' noTop={true} noRight={true} />
             </div>
 
             <SiteIntro/>

@@ -15,19 +15,19 @@ export const ProjectPreview = React.createClass({
     return (
       <div className='ProjectPreview'>
         <div className='ProjectPreview__leftCol'>
-          <Block3d cssClass='ProjectPreview__leftCol__title' height='auto' depth='10' z='-4'>
+          <Block3d cssClass='ProjectPreview__leftCol__title' height='auto' depth='10' z='-4' noRight={true} noLeft={true}>
             <h1>{this.props.title}</h1>
           </Block3d>
-          <Block3d cssClass='ProjectPreview__leftCol__snippet' width='100%' height='auto' depth='8' z='-6'>
+          <Block3d cssClass='ProjectPreview__leftCol__snippet' width='100%' height='auto' depth='8' z='-6' noTop={true} noRight={true} noLeft={true}>
             <p className='snippet'>{this.props.snippet}</p>
           </Block3d>
-          <Block3d cssClass='ProjectPreview__leftCol__route' route={this.props.route} width='auto' height='auto' depth='1' z='0' y='1.5' x='0'>
+          <Block3d cssClass='ProjectPreview__leftCol__route' route={this.props.route} width='auto' height='auto' depth='1' z='0' y='1.5' x='0' noRight={true} noLeft={true}>
             <h2>learn more</h2>
           </Block3d>
         </div>
 
         <div className='ProjectPreview__rightCol'>
-          <Block3d width='100%' depth='14' z='0'>
+          <Block3d width='100%' depth='14' z='0' noRight={true} noLeft={true}>
             <img width='100%' src={this.props.thumbnailPath} alt='portfolio'/>
             {/*
             <div className='Block3d__content__imgFrame' style={{
