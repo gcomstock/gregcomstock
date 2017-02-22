@@ -15,8 +15,13 @@
   }
 
   p {
-    font-size: 15px;
-    line-height: 28px;
+    font-size: 14px;
+    line-height: 22px;
+
+    &.snippet {
+      font-size: 15px;
+      line-height: 28px;
+    }
   }
   li {
     font-size: 14px;
@@ -37,8 +42,13 @@
     font-size: 24px;
   }
   p {
-    font-size: 14px;
+    font-size: 12px;
     line-height: 26px;
+
+    &.snippet {
+      font-size: 14px;
+      line-height: 26px;
+    }
   }
   li {
     font-size: 12px;

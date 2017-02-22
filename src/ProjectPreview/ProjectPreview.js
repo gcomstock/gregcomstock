@@ -8,7 +8,6 @@ export const ProjectPreview = React.createClass({
     route: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     snippet: PropTypes.string.isRequired,
-    credits: PropTypes.string.isRequired,
     thumbnailPath: PropTypes.string.isRequired
   },
 
@@ -20,7 +19,7 @@ export const ProjectPreview = React.createClass({
             <h1>{this.props.title}</h1>
           </Block3d>
           <Block3d cssClass='ProjectPreview__leftCol__snippet' width='100%' height='auto' depth='8' z='-6'>
-            <p>{this.props.snippet}</p>
+            <p className='snippet'>{this.props.snippet}</p>
           </Block3d>
           <Block3d cssClass='ProjectPreview__leftCol__route' route={this.props.route} width='auto' height='auto' depth='1' z='0' y='1.5' x='0'>
             <h2>learn more</h2>

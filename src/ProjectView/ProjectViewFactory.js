@@ -48,21 +48,23 @@ export default function projectViewFactory(WrappedComponent, projectData) {
 
           <div className='ProjectDesc'>
             <div className={ProjectDesc__content}>
-              <Block3d cssClass='ProjectDesc__content__title' width='100%' height='auto' depth='2' z='-2'>
+              <Block3d cssClass='ProjectDesc__content__x' route={'/'} width='1.5rem' height='1.5rem' depth='0.25' z='0' />
+
+              <Block3d cssClass='ProjectDesc__content__title' width='100%' height='auto' depth='2' z='0'>
                 <h2>{ projectData.TITLE }</h2>
               </Block3d>
 
-              <Block3d cssClass='ProjectDesc__content__text' width='100%' height='auto' depth='1' z='-3'>
+              <Block3d cssClass='ProjectDesc__content__text' width='100%' height='auto' depth='1' z='-1'>
                 {projectData.TEXT.map((item) => {
                   return <p>{item}</p>;
                 })}
               </Block3d>
 
               <div className='ProjectDesc__content__note--responsibilities'>
-                <Block3d cssClass='ProjectDesc__content__note__title' width='100%' depth='2' z='-2'>
+                <Block3d cssClass='ProjectDesc__content__note__title' width='100%' depth='2' z='0'>
                   <h3>key responsibilities</h3>
                 </Block3d>
-                <Block3d cssClass='ProjectDesc__content__note__text' width='100%' depth='1' z='-3'>
+                <Block3d cssClass='ProjectDesc__content__note__text' width='100%' depth='1' z='-1'>
                   <ul>
                     {projectData.RESPONSIBILITIES.map((item) => {
                       return <li>{item}</li>;
@@ -72,15 +74,21 @@ export default function projectViewFactory(WrappedComponent, projectData) {
               </div>
 
               <div className='ProjectDesc__content__note--technology'>
-                <Block3d cssClass='ProjectDesc__content__note__title' width='100%' depth='2' z='-2'>
+                <Block3d cssClass='ProjectDesc__content__note__title' width='100%' depth='2' z='0'>
                   <h3>technology</h3>
                 </Block3d>
-                <Block3d cssClass='ProjectDesc__content__note__text' width='100%' depth='1' z='-3'>
+                <Block3d cssClass='ProjectDesc__content__note__text' width='100%' depth='1' z='-1'>
                   <ul>
                     {projectData.TECHNOLOGIES.map((item) => {
                       return <li>{item}</li>;
                     })}
                   </ul>
+                </Block3d>
+              </div>
+
+              <div className='ProjectDesc__content__buttonWrapper'>
+                <Block3d cssClass='button ProjectDesc__content__launch' externalUrl={'//riddickart.com'} width='auto' height='auto' depth='1' z='-1' y='0.75' x='0'>
+                  <h3>launch project</h3>
                 </Block3d>
               </div>
             </div>
