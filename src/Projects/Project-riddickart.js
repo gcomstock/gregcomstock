@@ -55,6 +55,7 @@ export const RiddickartLayout = React.createClass({
 export const RiddickartConsts = Object.freeze({
   ROUTE: '/project/riddickart',
   TITLE: 'riddickart.com',
+  EXTERNAL_URL: '//riddickart.com',
   SNIPPET: 'Riddick has been creating grotesquely gorgeous illustrations since 1991, and has garnered a devoted following within the death metal community. I have been maintaining his site since 2009, occasionally adding new features and visual refreshes.',
   THUMBNAIL_PATH: 'work/riddickart/tn.jpg',
   TEXT: [

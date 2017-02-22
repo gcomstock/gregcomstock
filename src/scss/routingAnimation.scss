@@ -65,7 +65,9 @@ $opacityIn:  opacity 450ms 100ms cubic-bezier(0.215, 0.610, 0.355, 1.000); /* ea
 
   // main block
   .ProjectDesc__content__title,
-  .ProjectDesc__content__text {
+  .ProjectDesc__content__text,
+  .ProjectDesc__content__x,
+  .ProjectDesc__content__buttonWrapper__button {
     transition: $transformIn;
   }
 
@@ -90,6 +92,11 @@ $opacityIn:  opacity 450ms 100ms cubic-bezier(0.215, 0.610, 0.355, 1.000); /* ea
   .Block3d__face,
   .Block3d__content {
     opacity: 0;
+  }
+
+  .ProjectDesc__content__x,
+  .ProjectDesc__content__buttonWrapper__button {
+    transform: translate3d(0,0,-4rem);
   }
 
   .ProjectDesc__content__title,
@@ -118,6 +125,12 @@ $opacityIn:  opacity 450ms 100ms cubic-bezier(0.215, 0.610, 0.355, 1.000); /* ea
   .Block3d__content {
     transition: $opacityOut;
     opacity: 0;
+  }
+
+  .ProjectDesc__content__x,
+  .ProjectDesc__content__buttonWrapper__button {
+    transition: $transformOut;
+    transform: translate3d(0,0,4rem);
   }
 
   .ProjectDesc__content__title,

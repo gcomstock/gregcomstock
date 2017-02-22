@@ -92,7 +92,7 @@ export default function projectViewFactory(WrappedComponent, projectData) {
               </div>
 
               <div className='ProjectDesc__content__buttonWrapper'>
-                <Block3d cssClass='button ProjectDesc__content__launch' externalUrl={'//riddickart.com'} width='auto' height='auto' depth='1' z='-1'>
+                <Block3d cssClass='ProjectDesc__content__buttonWrapper__button button' externalUrl={projectData.EXTERNAL_URL} width='auto' height='auto' depth='1' z='0'>
                   <h3>launch project</h3>
                 </Block3d>
               </div>

@@ -37,7 +37,7 @@ $buttonHoverTransition: background-color 100ms linear, color 100ms linear, strok
 .floatingButton {
   animation-name: floatingButtonAnimation;
   animation-duration: 4s;
-  animation-delay: 1s; // to allow routing animation to complete
+  animation-delay: 1.5s; // to allow routing animation to complete
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }

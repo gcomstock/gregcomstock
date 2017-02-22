@@ -87,6 +87,7 @@ export const ChristynNatsumiLayout = React.createClass({
 export const ChristyNatsumiConsts = Object.freeze({
   ROUTE: '/project/christynatsumi',
   TITLE: 'christy natsumi',
+  EXTERNAL_URL: 'https://christynatsumi.com',
   SNIPPET: 'A San Francisco based independent design studio that creates modern jewelry essentials. I design, build, and maintain all of the site\'s front-end, adding updates regularly in my spare time. I also shoot most of the photography.',
   THUMBNAIL_PATH: 'work/christynatsumi/tn.jpg',
   TEXT: [
