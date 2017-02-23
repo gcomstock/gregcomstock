@@ -32,3 +32,17 @@
     background-size: 150%, 4px;
   }
 }
+
+
+
+
+.App__body__scrollable__wrapper__floor {
+
+
+  @media screen and (max-width: $breakpoint-mobile){
+    background-image: none;
+    background-color: rgba(192,192,192, 0.5);
+  }
+}
+
+

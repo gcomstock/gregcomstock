@@ -9,6 +9,11 @@
   display: inline-block;
   text-align: right;
   vertical-align: top;
+
+  @media screen and (max-width: $breakpoint-mobile){
+    width: 100%;
+    text-align: left;
+  }
 }
 
 .ProjectPreview__rightCol {
@@ -16,6 +21,11 @@
   display: inline-block;
   text-align: left;
   vertical-align: top;
+
+  @media screen and (max-width: $breakpoint-mobile){
+    width: 100%;
+    text-align: left;
+  }
 }
 
 .ProjectPreview__leftCol__snippet {
@@ -33,6 +43,10 @@
   margin: 0 1.35rem 0 0;
   cursor: pointer;
 
+  @media screen and (max-width: $breakpoint-mobile){
+    margin: 1.5rem;
+  }
+
   .Block3d {
     @extend .floatingButton;
   }
@@ -41,6 +55,10 @@
     padding: 0.6rem 1rem 0.6rem 0.6rem;
     box-shadow: $buttonBoxShadow;
     transition: $buttonHoverTransition;
+
+    @media screen and (max-width: $breakpoint-mobile){
+      padding: 1.2rem 2rem 1.2rem 1.2rem;
+    }
   }
 
   h2 {
@@ -50,6 +68,10 @@
   h2:after {
     @include rightArrow(0.22);
     transition: $buttonHoverTransition;
+
+    @media screen and (max-width: $breakpoint-mobile){
+      @include rightArrow(0.36);
+    }
   }
 
   // shadow

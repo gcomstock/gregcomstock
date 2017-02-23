@@ -32,8 +32,8 @@ $siteIntroHeight--mobile: 60vh;
   position: absolute;
   top: 50%;
   right: -($size*2)+rem;
-  margin-top: -($size/1.5)+rem;
-  width: 1rem;
+  margin-top: -($size)+rem;
+  width: ($size*4)+rem;
 
   border-top: $size+rem solid transparent;
   border-bottom: $size+rem solid transparent;
