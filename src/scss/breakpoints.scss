@@ -1,3 +1,4 @@
+@import 'shared.scss';
 
 
 @media screen and (max-width: 1800px){
@@ -75,6 +76,11 @@
   }
 }
 
+@media screen and (max-width: $breakpoint-mobile){
+  html {
+    font-size: 16px;
+  }
+}
 
 
 /**
@@ -83,34 +89,43 @@
  *  Mobile doesn't work well with the 3d effect, so lets bring everything into the doc flow and make .App scrollable
  */
 
-@media screen and (max-width: 1020px){
+@media screen and (max-width: $breakpoint-mobile){
 
-  .App {
+  body {
+    overflow: visible;
+  }
+  
+
+  // the new scrollable element
+  .App__body {
+    height: 100%;
     overflow-y: scroll;
-    overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
   }
 
+  // no longer scrollable - we .ProjectDesc to scroll with this, so we will now scroll its parent
   .App__body__scrollable {
     position: relative;
-    height: auto;
-    /* -webkit-perspective-origin: 50% 80%; */
-    /* perspective-origin: 50% 80%; */
-    /* -webkit-perspective: 50rem; */
-    /* perspective: 50rem; */
     perspective: none;
     overflow-y: auto;
-    overflow-x: hidden;
   }
 
+  // this is now 100% because we don't care about App__body__scrollable__wrapper__leftFrame/rightFrame visuals
   .App__body__scrollable__wrapper {
-    width: 100%;
+    width: 100%
   }
 
+  // ideally wont be rendered at all, but hid for now
   .App__body__scrollable__wrapper__leftFrame,
   .App__body__scrollable__wrapper__rightFrame {
     display: none;
   }
+
+
+
+
+
+
 
   .ProjectDesc {
     perspective: none;

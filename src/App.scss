@@ -1,3 +1,6 @@
+@import 'scss/shared.scss';
+
+
 .App {
   height: 100%;
 }
@@ -89,5 +92,14 @@
 .App__body__scrollable__wrapper__leftFrame--WorkView,
 .App__body__scrollable__wrapper__rightFrame--WorkView,
 .App__body__scrollable__wrapper__floor--WorkView {
-  top: 80vh;
+  top: $siteIntroHeight;
+
+  @media screen and (max-width: $breakpoint-mobile){
+    top: $siteIntroHeight--mobile;
+  }
+}
+
+
+.App__body__scrollable__wrapper__content {
+
 }

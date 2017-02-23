@@ -27,7 +27,7 @@ export const SiteIntro = React.createClass({
         <div className='SiteIntro__title'>
           { this.populateTitle() }
           <div className='SiteIntro__title__subtitle'>
-            <h1>DESIGN + DEVELOPMENT</h1>
+            DESIGN + DEVELOPMENT
           </div>
         </div>
         <Block3d cssClass='SiteIntro__viewWork' width='auto' height='auto' depth='1' z='0' noRight={true} noLeft={true}>

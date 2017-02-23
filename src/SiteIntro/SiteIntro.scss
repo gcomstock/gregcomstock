@@ -1,18 +1,28 @@
 @import '../scss/shared.scss';
 
 .SiteIntro {
-  width: 100%;
-  height: 80vh;
+  //width: 100%;
+  height: $siteIntroHeight;
   position: relative;
   transform-style: preserve-3d;
   margin-bottom: 10rem;
+
+  @media screen and (max-width: $breakpoint-mobile){
+    margin: 10px;
+    height: $siteIntroHeight--mobile;
+  }
 }
+
 .SiteIntro__title {
   position: absolute;
   text-align: left;
   top: 50%;
   transform-style: preserve-3d;
   transform: translate3d(0,-70%,0);
+
+  @media screen and (max-width: $breakpoint-mobile){
+    transform: translate3d(0,-50%,0);
+  }
 }
 .SiteIntro__title__letter {
   font-family: 'title';
@@ -24,10 +34,21 @@
   &:before {
     @include blockShadow(-6rem);
   }
+
+  @media screen and (max-width: $breakpoint-mobile){
+    font-size: 10vw;
+    line-height: 8vw;
+    margin: 0 1vw 1vw 0;
+  }
 }
 .SiteIntro__title__letter .Block3d__content {
   padding: 1rem 0 0.5rem 0.5rem;
   width: 2.75rem;
+
+  @media screen and (max-width: $breakpoint-mobile){
+    padding: 3vw 0 1.5vw 1.5vw;
+    width: 9vw;
+  }
 }
 
 
@@ -37,6 +58,12 @@
   text-align: left;
   margin-top: 1rem;
   margin-left: 0.55rem;
+
+  @media screen and (max-width: $breakpoint-mobile){
+    font-size: 7vw;
+    margin-top: 1.5vw;
+    margin-left: 1.5vw;
+  }
 }
 
 
@@ -44,11 +71,14 @@
 
 .SiteIntro__viewWork {
   position: absolute;
-  top: calc(80vh - 1.5rem);
+  top: calc(#{$siteIntroHeight} - 1.5rem);
   left: 50%;
   transform: translate3d(-50%,0,0);
   height: auto;
 
+  @media screen and (max-width: $breakpoint-mobile){
+    top: calc(#{$siteIntroHeight--mobile} - 1.5rem);
+  }
 
 
   &:before {

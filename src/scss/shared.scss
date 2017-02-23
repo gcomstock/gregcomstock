@@ -4,6 +4,13 @@ $buttonBoxShadow: inset 0 0 0 0.1rem #fff;
 // button background, text, outline, and arrow
 $buttonHoverTransition: background-color 100ms linear, color 100ms linear, stroke 100ms linear, border-color 100ms linear;
 
+$breakpoint-mobile: 1020px;
+
+
+$siteIntroHeight: 80vh;
+$siteIntroHeight--mobile: 60vh;
+
+
 
 
 @mixin blockShadow($depth) {

@@ -126,8 +126,12 @@ export default function projectViewFactory(WrappedComponent, projectData) {
               </div>
 
 
-              {/* TODO: pass in props (theme?) */}
-              <WrappedComponent />
+              <div className='App__body__scrollable__wrapper__content'>
+
+                {/* TODO: pass in props (theme?) */}
+                <WrappedComponent />
+
+              </div>
 
 
             </div>

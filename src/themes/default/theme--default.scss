@@ -1,0 +1,34 @@
+@import '../../scss/shared.scss';
+
+
+//TODO: move all theme css here...
+
+
+.SiteIntro__title__subtitle {
+  color: #222;
+  text-shadow:
+    -0.05rem -0.05rem 0 #909090,
+    0.05rem -0.05rem 0 #909090,
+    -0.05rem 0.05rem 0 #909090,
+    0.05rem 0.05rem 0 #909090;
+
+
+  @media screen and (max-width: $breakpoint-mobile){
+    text-shadow:
+      -0.5vh -0.5vh 0 #909090,
+      0.5vh -0.5vh 0 #909090,
+      -0.5vh 0.5vh 0 #909090,
+      0.5vh 0.5vh 0 #909090;
+  }
+}
+
+
+
+.App__body__scrollable {
+
+  //  background-size: 50%, 4px;
+
+  @media screen and (max-width: $breakpoint-mobile){
+    background-size: 150%, 4px;
+  }
+}

@@ -7,6 +7,9 @@
 @import '../SiteIntro/SiteIntro.scss';
 
 
+// import all theme files
+@import '../themes/default/theme--default.scss';
+
 // import all shared sass files
 @import 'shared.scss';
 @import 'breakpoints.scss';
