@@ -17,6 +17,13 @@
 // containing element to allow scrollable and non-scrollable content on a view
 .App__body {
   font-size: 0; // so whitespace doesnt mess with inline elements
+
+  // the new scrollable element
+  @media screen and (max-width: $breakpoint-mobile){
+    height: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
 }
 
 

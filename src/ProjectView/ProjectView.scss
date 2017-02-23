@@ -8,6 +8,10 @@
   display: inline-block;
   text-align: left;
   vertical-align: top;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    width: 100%;
+  }
 }
 
 .ProjectView__pic {
@@ -108,6 +112,10 @@
   display: inline-block;
   vertical-align: top;
   width: 6.25rem;
+
+  @media screen and (max-width: $breakpoint-mobile){
+    width: 100%;
+  }
 }
 .ProjectDesc__content__note--responsibilities {
   margin-top: 0.75rem;
@@ -115,6 +123,11 @@
   display: inline-block;
   vertical-align: top;
   width: 9rem;
+
+  @media screen and (max-width: $breakpoint-mobile){
+    width: 100%;
+    margin-right: 0;
+  }
 }
 
 
@@ -130,6 +143,11 @@
 }
 .ProjectDesc__content__note__text .Block3d__content {
   padding: 0.75rem 1.1rem 0.75rem 1.4rem;
+
+  @media screen and (max-width: $breakpoint-mobile){
+    background-color: #eee;
+    padding: 1.5rem;
+  }
 }
 
 
