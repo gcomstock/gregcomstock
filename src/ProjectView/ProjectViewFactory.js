@@ -134,9 +134,7 @@ export default function projectViewFactory(WrappedComponent, projectData) {
               </div>
             </div>
 
-            <div className='App__body__scrollable__footer'>
 
-            </div>
           </div>
         </div>
       )

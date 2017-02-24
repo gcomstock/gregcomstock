@@ -119,15 +119,19 @@ const WorkView = React.createClass({
           <div className='App__body__scrollable__footer'>
             <div className='App__body__scrollable__footer__content'>
               <h2>about me</h2>
-              <div className='App__body__scrollable__footer__content__col'>
-                <p>
-                  asdasdasd sadasd
-                </p>
-              </div>
-              <div className='App__body__scrollable__footer__content__col'>
-                <p>
-                  asdasdasd sadasd
-                </p>
+              <div className='App__body__scrollable__footer__contentWrap'>
+                <div className='App__body__scrollable__footer__content__col'>
+                  <p>
+                    I hold a lifelong passion for good design. With over five years of industry experience as a designer, it became
+                    increasingly important to me to preserve the integrity and vision of a product's design. How a product feels, its inertia,
+                    and its flow, is best expressed and communicated with an understanding of the final implementation. Seeking this knowledge led me down the path of front-end development, and made me realize just how creative code can be!
+                  </p>
+                </div>
+                <div className='App__body__scrollable__footer__content__col'>
+                  <p>
+                    I'm not striving to be the most knowledgeable distributed systems engineer, and most likely won't be the candidate to make sweeping architectural decisions about an application. However, if you're looking for an exceptionally visually sensitive developer that can bring a user interface to life, talk at length with designers about what can and can't be done under what time frames, and always has the user experience at the forefront of their mind, <a href='https://www.linkedin.com/in/gregcomstock/' target='_blank'>we should talk</a>!
+                  </p>
+                </div>
               </div>
             </div>
           </div>

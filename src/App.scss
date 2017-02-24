@@ -71,15 +71,22 @@
 
 .App__body__scrollable__footer__content h2 {
   font-size: 2rem;
+  margin-left: 0.75rem;
+  margin-bottom: 0.5rem;
   text-shadow: -0.05rem -0.05rem 0 #f8f8f8, 0.05rem -0.05rem 0 #f8f8f8, -0.05rem 0.05rem 0 #f8f8f8, 0.05rem 0.05rem 0 #f8f8f8;
+}
+
+.App__body__scrollable__footer__contentWrap {
+  background-color: #f8f8f8;
+  border: 1px solid #d6d6d6;
 }
 
 .App__body__scrollable__footer__content__col {
   display: inline-block;
-  width: 16rem;
-  background-color: #f8f8f8;
-  border: 1px solid #d6d6d6;
+  width: 18.125rem;
+
   padding: 0.75rem;
+  vertical-align: top;
 }
 
 
@@ -95,7 +102,7 @@
   right: 0;
   display: block;
   width: 100%;
-  height: calc(100% + 8rem);
+  height: calc(100% + 10rem);
   transform: translate3d(0,0,-14rem);
 }
 
@@ -108,7 +115,7 @@
 .App__body__scrollable__wrapper__rightFrame {
   top: -10rem;
   width: 20rem;
-  height: 100%;
+  height: calc(100% + 10rem);
   position: absolute;
   z-index: -1;
   transform-style: preserve-3d;
