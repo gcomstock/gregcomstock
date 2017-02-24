@@ -72,11 +72,21 @@
   #close {
     width: 1.5rem;
     height: 1.5rem;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      width: 44px;
+      height: 44px;
+      background-color: $highlightColor;
+    }
   }
   #close1,
   #close2 {
-    stroke: rgb(180,0,0);
+    stroke: $highlightColor;
     transition: stroke 100ms linear;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      stroke: #fff;
+    }
   }
 
   &:hover {

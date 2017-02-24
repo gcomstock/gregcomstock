@@ -13,6 +13,10 @@ export const PandoraLayout = React.createClass({
         <Block3d cssClass='ProjectView__pic' width='100%' height='auto' depth='14' z='0'>
           <img width='100%' src='work/pandora/pandora-2.jpg' alt='portfolio'/>
         </Block3d>
+
+        <Block3d cssClass='ProjectView__pic' width='100%' height='auto' depth='14' z='0'>
+          <img width='100%' src='work/pandora/pandora-3.jpg' alt='portfolio'/>
+        </Block3d>
       </div>
     );
   }

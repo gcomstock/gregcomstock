@@ -49,7 +49,17 @@
   width: 54rem;
   margin: 0 auto;
   transform-style: preserve-3d;
-  padding-bottom: 20rem;
+  padding-bottom: 14rem;
+}
+
+.App__body__scrollable__footer {
+  width: 100%;
+  background-color: #666;
+  border-top: 1px solid #999;
+  position: absolute;
+
+  height: 12rem;
+  margin-top: -12rem;
 }
 
 .App__body__scrollable__wrapper--WorkView {
@@ -64,7 +74,7 @@
   right: 0;
   display: block;
   width: 100%;
-  height: 100%;
+  height: calc(100% + 8rem);
   transform: translate3d(0,0,-14rem);
 }
 
@@ -100,6 +110,7 @@
 .App__body__scrollable__wrapper__rightFrame--WorkView,
 .App__body__scrollable__wrapper__floor--WorkView {
   top: $siteIntroHeight;
+  height: calc(100% - #{$siteIntroHeight});
 
   @media screen and (max-width: $breakpoint-mobile){
     top: $siteIntroHeight--mobile;

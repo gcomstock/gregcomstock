@@ -24,6 +24,10 @@
   background-color: rgb(192,192,192);
 }
 
+.App__body__scrollable__footer {
+  background-image: url(siteIntro__bg.png), url(bg-8x8.png);
+  background-size: 50%, 4px;
+}
 
 .SiteIntro__title__subtitle h1 {
   color: #222;
