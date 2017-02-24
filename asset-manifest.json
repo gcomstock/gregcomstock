@@ -1,8 +1,8 @@
 {
-  "main.css": "static/css/main.fe590dd8.css",
-  "main.css.map": "static/css/main.fe590dd8.css.map",
-  "main.js": "static/js/main.edb11302.js",
-  "main.js.map": "static/js/main.edb11302.js.map",
+  "main.css": "static/css/main.47683a45.css",
+  "main.css.map": "static/css/main.47683a45.css.map",
+  "main.js": "static/js/main.bec768f8.js",
+  "main.js.map": "static/js/main.bec768f8.js.map",
   "static/media/bebasneue_bold-webfont.woff": "static/media/bebasneue_bold-webfont.3099c0ff.woff",
   "static/media/bebasneue_bold-webfont.woff2": "static/media/bebasneue_bold-webfont.9292b8e5.woff2",
   "static/media/bebasneue_book-webfont.woff": "static/media/bebasneue_book-webfont.38bca89b.woff",
@@ -11,5 +11,6 @@
   "static/media/bebasneue_light-webfont.woff2": "static/media/bebasneue_light-webfont.d1c74f03.woff2",
   "static/media/bebasneue_regular-webfont.woff": "static/media/bebasneue_regular-webfont.6b0f86d4.woff",
   "static/media/bebasneue_regular-webfont.woff2": "static/media/bebasneue_regular-webfont.7e245ab7.woff2",
+  "static/media/bio.jpg": "static/media/bio.2d32d5d2.jpg",
   "static/media/siteIntro__bg.png": "static/media/siteIntro__bg.2edf96cd.png"
 }
