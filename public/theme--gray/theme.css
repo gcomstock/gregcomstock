@@ -29,6 +29,18 @@
   background-size: 50%, 4px;
 }
 
+
+.App__body__scrollable__footer__bio {
+  background-image: url(bio.jpg);
+  background-size: 100%;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  border: 0.2rem solid #ddd;
+  display: inline-block;
+}
+
+
 .SiteIntro__title__subtitle h1 {
   color: #222;
   text-shadow:

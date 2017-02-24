@@ -117,7 +117,19 @@ const WorkView = React.createClass({
           </div>
 
           <div className='App__body__scrollable__footer'>
-
+            <div className='App__body__scrollable__footer__content'>
+              <h2>about me</h2>
+              <div className='App__body__scrollable__footer__content__col'>
+                <p>
+                  asdasdasd sadasd
+                </p>
+              </div>
+              <div className='App__body__scrollable__footer__content__col'>
+                <p>
+                  asdasdasd sadasd
+                </p>
+              </div>
+            </div>
           </div>
 
 

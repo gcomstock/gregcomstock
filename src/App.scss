@@ -54,13 +54,34 @@
 
 .App__body__scrollable__footer {
   width: 100%;
-  background-color: #666;
-  border-top: 1px solid #999;
+  background-color: #f8f8f8;
+  border-top: 1px solid #666;
   position: absolute;
 
-  height: 12rem;
+  min-height: 12rem;
   margin-top: -12rem;
 }
+
+
+
+.App__body__scrollable__footer__content {
+  margin: 2rem auto;
+  width: 36.5rem;
+}
+
+.App__body__scrollable__footer__content h2 {
+  font-size: 2rem;
+  text-shadow: -0.05rem -0.05rem 0 #f8f8f8, 0.05rem -0.05rem 0 #f8f8f8, -0.05rem 0.05rem 0 #f8f8f8, 0.05rem 0.05rem 0 #f8f8f8;
+}
+
+.App__body__scrollable__footer__content__col {
+  display: inline-block;
+  width: 16rem;
+  background-color: #f8f8f8;
+  border: 1px solid #d6d6d6;
+  padding: 0.75rem;
+}
+
 
 .App__body__scrollable__wrapper--WorkView {
   width: 46rem;
