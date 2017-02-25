@@ -3,19 +3,13 @@ import ReactTransitionGroup from 'react-addons-transition-group'
 import { Link } from 'react-router'
 
 
-// TODO: sass rules to squash theme css files into one, load them on state change
-import '../public/theme--gray/theme.css';
-import '../public/theme--gray/theme__workview.css';
-import '../public/theme--gray/theme__projectview.css';
-
-
 
 // This is intentionally not part of state, because we only need to update it on mount. Avoid un-necessary re-renders.
 let scrollY = 0;
 
 const App = React.createClass({
   getInitialState() {
-    // Setup application state. if this were a more complication app we'd use react, however for this project let's just
+    // Setup application state. if this were a more complication app we'd use redux, however for this project let's just
     // pass handlers into children to update this state when needed
     return {
       //activeTheme: ''
@@ -23,7 +17,7 @@ const App = React.createClass({
   },
 
   handleScroll(e) {
-    // WorkView calls this when it scrolls, and we store it here, so we can scroll back to position when WorkView is re-mounted
+    // WorkView calls this when it scrolls, and we store it in App.js, so we can scroll back to position when WorkView is re-mounted
     e.preventDefault();
     scrollY = e.target.scrollTop;
   },

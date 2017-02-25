@@ -1,16 +1,19 @@
 // import all component-level sass files
-@import '../index.scss';
-@import '../App.scss';
-@import '../Block3d/Block3d.scss';
-@import '../ProjectPreview/ProjectPreview.scss';
-@import '../ProjectView/ProjectView.scss';
-@import '../SiteIntro/SiteIntro.scss';
+@import '../index';
+@import '../App';
+@import '../Block3d/Block3d';
+@import '../ProjectPreview/ProjectPreview';
+@import '../ProjectView/ProjectView';
+@import '../SiteIntro/SiteIntro';
 
 
 // import all theme files
-@import '../themes/default/theme--default.scss';
+@import '../themes/default/theme--default';
+@import '../themes/default/theme--default-SiteIntro';
+@import '../themes/default/theme--default-Block3d';
+
 
 // import all shared sass files
-@import 'shared.scss';
-@import 'breakpoints.scss';
-@import 'routingAnimation.scss';
+@import 'shared';
+@import 'breakpoints';
+@import 'routingAnimation';
