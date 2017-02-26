@@ -29,13 +29,7 @@
 
 
 .App {
-  //color: #333;
-  //background-color: rgb(150,150,150);
-  //background-image: url(siteIntro__bg.png), url(bg-8x8.png);
-  //background-size: 50%, 4px;
 }
-
-
 
 
 /* main bg */
@@ -103,4 +97,11 @@
 
 .ProjectPreview__leftCol__title h1 {
   margin-right: -0.2rem; //for text alignment with preview image
+}
+
+
+.ProjectDesc__content__x {
+  .Block3d__content {
+    background-image: url(../themes/default/x.png);
+  }
 }

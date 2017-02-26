@@ -62,43 +62,42 @@
   cursor: pointer;
   pointer-events: all;
 
+  width: 1.5rem;
+  height: 1.5rem;
+
+
   .Block3d__content {
+    width: 100%;
+    height: 100%;
     padding: 0;
     box-shadow: $buttonBoxShadow;
     transition: $buttonHoverTransition;
-  }
-
-  // TODO: get smarter with svg management
-  #close {
-    width: 1.5rem;
-    height: 1.5rem;
-
-    @media screen and (max-width: $breakpoint-mobile) {
-      width: 44px;
-      height: 44px;
-      background-color: $highlightColor;
-    }
-  }
-  #close1,
-  #close2 {
-    stroke: $highlightColor;
-    transition: stroke 100ms linear;
-
-    @media screen and (max-width: $breakpoint-mobile) {
-      stroke: #fff;
-    }
+    background-size: 200% 100%;
   }
 
   &:hover {
     .Block3d__content {
-      background-color: rgb(180,0,0);
-    }
-
-    #close1,
-    #close2 {
-      stroke: rgb(255,255,255);
+      background-color: $highlightColor;
+      background-position-x: 100%;
     }
   }
+
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    width: 44px;
+    height: 44px;
+
+    .Block3d__content {
+      background-color: $highlightColor;
+      background-position-x: 100%;
+    }
+  }
+
+
+
+
+
+
 }
 
 .ProjectDesc__content__title {

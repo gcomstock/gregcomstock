@@ -67,12 +67,7 @@ export default function projectViewFactory(WrappedComponent, projectData) {
 
           <div className='ProjectDesc'>
             <div className={ProjectDesc__content}>
-              <Block3d cssClass='ProjectDesc__content__x' route={'/'} depth='0.25' z='0' noTop={true} noRight={true}>
-                <svg id='close'>
-                  <line id='close1' fill='none' stroke='#000000' stroke-width='2' stroke-miterlimit='10' x1='0.35rem' y1='0.35rem' x2='1.15rem' y2='1.15rem'/>
-                  <line id='close2' fill='none' stroke='#000000' stroke-width='2' stroke-miterlimit='10' x1='0.35rem' y1='1.15rem' x2='1.15rem' y2='0.35rem'/>
-                </svg>
-              </Block3d>
+              <Block3d cssClass='ProjectDesc__content__x' route={'/'} width='100%' height='100%' depth='0.25' z='0' noTop={true} noRight={true}/>
 
               <Block3d cssClass='ProjectDesc__content__title' width='100%' height='auto' depth='2' z='0' noTop={true} noRight={true}>
                 <h2>{ projectData.TITLE }</h2>
