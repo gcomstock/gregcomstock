@@ -1,0 +1,26 @@
+.SiteIntro__title__subtitle h1 {
+  color: #222;
+  text-shadow:
+    -0.05rem -0.05rem 0 #909090,
+    0.05rem -0.05rem 0 #909090,
+    -0.05rem 0.05rem 0 #909090,
+    0.05rem 0.05rem 0 #909090;
+}
+
+.SiteIntro__title__subtitle {
+  color: #222;
+  text-shadow:
+    -0.05rem -0.05rem 0 #909090,
+    0.05rem -0.05rem 0 #909090,
+    -0.05rem 0.05rem 0 #909090,
+    0.05rem 0.05rem 0 #909090;
+
+
+  @media screen and (max-width: $breakpoint-mobile){
+    text-shadow:
+      -0.5vh -0.5vh 0 #909090,
+      0.5vh -0.5vh 0 #909090,
+      -0.5vh 0.5vh 0 #909090,
+      0.5vh 0.5vh 0 #909090;
+  }
+}

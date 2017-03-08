@@ -31,10 +31,6 @@
   margin: 0 0.75rem 0.75rem 0;
   height: auto;
 
-  &:before {
-    @include blockShadow(-6rem);
-  }
-
   @media screen and (max-width: $breakpoint-mobile){
     font-size: 10vw;
     line-height: 8vw;
@@ -80,15 +76,13 @@
     top: calc(#{$siteIntroHeight--mobile} - 1.5rem);
   }
 
-
-  &:before {
-    @include blockShadow(-14rem);
-    margin-top: 1.5rem;
-    height: calc(100% - 0.75rem);
-  }
-
   .Block3d {
     @extend .floatingButton;
+  }
+
+  .Block3d--shadow {
+    margin-top: 1.5rem;
+    height: calc(100% - 0.75rem);
   }
 
   .Block3d__content {

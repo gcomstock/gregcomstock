@@ -16,7 +16,7 @@ export const SiteIntro = React.createClass({
       if (i === 4) {
         blocks.push(<br key={i+'br'}/>);
       }
-      blocks.push(<Block3d key={i} cssClass='SiteIntro__title__letter' depth='1.5' animationDelay={rnd + 'ms'}  noTop={true} noLeft={true}>{letter}</Block3d>);
+      blocks.push(<Block3d key={i} cssClass='SiteIntro__title__letter' depth='1.5' animationDelay={rnd + 'ms'} noTop={true} noLeft={true} shadow={true} shadowDepth={-6}>{letter}</Block3d>);
     });
     return blocks;
   },
@@ -30,7 +30,7 @@ export const SiteIntro = React.createClass({
             DESIGN + DEVELOPMENT
           </div>
         </div>
-        <Block3d cssClass='SiteIntro__viewWork' width='auto' height='auto' depth='1' z='0' noRight={true} noLeft={true}>
+        <Block3d cssClass='SiteIntro__viewWork' width='auto' height='auto' depth='1' z='0' shadow={true} shadowDepth={-14} noRight={true} noLeft={true}>
           <h2>view work</h2>
         </Block3d>
       </div>

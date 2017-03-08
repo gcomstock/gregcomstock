@@ -1,0 +1,142 @@
+@import '../scss/shared.scss';
+
+// RIGHT SIDE DESCRIPTION PANEL
+
+.ProjectDesc {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 9999;
+  pointer-events: none;
+
+  perspective-origin: 50% 80%; // x-center y-top
+  perspective: 50rem;          // should match width of App__wrapper for best cube appearance
+}
+
+.ProjectDesc__content {
+  top: 1rem;
+  left: calc(50% + 19.5rem);
+  width: 16rem;
+  position: absolute;
+  transform-style: preserve-3d;
+  transform: translate3d(-50%,0,0);
+}
+
+
+
+
+.ProjectDesc__content__x {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  pointer-events: all;
+
+  width: 1.5rem;
+  height: 1.5rem;
+
+
+  .Block3d__content {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    box-shadow: $buttonBoxShadow;
+    transition: $buttonHoverTransition;
+    background-size: 200% 100%;
+  }
+
+  &:hover {
+    .Block3d__content {
+      background-color: $highlightColor;
+      background-position-x: 100%;
+    }
+  }
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    width: $mobileMinSize;
+    height: $mobileMinSize;
+
+    .Block3d__content {
+      background-color: $highlightColor;
+      background-position-x: 100%;
+    }
+  }
+}
+
+
+
+
+.ProjectDesc__content__title {
+  max-width: 13.75rem; // to leave room for the x button
+
+  .Block3d__content {
+    padding: 0.75rem 1.15rem;
+
+    @media screen and (max-width: $breakpoint-mobile){
+      padding: 0 1.5rem;
+      line-height: $mobileMinSize
+    }
+  }
+
+
+
+}
+
+.ProjectDesc__content__text {
+  display: block;
+
+  .Block3d__content {
+    padding: 0.75rem 1.4rem;
+  }
+}
+
+.ProjectDesc__content__note--technology {
+  margin-top: 0.75rem;
+  display: inline-block;
+  vertical-align: top;
+  width: 6.25rem;
+
+  @media screen and (max-width: $breakpoint-mobile){
+    width: 100%;
+  }
+}
+.ProjectDesc__content__note--responsibilities {
+  margin-top: 0.75rem;
+  margin-right: 0.75rem;
+  display: inline-block;
+  vertical-align: top;
+  width: 9rem;
+
+  @media screen and (max-width: $breakpoint-mobile){
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+
+.ProjectDesc__content__note__title {
+  display: block;
+}
+.ProjectDesc__content__note__text {
+  display: block;
+}
+
+.ProjectDesc__content__note__title .Block3d__content {
+  padding: 0.75rem 1.1rem;
+}
+.ProjectDesc__content__note__text .Block3d__content {
+  padding: 0.75rem 1.1rem 0.75rem 1.4rem;
+
+  @media screen and (max-width: $breakpoint-mobile){
+    background-color: #eee;
+    padding: 1.5rem;
+  }
+}
+
+
+.ProjectDesc__content__buttonWrapper {
+  margin-top: 0.75rem;
+  text-align: center;
+}

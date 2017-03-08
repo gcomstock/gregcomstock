@@ -1,0 +1,41 @@
+@import '../../scss/shared.scss';
+
+.ProjectPreview__rightCol {
+  @media screen and (max-width: $breakpoint-mobile){
+    @include mobileBox(2rem, #666, #333);
+  }
+}
+
+
+
+.ProjectPreview__leftCol__title {
+  @media screen and (max-width: $breakpoint-mobile){
+    @include mobileBox(0.75rem, #888, #666);
+
+    margin-right: 1.5rem;
+  }
+
+  h1 {
+    margin-right: -0.2rem; //for text alignment with preview image
+  }
+}
+
+.ProjectPreview__leftCol__snippet {
+  @media screen and (max-width: $breakpoint-mobile){
+    @include mobileBox(0.75rem, #777, #555);
+
+    margin-top: 0.75rem;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+
+    .Block3d__content {
+      //padding: 0.75rem 1.5rem;
+    }
+  }
+}
+
+.ProjectPreview__leftCol__route {
+  @media screen and (max-width: $breakpoint-mobile){
+    @include mobileBox(0.25rem, #777, #555);
+  }
+}

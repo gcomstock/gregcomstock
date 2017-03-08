@@ -21,7 +21,18 @@ export const ProjectPreview = React.createClass({
           <Block3d cssClass='ProjectPreview__leftCol__snippet' width='100%' height='auto' depth='8' z='-6' noTop={true} noRight={true} noLeft={true}>
             <p className='snippet'>{this.props.snippet}</p>
           </Block3d>
-          <Block3d cssClass='ProjectPreview__leftCol__route' route={this.props.route} width='auto' height='auto' depth='1' z='0' y='0' x='0' noRight={true} noLeft={true}>
+          <Block3d cssClass='ProjectPreview__leftCol__route'
+           route={this.props.route}
+           width='auto'
+           height='auto'
+           depth='1'
+           z='0'
+           y='0'
+           x='0'
+           noRight={true}
+           noLeft={true}
+           shadow={true}
+           shadowDepth={-14}>
             <h2>learn more</h2>
           </Block3d>
         </div>

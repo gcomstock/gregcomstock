@@ -1,6 +1,7 @@
 
 $highlightColor: rgb(180,0,0);
 $buttonBoxShadow: inset 0 0 0 0.1rem #fff;
+
 // button background, text, outline, and arrow
 $buttonHoverTransition: background-color 100ms linear, color 100ms linear, stroke 100ms linear, border-color 100ms linear;
 
@@ -10,22 +11,8 @@ $breakpoint-mobile: 1020px;
 $siteIntroHeight: 80vh;
 $siteIntroHeight--mobile: 60vh;
 
+$mobileMinSize: 44px;
 
-
-
-@mixin blockShadow($depth) {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(0,0,0);
-  opacity: 0.1;
-  transform: translate3d(0,0,$depth);
-  z-index: -999;
-  pointer-events: none;
-}
 
 @mixin rightArrow($size) {
   content: '';
@@ -38,6 +25,38 @@ $siteIntroHeight--mobile: 60vh;
   border-top: $size+rem solid transparent;
   border-bottom: $size+rem solid transparent;
   border-left: ($size*1.25)+rem solid $highlightColor;
+}
+
+@mixin mobileBox($depth, $colorRight, $colorBottom) {
+  z-index: -1;
+
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: -$depth;
+    width: $depth;
+    height: 100%;
+
+    transform: skewY(45deg);
+    transform-origin: 0 0;
+    background-color: $colorRight;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: -$depth;
+    width: 100%;
+    height: $depth;
+
+    transform: skewX(45deg);
+    transform-origin: top center;
+    background-color: $colorBottom;
+  }
 }
 
 

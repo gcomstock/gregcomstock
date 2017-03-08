@@ -4,22 +4,25 @@
   margin-bottom: 8rem;
 }
 
-.ProjectPreview__leftCol {
-  width: 22rem;
+.ProjectPreview__rightCol {
+  position: relative;
+  width: 24rem;
   display: inline-block;
-  text-align: right;
+  text-align: left;
   vertical-align: top;
 
   @media screen and (max-width: $breakpoint-mobile){
     width: 100%;
-    text-align: left;
   }
 }
 
-.ProjectPreview__rightCol {
-  width: 24rem;
+
+
+
+.ProjectPreview__leftCol {
+  width: 22rem;
   display: inline-block;
-  text-align: left;
+  text-align: right;
   vertical-align: top;
 
   @media screen and (max-width: $breakpoint-mobile){
@@ -45,6 +48,7 @@
 
   @media screen and (max-width: $breakpoint-mobile){
     margin: 1.5rem;
+    position: relative;
   }
 
   .Block3d {
@@ -74,10 +78,6 @@
     }
   }
 
-  // shadow
-  &:before {
-    @include blockShadow(-14rem);
-  }
 
   &:hover {
     // background + border

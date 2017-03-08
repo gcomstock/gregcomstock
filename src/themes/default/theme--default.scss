@@ -28,12 +28,8 @@
 
 
 
-.App {
-}
-
-
-/* main bg */
-.App__body__scrollable {
+// main bg
+.App__body {
   color: #333;
   background-color: rgb(150,150,150);
   background-image: url(../themes/default/siteIntro__bg.png), url(../themes/default/bg-8x8.png);
@@ -41,9 +37,10 @@
   background-attachment: fixed;
 
   @media screen and (max-width: $breakpoint-mobile){
-    background-size: 150%, 4px;
+    background-size: 600px, 4px;
   }
 }
+
 
 
 
@@ -59,44 +56,9 @@
 }
 
 
-
 .App__body__scrollable__footer {
   background-image: url(../themes/default/siteIntro__bg.png), url(../themes/default/bg-8x8.png);
   background-size: 900px, 4px;
-}
-
-
-.SiteIntro__title__subtitle h1 {
-  color: #222;
-  text-shadow:
-    -0.05rem -0.05rem 0 #909090,
-    0.05rem -0.05rem 0 #909090,
-    -0.05rem 0.05rem 0 #909090,
-    0.05rem 0.05rem 0 #909090;
-}
-
-.SiteIntro__title__subtitle {
-  color: #222;
-  text-shadow:
-    -0.05rem -0.05rem 0 #909090,
-    0.05rem -0.05rem 0 #909090,
-    -0.05rem 0.05rem 0 #909090,
-    0.05rem 0.05rem 0 #909090;
-
-
-  @media screen and (max-width: $breakpoint-mobile){
-    text-shadow:
-      -0.5vh -0.5vh 0 #909090,
-      0.5vh -0.5vh 0 #909090,
-      -0.5vh 0.5vh 0 #909090,
-      0.5vh 0.5vh 0 #909090;
-  }
-}
-
-
-
-.ProjectPreview__leftCol__title h1 {
-  margin-right: -0.2rem; //for text alignment with preview image
 }
 
 

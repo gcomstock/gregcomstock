@@ -1,7 +1,7 @@
 import React from 'react';
 import { hashHistory, browserHistory } from 'react-router';
 
-//class Block3d extends Component {
+
 const Block3d = React.createClass({
   propTypes: {
     width: React.PropTypes.string,
@@ -12,6 +12,8 @@ const Block3d = React.createClass({
     externalUrl: React.PropTypes.string,
     route: React.PropTypes.string,
     animationDelay: React.PropTypes.string,
+    shadow: React.PropTypes.bool,
+    shadowDepth: React.PropTypes.number,
     noTop: React.PropTypes.bool,
     noLeft: React.PropTypes.bool,
     noRight: React.PropTypes.bool,
@@ -36,7 +38,8 @@ const Block3d = React.createClass({
   },
 
   applyDefaultContentClasses() {
-    // the class added here determines default background and border css properties for the element, so lower elements appear darker
+    // the class added here determines default background and border css properties for the element,
+    // so lower elements appear darker
     const z = parseInt(this.props.z, 10);
     let classes = 'Block3d__content';
 
@@ -89,6 +92,7 @@ const Block3d = React.createClass({
       <div className={wrapperClasses} onClick={this.handleClick} style={{
         transform: this.applyXYTranslation()
         }}>
+
         <div className='Block3d' style={{
           width: this.props.width,
           height: this.props.height,
@@ -104,6 +108,8 @@ const Block3d = React.createClass({
           { !this.props.noRight && <div className='Block3d__face Block3d__face--right' style={{width: this.props.depth + 'rem'}}></div> }
           { !this.props.noBottom && <div className='Block3d__face Block3d__face--bottom' style={{height: this.props.depth + 'rem'}}></div> }
         </div>
+
+        { this.props.shadow && <div className='Block3d--shadow' style={{transform: 'translate3d(0, 0, ' + this.props.shadowDepth + 'rem'}}></div> }
       </div>
     )
   }
