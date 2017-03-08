@@ -8,7 +8,8 @@ export const ProjectPreview = React.createClass({
     route: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     snippet: PropTypes.string.isRequired,
-    thumbnailPath: PropTypes.string.isRequired
+    thumbnailPath: PropTypes.string.isRequired,
+    isMobile: PropTypes.bool.isRequired
   },
 
   render() {

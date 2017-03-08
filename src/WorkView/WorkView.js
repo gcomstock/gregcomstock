@@ -20,7 +20,8 @@ const WorkView = React.createClass({
   propTypes: {
     params: PropTypes.object.isRequired,
     handleScroll: PropTypes.func,
-    scrollY: PropTypes.number
+    scrollY: PropTypes.number,
+    isMobile: PropTypes.bool.isRequired
   },
 
   getInitialState() {
@@ -51,6 +52,10 @@ const WorkView = React.createClass({
   },
 
   render() {
+    console.debug(this.props.isMobile);
+
+
+
     const App__body__scrollable__wrapper = classNames(
       'App__body__scrollable__wrapper', 'App__body__scrollable__wrapper--WorkView', {
         'App__body__scrollable__wrapper--intro': this.state.routeTransition === 'intro',

@@ -71,6 +71,13 @@
 .ProjectDesc__content__title {
   max-width: 13.75rem; // to leave room for the x button
 
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    margin-bottom: 3rem;
+    margin-right: 3rem; //to make room for 3d wall
+  }
+
+
   .Block3d__content {
     padding: 0.75rem 1.15rem;
 
