@@ -1,3 +1,5 @@
+@import '../scss/shared.scss';
+
 
 .Block3d, .Block3d--wrapper {
   position: relative;
@@ -5,7 +7,6 @@
   display: inline-block;
   vertical-align: top;
   backface-visibility: hidden;
-  //height: 100%;
 }
 
 .Block3d {
@@ -83,4 +84,9 @@
   opacity: 0.1;
   z-index: -999;
   pointer-events: none;
+
+  @media screen and (max-width: $breakpoint-mobile){
+    top: 1.5rem;
+    left: 1.5rem;
+  }
 }

@@ -31,23 +31,51 @@
   }
 }
 
+
+
+.ProjectPreview__leftCol__title {
+  @media screen and (max-width: $breakpoint-mobile){
+    z-index: -1 !important; //to override Block3d inline styles
+    transform: translateZ(-6rem); //TODO: figure out why this works
+  }
+}
+
+
 .ProjectPreview__leftCol__snippet {
   display: block;
   text-align: left;
-}
 
+
+  @media screen and (max-width: $breakpoint-mobile){
+    margin: 0.75rem;
+    z-index: 1 !important; //to override Block3d inline styles
+  }
+}
 
 
 
 
 /* BEGIN ROUTE BUTTON STYLES */
 
+
+.ProjectPreview__leftCol__routeWrapper {
+  position: relative;
+
+  @media screen and (max-width: $breakpoint-mobile){
+    text-align: right;
+  }
+}
+
+
 .ProjectPreview__leftCol__route {
   margin: 0 1.35rem 0 0;
   cursor: pointer;
 
   @media screen and (max-width: $breakpoint-mobile){
-    margin: 1.5rem;
+    z-index: 1 !important; //to override Block3d inline styles
+    margin-top: -1.5rem;
+    margin-right: 2.5rem;
+    margin-bottom: 3rem;
     position: relative;
   }
 

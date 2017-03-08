@@ -28,12 +28,10 @@ $mobileMinSize: 44px;
 }
 
 @mixin mobileBox($depth, $colorRight, $colorBottom) {
-  z-index: -1;
 
   &:after {
     content: '';
     position: absolute;
-    z-index: -1;
     top: 0;
     right: -$depth;
     width: $depth;
@@ -47,7 +45,6 @@ $mobileMinSize: 44px;
   &:before {
     content: '';
     position: absolute;
-    z-index: -1;
     left: 0;
     bottom: -$depth;
     width: 100%;
@@ -69,9 +66,19 @@ $mobileMinSize: 44px;
 }
 
 @keyframes floatingButtonAnimation {
-  0% { transform: translate3d(0,0,0rem); }
-  50% { transform: translate3d(0,0,-1.5rem); }
-  100% { transform: translate3d(0,0,0rem); }
+  0% {
+    transform: translate3d(0,0,0);
+  }
+  50% {
+    transform: translate3d(0,0,-1.5rem);
+
+    @media screen and (max-width: $breakpoint-mobile){
+      transform: translate3d(-0.25rem,-0.25rem,0) !important;
+    }
+  }
+  100% {
+    transform: translate3d(0,0,0);
+  }
 }
 
 
@@ -83,10 +90,6 @@ $mobileMinSize: 44px;
 .button {
   cursor: pointer;
   pointer-events: all;
-
-  //&:before {
-  //  @include blockShadow(-14rem);
-  //}
 
   .Block3d {
     @extend .floatingButton;

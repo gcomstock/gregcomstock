@@ -99,6 +99,7 @@
 
 .App__body__scrollable__wrapper__floor {
   position: absolute !important;
+  z-index: -2;
   top: -10rem;
   left: 0;
   right: 0;
