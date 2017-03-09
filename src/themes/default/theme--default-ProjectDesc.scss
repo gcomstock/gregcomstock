@@ -1,0 +1,12 @@
+.ProjectDesc__content__x {
+  .Block3d__content {
+    background-image: url(../themes/default/x.png);
+  }
+}
+
+
+.ProjectDesc__content__title {
+  @media screen and (max-width: $breakpoint-mobile){
+    @include mobileBox(0.75rem, rgb(200,200,200), rgb(160,160,160));
+  }
+}

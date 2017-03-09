@@ -62,20 +62,3 @@
   background-size: 900px, 4px;
 }
 
-
-
-
-
-.ProjectDesc__content__x {
-  .Block3d__content {
-    background-image: url(../themes/default/x.png);
-  }
-}
-
-
-.ProjectDesc__content__title {
-  @media screen and (max-width: $breakpoint-mobile){
-    @include mobileBox(1.5rem, rgb(200,200,200), rgb(160,160,160));
-    margin-right: 1.5rem; //to make room for 3d wall
-  }
-}

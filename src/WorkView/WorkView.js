@@ -55,7 +55,6 @@ const WorkView = React.createClass({
     console.debug(this.props.isMobile);
 
 
-
     const App__body__scrollable__wrapper = classNames(
       'App__body__scrollable__wrapper', 'App__body__scrollable__wrapper--WorkView', {
         'App__body__scrollable__wrapper--intro': this.state.routeTransition === 'intro',
