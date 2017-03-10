@@ -34,9 +34,20 @@
 
 
 .ProjectPreview__leftCol__title {
+  @extend h1;
+
+
   @media screen and (max-width: $breakpoint-mobile){
     z-index: -1 !important; //to override Block3d inline styles
     transform: translateZ(-6rem); //TODO: figure out why this works
+  }
+}
+
+
+.ProjectPreview__leftCol__thumb {
+  @media screen and (max-width: $breakpoint-mobile){
+    margin: 0.75rem;
+    //z-index: 1 !important; //to override Block3d inline styles
   }
 }
 
@@ -95,6 +106,10 @@
 
   h2 {
     transition: $buttonHoverTransition;
+
+    @media screen and (max-width: $breakpoint-mobile){
+      font-size: 1.4rem;
+    }
   }
 
   h2:after {

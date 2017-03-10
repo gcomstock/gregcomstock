@@ -41,6 +41,14 @@
   perspective: 54rem;          // should match width of App__wrapper for best cube appearance
   overflow-y: scroll;
   overflow-x: hidden;
+
+  // no longer scrollable - we want .ProjectDesc to scroll with this, so we will now scroll its parent
+  @media screen and (max-width: $breakpoint-mobile) {
+    position: relative;
+    perspective: none;
+    overflow-y: hidden;
+    height: auto;
+  }
 }
 
 
@@ -52,6 +60,11 @@
   margin: 0 auto;
   transform-style: preserve-3d;
   padding-bottom: 14rem;
+
+  // this is now 100% because we don't care about App__body__scrollable__wrapper__leftFrame/rightFrame visuals
+  @media screen and (max-width: $breakpoint-mobile) {
+    width: 100%
+  }
 }
 
 .App__body__scrollable__footer {

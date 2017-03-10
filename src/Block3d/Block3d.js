@@ -17,7 +17,8 @@ const Block3d = React.createClass({
     noTop: React.PropTypes.bool,
     noLeft: React.PropTypes.bool,
     noRight: React.PropTypes.bool,
-    noBottom: React.PropTypes.bool
+    noBottom: React.PropTypes.bool,
+    isMobile: React.PropTypes.bool.isRequired
   },
 
   applyXYTranslation() {
@@ -73,9 +74,8 @@ const Block3d = React.createClass({
   },
 
 
-  //TODO: get smart about excluding faces to increase performance
-
   render() {
+    console.debug('isMobile: ' + this.props.isMobile);
     //if ( Math.abs(parseInt(this.props.z, 10)) + Math.abs(parseInt(this.props.depth, 10)) !== 14) {
     //  console.warn(this.props.cssClass + ' has improper total depth');
     //}
@@ -93,6 +93,8 @@ const Block3d = React.createClass({
         transform: this.applyXYTranslation()
         }}>
 
+        { this.props.shadow && <div className='Block3d--shadow' style={{transform: 'translateZ(' + this.props.shadowDepth + 'rem)'}}></div> }
+
         <div className='Block3d' style={{
           width: this.props.width,
           height: this.props.height,
@@ -103,13 +105,11 @@ const Block3d = React.createClass({
           <div className={contentClasses}>
             {this.props.children}
           </div>
-          { !this.props.noTop && <div className='Block3d__face Block3d__face--top' style={{height: this.props.depth + 'rem'}}></div> }
-          { !this.props.noLeft && <div className='Block3d__face Block3d__face--left' style={{width: this.props.depth + 'rem'}}></div> }
-          { !this.props.noRight && <div className='Block3d__face Block3d__face--right' style={{width: this.props.depth + 'rem'}}></div> }
-          { !this.props.noBottom && <div className='Block3d__face Block3d__face--bottom' style={{height: this.props.depth + 'rem'}}></div> }
+          { !this.props.isMobile && !this.props.noTop && <div className='Block3d__face Block3d__face--top' style={{height: this.props.depth + 'rem'}}></div> }
+          { !this.props.isMobile && !this.props.noLeft && <div className='Block3d__face Block3d__face--left' style={{width: this.props.depth + 'rem'}}></div> }
+          { !this.props.isMobile && !this.props.noRight && <div className='Block3d__face Block3d__face--right' style={{width: this.props.depth + 'rem'}}></div> }
+          { !this.props.isMobile && !this.props.noBottom && <div className='Block3d__face Block3d__face--bottom' style={{height: this.props.depth + 'rem'}}></div> }
         </div>
-
-        { this.props.shadow && <div className='Block3d--shadow' style={{transform: 'translate3d(0, 0, ' + this.props.shadowDepth + 'rem'}}></div> }
       </div>
     )
   }

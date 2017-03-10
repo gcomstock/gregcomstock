@@ -18,6 +18,10 @@ body {
   font-family: sans-serif;
   overflow: hidden;
   height: 100%;
+
+  @media screen and (max-width: $breakpoint-mobile){
+    overflow: visible;
+  }
 }
 
 #root {
@@ -67,8 +71,6 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 2rem;
   letter-spacing: 0.08rem;
-
-
 }
 
 h2 {

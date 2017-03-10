@@ -39,6 +39,8 @@ $mobileMinSize: 44px;
     transform: skewY(45deg);
     transform-origin: 0 0;
     background-color: $colorRight;
+
+    border-right: 1px solid #aaa;
   }
 
   &:before {
@@ -52,6 +54,8 @@ $mobileMinSize: 44px;
     transform: skewX(45deg);
     transform-origin: top center;
     background-color: $colorBottom;
+
+    border-bottom: 1px solid #9a9a9a;
   }
 }
 

@@ -83,33 +83,13 @@
 }
 
 
-/**
- *  MOBILE BREAKPOINTS
- *
- *  Mobile doesn't work well with the 3d effect, so lets bring everything into the doc flow and make .App scrollable
- */
+
 
 @media screen and (max-width: $breakpoint-mobile){
 
-  body {
-    overflow: visible;
-  }
-  
 
 
 
-  // no longer scrollable - we .ProjectDesc to scroll with this, so we will now scroll its parent
-  .App__body__scrollable {
-    position: relative;
-    perspective: none;
-    overflow-y: hidden;
-    height: auto;
-  }
-
-  // this is now 100% because we don't care about App__body__scrollable__wrapper__leftFrame/rightFrame visuals
-  .App__body__scrollable__wrapper {
-    width: 100%
-  }
 
   // ideally wont be rendered at all, but hid for now
   .App__body__scrollable__wrapper__leftFrame,
@@ -120,40 +100,4 @@
 
 
 
-
-
-
-  .ProjectDesc {
-    perspective: none;
-    position: relative;
-    transform: none;
-  }
-  .ProjectDesc__content {
-    width: 100%;
-    position: static;
-    transform: none;
-  }
-
-
-
 }
-
-
-
-/*
-@media screen and (max-width: 1020px){
-  .WorkView__project--leftCol {
-    width: 100%;
-    display: inline-block;
-    text-align: right;
-    vertical-align: top;
-  }
-
-  .WorkView__project--rightCol {
-    width: 100%;
-    display: inline-block;
-    text-align: left;
-    vertical-align: top;
-  }
-}
-*/

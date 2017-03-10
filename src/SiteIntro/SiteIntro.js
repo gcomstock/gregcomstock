@@ -3,6 +3,10 @@ import Block3d from '../Block3d/Block3d';
 
 
 export const SiteIntro = React.createClass({
+  propTypes: {
+    isMobile: PropTypes.bool.isRequired
+  },
+
   populateTitle() {
     const title = ['G','R','E','G','C','O','M','S','T','O','C','K'];
     let blocks = [];
@@ -16,7 +20,21 @@ export const SiteIntro = React.createClass({
       if (i === 4) {
         blocks.push(<br key={i+'br'}/>);
       }
-      blocks.push(<Block3d key={i} cssClass='SiteIntro__title__letter' depth='1.5' animationDelay={rnd + 'ms'} noTop={true} noLeft={true} shadow={true} shadowDepth={-6}>{letter}</Block3d>);
+      blocks.push(
+        <Block3d
+          key={i}
+          cssClass='SiteIntro__title__letter'
+          depth='1.5'
+          animationDelay={rnd + 'ms'}
+          noTop={true}
+          noLeft={true}
+          shadow={true}
+          shadowDepth={-6}
+          isMobile={this.props.isMobile}
+        >
+          {letter}
+        </Block3d>
+      );
     });
     return blocks;
   },
@@ -24,15 +42,27 @@ export const SiteIntro = React.createClass({
   render() {
     return (
       <div className='SiteIntro'>
+
         <div className='SiteIntro__title'>
           { this.populateTitle() }
           <div className='SiteIntro__title__subtitle'>
             DESIGN + DEVELOPMENT
           </div>
         </div>
-        <Block3d cssClass='SiteIntro__viewWork' width='auto' height='auto' depth='1' z='0' shadow={true} shadowDepth={-14} noRight={true} noLeft={true}>
+
+        <Block3d
+          cssClass='SiteIntro__viewWork'
+          depth='1'
+          z='0'
+          shadow={true}
+          shadowDepth={-14}
+          noRight={true}
+          noLeft={true}
+          isMobile={this.props.isMobile}
+        >
           <h2>view work</h2>
         </Block3d>
+
       </div>
     )
   }

@@ -13,6 +13,12 @@
 
   perspective-origin: 50% 80%; // x-center y-top
   perspective: 50rem;          // should match width of App__wrapper for best cube appearance
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    perspective: none;
+    position: relative;
+    transform: none;
+  }
 }
 
 .ProjectDesc__content {
@@ -22,6 +28,12 @@
   position: absolute;
   transform-style: preserve-3d;
   transform: translate3d(-50%,0,0);
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    width: 100%;
+    position: static;
+    transform: none;
+  }
 }
 
 

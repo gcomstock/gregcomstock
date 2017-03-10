@@ -19,7 +19,7 @@ const App = React.createClass({
     // Setup application state. If this were a more complication app we'd use redux, however for this project let's just
     // pass handlers into children to update this App-level state when needed
     return {
-      isMobile: false
+      isMobile: window.innerWidth <= BREAKPOINT_MOBILE
       //activeTheme: ''
     }
   },

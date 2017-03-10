@@ -25,7 +25,7 @@ export const PandoraAdsLayout = React.createClass({
 
 export const PandoraAdsConsts = Object.freeze({
   ROUTE: '/project/pandora-display-ads',
-  TITLE: 'pandora display ad architecture',
+  TITLE: 'pandora display ad<br/>architecture',
   SNIPPET: 'I have been closely tied to the display ad workflow during my tenure at Pandora. On Pandora.com, we had a unique opportunity to do things that have never been done before with display advertising.',
   THUMBNAIL_PATH: 'work/pandora-ads/tn.jpg',
   TEXT: [
