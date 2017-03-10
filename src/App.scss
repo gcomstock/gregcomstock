@@ -61,11 +61,20 @@
   transform-style: preserve-3d;
   padding-bottom: 14rem;
 
-  // this is now 100% because we don't care about App__body__scrollable__wrapper__leftFrame/rightFrame visuals
   @media screen and (max-width: $breakpoint-mobile) {
-    width: 100%
+    width: 100%;
   }
 }
+
+
+.App__body__scrollable__wrapper--WorkView {
+  width: 46rem;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    width: 100%;
+  }
+}
+
 
 .App__body__scrollable__footer {
   width: 100%;
@@ -105,9 +114,7 @@
 }
 
 
-.App__body__scrollable__wrapper--WorkView {
-  width: 46rem;
-}
+
 
 
 .App__body__scrollable__wrapper__floor {

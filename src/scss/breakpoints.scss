@@ -81,23 +81,3 @@
     font-size: 14px;
   }
 }
-
-
-
-
-@media screen and (max-width: $breakpoint-mobile){
-
-
-
-
-
-  // ideally wont be rendered at all, but hid for now
-  .App__body__scrollable__wrapper__leftFrame,
-  .App__body__scrollable__wrapper__rightFrame {
-    display: none;
-  }
-
-
-
-
-}
