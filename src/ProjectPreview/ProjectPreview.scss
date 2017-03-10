@@ -2,6 +2,10 @@
 
 .ProjectPreview {
   margin-bottom: 8rem;
+
+  @media screen and (max-width: $breakpoint-mobile){
+    margin-bottom: 4rem;
+  }
 }
 
 .ProjectPreview__rightCol {
