@@ -5,6 +5,10 @@ import Block3d from './../Block3d/Block3d';
 
 export default function projectViewFactory(WrappedComponent, projectData) {
   return React.createClass({
+    propTypes: {
+      isMobile: React.PropTypes.bool.isRequired
+    },
+
     getInitialState() {
       return {
         routeTransition: null
@@ -30,7 +34,7 @@ export default function projectViewFactory(WrappedComponent, projectData) {
     renderTitleHTML() {
       // to allow markup for the title...I like to break the title at just the right word.
       return {
-        __html: '<h2>' + projectData.TITLE + '</h2>'
+        __html: projectData.TITLE
       }
     },
 
@@ -76,11 +80,27 @@ export default function projectViewFactory(WrappedComponent, projectData) {
             <div className={ProjectDesc__content}>
               <Block3d cssClass='ProjectDesc__content__x' route={'/'} width='100%' height='100%' depth='0.25' z='0' noTop={true} noRight={true}/>
 
-              <Block3d cssClass='ProjectDesc__content__title' width='100%' height='auto' depth='2' z='0' noTop={true} noRight={true}>
+              <Block3d
+                cssClass='ProjectDesc__content__title'
+                width='100%'
+                depth='2'
+                z='0'
+                noTop={true}
+                noRight={true}
+                isMobile={this.props.isMobile}
+              >
                 <div dangerouslySetInnerHTML={this.renderTitleHTML()} />
               </Block3d>
 
-              <Block3d cssClass='ProjectDesc__content__text' width='100%' height='auto' depth='1' z='-1' noTop={true} noRight={true}>
+              <Block3d
+                cssClass='ProjectDesc__content__text'
+                width='100%'
+                depth='1'
+                z='-1'
+                noTop={true}
+                noRight={true}
+                isMobile={this.props.isMobile}
+              >
                 {projectData.TEXT.map((item) => {
                   return <p>{item}</p>;
                 })}

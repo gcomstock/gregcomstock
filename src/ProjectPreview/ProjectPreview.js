@@ -1,5 +1,4 @@
 import React, { PropTypes } from 'react';
-import classNames from 'classnames';
 import Block3d from '../Block3d/Block3d';
 
 

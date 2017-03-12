@@ -1,6 +1,7 @@
 
 $highlightColor: rgb(180,0,0);
 $buttonBoxShadow: inset 0 0 0 0.1rem #fff;
+$xButtonBoxShadow: inset 0 0 0 1px #fff;
 
 // button background, text, outline, and arrow
 $buttonHoverTransition: background-color 100ms linear, color 100ms linear, stroke 100ms linear, border-color 100ms linear;
@@ -10,7 +11,7 @@ $breakpoint-mobile: 1020px;
 
 $siteIntroHeight: 80vh;
 $siteIntroHeight--mobile: 60vh;
-$mobileMinSize: 44px;
+$mobileMinSize: 2.5rem;
 
 
 @mixin rightArrow($size) {
@@ -31,6 +32,7 @@ $mobileMinSize: 44px;
   &:after {
     content: '';
     position: absolute;
+    z-index: -1;
     top: 0;
     right: -$depth;
     width: $depth;
@@ -46,6 +48,7 @@ $mobileMinSize: 44px;
   &:before {
     content: '';
     position: absolute;
+    z-index: -1;
     left: 0;
     bottom: -$depth;
     width: 100%;

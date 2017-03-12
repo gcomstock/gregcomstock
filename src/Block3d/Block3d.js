@@ -35,7 +35,9 @@ const Block3d = React.createClass({
   },
 
   applyZTranslation() {
-    return this.props.z ? 'translateZ(' + this.props.z + 'rem)' : null;
+    console.debug(this.props.isMobile);
+
+    return this.props.z && !this.props.isMobile ? 'translateZ(' + this.props.z + 'rem)' : null;
   },
 
   applyDefaultContentClasses() {
