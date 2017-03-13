@@ -145,30 +145,49 @@
 }
 
 
+
+
+
+
 .ProjectDesc__content__note__title {
   display: block;
+  @extend h3;
 
-  //@media screen and (max-width: $breakpoint-mobile) {
-  //  .Block3d__content {
-  //    padding: 1.5rem;
-  //  }
-  //}
+  @media screen and (max-width: $breakpoint-mobile){
+    display: inline-block;
+    margin: 0.75rem;
+    font-size: 1.2rem;
+  }
 }
+
 .ProjectDesc__content__note__text {
   display: block;
+
+  @media screen and (max-width: $breakpoint-mobile){
+    margin: 0 2.25rem 0.75rem 1.5rem;
+  }
 }
 
+
+
+
 .ProjectDesc__content__note__title .Block3d__content {
-  padding: 0.75rem 1.1rem;
+  padding: 0.75rem 1.1rem 0.75rem 1.4rem;
+
+  @media screen and (max-width: $breakpoint-mobile){
+    padding: 1.25rem;
+  }
 }
+
+
 .ProjectDesc__content__note__text .Block3d__content {
   padding: 0.75rem 1.1rem 0.75rem 1.4rem;
 
   @media screen and (max-width: $breakpoint-mobile){
-    background-color: #eee;
-    padding: 1.5rem;
+    padding: 1.5rem 1.5rem 1.5rem 2.25rem;
   }
 }
+
 
 
 .ProjectDesc__content__buttonWrapper {

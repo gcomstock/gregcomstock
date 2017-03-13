@@ -107,10 +107,26 @@ export default function projectViewFactory(WrappedComponent, projectData) {
               </Block3d>
 
               <div className='ProjectDesc__content__note--responsibilities'>
-                <Block3d cssClass='ProjectDesc__content__note__title' width='100%' depth='2' z='0' noTop={true} noRight={true}>
-                  <h3>key responsibilities</h3>
+                <Block3d
+                  cssClass='ProjectDesc__content__note__title'
+                  width='100%'
+                  depth='2'
+                  z='0'
+                  noTop={true}
+                  noRight={true}
+                  isMobile={this.props.isMobile}
+                >
+                  key responsibilities
                 </Block3d>
-                <Block3d cssClass='ProjectDesc__content__note__text' width='100%' depth='1' z='-1' noTop={true} noRight={true}>
+                <Block3d
+                  cssClass='ProjectDesc__content__note__text'
+                  width='100%'
+                  depth='1'
+                  z='-1'
+                  noTop={true}
+                  noRight={true}
+                  isMobile={this.props.isMobile}
+                >
                   <ul>
                     {projectData.RESPONSIBILITIES.map((item) => {
                       return <li>{item}</li>;
@@ -120,10 +136,26 @@ export default function projectViewFactory(WrappedComponent, projectData) {
               </div>
 
               <div className='ProjectDesc__content__note--technology'>
-                <Block3d cssClass='ProjectDesc__content__note__title' width='100%' depth='2' z='0' noTop={true} noRight={true}>
-                  <h3>technology</h3>
+                <Block3d
+                  cssClass='ProjectDesc__content__note__title'
+                  width='100%'
+                  depth='2'
+                  z='0'
+                  noTop={true}
+                  noRight={true}
+                  isMobile={this.props.isMobile}
+                >
+                  technology
                 </Block3d>
-                <Block3d cssClass='ProjectDesc__content__note__text' width='100%' depth='1' z='-1' noTop={true} noRight={true}>
+                <Block3d
+                  cssClass='ProjectDesc__content__note__text'
+                  width='100%'
+                  depth='1'
+                  z='-1'
+                  noTop={true}
+                  noRight={true}
+                  isMobile={this.props.isMobile}
+                >
                   <ul>
                     {projectData.TECHNOLOGIES.map((item) => {
                       return <li>{item}</li>;
