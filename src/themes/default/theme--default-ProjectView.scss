@@ -1,0 +1,7 @@
+@import '../../scss/shared.scss';
+
+.ProjectView__pic .Block3d__content {
+  @media screen and (max-width: $breakpoint-mobile) {
+    @include mobileBox(2.25rem, transparent, rgb(160,160,160));
+  }
+}

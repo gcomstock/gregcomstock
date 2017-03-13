@@ -1,13 +1,19 @@
 @import '../../scss/shared.scss';
 
+
+.ProjectDesc {
+  // no borders on mobile 3d walls
+  @media screen and (max-width: $breakpoint-mobile) {
+    :after,
+    :before {
+      border: none !important;
+    }
+  }
+}
+
 .ProjectDesc__content__x {
   .Block3d__content {
     background-image: url(../themes/default/x.png);
-  }
-
-  &:after,
-  &:before {
-    border: none !important;
   }
 
   &:hover {
@@ -44,18 +50,30 @@
   @media screen and (max-width: $breakpoint-mobile){
     @include mobileBox(1.5rem, rgb(200,200,200), rgb(160,160,160));
   }
+
+  .Block3d__content {
+    background-color: #eee;
+  }
 }
 
 
 .ProjectDesc__content__note__title {
   @media screen and (max-width: $breakpoint-mobile){
     @include mobileBox(1.5rem, rgb(200,200,200), rgb(160,160,160));
+
+    .Block3d__content {
+      background-color: #eee;
+    }
   }
 }
 
 .ProjectDesc__content__note__text {
   @media screen and (max-width: $breakpoint-mobile){
     @include mobileBox(0.75rem, rgb(200,200,200), rgb(160,160,160));
+
+    .Block3d__content {
+      background-color: #ddd;
+    }
   }
 }
 

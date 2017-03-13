@@ -1,20 +1,24 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 import Block3d from '../Block3d/Block3d';
 
 
 export const PandoraLayout = React.createClass({
+  propTypes: {
+    isMobile: PropTypes.bool.isRequired
+  },
+
   render() {
     return (
       <div className='ProjectView'>
-        <Block3d cssClass='ProjectView__pic' width='100%' height='auto' depth='14' z='0'>
+        <Block3d cssClass='ProjectView__pic' width='100%' height='auto' depth='14' z='0' isMobile={this.props.isMobile}>
           <img width='100%' src='work/pandora/pandora-1.jpg' alt='portfolio'/>
         </Block3d>
 
-        <Block3d cssClass='ProjectView__pic' width='100%' height='auto' depth='14' z='0'>
+        <Block3d cssClass='ProjectView__pic' width='100%' height='auto' depth='14' z='0' isMobile={this.props.isMobile}>
           <img width='100%' src='work/pandora/pandora-2.jpg' alt='portfolio'/>
         </Block3d>
 
-        <Block3d cssClass='ProjectView__pic' width='100%' height='auto' depth='14' z='0'>
+        <Block3d cssClass='ProjectView__pic' width='100%' height='auto' depth='14' z='0' isMobile={this.props.isMobile}>
           <img width='100%' src='work/pandora/pandora-3.jpg' alt='portfolio'/>
         </Block3d>
       </div>
