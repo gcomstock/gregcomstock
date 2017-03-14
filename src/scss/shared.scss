@@ -19,7 +19,7 @@ $mobileMinSize: 2.5rem;
   position: absolute;
   top: 50%;
   right: -($size*2)+rem;
-  margin-top: -($size)+rem;
+  margin-top: -($size*0.95)+rem;
   width: ($size*4)+rem;
 
   border-top: $size+rem solid transparent;
@@ -41,8 +41,6 @@ $mobileMinSize: 2.5rem;
     transform: skewY(45deg);
     transform-origin: 0 0;
     background-color: $colorRight;
-
-    border-right: 1px solid #aaa;
   }
 
   &:before {
@@ -57,8 +55,6 @@ $mobileMinSize: 2.5rem;
     transform: skewX(45deg);
     transform-origin: top center;
     background-color: $colorBottom;
-
-    border-bottom: 1px solid #9a9a9a;
   }
 }
 
@@ -96,9 +92,19 @@ $mobileMinSize: 2.5rem;
 .button {
   cursor: pointer;
   pointer-events: all;
+  @extend h3;
+
 
   .Block3d {
     @extend .floatingButton;
+
+    &:after {
+      @include rightArrow(0.22);
+
+      @media screen and (max-width: $breakpoint-mobile){
+        @include rightArrow(0.3);
+      }
+    }
   }
 
   // background
@@ -106,11 +112,11 @@ $mobileMinSize: 2.5rem;
     padding: 0.6rem 1rem 0.6rem 0.6rem;
     box-shadow: $buttonBoxShadow;
     transition: $buttonHoverTransition;
-  }
 
-  // arrow
-  h3:after {
-    @include rightArrow(0.22);
+    @media screen and (max-width: $breakpoint-mobile){
+      @include mobileBox(0.25rem, rgb(200,200,200), rgb(160,160,160));
+      padding: 1rem 1.4rem 1rem 1rem;
+    }
   }
 
   &:hover {

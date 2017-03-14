@@ -50,7 +50,7 @@ export default function projectViewFactory(WrappedComponent, projectData) {
               depth='1'
               z='0'
               noRight={true}>
-              <h3>launch project</h3>
+              launch project
             </Block3d>
           </div>
         )

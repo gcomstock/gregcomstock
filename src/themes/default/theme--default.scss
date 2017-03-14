@@ -48,8 +48,10 @@
   background-color: rgb(192,192,192);
 
   @media screen and (max-width: $breakpoint-mobile){
-    background-image: url(../themes/default/bg-8x8.png);
-    background-size: 4px;
+    //background-image: url(../themes/default/bg-8x8.png);
+    //background-size: 4px;
+    background-image: none;
+    background-color: transparent;
     border-top: 1px solid #555;
   }
 }

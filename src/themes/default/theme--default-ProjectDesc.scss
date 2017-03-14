@@ -1,15 +1,6 @@
 @import '../../scss/shared.scss';
 
 
-.ProjectDesc {
-  // no borders on mobile 3d walls
-  @media screen and (max-width: $breakpoint-mobile) {
-    :after,
-    :before {
-      border: none !important;
-    }
-  }
-}
 
 .ProjectDesc__content__x {
   .Block3d__content {
