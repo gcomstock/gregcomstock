@@ -14,6 +14,44 @@ $siteIntroHeight--mobile: 60vh;
 $mobileMinSize: 2.5rem;
 
 
+
+
+
+.title--head {
+  font-family: 'title';
+  font-size: 2rem;
+  letter-spacing: 0.08rem;
+  color: $highlightColor;
+}
+
+.title--subhead {
+  font-family: 'title';
+  font-size: 1.2rem;
+  letter-spacing: 0.06rem;
+  color: $highlightColor;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    font-size: 1.8rem;
+  }
+}
+
+.title--button {
+  font-family: 'title';
+  font-size: 0.8rem;
+  letter-spacing: 0.05rem;
+  color: $highlightColor;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    font-size: 1.2rem;
+  }
+}
+
+
+
+
+
+
+
 @mixin rightArrow($size) {
   content: '';
   position: absolute;
@@ -92,7 +130,8 @@ $mobileMinSize: 2.5rem;
 .button {
   cursor: pointer;
   pointer-events: all;
-  @extend h3;
+  @extend .title--button;
+  color: $highlightColor;
 
 
   .Block3d {
@@ -124,13 +163,15 @@ $mobileMinSize: 2.5rem;
       background-color: $highlightColor;
     }
 
-    h3 {
-      color: #fff;
-      transition: $buttonHoverTransition;
-    }
-    h3:after {
-      border-left-color: #fff;
-      transition: $buttonHoverTransition;
-    }
+    color: #fff;
+    transition: $buttonHoverTransition;
+  }
+}
+
+.button:hover {
+
+  .Block3d:after {
+    border-left-color: #fff;
+    transition: $buttonHoverTransition;
   }
 }

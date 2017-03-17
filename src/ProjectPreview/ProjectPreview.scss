@@ -37,6 +37,7 @@
 
 .ProjectPreview__leftCol__title {
   @extend h1;
+  @extend .title--head;
 
   @media screen and (max-width: $breakpoint-mobile){
     z-index: -1 !important; //to override Block3d inline styles
