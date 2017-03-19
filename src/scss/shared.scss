@@ -56,7 +56,8 @@ $mobileMinSize: 2.5rem;
   content: '';
   position: absolute;
   top: 50%;
-  right: -($size*2)+rem;
+  right: -($size*0.75)+rem;
+  //right: -($size*2)+rem;
   margin-top: -($size*0.95)+rem;
   width: ($size*4)+rem;
 
@@ -103,6 +104,11 @@ $mobileMinSize: 2.5rem;
   animation-delay: 1.5s; // to allow routing animation to complete
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
+
+  @media screen and (max-width: $breakpoint-mobile){
+    animation-name: floatingButtonMobileAnimation;
+    //transform: translate3d(-2.25rem,-2.25rem,0);
+  }
 }
 
 @keyframes floatingButtonAnimation {
@@ -111,17 +117,23 @@ $mobileMinSize: 2.5rem;
   }
   50% {
     transform: translate3d(0,0,-1.5rem);
-
-    @media screen and (max-width: $breakpoint-mobile){
-      transform: translate3d(-0.25rem,-0.25rem,0) !important;
-    }
   }
   100% {
     transform: translate3d(0,0,0);
   }
 }
 
-
+@keyframes floatingButtonMobileAnimation {
+  0% {
+    transform: translate3d(0.75rem,0.75rem,0);
+  }
+  50% {
+    transform: translate3d(0,0,0);
+  }
+  100% {
+    transform: translate3d(0.75rem,0.75rem,0);
+  }
+}
 
 
 

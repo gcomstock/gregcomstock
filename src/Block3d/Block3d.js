@@ -35,8 +35,6 @@ const Block3d = React.createClass({
   },
 
   applyZTranslation() {
-    console.debug(this.props.isMobile);
-
     return this.props.z && !this.props.isMobile ? 'translateZ(' + this.props.z + 'rem)' : null;
   },
 
@@ -65,6 +63,16 @@ const Block3d = React.createClass({
     return classes;
   },
 
+  renderShadow() {
+    if (this.props.shadow && this.props.shadowDepth) {
+      return <div className='Block3d--shadow' style={{transform: 'translateZ(' + this.props.shadowDepth + 'rem)'}}></div>;
+    }
+    else if (this.props.shadow) {
+      // shadow is just intended for mobile because depth has not been defined
+      return <div className='Block3d--shadow'></div>;
+    }
+  },
+
   handleClick() {
     if (this.props.route) {
       hashHistory.push(this.props.route);
@@ -77,7 +85,6 @@ const Block3d = React.createClass({
 
 
   render() {
-    console.debug('isMobile: ' + this.props.isMobile);
     //if ( Math.abs(parseInt(this.props.z, 10)) + Math.abs(parseInt(this.props.depth, 10)) !== 14) {
     //  console.warn(this.props.cssClass + ' has improper total depth');
     //}
@@ -95,7 +102,7 @@ const Block3d = React.createClass({
         transform: this.applyXYTranslation()
         }}>
 
-        { this.props.shadow && <div className='Block3d--shadow' style={{transform: 'translateZ(' + this.props.shadowDepth + 'rem)'}}></div> }
+        { this.renderShadow() }
 
         <div className='Block3d' style={{
           width: this.props.width,
