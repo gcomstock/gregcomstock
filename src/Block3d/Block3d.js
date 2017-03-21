@@ -11,6 +11,7 @@ const Block3d = React.createClass({
     cssClass: React.PropTypes.string,
     externalUrl: React.PropTypes.string,
     route: React.PropTypes.string,
+    clickHandler: React.PropTypes.func,
     animationDelay: React.PropTypes.string,
     shadow: React.PropTypes.bool,
     shadowDepth: React.PropTypes.number,
@@ -80,6 +81,10 @@ const Block3d = React.createClass({
 
     if (this.props.externalUrl) {
       window.open(this.props.externalUrl);
+    }
+
+    if (this.props.clickHandler) {
+      this.props.clickHandler();
     }
   },
 
