@@ -78,7 +78,16 @@ export default function projectViewFactory(WrappedComponent, projectData) {
 
           <div className='ProjectDesc'>
             <div className={ProjectDesc__content}>
-              <Block3d cssClass='ProjectDesc__content__x' route={'/'} width='100%' height='100%' depth='0.25' z='0' noTop={true} noRight={true}/>
+              <Block3d
+                cssClass='ProjectDesc__content__x'
+                route={'/'}
+                width='100%'
+                height='100%'
+                depth='0.25'
+                z='0'
+                noTop={true}
+                noRight={true}
+              />
 
               <Block3d
                 cssClass='ProjectDesc__content__title'

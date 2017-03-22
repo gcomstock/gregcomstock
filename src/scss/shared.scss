@@ -135,13 +135,13 @@ $mobileMinSize: 2.5rem;
 
 @keyframes floatingButtonMobileAnimation {
   0% {
-    transform: translate3d(0.75rem,0.75rem,0);
-  }
-  50% {
     transform: translate3d(0,0,0);
   }
-  100% {
+  50% {
     transform: translate3d(0.75rem,0.75rem,0);
+  }
+  100% {
+    transform: translate3d(0,0,0);
   }
 }
 
