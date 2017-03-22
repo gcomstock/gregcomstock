@@ -1,10 +1,9 @@
-
 $highlightColor: rgb(180,0,0);
 $buttonBoxShadow: inset 0 0 0 0.1rem #fff;
 $xButtonBoxShadow: inset 0 0 0 1px #fff;
 
 // button background, text, outline, and arrow
-$buttonHoverTransition: background-color 100ms linear, color 100ms linear, stroke 100ms linear, border-color 100ms linear;
+$buttonHoverTransition: background-color 150ms linear, color 150ms linear, stroke 150ms linear, border-color 150ms linear;
 
 $breakpoint-mobile: 1020px;
 
@@ -57,14 +56,26 @@ $mobileMinSize: 2.5rem;
   position: absolute;
   top: 50%;
   right: -($size*0.75)+rem;
-  //right: -($size*2)+rem;
   margin-top: -($size*0.95)+rem;
-  width: ($size*4)+rem;
 
   border-top: $size+rem solid transparent;
   border-bottom: $size+rem solid transparent;
   border-left: ($size*1.25)+rem solid $highlightColor;
 }
+
+@mixin bottomArrow($size) {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -($size*0.75)+rem;
+  margin-left: -$size+rem;
+  display: block;
+
+  border-top: $size+rem solid $highlightColor;
+  border-left: ($size*1.25)+rem solid transparent;
+  border-right: ($size*1.25)+rem solid transparent;
+}
+
 
 @mixin mobileBox($depth, $colorRight, $colorBottom) {
 
@@ -107,7 +118,6 @@ $mobileMinSize: 2.5rem;
 
   @media screen and (max-width: $breakpoint-mobile){
     animation-name: floatingButtonMobileAnimation;
-    //transform: translate3d(-2.25rem,-2.25rem,0);
   }
 }
 
@@ -142,25 +152,13 @@ $mobileMinSize: 2.5rem;
 .button {
   cursor: pointer;
   pointer-events: all;
-  @extend .title--button;
-  color: $highlightColor;
-
 
   .Block3d {
     @extend .floatingButton;
-
-    &:after {
-      @include rightArrow(0.22);
-
-      @media screen and (max-width: $breakpoint-mobile){
-        @include rightArrow(0.3);
-      }
-    }
   }
 
-  // background
   .Block3d__content {
-    padding: 0.6rem 1rem 0.6rem 0.6rem;
+    padding: 0.6rem;
     box-shadow: $buttonBoxShadow;
     transition: $buttonHoverTransition;
 
@@ -169,21 +167,62 @@ $mobileMinSize: 2.5rem;
       padding: 1rem 1.4rem 1rem 1rem;
     }
   }
+}
 
-  &:hover {
-    .Block3d__content {
-      background-color: $highlightColor;
-    }
 
-    color: #fff;
+.button__text {
+  @extend .title--button;
+  color: $highlightColor;
+  transition: $buttonHoverTransition;
+  position: relative;
+}
+
+
+.button__text--arrowBottom {
+  padding-bottom: 0.1rem;
+
+  &:after {
     transition: $buttonHoverTransition;
+    @include bottomArrow(0.22);
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      @include bottomArrow(0.3);
+    }
   }
 }
 
+
+.button__text--arrowRight {
+  padding-right: 0.4rem;
+
+  &:after {
+    transition: $buttonHoverTransition;
+    @include rightArrow(0.22);
+
+    @media screen and (max-width: $breakpoint-mobile){
+      @include rightArrow(0.3);
+    }
+  }
+}
+
+
+
+
 .button:hover {
 
-  .Block3d:after {
+  .button__text {
+    color: #fff;
+  }
+
+  .Block3d__content {
+    background-color: $highlightColor;
+  }
+
+  .button__text--arrowRight:after {
     border-left-color: #fff;
-    transition: $buttonHoverTransition;
+  }
+
+  .button__text--arrowBottom:after {
+    border-top-color: #fff;
   }
 }

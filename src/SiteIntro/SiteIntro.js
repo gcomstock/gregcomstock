@@ -90,7 +90,7 @@ export const SiteIntro = React.createClass({
 
 
         <Block3d
-          cssClass='SiteIntro__viewWork'
+          cssClass='SiteIntro__viewWork button'
           depth='1'
           z='0'
           shadow={true}
@@ -100,7 +100,7 @@ export const SiteIntro = React.createClass({
           clickHandler={this.onViewWorkClick}
           isMobile={this.props.isMobile}
         >
-          <h2>view work</h2>
+          <div className='button__text button__text--arrowBottom'>view work</div>
         </Block3d>
 
       </div>

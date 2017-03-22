@@ -1,3 +1,5 @@
+@import 'shared.scss';
+
 $transformOut: transform 500ms cubic-bezier(0.550, 0.055, 0.675, 0.190); /* easeInCubic */
 $transformIn:  transform 500ms cubic-bezier(0.215, 0.610, 0.355, 1.000); /* easeOutCubic */
 
@@ -14,9 +16,12 @@ $opacityIn:  opacity 450ms 100ms cubic-bezier(0.215, 0.610, 0.355, 1.000); /* ea
   transition: $transformIn;
 
   .Block3d__face,
-  .Block3d__content,
   .App__body__scrollable__wrapper__floor {
     transition: $opacityIn;
+  }
+
+  .Block3d__content {
+    transition: $opacityIn, $buttonHoverTransition;
   }
 }
 

@@ -75,8 +75,6 @@
 
   @media screen and (max-width: $breakpoint-mobile){
     top: calc(#{$siteIntroHeight--mobile} - 1.5rem);
-
-
   }
 
   .Block3d {
@@ -90,18 +88,5 @@
 
   .Block3d__content {
     padding: 0.75rem 1rem 1rem 1rem;
-  }
-
-  // arrow
-  .Block3d__content:after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: 0.6rem;
-    margin-left: -0.5rem;
-
-    border-top: 0.4rem solid rgb(180,0,0);
-    border-left: 0.5rem solid transparent;
-    border-right: 0.5rem solid transparent;
   }
 }

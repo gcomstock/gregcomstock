@@ -50,7 +50,7 @@ export default function projectViewFactory(WrappedComponent, projectData) {
               depth='1'
               z='0'
               noRight={true}>
-              launch project
+              <div className='button__text button__text--arrowRight'>launch project</div>
             </Block3d>
           </div>
         )

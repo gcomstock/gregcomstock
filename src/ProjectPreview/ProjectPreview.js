@@ -87,7 +87,7 @@ export const ProjectPreview = React.createClass({
 
           <div className='ProjectPreview__leftCol__routeWrapper'>
             <Block3d
-              cssClass='ProjectPreview__leftCol__route'
+              cssClass='ProjectPreview__leftCol__route button'
               route={this.props.route}
               depth='1'
               noRight={true}
@@ -96,7 +96,7 @@ export const ProjectPreview = React.createClass({
               shadowDepth={-13.99}
               isMobile={this.props.isMobile}
             >
-              <h2>learn more</h2>
+              <div className='button__text button__text--arrowRight'>learn more</div>
             </Block3d>
           </div>
         </div>
