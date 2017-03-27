@@ -87,6 +87,7 @@ export default function projectViewFactory(WrappedComponent, projectData) {
                 z='0'
                 noTop={true}
                 noRight={true}
+                padding={[0]}
               />
 
               <Block3d
@@ -97,6 +98,7 @@ export default function projectViewFactory(WrappedComponent, projectData) {
                 noTop={true}
                 noRight={true}
                 isMobile={this.props.isMobile}
+                padding={[1.5]}
               >
                 <div dangerouslySetInnerHTML={this.renderTitleHTML()} />
               </Block3d>
@@ -109,6 +111,7 @@ export default function projectViewFactory(WrappedComponent, projectData) {
                 noTop={true}
                 noRight={true}
                 isMobile={this.props.isMobile}
+                isSharpText={true}
               >
                 {projectData.TEXT.map((item) => {
                   return <p>{item}</p>;
@@ -124,6 +127,7 @@ export default function projectViewFactory(WrappedComponent, projectData) {
                   noTop={true}
                   noRight={true}
                   isMobile={this.props.isMobile}
+                  padding={[0.75,1.2]}
                 >
                   key responsibilities
                 </Block3d>
@@ -153,6 +157,7 @@ export default function projectViewFactory(WrappedComponent, projectData) {
                   noTop={true}
                   noRight={true}
                   isMobile={this.props.isMobile}
+                  padding={[0.75,1.5,0.75,1.5]}
                 >
                   technology
                 </Block3d>

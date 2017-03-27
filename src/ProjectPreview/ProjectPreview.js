@@ -78,8 +78,8 @@ export const ProjectPreview = React.createClass({
             depth='8'
             z='-6'
             noTop={true}
-            noRight={true}
             noLeft={true}
+            noRight={true}
             isMobile={this.props.isMobile}
           >
             <p className='snippet'>{this.props.snippet}</p>
@@ -90,11 +90,12 @@ export const ProjectPreview = React.createClass({
               cssClass='ProjectPreview__leftCol__route button'
               route={this.props.route}
               depth='1'
-              noRight={true}
               noLeft={true}
+              noRight={true}
               shadow={true}
               shadowDepth={-13.99}
               isMobile={this.props.isMobile}
+              padding={[0.75]}
             >
               <div className='button__text button__text--arrowRight'>learn more</div>
             </Block3d>

@@ -71,7 +71,6 @@
   .Block3d__content {
     width: 100%;
     height: 100%;
-    padding: 0;
     box-shadow: $xButtonBoxShadow;
     transition: $buttonHoverTransition;
     background-size: 200% 100%;
@@ -99,10 +98,10 @@
 
 
   .Block3d__content {
-    padding: 0.75rem 1.15rem;
+    //padding: 0.75rem 1.15rem;
 
     @media screen and (max-width: $breakpoint-mobile){
-      padding: 1.5rem;
+      //padding: 1.5rem;
     }
   }
 }
@@ -116,7 +115,7 @@
   margin-bottom: 0.75rem;
 
   .Block3d__content {
-    padding: 0.75rem 1.4rem;
+    //padding: 0.75rem 1.4rem;
   }
 
   @media screen and (max-width: $breakpoint-mobile) {
@@ -124,7 +123,7 @@
     z-index: 1 !important; //to override Block3d inline styles
 
     .Block3d__content {
-      padding: 1.5rem;
+      //padding: 1.5rem;
     }
   }
 }
@@ -178,19 +177,19 @@
 
 
 .ProjectDesc__content__note__title .Block3d__content {
-  padding: 0.75rem 1.2rem;
+  //padding: 0.75rem 1.2rem;
 
   @media screen and (max-width: $breakpoint-mobile){
-    padding: 0.75rem 1.5rem;
+    //padding: 0.75rem 1.5rem;
   }
 }
 
 
 .ProjectDesc__content__note__text .Block3d__content {
-  padding: 0.75rem 1.1rem 0.75rem 1.4rem;
+  //padding: 0.75rem 1.1rem 0.75rem 1.4rem;
 
   @media screen and (max-width: $breakpoint-mobile){
-    padding: 1.5rem 1.5rem 1.5rem 2.25rem;
+    //padding: 1.5rem 1.5rem 1.5rem 2.25rem;
   }
 }
 

@@ -19,7 +19,9 @@ const Block3d = React.createClass({
     noLeft: React.PropTypes.bool,
     noRight: React.PropTypes.bool,
     noBottom: React.PropTypes.bool,
-    isMobile: React.PropTypes.bool.isRequired
+    isMobile: React.PropTypes.bool.isRequired,
+    isSharpText: React.PropTypes.bool,
+    padding: React.PropTypes.array
   },
 
   applyXYTranslation() {
@@ -35,8 +37,41 @@ const Block3d = React.createClass({
     return translation
   },
 
-  applyZTranslation() {
-    return this.props.z && !this.props.isMobile ? 'translateZ(' + this.props.z + 'rem)' : null;
+  applyTransform() {
+    // no transforms for mobile - it is 2d
+    if (this.props.isMobile) {
+      return null;
+    }
+
+    // need to include scale for 'sharp text' option, because we double the size then scale by 50%
+    if (this.props.isSharpText) {
+      return this.props.z ? 'translateZ(' + this.props.z + 'rem) scale3d(0.5,0.5,0.5)' : 'scale3d(0.5,0.5,0.5)';
+    }
+
+    // normal
+    return this.props.z ? 'translateZ(' + this.props.z + 'rem)' : null;
+  },
+
+  applyPadding(padding) {
+    if (!padding) {
+      padding = [1.5];
+    }
+
+
+    if (this.props.isMobile) {
+      return buildPaddingString(1);
+    }
+    return this.props.isSharpText ? buildPaddingString(2) : buildPaddingString(1);
+
+
+    // hoisted
+    function buildPaddingString(multiplier) {
+      let str = '';
+      padding.forEach((val) => {
+        str += val * multiplier + 'rem ';
+      });
+      return str;
+    }
   },
 
   applyDefaultContentClasses() {
@@ -62,6 +97,31 @@ const Block3d = React.createClass({
     }
 
     return classes;
+  },
+
+  applyWidthOrHeight(str) {
+
+    // null - no specific measurement provided for this block, so it will wrap to size of its content
+    if (!str) {
+      return null;
+    }
+
+    // mobile just takes normal values given, no stretching
+    if (this.props.isMobile || !this.props.isSharpText) {
+      return str;
+    }
+
+    const unit = str.replace(/[0-9]/g, '');
+    let value = str.replace(unit, '');
+
+    return value*2 + unit;
+  },
+
+  applyDepth() {
+    if (this.props.isMobile) {
+      return this.props.depth;
+    }
+    return this.props.isSharpText ? this.props.depth * 2 : this.props.depth;
   },
 
   renderShadow() {
@@ -110,19 +170,21 @@ const Block3d = React.createClass({
         { this.renderShadow() }
 
         <div className='Block3d' style={{
-          width: this.props.width,
-          height: this.props.height,
+          width: this.applyWidthOrHeight(this.props.width),
+          height: this.applyWidthOrHeight(this.props.height),
           zIndex: this.props.z,
-          transform: this.applyZTranslation(),
+          transform: this.applyTransform(),
           animationDelay: this.props.animationDelay
+        }}>
+          <div className={contentClasses} style={{
+            padding: this.applyPadding(this.props.padding)
           }}>
-          <div className={contentClasses}>
             {this.props.children}
           </div>
-          { !this.props.isMobile && !this.props.noTop && <div className='Block3d__face Block3d__face--top' style={{height: this.props.depth + 'rem'}}></div> }
-          { !this.props.isMobile && !this.props.noLeft && <div className='Block3d__face Block3d__face--left' style={{width: this.props.depth + 'rem'}}></div> }
-          { !this.props.isMobile && !this.props.noRight && <div className='Block3d__face Block3d__face--right' style={{width: this.props.depth + 'rem'}}></div> }
-          { !this.props.isMobile && !this.props.noBottom && <div className='Block3d__face Block3d__face--bottom' style={{height: this.props.depth + 'rem'}}></div> }
+          { !this.props.isMobile && !this.props.noTop && <div className='Block3d__face Block3d__face--top' style={{height: this.applyDepth() + 'rem'}}></div> }
+          { !this.props.isMobile && !this.props.noLeft && <div className='Block3d__face Block3d__face--left' style={{width: this.applyDepth() + 'rem'}}></div> }
+          { !this.props.isMobile && !this.props.noRight && <div className='Block3d__face Block3d__face--right' style={{width: this.applyDepth() + 'rem'}}></div> }
+          { !this.props.isMobile && !this.props.noBottom && <div className='Block3d__face Block3d__face--bottom' style={{height: this.applyDepth() + 'rem'}}></div> }
         </div>
       </div>
     )
