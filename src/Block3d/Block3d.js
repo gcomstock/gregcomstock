@@ -21,7 +21,36 @@ const Block3d = React.createClass({
     noBottom: React.PropTypes.bool,
     isMobile: React.PropTypes.bool.isRequired,
     isSharpText: React.PropTypes.bool,
-    padding: React.PropTypes.array
+    padding: React.PropTypes.array,
+    fontSize: React.PropTypes.string,
+    lineHeight: React.PropTypes.string
+  },
+
+  getInitialState() {
+    return {
+      unscaledHeight: 0
+    }
+  },
+
+  componentDidMount() {
+    this.setState({unscaledHeight: this.el.clientHeight});
+    this.setInlineHeight();
+  },
+
+  componentDidUpdate() {
+    //console.debug('this.state.unscaledHeight: ' + this.state.unscaledHeight);
+    this.setInlineHeight();
+  },
+
+  setInlineHeight() {
+    //console.debug(this.el);
+
+    if (this.props.isSharpText && !this.props.isMobile) {
+      // adjust doc flow for scaled down element
+      this.el.style.height = this.state.unscaledHeight/2 + 'px';
+    } else if (this.props.isSharpText && this.props.isMobile) {
+      this.el.style.height = 'auto';//this.state.unscaledHeight + 'px';
+    }
   },
 
   applyXYTranslation() {
@@ -99,9 +128,8 @@ const Block3d = React.createClass({
     return classes;
   },
 
-  applyWidthOrHeight(str) {
-
-    // null - no specific measurement provided for this block, so it will wrap to size of its content
+  applyCSSValue(str) {
+    // null - no specific measurement provided for this block, so we wont apply anything inline
     if (!str) {
       return null;
     }
@@ -111,10 +139,28 @@ const Block3d = React.createClass({
       return str;
     }
 
-    const unit = str.replace(/[0-9]/g, '');
+    const unit = str.replace(/[0-9]+(\.[0-9][0-9]?)?/g, '');
     let value = str.replace(unit, '');
 
-    return value*2 + unit;
+    return value * 2 + unit;
+  },
+
+  applyFontValue(str) {
+    if (!str) {
+      return null;
+    }
+
+    if (this.props.isMobile || !this.props.isSharpText) {
+      return str;
+    }
+
+
+    if (this.props.isSharpText) {
+      const unit = str.replace(/[0-9]+(\.[0-9][0-9]?)?/g, '');
+      let value = str.replace(unit, '');
+
+      return value * 2 + unit;
+    }
   },
 
   applyDepth() {
@@ -161,25 +207,27 @@ const Block3d = React.createClass({
 
     let contentClasses = this.applyDefaultContentClasses(); // styles applied based off of element's depth
 
-
+    //key changes when mobile view activates so we can re-measure scaled height when we re-mount
     return (
-      <div className={wrapperClasses} onClick={this.handleClick} style={{
+      <div className={wrapperClasses} onClick={this.handleClick} key={`isMobile--${this.props.isMobile}`} ref={(el) => { this.el = el; }} style={{
         transform: this.applyXYTranslation()
-        }}>
+      }}>
 
         { this.renderShadow() }
 
         <div className='Block3d' style={{
-          width: this.applyWidthOrHeight(this.props.width),
-          height: this.applyWidthOrHeight(this.props.height),
+          width: this.applyCSSValue(this.props.width),
+          height: this.applyCSSValue(this.props.height),
           zIndex: this.props.z,
           transform: this.applyTransform(),
           animationDelay: this.props.animationDelay
         }}>
           <div className={contentClasses} style={{
-            padding: this.applyPadding(this.props.padding)
+            padding: this.applyPadding(this.props.padding),
+            fontSize: this.applyFontValue(this.props.fontSize),
+            lineHeight: this.applyFontValue(this.props.lineHeight)
           }}>
-            {this.props.children}
+            { this.props.children }
           </div>
           { !this.props.isMobile && !this.props.noTop && <div className='Block3d__face Block3d__face--top' style={{height: this.applyDepth() + 'rem'}}></div> }
           { !this.props.isMobile && !this.props.noLeft && <div className='Block3d__face Block3d__face--left' style={{width: this.applyDepth() + 'rem'}}></div> }

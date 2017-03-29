@@ -98,7 +98,7 @@ export default function projectViewFactory(WrappedComponent, projectData) {
                 noTop={true}
                 noRight={true}
                 isMobile={this.props.isMobile}
-                padding={[1.5]}
+                padding={[1,1.35]}
               >
                 <div dangerouslySetInnerHTML={this.renderTitleHTML()} />
               </Block3d>
@@ -112,9 +112,11 @@ export default function projectViewFactory(WrappedComponent, projectData) {
                 noRight={true}
                 isMobile={this.props.isMobile}
                 isSharpText={true}
+                fontSize={'0.5rem'}
+                lineHeight={'1rem'}
               >
                 {projectData.TEXT.map((item) => {
-                  return <p>{item}</p>;
+                  return <p className='sharpText'>{item}</p>;
                 })}
               </Block3d>
 
