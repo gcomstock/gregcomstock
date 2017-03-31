@@ -13,8 +13,8 @@
   }
 
   p {
-    //font-size: 14px;
-    //line-height: 22px;
+    font-size: 14px;
+    line-height: 22px;
 
     &.snippet {
       font-size: 15px;
@@ -22,8 +22,8 @@
     }
   }
   li {
-    //font-size: 14px;
-    //line-height: 22px;
+    font-size: 14px;
+    line-height: 22px;
     margin-bottom: 14px;
   }
 }
@@ -39,17 +39,17 @@
     font-size: 24px;
   }
   p {
-    //font-size: 13px;
-    //line-height: 26px;
+    font-size: 12px;
+    line-height: 26px;
 
-    //&.snippet {
-    //  font-size: 14px;
-    //  line-height: 26px;
-    //}
+    &.snippet {
+      font-size: 14px;
+      line-height: 26px;
+    }
   }
   li {
-    //font-size: 13px;
-    //line-height: 18px;
+    font-size: 12px;
+    line-height: 26px;
     margin-bottom: 14px;
   }
 }

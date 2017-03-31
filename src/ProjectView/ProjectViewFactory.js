@@ -49,7 +49,9 @@ export default function projectViewFactory(WrappedComponent, projectData) {
               height='auto'
               depth='1'
               z='0'
-              noRight={true}>
+              noRight={true}
+              padding={[1]}
+            >
               <div className='button__text button__text--arrowRight'>launch project</div>
             </Block3d>
           </div>
@@ -65,10 +67,10 @@ export default function projectViewFactory(WrappedComponent, projectData) {
         }
       );
 
-      const ProjectDesc__content = classNames(
-        'ProjectDesc__content', {
-          'ProjectDesc__content--intro': this.state.routeTransition === 'intro',
-          'ProjectDesc__content--outro': this.state.routeTransition === 'outro'
+      const ProjectDesc = classNames(
+        'ProjectDesc', {
+          'ProjectDesc--intro': this.state.routeTransition === 'intro',
+          'ProjectDesc--outro': this.state.routeTransition === 'outro'
         }
       );
 
@@ -76,15 +78,16 @@ export default function projectViewFactory(WrappedComponent, projectData) {
         <div className='App__body'>
 
 
-          <div className='ProjectDesc'>
-            <div className={ProjectDesc__content}>
+          <div className={ProjectDesc}>
+            <div className='ProjectDesc__content'>
               <Block3d
                 cssClass='ProjectDesc__content__x'
                 route={'/'}
                 width='100%'
                 height='100%'
-                depth='0.25'
-                z='0'
+                depth='0.5'
+                //z='-2'
+                y='0'
                 noTop={true}
                 noRight={true}
                 padding={[0]}
@@ -93,12 +96,14 @@ export default function projectViewFactory(WrappedComponent, projectData) {
               <Block3d
                 cssClass='ProjectDesc__content__title'
                 width='100%'
-                depth='2'
-                z='0'
+                depth='6.5'
+                //z='-2'
+                //x='1'
+                //y='-6'
                 noTop={true}
                 noRight={true}
                 isMobile={this.props.isMobile}
-                padding={[1,1.35]}
+                padding={[1,1.5]}
               >
                 <div dangerouslySetInnerHTML={this.renderTitleHTML()} />
               </Block3d>
@@ -106,41 +111,41 @@ export default function projectViewFactory(WrappedComponent, projectData) {
               <Block3d
                 cssClass='ProjectDesc__content__text'
                 width='100%'
-                depth='1'
-                z='-1'
+                depth='6.5'
+                //z='-4'
+                //x='1'
+                //y='2'
                 noTop={true}
                 noRight={true}
                 isMobile={this.props.isMobile}
-                isSharpText={true}
-                fontSize={'0.5rem'}
-                lineHeight={'1rem'}
               >
                 {projectData.TEXT.map((item) => {
-                  return <p className='sharpText'>{item}</p>;
+                  return <p>{item}</p>;
                 })}
               </Block3d>
 
-              <div className='ProjectDesc__content__note--responsibilities'>
+              <div className='ProjectDesc__content__note'>
                 <Block3d
                   cssClass='ProjectDesc__content__note__title'
                   width='100%'
-                  depth='2'
+                  depth='2.5'
                   z='0'
-                  noTop={true}
+                  //noTop={true}
                   noRight={true}
                   isMobile={this.props.isMobile}
-                  padding={[0.75,1.2]}
+                  padding={[1,1.5]}
                 >
                   key responsibilities
                 </Block3d>
                 <Block3d
                   cssClass='ProjectDesc__content__note__text'
                   width='100%'
-                  depth='1'
-                  z='-1'
-                  noTop={true}
+                  depth='2.5'
+                  z='0'
+                  //noTop={true}
                   noRight={true}
                   isMobile={this.props.isMobile}
+                  padding={[1,1.5]}
                 >
                   <ul>
                     {projectData.RESPONSIBILITIES.map((item) => {
@@ -150,27 +155,28 @@ export default function projectViewFactory(WrappedComponent, projectData) {
                 </Block3d>
               </div>
 
-              <div className='ProjectDesc__content__note--technology'>
+              <div className='ProjectDesc__content__note'>
                 <Block3d
                   cssClass='ProjectDesc__content__note__title'
                   width='100%'
-                  depth='2'
+                  depth='2.5'
                   z='0'
-                  noTop={true}
+                  //noTop={true}
                   noRight={true}
                   isMobile={this.props.isMobile}
-                  padding={[0.75,1.5,0.75,1.5]}
+                  padding={[1,1.5]}
                 >
                   technology
                 </Block3d>
                 <Block3d
                   cssClass='ProjectDesc__content__note__text'
                   width='100%'
-                  depth='1'
-                  z='-1'
-                  noTop={true}
+                  depth='2.5'
+                  z='0'
+                  //noTop={true}
                   noRight={true}
                   isMobile={this.props.isMobile}
+                  padding={[1,1.5]}
                 >
                   <ul>
                     {projectData.TECHNOLOGIES.map((item) => {
@@ -203,8 +209,6 @@ export default function projectViewFactory(WrappedComponent, projectData) {
 
               </div>
             </div>
-
-
           </div>
         </div>
       )

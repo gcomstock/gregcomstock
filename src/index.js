@@ -20,12 +20,12 @@ ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={App}>
       <IndexRoute component={WorkView}/>
-      <Route path="/project/pandora" component={projectViewFactory(PandoraLayout, PandoraConsts)}/>
+      <Route path="/project/pandora"             component={projectViewFactory(PandoraLayout, PandoraConsts)}/>
       <Route path="/project/pandora-display-ads" component={projectViewFactory(PandoraAdsLayout, PandoraAdsConsts)}/>
-      <Route path="/project/pandora-windows10" component={projectViewFactory(PandoraWin10Layout, PandoraWin10Consts)}/>
-      <Route path="/project/christynatsumi" component={projectViewFactory(ChristynNatsumiLayout, ChristyNatsumiConsts)}/>
-      <Route path="/project/riddickart" component={projectViewFactory(RiddickartLayout, RiddickartConsts)}/>
-      <Route path="/project/screensim" component={projectViewFactory(ScreensimLayout, ScreensimConsts)}/>
+      <Route path="/project/pandora-windows10"   component={projectViewFactory(PandoraWin10Layout, PandoraWin10Consts)}/>
+      <Route path="/project/christynatsumi"      component={projectViewFactory(ChristynNatsumiLayout, ChristyNatsumiConsts)}/>
+      <Route path="/project/riddickart"          component={projectViewFactory(RiddickartLayout, RiddickartConsts)}/>
+      <Route path="/project/screensim"           component={projectViewFactory(ScreensimLayout, ScreensimConsts)}/>
       <Route path="*" component={WorkView}/>
     </Route>
   </Router>,

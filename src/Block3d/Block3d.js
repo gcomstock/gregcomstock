@@ -20,37 +20,9 @@ const Block3d = React.createClass({
     noRight: React.PropTypes.bool,
     noBottom: React.PropTypes.bool,
     isMobile: React.PropTypes.bool.isRequired,
-    isSharpText: React.PropTypes.bool,
     padding: React.PropTypes.array,
     fontSize: React.PropTypes.string,
     lineHeight: React.PropTypes.string
-  },
-
-  getInitialState() {
-    return {
-      unscaledHeight: 0
-    }
-  },
-
-  componentDidMount() {
-    this.setState({unscaledHeight: this.el.clientHeight});
-    this.setInlineHeight();
-  },
-
-  componentDidUpdate() {
-    //console.debug('this.state.unscaledHeight: ' + this.state.unscaledHeight);
-    this.setInlineHeight();
-  },
-
-  setInlineHeight() {
-    //console.debug(this.el);
-
-    if (this.props.isSharpText && !this.props.isMobile) {
-      // adjust doc flow for scaled down element
-      this.el.style.height = this.state.unscaledHeight/2 + 'px';
-    } else if (this.props.isSharpText && this.props.isMobile) {
-      this.el.style.height = 'auto';//this.state.unscaledHeight + 'px';
-    }
   },
 
   applyXYTranslation() {
@@ -72,11 +44,6 @@ const Block3d = React.createClass({
       return null;
     }
 
-    // need to include scale for 'sharp text' option, because we double the size then scale by 50%
-    if (this.props.isSharpText) {
-      return this.props.z ? 'translateZ(' + this.props.z + 'rem) scale3d(0.5,0.5,0.5)' : 'scale3d(0.5,0.5,0.5)';
-    }
-
     // normal
     return this.props.z ? 'translateZ(' + this.props.z + 'rem)' : null;
   },
@@ -86,21 +53,13 @@ const Block3d = React.createClass({
       padding = [1.5];
     }
 
+    let str = '';
 
-    if (this.props.isMobile) {
-      return buildPaddingString(1);
-    }
-    return this.props.isSharpText ? buildPaddingString(2) : buildPaddingString(1);
+    padding.forEach((val) => {
+      str += val + 'rem ';
+    });
 
-
-    // hoisted
-    function buildPaddingString(multiplier) {
-      let str = '';
-      padding.forEach((val) => {
-        str += val * multiplier + 'rem ';
-      });
-      return str;
-    }
+    return str;
   },
 
   applyDefaultContentClasses() {
@@ -128,46 +87,9 @@ const Block3d = React.createClass({
     return classes;
   },
 
-  applyCSSValue(str) {
-    // null - no specific measurement provided for this block, so we wont apply anything inline
-    if (!str) {
-      return null;
-    }
-
-    // mobile just takes normal values given, no stretching
-    if (this.props.isMobile || !this.props.isSharpText) {
-      return str;
-    }
-
-    const unit = str.replace(/[0-9]+(\.[0-9][0-9]?)?/g, '');
-    let value = str.replace(unit, '');
-
-    return value * 2 + unit;
-  },
-
-  applyFontValue(str) {
-    if (!str) {
-      return null;
-    }
-
-    if (this.props.isMobile || !this.props.isSharpText) {
-      return str;
-    }
-
-
-    if (this.props.isSharpText) {
-      const unit = str.replace(/[0-9]+(\.[0-9][0-9]?)?/g, '');
-      let value = str.replace(unit, '');
-
-      return value * 2 + unit;
-    }
-  },
-
   applyDepth() {
-    if (this.props.isMobile) {
-      return this.props.depth;
-    }
-    return this.props.isSharpText ? this.props.depth * 2 : this.props.depth;
+    //TODO: maybe use this to create side walls for mobile instead of psuedo selectors
+    return !this.props.isMobile ? this.props.depth : null;
   },
 
   renderShadow() {
@@ -216,16 +138,16 @@ const Block3d = React.createClass({
         { this.renderShadow() }
 
         <div className='Block3d' style={{
-          width: this.applyCSSValue(this.props.width),
-          height: this.applyCSSValue(this.props.height),
+          width: this.props.width,
+          height: this.props.height,
           zIndex: this.props.z,
           transform: this.applyTransform(),
           animationDelay: this.props.animationDelay
         }}>
           <div className={contentClasses} style={{
             padding: this.applyPadding(this.props.padding),
-            fontSize: this.applyFontValue(this.props.fontSize),
-            lineHeight: this.applyFontValue(this.props.lineHeight)
+            fontSize: this.props.fontSize + 'rem',
+            lineHeight: this.props.lineHeight + 'rem'
           }}>
             { this.props.children }
           </div>
