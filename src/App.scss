@@ -51,10 +51,15 @@
 
 // containing element to allow scrollable and non-scrollable content on a view
 .App__body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+
   font-size: 0; // so whitespace doesnt mess with inline elements
   //height: 100vh;
   height: calc(100vh - #{$headerHeight});
-  position: relative;
   background-color: red;
   margin-top: $headerHeight;
 
@@ -74,10 +79,10 @@
 
 // magical element that gives 3d scrolling
 .App__body__scrollable {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  //position: absolute;
+  //top: 0;
+  //left: 0;
+  //width: 100%;
   height: 100vh;
 
   perspective-origin: 50% 80%; // x-center y-top

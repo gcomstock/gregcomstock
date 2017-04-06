@@ -20,7 +20,7 @@ export default function projectViewFactory(WrappedComponent, projectData) {
       setTimeout(() => {
         this.setState({routeTransition: null});
         callback();
-      }, 600000);
+      }, 600);
     },
 
     componentWillLeave(callback) {
@@ -28,7 +28,7 @@ export default function projectViewFactory(WrappedComponent, projectData) {
       setTimeout(() => {
         this.setState({routeTransition: null});
         callback();
-      }, 600000);
+      }, 600);
     },
 
     renderTitleHTML() {
@@ -60,25 +60,16 @@ export default function projectViewFactory(WrappedComponent, projectData) {
     },
 
     render() {
-      const App__body__scrollable__wrapper = classNames(
-        'App__body__scrollable__wrapper', {
-          'App__body__scrollable__wrapper--intro': this.state.routeTransition === 'intro',
-          'App__body__scrollable__wrapper--outro': this.state.routeTransition === 'outro'
-        }
-      );
-
-      const ProjectDesc = classNames(
-        'ProjectDesc', {
-          'ProjectDesc--intro': this.state.routeTransition === 'intro',
-          'ProjectDesc--outro': this.state.routeTransition === 'outro'
+      const App__body = classNames(
+        'App__body', {
+          'App__body--intro': this.state.routeTransition === 'intro',
+          'App__body--outro': this.state.routeTransition === 'outro'
         }
       );
 
       return (
-        <div className='App__body'>
-
-
-          <div className={ProjectDesc}>
+        <div className={App__body}>
+          <div className='ProjectDesc'>
             <div className='ProjectDesc__content'>
               <Block3d
                 cssClass='ProjectDesc__content__x'
@@ -176,7 +167,7 @@ export default function projectViewFactory(WrappedComponent, projectData) {
 
 
           <div className='App__body__scrollable'>
-            <div className={App__body__scrollable__wrapper}>
+            <div className='App__body__scrollable__wrapper'>
               <div className='App__body__scrollable__wrapper__floor'></div>
               <div className='App__body__scrollable__wrapper__leftFrame'>
                 <Block3d width='20rem' height='100%' depth='10' z='-4'/>

@@ -35,7 +35,7 @@ const WorkView = React.createClass({
     setTimeout(() => {
       this.setState({routeTransition: null});
       callback();
-    }, 600000);
+    }, 600);
   },
 
   componentWillLeave(callback) {
@@ -43,7 +43,7 @@ const WorkView = React.createClass({
     setTimeout(() => {
       this.setState({routeTransition: null});
       callback();
-    }, 600000);
+    }, 600);
   },
 
   componentDidMount() {
@@ -83,17 +83,17 @@ const WorkView = React.createClass({
   },
 
   render() {
-    const App__body__scrollable__wrapper = classNames(
-      'App__body__scrollable__wrapper', 'App__body__scrollable__wrapper--WorkView', {
-        'App__body__scrollable__wrapper--intro': this.state.routeTransition === 'intro',
-        'App__body__scrollable__wrapper--outro': this.state.routeTransition === 'outro'
+    const App__body = classNames(
+      'App__body', {
+        'App__body--intro': this.state.routeTransition === 'intro',
+        'App__body--outro': this.state.routeTransition === 'outro'
       }
     );
 
     return (
-      <div className='App__body'>
+      <div className={App__body}>
         <div className='App__body__scrollable' ref={(scrollableWrapper) => { this.scrollableWrapper = scrollableWrapper; }} onScroll={this.props.handleScroll}>
-          <div className={App__body__scrollable__wrapper}>
+          <div className='App__body__scrollable__wrapper App__body__scrollable__wrapper--WorkView'>
             <div className='App__body__scrollable__wrapper__floor App__body__scrollable__wrapper__floor--WorkView'></div>
 
             { this.renderOuterFrames() }

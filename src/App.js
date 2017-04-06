@@ -48,13 +48,13 @@ const App = React.createClass({
 
     return (
       <div className={`App theme--${this.state.theme}`}>
-        <div className='App__header'>
+        {/*<div className='App__header'>
           <div className='App__header__title'>
             greg comstock
           </div>
           <div className='App__header__theme' onClick={() => this.setTheme('default')}>1</div>
           <div className='App__header__theme' onClick={() => this.setTheme('game')}>2</div>
-        </div>
+        </div>*/}
 
         <ReactTransitionGroup>
           {React.cloneElement(this.props.children, {
