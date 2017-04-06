@@ -54,8 +54,6 @@ export const ProjectPreview = React.createClass({
   },
 
   render() {
-
-
     return (
       <div className='ProjectPreview'>
         <div className='ProjectPreview__leftCol'>

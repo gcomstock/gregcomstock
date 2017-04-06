@@ -14,41 +14,7 @@ $mobileMinSize: 2.5rem;
 
 
 
-
-
-.title--head {
-  font-family: 'title';
-  font-size: 2rem;
-  letter-spacing: 0.08rem;
-  color: $highlightColor;
-}
-
-.title--subhead {
-  font-family: 'title';
-  font-size: 1.2rem;
-  letter-spacing: 0.06rem;
-  color: $highlightColor;
-
-  @media screen and (max-width: $breakpoint-mobile) {
-    font-size: 1.8rem;
-  }
-}
-
-.title--button {
-  font-family: 'title';
-  font-size: 0.8rem;
-  letter-spacing: 0.05rem;
-  color: $highlightColor;
-
-  @media screen and (max-width: $breakpoint-mobile) {
-    font-size: 1.2rem;
-  }
-}
-
-
-
-
-
+$headerHeight: 0.1rem;
 
 
 @mixin rightArrow($size) {
@@ -171,8 +137,6 @@ $mobileMinSize: 2.5rem;
 
 
 .button__text {
-  @extend .title--button;
-  color: $highlightColor;
   transition: $buttonHoverTransition;
   position: relative;
 }

@@ -5,7 +5,7 @@ import { Link } from 'react-router'
 
 const BREAKPOINT_MOBILE = 1020;
 
-// This is intentionally not part of state, because we only need to update it on mount. Avoid un-necessary re-renders.
+// Intentionally not part of state, because we only need to update it on mount. Avoid un-necessary re-renders.
 let scrollY = 0;
 
 const App = React.createClass({
@@ -19,8 +19,8 @@ const App = React.createClass({
     // Setup application state. If this were a more complicated app we'd use redux, however for this project let's just
     // pass handlers into children to update this App-level state when needed
     return {
-      isMobile: window.innerWidth <= BREAKPOINT_MOBILE
-      //activeTheme: ''
+      isMobile: window.innerWidth <= BREAKPOINT_MOBILE,
+      theme: 'default'
     }
   },
 
@@ -40,14 +40,20 @@ const App = React.createClass({
     scrollY = e.target.scrollTop;
   },
 
-  //TODO: set theme
+  setTheme(theme) {
+    this.setState({theme});
+  },
 
   render() {
+
     return (
-      <div className="App">
-        <div className="App__header">
-          <Link to="/">home link</Link>
-          <Link to="/project/pandora">project link</Link>
+      <div className={`App theme--${this.state.theme}`}>
+        <div className='App__header'>
+          <div className='App__header__title'>
+            greg comstock
+          </div>
+          <div className='App__header__theme' onClick={() => this.setTheme('default')}>1</div>
+          <div className='App__header__theme' onClick={() => this.setTheme('game')}>2</div>
         </div>
 
         <ReactTransitionGroup>

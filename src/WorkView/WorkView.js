@@ -35,7 +35,7 @@ const WorkView = React.createClass({
     setTimeout(() => {
       this.setState({routeTransition: null});
       callback();
-    }, 600);
+    }, 600000);
   },
 
   componentWillLeave(callback) {
@@ -43,7 +43,7 @@ const WorkView = React.createClass({
     setTimeout(() => {
       this.setState({routeTransition: null});
       callback();
-    }, 600);
+    }, 600000);
   },
 
   componentDidMount() {

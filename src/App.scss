@@ -7,17 +7,56 @@
 
 .App__header {
   position: fixed;
-  height: 2rem;
+  height: $headerHeight;
+  top: 0;
   width: 100%;
-  z-index: 9999;
+  z-index: 99999;
   font-size: 2rem;
-  display: none;
+
+  &:after {
+    position: absolute;
+    bottom: calc(1px - 0.25rem);
+    left: 0;
+    content: '';
+    width: 50%;
+    border-top: 0.25rem solid #ccc;
+    border-left: 0.25rem solid transparent;
+  }
+
+  &:before {
+    position: absolute;
+    bottom: calc(1px - 0.25rem);
+    right: 0;
+    content: '';
+    width: 50%;
+    border-top: 0.25rem solid #ccc;
+    border-right: 0.25rem solid transparent;
+  }
 }
+
+.App__header__title {
+  font-size: 1rem;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.App__header__theme {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background-color: #999;
+}
+
 
 // containing element to allow scrollable and non-scrollable content on a view
 .App__body {
   font-size: 0; // so whitespace doesnt mess with inline elements
-  height: 100vh;
+  //height: 100vh;
+  height: calc(100vh - #{$headerHeight});
+  position: relative;
+  background-color: red;
+  margin-top: $headerHeight;
 
   // the new scrollable element
   @media screen and (max-width: $breakpoint-mobile){
@@ -59,7 +98,6 @@
 // maintains fixed width for layout
 .App__body__scrollable__wrapper {
   position: relative;
-  /*padding-top: 3rem;*/
   width: 54rem;
   margin: 0 auto;
   transform-style: preserve-3d;
@@ -106,7 +144,6 @@
 }
 
 .App__body__scrollable__footer__content__title {
-  @extend .title--head;
   margin-left: 0.75rem;
   margin-bottom: 0.5rem;
   text-shadow: -0.05rem -0.05rem 0 #f8f8f8, 0.05rem -0.05rem 0 #f8f8f8, -0.05rem 0.05rem 0 #f8f8f8, 0.05rem 0.05rem 0 #f8f8f8;

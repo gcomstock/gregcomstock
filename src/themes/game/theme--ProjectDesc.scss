@@ -27,7 +27,7 @@
 
 
 .ProjectDesc__content__title {
-  @extend .title--subhead--default;
+  @extend .title--subhead--game;
 
   @media screen and (max-width: $breakpoint-mobile){
     @include mobileBox(2.25rem, rgb(200,200,200), rgb(160,160,160));
@@ -47,7 +47,7 @@
 
 
 .ProjectDesc__content__note__title {
-  @extend .title--button--default;
+  @extend .title--button--game;
 
   @media screen and (max-width: $breakpoint-mobile){
     @include mobileBox(1.5rem, rgb(200,200,200), rgb(160,160,160));

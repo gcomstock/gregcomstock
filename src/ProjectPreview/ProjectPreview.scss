@@ -36,8 +36,6 @@
 
 
 .ProjectPreview__leftCol__title {
-  @extend .title--head;
-
   @media screen and (max-width: $breakpoint-mobile){
     z-index: -1 !important; //to override Block3d inline styles
     transform: translateZ(-6rem); //TODO: figure out why this works

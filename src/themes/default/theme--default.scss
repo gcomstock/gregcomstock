@@ -1,5 +1,7 @@
 @import '../../scss/shared.scss';
 
+$highlightColor: blue;
+
 
 @font-face {
   font-family: 'title';
@@ -9,56 +11,93 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'title--light';
-  src: url('../themes/default/bebasneue_light-webfont.woff2') format('woff2'),
-  url('../themes/default/bebasneue_light-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+.title--head--default {
+  font-family: 'title';
+  font-size: 2rem;
+  letter-spacing: 0.08rem;
+  color: $highlightColor;
 }
 
-@font-face {
-  font-family: 'title--book';
-  src: url('../themes/default/bebasneue_book-webfont.woff2') format('woff2'),
-  url('../themes/default/bebasneue_book-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+.title--subhead--default {
+  font-family: 'title';
+  font-size: 1.2rem;
+  letter-spacing: 0.06rem;
+  color: $highlightColor;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    font-size: 1.8rem;
+  }
 }
 
+.title--button--default {
+  font-family: 'title';
+  font-size: 0.8rem;
+  letter-spacing: 0.05rem;
+  color: $highlightColor;
 
-
-
-// main bg
-.App__body {
-  color: #333;
-  background-color: rgb(150,150,150);
-  background-image: url(../themes/default/siteIntro__bg.png), url(../themes/default/bg-8x8.png);
-  background-size: 900px, 4px;
-  background-attachment: fixed;
-
-  @media screen and (max-width: $breakpoint-mobile){
-    background-size: 600px, 4px;
+  @media screen and (max-width: $breakpoint-mobile) {
+    font-size: 1.2rem;
   }
 }
 
 
-.App__body__scrollable__wrapper__floor {
-  background-image: url(../themes/default/bg-10x10.png);
-  background-size: 5px;
-  background-color: rgb(192,192,192);
 
-  @media screen and (max-width: $breakpoint-mobile){
-    //background-image: url(../themes/default/bg-8x8.png);
-    //background-size: 4px;
-    background-image: none;
-    background-color: transparent;
-    border-top: 1px solid #555;
+
+
+
+.theme--default {
+
+
+  .button__text {
+    @extend .title--button--default;
+    color: $highlightColor;
   }
+
+
+  .App__header {
+    background-color: #eee;
+    box-shadow: 0 1rem 0.125rem -0.5rem rgba(0,0,0,0.2);
+  }
+
+  .App__body {
+    color: #333;
+    background-color: rgb(150, 150, 150);
+    background-image: url(../themes/default/siteIntro__bg.png), url(../themes/default/bg-8x8.png);
+    background-size: 900px, 4px;
+    background-attachment: fixed;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      background-size: 600px, 4px;
+    }
+  }
+
+  .App__body__scrollable__wrapper__floor {
+    background-image: url(../themes/default/bg-10x10.png);
+    background-size: 5px;
+    background-color: rgb(192, 192, 192);
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      background-image: none;
+      background-color: transparent;
+      border-top: 1px solid #555;
+    }
+  }
+
+  .App__body__scrollable__footer {
+    background-image: url(../themes/default/siteIntro__bg.png), url(../themes/default/bg-8x8.png);
+    background-size: 900px, 4px;
+  }
+
+  .App__body__scrollable__footer__content__title {
+    @extend .title--head--default;
+  }
+
+
+
+
+  @import 'theme--default-SiteIntro';
+  @import 'theme--default-Block3d';
+  @import 'theme--default-ProjectPreview';
+  @import 'theme--default-ProjectDesc';
+  @import 'theme--default-ProjectView';
 }
-
-
-.App__body__scrollable__footer {
-  background-image: url(../themes/default/siteIntro__bg.png), url(../themes/default/bg-8x8.png);
-  background-size: 900px, 4px;
-}
-

@@ -5,16 +5,16 @@ $rightMargin--web: 1.5rem;
 // RIGHT SIDE DESCRIPTION PANEL
 
 .ProjectDesc {
-  top: 0;
+  top: $headerHeight;
   right: 50%;
+
+  padding-top: 0.8rem;
   margin-right: -28rem;
 
   width: 19rem;
-  height: 100%;
+  height: calc(100% - #{$headerHeight});
   position: fixed;
   z-index: 9999;
-
-  background-color: rgba(255,0,0,0.1);
 
   overflow-y: scroll;
   overflow-x: hidden;
@@ -25,6 +25,8 @@ $rightMargin--web: 1.5rem;
   @media screen and (max-width: $breakpoint-mobile) {
     // no longer scrollable div on mobile, bring everything into doc flow
     perspective: none;
+    margin: 0;
+    right: auto;
     position: relative;
     transform: none;
     width: auto;
@@ -34,7 +36,7 @@ $rightMargin--web: 1.5rem;
 }
 
 .ProjectDesc__content {
-  top: 0.75rem;
+  //top: 0.75rem;
   left: 2rem;
   width: 16rem;
   position: absolute;
@@ -94,9 +96,6 @@ $rightMargin--web: 1.5rem;
 .ProjectDesc__content__title {
   margin-right: 3rem; // make room for x button
   margin-bottom: 0.75rem;
-  //margin-left: 0.75rem;
-
-  @extend .title--subhead;
 
   @media screen and (max-width: $breakpoint-mobile) {
     z-index: -1 !important; // override Block3d inline styles
@@ -169,8 +168,6 @@ $rightMargin--web: 1.5rem;
 .ProjectDesc__content__note__title {
   display: inline-block;
   margin-bottom: 0.75rem;
-
-  @extend .title--button;
 
   @media screen and (max-width: $breakpoint-mobile){
     display: inline-block;

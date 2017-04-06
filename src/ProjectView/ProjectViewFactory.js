@@ -20,7 +20,7 @@ export default function projectViewFactory(WrappedComponent, projectData) {
       setTimeout(() => {
         this.setState({routeTransition: null});
         callback();
-      }, 600);
+      }, 600000);
     },
 
     componentWillLeave(callback) {
@@ -28,7 +28,7 @@ export default function projectViewFactory(WrappedComponent, projectData) {
       setTimeout(() => {
         this.setState({routeTransition: null});
         callback();
-      }, 600);
+      }, 600000);
     },
 
     renderTitleHTML() {
@@ -85,9 +85,7 @@ export default function projectViewFactory(WrappedComponent, projectData) {
                 route={'/'}
                 width='100%'
                 height='100%'
-                depth='0.5'
-                //z='-2'
-                y='0'
+                depth='0.25'
                 noTop={true}
                 noRight={true}
                 padding={[0]}
@@ -96,10 +94,7 @@ export default function projectViewFactory(WrappedComponent, projectData) {
               <Block3d
                 cssClass='ProjectDesc__content__title'
                 width='100%'
-                depth='6.5'
-                //z='-2'
-                //x='1'
-                //y='-6'
+                depth='2.5'
                 noTop={true}
                 noRight={true}
                 isMobile={this.props.isMobile}
@@ -111,10 +106,7 @@ export default function projectViewFactory(WrappedComponent, projectData) {
               <Block3d
                 cssClass='ProjectDesc__content__text'
                 width='100%'
-                depth='6.5'
-                //z='-4'
-                //x='1'
-                //y='2'
+                depth='2.5'
                 noTop={true}
                 noRight={true}
                 isMobile={this.props.isMobile}
@@ -129,8 +121,6 @@ export default function projectViewFactory(WrappedComponent, projectData) {
                   cssClass='ProjectDesc__content__note__title'
                   width='100%'
                   depth='2.5'
-                  z='0'
-                  //noTop={true}
                   noRight={true}
                   isMobile={this.props.isMobile}
                   padding={[1,1.5]}
@@ -141,8 +131,6 @@ export default function projectViewFactory(WrappedComponent, projectData) {
                   cssClass='ProjectDesc__content__note__text'
                   width='100%'
                   depth='2.5'
-                  z='0'
-                  //noTop={true}
                   noRight={true}
                   isMobile={this.props.isMobile}
                   padding={[1,1.5]}
@@ -160,8 +148,6 @@ export default function projectViewFactory(WrappedComponent, projectData) {
                   cssClass='ProjectDesc__content__note__title'
                   width='100%'
                   depth='2.5'
-                  z='0'
-                  //noTop={true}
                   noRight={true}
                   isMobile={this.props.isMobile}
                   padding={[1,1.5]}
@@ -172,8 +158,6 @@ export default function projectViewFactory(WrappedComponent, projectData) {
                   cssClass='ProjectDesc__content__note__text'
                   width='100%'
                   depth='2.5'
-                  z='0'
-                  //noTop={true}
                   noRight={true}
                   isMobile={this.props.isMobile}
                   padding={[1,1.5]}
