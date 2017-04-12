@@ -1,6 +1,48 @@
 @import 'shared.scss';
 
 
+html {
+  font-size: 32px;
+  font-family: sans-serif;
+}
+
+p {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  line-height: 34px;
+  text-align: justify;
+  color: #555;
+
+  &.snippet {
+    font-size: 16px;
+    line-height: 36px;
+  }
+
+  @media screen and (max-width: $breakpoint-mobile){
+    text-align: left;
+  }
+}
+
+li {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 18px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+ul {
+  color: #555;
+  list-style-type: square;
+  margin-left: 0.5rem; // so bullet is flush with text
+}
+
+
+
+
 @media screen and (max-width: 1800px){
   html {
     font-size: 30px;
@@ -13,8 +55,8 @@
   }
 
   p {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 13px;
+    line-height: 28px;
 
     &.snippet {
       font-size: 15px;
@@ -22,8 +64,8 @@
     }
   }
   li {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 13px;
+    line-height: 21px;
     margin-bottom: 14px;
   }
 }
@@ -44,13 +86,13 @@
 
     &.snippet {
       font-size: 14px;
-      line-height: 26px;
+      line-height: 28px;
     }
   }
   li {
     font-size: 12px;
-    line-height: 26px;
-    margin-bottom: 14px;
+    line-height: 18px;
+    margin-bottom: 12px;
   }
 }
 

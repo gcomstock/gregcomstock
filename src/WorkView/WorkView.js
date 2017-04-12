@@ -77,6 +77,7 @@ const WorkView = React.createClass({
               isMobile={this.props.isMobile}
             />
           </div>
+          <div className='App__body__scrollable__wrapper__floor App__body__scrollable__wrapper__floor--WorkView'></div>
         </div>
       )
     }
@@ -85,8 +86,10 @@ const WorkView = React.createClass({
   render() {
     const App__body = classNames(
       'App__body', {
-        'App__body--intro': this.state.routeTransition === 'intro',
-        'App__body--outro': this.state.routeTransition === 'outro'
+        'App__body--webIntro': this.state.routeTransition === 'intro' && !this.props.isMobile,
+        'App__body--webOutro': this.state.routeTransition === 'outro' && !this.props.isMobile,
+        'App__body--mobileIntro': this.state.routeTransition === 'intro' && this.props.isMobile,
+        'App__body--mobileOutro': this.state.routeTransition === 'outro' && this.props.isMobile
       }
     );
 
@@ -94,7 +97,6 @@ const WorkView = React.createClass({
       <div className={App__body}>
         <div className='App__body__scrollable' ref={(scrollableWrapper) => { this.scrollableWrapper = scrollableWrapper; }} onScroll={this.props.handleScroll}>
           <div className='App__body__scrollable__wrapper App__body__scrollable__wrapper--WorkView'>
-            <div className='App__body__scrollable__wrapper__floor App__body__scrollable__wrapper__floor--WorkView'></div>
 
             { this.renderOuterFrames() }
 

@@ -46,5 +46,6 @@ export const PandoraConsts = Object.freeze({
     'React, Redux, ES6',
     'Webpack, npm, CSS/SASS',
     'Photoshop, Illustrator'
-  ]
+  ],
+  TECH: 'React, Redux, ES6, Webpack, npm, CSS/SASS, Photoshop, Illustrator'
 });

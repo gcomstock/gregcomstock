@@ -26,8 +26,31 @@ $opacityIn:  opacity 450ms 100ms cubic-bezier(0.215, 0.610, 0.355, 1.000); /* ea
 }
 
 
+.App__body--mobileIntro {
+  .App__body__scrollable__wrapper {
+    transition: $transformIn, $opacityIn;
+    transform: translate3d(4rem, 4rem, 0);
+
+    .Block3d__face,
+    .Block3d__content,
+    .Block3d--shadow,
+    .App__body__scrollable__wrapper__floor {
+      opacity: 0;
+    }
+  }
+}
+
+.App__body--mobileOutro {
+  .App__body__scrollable__wrapper {
+    transition: $transformOut, $opacityOut;
+    transform: translate3d(-4rem, -4rem, 0);
+    opacity: 0;
+  }
+}
+
+
 // intro
-.App__body--intro {
+.App__body--webIntro {
   .App__body__scrollable__wrapper {
     transform: translate3d(0, 0, -34rem);
     transition: none;
@@ -43,7 +66,7 @@ $opacityIn:  opacity 450ms 100ms cubic-bezier(0.215, 0.610, 0.355, 1.000); /* ea
 
 
 // outro
-.App__body--outro {
+.App__body--webOutro {
   .App__body__scrollable__wrapper {
     transition: $transformOut;
     transform: translate3d(0, 0, 14rem);
@@ -84,7 +107,7 @@ $opacityIn:  opacity 450ms 100ms cubic-bezier(0.215, 0.610, 0.355, 1.000); /* ea
 }
 
 
-.App__body--intro {
+.App__body--webIntro {
   .ProjectDesc {
     overflow: visible;
 
@@ -115,7 +138,7 @@ $opacityIn:  opacity 450ms 100ms cubic-bezier(0.215, 0.610, 0.355, 1.000); /* ea
 }
 
 
-.App__body--outro {
+.App__body--webOutro {
   .ProjectDesc {
     overflow: visible;
 

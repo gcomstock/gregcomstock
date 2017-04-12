@@ -59,16 +59,9 @@ export default function projectViewFactory(WrappedComponent, projectData) {
       }
     },
 
-    render() {
-      const App__body = classNames(
-        'App__body', {
-          'App__body--intro': this.state.routeTransition === 'intro',
-          'App__body--outro': this.state.routeTransition === 'outro'
-        }
-      );
-
-      return (
-        <div className={App__body}>
+    renderProjectDesc(mode) {
+      if (this.props.isMobile && mode === 'mobile' || !this.props.isMobile && mode === 'web') {
+        return (
           <div className='ProjectDesc'>
             <div className='ProjectDesc__content'>
               <Block3d
@@ -89,7 +82,6 @@ export default function projectViewFactory(WrappedComponent, projectData) {
                 noTop={true}
                 noRight={true}
                 isMobile={this.props.isMobile}
-                padding={[1,1.5]}
               >
                 <div dangerouslySetInnerHTML={this.renderTitleHTML()} />
               </Block3d>
@@ -101,20 +93,21 @@ export default function projectViewFactory(WrappedComponent, projectData) {
                 noTop={true}
                 noRight={true}
                 isMobile={this.props.isMobile}
+                padding={[0.75,1.25]}
               >
                 {projectData.TEXT.map((item) => {
                   return <p>{item}</p>;
                 })}
               </Block3d>
 
-              <div className='ProjectDesc__content__note'>
+              <div className='ProjectDesc__content__note ProjectDesc__content__note--responsibilities'>
                 <Block3d
                   cssClass='ProjectDesc__content__note__title'
                   width='100%'
                   depth='2.5'
                   noRight={true}
                   isMobile={this.props.isMobile}
-                  padding={[1,1.5]}
+                  padding={[0.75,1.25]}
                 >
                   key responsibilities
                 </Block3d>
@@ -124,7 +117,7 @@ export default function projectViewFactory(WrappedComponent, projectData) {
                   depth='2.5'
                   noRight={true}
                   isMobile={this.props.isMobile}
-                  padding={[1,1.5]}
+                  padding={[1,1.25]}
                 >
                   <ul>
                     {projectData.RESPONSIBILITIES.map((item) => {
@@ -134,54 +127,54 @@ export default function projectViewFactory(WrappedComponent, projectData) {
                 </Block3d>
               </div>
 
-              <div className='ProjectDesc__content__note'>
-                <Block3d
-                  cssClass='ProjectDesc__content__note__title'
-                  width='100%'
-                  depth='2.5'
-                  noRight={true}
-                  isMobile={this.props.isMobile}
-                  padding={[1,1.5]}
-                >
-                  technology
-                </Block3d>
-                <Block3d
-                  cssClass='ProjectDesc__content__note__text'
-                  width='100%'
-                  depth='2.5'
-                  noRight={true}
-                  isMobile={this.props.isMobile}
-                  padding={[1,1.5]}
-                >
-                  <ul>
-                    {projectData.TECHNOLOGIES.map((item) => {
-                      return <li>{item}</li>;
-                    })}
-                  </ul>
-                </Block3d>
-              </div>
-
               {this.renderLaunchButton()}
             </div>
           </div>
+        )
+      }
+    },
 
+    renderOuterFrames() {
+      if (!this.props.isMobile) {
+        return (
+          <div>
+            <div className='App__body__scrollable__wrapper__floor'></div>
+            <div className='App__body__scrollable__wrapper__leftFrame'>
+              <Block3d width='20rem' height='100%' depth='10' z='-4'/>
+            </div>
+            <div className='App__body__scrollable__wrapper__rightFrame'>
+              <Block3d width='20rem' height='100%' depth='10' z='-4'/>
+            </div>
+          </div>
+        )
+      }
+    },
+
+    render() {
+      const App__body = classNames(
+        'App__body', {
+          'App__body--webIntro': this.state.routeTransition === 'intro' && !this.props.isMobile,
+          'App__body--webOutro': this.state.routeTransition === 'outro' && !this.props.isMobile,
+          'App__body--mobileIntro': this.state.routeTransition === 'intro' && this.props.isMobile,
+          'App__body--mobileOutro': this.state.routeTransition === 'outro' && this.props.isMobile
+        }
+      );
+
+      return (
+        <div className={App__body}>
+
+          {this.renderProjectDesc('web')}
 
           <div className='App__body__scrollable'>
             <div className='App__body__scrollable__wrapper'>
-              <div className='App__body__scrollable__wrapper__floor'></div>
-              <div className='App__body__scrollable__wrapper__leftFrame'>
-                <Block3d width='20rem' height='100%' depth='10' z='-4'/>
-              </div>
-              <div className='App__body__scrollable__wrapper__rightFrame'>
-                <Block3d width='20rem' height='100%' depth='10' z='-4'/>
-              </div>
 
+              {this.renderProjectDesc('mobile')}
+
+              {this.renderOuterFrames()}
 
               <div className='App__body__scrollable__wrapper__content'>
-
                 {/* TODO: pass in props (theme?) */}
                 <WrappedComponent />
-
               </div>
             </div>
           </div>

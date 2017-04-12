@@ -67,7 +67,7 @@ $rightMargin--web: 1.5rem;
   @media screen and (max-width: $breakpoint-mobile) {
     width: $mobileMinSize;
     height: $mobileMinSize;
-    margin: 0.5rem 0.75rem 0 0;
+    margin: 0 0.75rem 0 0;
 
     .Block3d__content {
       background-position-x: 100%;
@@ -97,22 +97,20 @@ $rightMargin--web: 1.5rem;
   margin-right: 3rem; // make room for x button
   margin-bottom: 0.75rem;
 
+  .Block3d__content {
+    padding: 1rem 1.5rem !important;
+  }
+
   @media screen and (max-width: $breakpoint-mobile) {
     z-index: -1 !important; // override Block3d inline styles
     margin-right: 3.75rem; // make room for 3d wall and x button
-  }
+    margin-bottom: 0;
 
-
-  .Block3d__content {
-    //padding: 0.75rem 1.15rem;
-
-    @media screen and (max-width: $breakpoint-mobile){
-      //padding: 1.5rem;
+    .Block3d__content {
+      padding: 1.5rem;
     }
   }
 }
-
-
 
 
 
@@ -121,7 +119,7 @@ $rightMargin--web: 1.5rem;
   margin-bottom: 2.25rem;
 
   .Block3d__content {
-    //padding: 0.75rem 1.4rem;
+    padding: 1rem 1.5rem !important;
   }
 
   @media screen and (max-width: $breakpoint-mobile) {
@@ -129,47 +127,29 @@ $rightMargin--web: 1.5rem;
     z-index: 1 !important; //to override Block3d inline styles
 
     .Block3d__content {
-      //padding: 1.5rem;
+      padding: 1.5rem;
     }
   }
 }
 
-
 .ProjectDesc__content__note {
+  display: block;
   margin-right: $rightMargin--web;
-}
 
-.ProjectDesc__content__note--technology {
-  display: inline-block;
-  vertical-align: top;
-  width: 6.25rem;
-
-  @media screen and (max-width: $breakpoint-mobile){
-    width: 100%;
-  }
-}
-.ProjectDesc__content__note--responsibilities {
-  margin-right: 0.75rem;
-  display: inline-block;
-  vertical-align: top;
-  width: 9rem;
-
-  @media screen and (max-width: $breakpoint-mobile){
-    width: 100%;
+  @media screen and (max-width: $breakpoint-mobile) {
     margin-right: 0;
   }
 }
-
-
-
-
-
 
 .ProjectDesc__content__note__title {
   display: inline-block;
   margin-bottom: 0.75rem;
 
-  @media screen and (max-width: $breakpoint-mobile){
+  .Block3d__content {
+    padding: 1rem 1.5rem !important;
+  }
+
+  @media screen and (max-width: $breakpoint-mobile) {
     display: inline-block;
     margin: 0.75rem;
     font-size: 1.2rem;
@@ -180,39 +160,37 @@ $rightMargin--web: 1.5rem;
   display: block;
   margin-bottom: 2.25rem;
 
-  @media screen and (max-width: $breakpoint-mobile){
-    margin: 0 2.25rem 2.25rem 1.5rem;
+  .Block3d__content {
+    padding: 1.15rem 1.7rem !important;
+  }
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    margin: 0 0.75rem 2.25rem 1.5rem;
   }
 }
-
-
-
 
 .ProjectDesc__content__note__title .Block3d__content {
   //padding: 0.75rem 1.2rem;
 
-  @media screen and (max-width: $breakpoint-mobile){
+  @media screen and (max-width: $breakpoint-mobile) {
     //padding: 0.75rem 1.5rem;
   }
 }
 
-
 .ProjectDesc__content__note__text .Block3d__content {
   //padding: 0.75rem 1.1rem 0.75rem 1.4rem;
 
-  @media screen and (max-width: $breakpoint-mobile){
+  @media screen and (max-width: $breakpoint-mobile) {
     //padding: 1.5rem 1.5rem 1.5rem 2.25rem;
   }
 }
-
-
 
 .ProjectDesc__content__buttonWrapper {
   text-align: center;
   margin-top: 1.5rem;
   margin-right: $rightMargin--web;
 
-  @media screen and (max-width: $breakpoint-mobile){
+  @media screen and (max-width: $breakpoint-mobile) {
     margin: 0.75rem 0;
   }
 }
