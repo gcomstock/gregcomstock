@@ -59,6 +59,7 @@
   font-size: 0; // so whitespace doesnt mess with inline elements
   height: calc(100vh - #{$headerHeight});
   margin-top: $headerHeight;
+  overflow: hidden;
 }
 
 
