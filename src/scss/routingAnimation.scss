@@ -15,35 +15,42 @@ $opacityIn:  opacity 450ms 100ms cubic-bezier(0.215, 0.610, 0.355, 1.000); /* ea
 .App__body__scrollable__wrapper {
   transition: $transformIn;
 
+
+  // we animate the faces instead of the whole block, so 3d is preserved for web
   .Block3d__face,
+  .Block3d--shadow,
   .App__body__scrollable__wrapper__floor {
     transition: $opacityIn;
   }
 
-  .Block3d__content {
+  .Block3d__content,
+  .Block3d__content:before,
+  .Block3d__content:after {
     transition: $opacityIn, $buttonHoverTransition;
   }
 }
 
 
-.App__body--mobileIntro {
-  .App__body__scrollable__wrapper {
-    transition: $transformIn, $opacityIn;
-    transform: translate3d(4rem, 4rem, 0);
-
-    .Block3d__face,
-    .Block3d__content,
-    .Block3d--shadow,
-    .App__body__scrollable__wrapper__floor {
-      opacity: 0;
-    }
+.introElements {
+  .Block3d__face,
+  .Block3d__content,
+  .Block3d--shadow,
+  .Block3d__content:before,
+  .Block3d__content:after,
+  .App__body__scrollable__wrapper__floor {
+    //transition: $transformIn, $opacityIn;
+    opacity: 0;
   }
 }
 
-.App__body--mobileOutro {
-  .App__body__scrollable__wrapper {
+.outroElements {
+  .Block3d__face,
+  .Block3d__content,
+  .Block3d--shadow,
+  .Block3d__content:before,
+  .Block3d__content:after,
+  .App__body__scrollable__wrapper__floor {
     transition: $transformOut, $opacityOut;
-    transform: translate3d(-4rem, -4rem, 0);
     opacity: 0;
   }
 }
@@ -55,12 +62,16 @@ $opacityIn:  opacity 450ms 100ms cubic-bezier(0.215, 0.610, 0.355, 1.000); /* ea
     transform: translate3d(0, 0, -34rem);
     transition: none;
 
-    .Block3d__face,
-    .Block3d__content,
-    .Block3d--shadow,
-    .App__body__scrollable__wrapper__floor {
-      opacity: 0;
-    }
+    @extend .introElements;
+  }
+}
+
+.App__body--mobileIntro {
+  .App__body__scrollable__wrapper {
+    transform: translate3d(4rem, 4rem, 0);
+    transition: none;
+
+    @extend .introElements;
   }
 }
 
@@ -71,13 +82,16 @@ $opacityIn:  opacity 450ms 100ms cubic-bezier(0.215, 0.610, 0.355, 1.000); /* ea
     transition: $transformOut;
     transform: translate3d(0, 0, 14rem);
 
-    .Block3d__face,
-    .Block3d__content,
-    .Block3d--shadow,
-    .App__body__scrollable__wrapper__floor {
-      transition: $opacityOut;
-      opacity: 0;
-    }
+    @extend .outroElements;
+  }
+}
+
+.App__body--mobileOutro {
+  .App__body__scrollable__wrapper {
+    transition: $transformOut;
+    transform: translate3d(-4rem, -4rem, 0);
+
+    @extend .outroElements;
   }
 }
 
@@ -91,10 +105,10 @@ $opacityIn:  opacity 450ms 100ms cubic-bezier(0.215, 0.610, 0.355, 1.000); /* ea
 
 
 .ProjectDesc {
-  .Block3d__face,
-  .Block3d__content {
-    transform: $opacityIn;
-  }
+  //.Block3d__face,
+  //.Block3d__content {
+  //  transform: $opacityIn;
+  //}
 
   .ProjectDesc__content__title,
   .ProjectDesc__content__text,

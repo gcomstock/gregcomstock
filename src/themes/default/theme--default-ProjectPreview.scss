@@ -1,4 +1,4 @@
-.ProjectPreview__rightCol .Block3d {
+.ProjectPreview__rightCol .Block3d__content {
   @media screen and (max-width: $breakpoint-mobile) {
     @include mobileBox(1.5rem, rgb(200, 200, 200), rgb(160, 160, 160));
   }
@@ -7,26 +7,26 @@
 .ProjectPreview__leftCol__title {
   @extend .title--head--default;
 
-  .Block3d {
-    @media screen and (max-width: $breakpoint-mobile) {
+  @media screen and (max-width: $breakpoint-mobile) {
+    .Block3d__content {
       @include mobileBox(1.5rem, rgb(200, 200, 200), rgb(160, 160, 160));
     }
   }
 }
 
-.ProjectPreview__leftCol__thumb .Block3d {
+.ProjectPreview__leftCol__thumb .Block3d__content {
   @media screen and (max-width: $breakpoint-mobile) {
     @include mobileBox(0.75rem, rgb(200, 200, 200), rgb(160, 160, 160));
   }
 }
 
-.ProjectPreview__leftCol__snippet .Block3d {
+.ProjectPreview__leftCol__snippet .Block3d__content {
   @media screen and (max-width: $breakpoint-mobile) {
     @include mobileBox(0.75rem, rgb(200, 200, 200), rgb(160, 160, 160));
   }
 }
 
-.ProjectPreview__leftCol__route .Block3d {
+.ProjectPreview__leftCol__route .Block3d__content {
   @media screen and (max-width: $breakpoint-mobile) {
     @include mobileBox(0.25rem, rgb(200, 200, 200), rgb(160, 160, 160));
   }

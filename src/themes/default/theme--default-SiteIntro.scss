@@ -21,7 +21,7 @@
   }
 }
 
-.SiteIntro__viewWork .Block3d {
+.SiteIntro__viewWork .Block3d__content {
   @media screen and (max-width: $breakpoint-mobile) {
     @include mobileBox(0.25rem, rgb(200, 200, 200), rgb(160, 160, 160));
   }
