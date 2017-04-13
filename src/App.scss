@@ -56,47 +56,26 @@
   left: 0;
   width: 100%;
 
-
   font-size: 0; // so whitespace doesnt mess with inline elements
-  //height: 100vh;
   height: calc(100vh - #{$headerHeight});
-  background-color: red;
   margin-top: $headerHeight;
-
-  // the new scrollable element
-  //@media screen and (max-width: $breakpoint-mobile){
-  //  overflow-y: scroll;
-  //  overflow-x: hidden;
-  //  -webkit-overflow-scrolling: touch;
-  //  position: absolute;
-  //  top: 0;
-  //  left: 0;
-  //  width: 100%;
-  //  height: 100%;
-  //}
 }
 
 
 // magical element that gives 3d scrolling
 .App__body__scrollable {
   position: relative;
-  //position: absolute;
-  //top: 0;
-  //left: 0;
-  //width: 100%;
   height: 100vh;
 
   perspective-origin: 50% 80%; // x-center y-top
   perspective: 54rem;          // should match width of App__wrapper for best cube appearance
   overflow-y: scroll;
   overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
 
-  // no longer scrollable - we want .ProjectDesc to scroll with this, so we will now scroll its parent
   @media screen and (max-width: $breakpoint-mobile) {
-
+    // no 3d perspective wanted on mobile...slows things down too uch
     perspective: none;
-  //  overflow-y: hidden;
-  //  height: auto;
   }
 }
 
