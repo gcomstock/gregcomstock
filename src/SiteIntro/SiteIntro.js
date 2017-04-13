@@ -31,6 +31,7 @@ export const SiteIntro = React.createClass({
           shadow={true}
           shadowDepth={-6}
           isMobile={this.props.isMobile}
+          padding={[1,0,0.5,0.5]}
         >
           {letter}
         </Block3d>
@@ -41,14 +42,7 @@ export const SiteIntro = React.createClass({
 
   onViewWorkClick() {
     const siteIntroEl = document.querySelector('.SiteIntro');
-    let scrollingEl;
-
-    if (this.props.isMobile) {
-      scrollingEl = document.querySelector('.App__body');
-    } else {
-      scrollingEl = document.querySelector('.App__body__scrollable');
-    }
-
+    const scrollingEl = document.querySelector('.App__body__scrollable');
 
     function scrollTo(element, to, duration) {
       var start = element.scrollTop,

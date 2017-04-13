@@ -4,13 +4,10 @@
   }
 }
 
-.ProjectPreview__leftCol__title {
-  @extend .title--head--default;
-
+.ProjectPreview__leftCol__title .Block3d__content {
+  @extend .title--subhead--default;
   @media screen and (max-width: $breakpoint-mobile) {
-    .Block3d__content {
-      @include mobileBox(1.5rem, rgb(200, 200, 200), rgb(160, 160, 160));
-    }
+    @include mobileBox(1.5rem, rgb(200, 200, 200), rgb(160, 160, 160));
   }
 }
 

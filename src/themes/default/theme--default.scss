@@ -4,7 +4,7 @@ $highlightColor: rgb(180,0,0);
 
 
 @font-face {
-  font-family: 'title';
+  font-family: 'title--default';
   src: url('../themes/default/bebasneue_regular-webfont.woff2') format('woff2'),
   url('../themes/default/bebasneue_regular-webfont.woff') format('woff');
   font-weight: normal;
@@ -12,14 +12,14 @@ $highlightColor: rgb(180,0,0);
 }
 
 .title--head--default {
-  font-family: 'title';
+  font-family: 'title--default';
   font-size: 2rem;
   letter-spacing: 0.08rem;
   color: $highlightColor;
 }
 
 .title--subhead--default {
-  font-family: 'title';
+  font-family: 'title--default';
   font-size: 1.2rem;
   letter-spacing: 0.06rem;
   color: $highlightColor;
@@ -30,7 +30,7 @@ $highlightColor: rgb(180,0,0);
 }
 
 .title--button--default {
-  font-family: 'title';
+  font-family: 'title--default';
   font-size: 0.8rem;
   letter-spacing: 0.05rem;
   color: $highlightColor;
