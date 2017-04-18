@@ -8,9 +8,26 @@
 @import '../SiteIntro/SiteIntro';
 
 
-// import all theme files
-@import '../themes/default/theme--default';
-@import '../themes/game/theme';
+
+
+//define theme vars and generate the css for them
+@import '../themes/themeBuilder/themeBuilder';
+
+$theme--default: (
+  highlightColor: rgb(180,0,0),
+  titleFont: '../themes/default/bebasneue_regular-webfont.woff',
+  titleFont2: '../themes/default/bebasneue_regular-webfont.woff2'
+);
+
+$theme--game: (
+  highlightColor: rgb(0,180,0),
+  titleFont: '../themes/game/pixeled-webfont.woff',
+  titleFont2: '../themes/game/pixeled-webfont.woff2'
+);
+
+@include themeBuilder('default', $theme--default);
+@include themeBuilder('game', $theme--game);
+
 
 
 

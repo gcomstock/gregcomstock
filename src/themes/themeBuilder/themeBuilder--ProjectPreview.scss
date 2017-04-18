@@ -5,7 +5,7 @@
 }
 
 .ProjectPreview__leftCol__title .Block3d__content {
-  @extend .title--subhead--default;
+  @extend .title--subhead--#{$name};
   @media screen and (max-width: $breakpoint-mobile) {
     @include mobileBox(1.5rem, rgb(200, 200, 200), rgb(160, 160, 160));
   }

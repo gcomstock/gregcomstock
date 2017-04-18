@@ -1,0 +1,46 @@
+.button:hover {
+  .button__text {
+    color: #fff;
+  }
+  .Block3d__content {
+    background-color: map-get($properties, 'highlightColor');
+  }
+  .button__text--arrowRight:after {
+    border-left-color: #fff;
+  }
+  .button__text--arrowBottom:after {
+    border-top-color: #fff;
+  }
+}
+
+
+.button__text {
+  @extend .title--button--#{$name};
+  color: map-get($properties, 'highlightColor');
+}
+
+.button__text--arrowRight {
+  padding-right: 0.4rem;
+
+  &:after {
+    transition: $buttonHoverTransition;
+    @include rightArrow(0.22, map-get($properties, 'highlightColor'));
+
+    @media screen and (max-width: $breakpoint-mobile){
+      @include rightArrow(0.3, map-get($properties, 'highlightColor'));
+    }
+  }
+}
+
+.button__text--arrowBottom {
+  padding-bottom: 0.1rem;
+
+  &:after {
+    transition: $buttonHoverTransition;
+    @include bottomArrow(0.22, map-get($properties, 'highlightColor'));
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      @include bottomArrow(0.3, map-get($properties, 'highlightColor'));
+    }
+  }
+}

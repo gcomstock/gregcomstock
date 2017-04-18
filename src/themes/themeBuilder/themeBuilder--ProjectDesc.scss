@@ -5,7 +5,7 @@
 
   &:hover {
     .Block3d__content {
-      background-color: $highlightColor;
+      background-color: map-get($properties, 'highlightColor');
       background-position-x: 100%;
     }
   }
@@ -26,8 +26,7 @@
 
 
 .ProjectDesc__content__title {
-  @extend .title--subhead--default;
-
+  @extend .title--subhead--#{$name};
 
   @media screen and (max-width: $breakpoint-mobile){
     .Block3d__content {
@@ -51,7 +50,7 @@
 
 
 .ProjectDesc__content__note__title {
-  @extend .title--button--default;
+  @extend .title--button--#{$name};
 
   @media screen and (max-width: $breakpoint-mobile){
     .Block3d__content {

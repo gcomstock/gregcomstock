@@ -1,0 +1,37 @@
+.App__header {
+  background-color: #eee;
+  box-shadow: 0 1rem 0.125rem -0.5rem rgba(0,0,0,0.2);
+}
+
+.App__body {
+  color: #333;
+  background-color: rgb(150, 150, 150);
+  background-image: url(../themes/default/siteIntro__bg.png), url(../themes/default/bg-8x8.png);
+  background-size: 900px, 4px;
+  background-attachment: fixed;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    background-size: 600px, 4px;
+  }
+}
+
+.App__body__scrollable__wrapper__floor {
+  background-image: url(../themes/default/bg-10x10.png);
+  background-size: 5px;
+  background-color: rgb(192, 192, 192);
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    background-image: none;
+    background-color: transparent;
+    border-top: 1px solid #555;
+  }
+}
+
+.App__body__scrollable__footer {
+  background-image: url(../themes/default/siteIntro__bg.png), url(../themes/default/bg-8x8.png);
+  background-size: 900px, 4px;
+}
+
+.App__body__scrollable__footer__content__title {
+  @extend .title--head--#{$name};
+}

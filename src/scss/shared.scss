@@ -1,4 +1,4 @@
-$highlightColor: rgb(180,0,0);
+//$highlightColor: rgb(180,0,0);
 $buttonBoxShadow: inset 0 0 0 0.1rem #fff;
 $xButtonBoxShadow: inset 0 0 0 1px #fff;
 
@@ -17,7 +17,7 @@ $mobileMinSize: 2.5rem;
 $headerHeight: 0.1rem;
 
 
-@mixin rightArrow($size) {
+@mixin rightArrow($size, $color) {
   content: '';
   position: absolute;
   top: 50%;
@@ -26,10 +26,10 @@ $headerHeight: 0.1rem;
 
   border-top: $size+rem solid transparent;
   border-bottom: $size+rem solid transparent;
-  border-left: ($size*1.25)+rem solid $highlightColor;
+  border-left: ($size*1.25)+rem solid $color;
 }
 
-@mixin bottomArrow($size) {
+@mixin bottomArrow($size, $color) {
   content: '';
   position: absolute;
   left: 50%;
@@ -37,7 +37,7 @@ $headerHeight: 0.1rem;
   margin-left: -$size+rem;
   display: block;
 
-  border-top: $size+rem solid $highlightColor;
+  border-top: $size+rem solid $color;
   border-left: ($size*1.25)+rem solid transparent;
   border-right: ($size*1.25)+rem solid transparent;
 }
@@ -139,54 +139,4 @@ $headerHeight: 0.1rem;
 .button__text {
   transition: $buttonHoverTransition;
   position: relative;
-}
-
-
-.button__text--arrowBottom {
-  padding-bottom: 0.1rem;
-
-  &:after {
-    transition: $buttonHoverTransition;
-    @include bottomArrow(0.22);
-
-    @media screen and (max-width: $breakpoint-mobile) {
-      @include bottomArrow(0.3);
-    }
-  }
-}
-
-
-.button__text--arrowRight {
-  padding-right: 0.4rem;
-
-  &:after {
-    transition: $buttonHoverTransition;
-    @include rightArrow(0.22);
-
-    @media screen and (max-width: $breakpoint-mobile){
-      @include rightArrow(0.3);
-    }
-  }
-}
-
-
-
-
-.button:hover {
-
-  .button__text {
-    color: #fff;
-  }
-
-  .Block3d__content {
-    background-color: $highlightColor;
-  }
-
-  .button__text--arrowRight:after {
-    border-left-color: #fff;
-  }
-
-  .button__text--arrowBottom:after {
-    border-top-color: #fff;
-  }
 }

@@ -1,0 +1,68 @@
+@import '../../scss/shared.scss';
+
+
+
+
+@mixin themeBuilder($name, $properties) {
+
+
+  // generate name-spaced classes for theme
+
+  @font-face {
+    font-family: 'title--#{$name}';
+    src: url(map-get($properties, 'titleFont2')) format('woff2'),
+    url(map-get($properties, 'titleFont')) format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  .title--head--#{$name} {
+    font-family: 'title--#{$name}';
+    font-size: 2rem;
+    letter-spacing: 0.08rem;
+    color: map-get($properties, 'highlightColor');
+  }
+
+  .title--subhead--#{$name} {
+    font-family: 'title--#{$name}';
+    font-size: 1.2rem;
+    letter-spacing: 0.06rem;
+    color: map-get($properties, 'highlightColor');
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      font-size: 1.8rem;
+    }
+  }
+
+  .title--button--#{$name} {
+    font-family: 'title--#{$name}';
+    font-size: 0.8rem;
+    letter-spacing: 0.05rem;
+    color: map-get($properties, 'highlightColor');
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      font-size: 1.2rem;
+    }
+  }
+
+
+
+
+  // generate styles for theme
+
+  .theme--#{$name} {
+
+    @import 'themeBuilder--button';
+    @import 'themeBuilder--App';
+    @import 'themeBuilder--SiteIntro';
+    @import 'themeBuilder--Block3d';
+    @import 'themeBuilder--ProjectPreview';
+    @import 'themeBuilder--ProjectDesc';
+    @import 'themeBuilder--ProjectView';
+
+  }
+}
+
+
+
+
