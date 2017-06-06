@@ -27,11 +27,14 @@
   border-left: 2px solid #888; /* bottom border */
 }
 
+
+
 /* TODO: be smarter about calculating these values later...keep it loose for now */
 
 .Block3d__content {
   /*outline: 1px solid rgb(235,235,235);*/
   background-color: rgb(255, 255, 255);
+  color: map-get($properties, 'title--color');
 }
 .Block3d__content--14 {
   /*outline: 1px solid rgb(165,165,165);*/
@@ -54,10 +57,10 @@
   background-color: rgb(228, 228, 228);
 }
 .Block3d__content--4 {
-  /*outline: 1px solid rgb(215,215,215);*/
-  background-color: rgb(237, 237, 237);
+  background: map-get($properties, 'block--4--bg');
+  outline:    map-get($properties, 'block--4--outline');
 }
 .Block3d__content--2 {
-  /*outline: 1px solid rgb(225,225,225);*/
+  /* outline: 1px solid rgb(225,225,225); */
   background-color: rgb(246, 246, 246);
 }

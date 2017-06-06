@@ -1,4 +1,3 @@
-//$highlightColor: rgb(180,0,0);
 $buttonBoxShadow: inset 0 0 0 0.1rem #fff;
 $xButtonBoxShadow: inset 0 0 0 1px #fff;
 
@@ -14,7 +13,7 @@ $mobileMinSize: 2.5rem;
 
 
 
-$headerHeight: 0.1rem;
+$headerHeight: 2rem;
 
 
 @mixin rightArrow($size, $color) {
@@ -44,7 +43,6 @@ $headerHeight: 0.1rem;
 
 
 @mixin mobileBox($depth, $colorRight, $colorBottom) {
-
   &:after {
     content: '';
     position: absolute;

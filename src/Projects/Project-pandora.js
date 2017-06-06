@@ -29,7 +29,7 @@ export const PandoraLayout = React.createClass({
 
 export const PandoraConsts = Object.freeze({
   ROUTE: '/project/pandora',
-  TITLE: 'pandora.com',
+  TITLE: 'Pandora.com',
   EXTERNAL_URL: 'https://pandora.com',
   SNIPPET: 'In preparation for on-demand listening, the new Pandora.com has been re-written from the ground up using the latest front-end technologies to address complex asynchronous use cases between audio playback and advertising.',
   THUMBNAIL_PATH: 'work/pandora/tn.jpg',

@@ -15,18 +15,62 @@
 
 $theme--default: (
   highlightColor: rgb(180,0,0),
-  titleFont: '../themes/default/bebasneue_regular-webfont.woff',
-  titleFont2: '../themes/default/bebasneue_regular-webfont.woff2'
+  title--font: '../themes/default/bebasneue_regular-webfont.woff',
+  title--font2: '../themes/default/bebasneue_regular-webfont.woff2',
+  title--fontSize: 2rem,
+  title--fontSpacing: 0.06rem,
+  title--textTransform: none,
+  title--color: rgb(180, 0, 0),
+
+  block--4--outline: none,
+  block--4--bg: rgb(237, 237, 237),
+
+  ProjectPreview__leftCol__title--background: rgb(237, 237, 237),
+
+  mobileBoxSide: rgb(200, 200, 200),
+  mobileBoxBottom: rgb(160, 160, 160)
 );
 
 $theme--game: (
   highlightColor: rgb(0,180,0),
-  titleFont: '../themes/game/pixeled-webfont.woff',
-  titleFont2: '../themes/game/pixeled-webfont.woff2'
+  title--font: '../themes/game/lady_radical-webfont.woff',
+  title--font2: '../themes/game/lady_radical-webfont.woff2',
+  title--fontSize: 2.4rem,
+  title--fontSpacing: 0.06rem,
+  title--textTransform: none,
+  title--color: rgb(255, 0, 0),
+
+
+  block--4--outline: 1px solid rgb(100, 100, 100),
+  block--4--bg: rgb(100, 100, 100),
+
+  ProjectPreview__leftCol__title--background: rgb(100, 100, 100),
+
+  mobileBoxSide: rgb(100, 200, 200),
+  mobileBoxBottom: rgb(80, 180, 180)
+);
+
+$theme--tech: (
+  highlightColor: rgb(0,0,0),
+  title--font: '../themes/tech/voyager-grotesque.woff',
+  title--font2: '../themes/tech/voyager-grotesque.woff2',
+  title--fontSize: 1.4rem,
+  title--fontSpacing: 0.06rem,
+  title--textTransform: uppercase,
+  title--color: rgb(255, 0, 0),
+
+  block--4--outline: 1px solid rgb(255, 0, 0),
+  block--4--bg: rgb(0, 0, 0),
+
+  ProjectPreview__leftCol__title--background: url('../themes/tech/content.png') rgb(100, 100, 100),
+
+  mobileBoxSide: rgb(100, 200, 200),
+  mobileBoxBottom: rgb(80, 180, 180)
 );
 
 @include themeBuilder('default', $theme--default);
 @include themeBuilder('game', $theme--game);
+@include themeBuilder('tech', $theme--tech);
 
 
 
