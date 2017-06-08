@@ -20,7 +20,7 @@ const App = React.createClass({
     // pass handlers into children to update this App-level state when needed
     return {
       isMobile: window.innerWidth <= BREAKPOINT_MOBILE,
-      theme: 'default'
+      theme: 'tech'
       //theme: 'game'
     }
   },

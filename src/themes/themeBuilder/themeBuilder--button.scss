@@ -16,7 +16,8 @@
 
 .button__text {
   @extend .title--button--#{$name};
-  color: map-get($properties, 'highlightColor');
+  color: map-get($properties, 'title--color');
+  text-transform: map-get($properties, 'title--textTransform');
 }
 
 .button__text--arrowRight {
@@ -24,10 +25,10 @@
 
   &:after {
     transition: $buttonHoverTransition;
-    @include rightArrow(0.22, map-get($properties, 'highlightColor'));
+    @include rightArrow(0.22, map-get($properties, 'title--color'));
 
     @media screen and (max-width: $breakpoint-mobile){
-      @include rightArrow(0.3, map-get($properties, 'highlightColor'));
+      @include rightArrow(0.3, map-get($properties, 'title--color'));
     }
   }
 }
@@ -37,10 +38,10 @@
 
   &:after {
     transition: $buttonHoverTransition;
-    @include bottomArrow(0.22, map-get($properties, 'highlightColor'));
+    @include bottomArrow(0.22, map-get($properties, 'title--color'));
 
     @media screen and (max-width: $breakpoint-mobile) {
-      @include bottomArrow(0.3, map-get($properties, 'highlightColor'));
+      @include bottomArrow(0.3, map-get($properties, 'title--color'));
     }
   }
 }

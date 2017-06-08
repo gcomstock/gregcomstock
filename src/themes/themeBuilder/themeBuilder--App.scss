@@ -15,9 +15,7 @@
 }
 
 .App__body__scrollable__wrapper__floor {
-  background-image: url(../themes/default/bg-10x10.png);
-  background-size: 5px;
-  background-color: rgb(192, 192, 192);
+  background: map-get($properties, 'App__body__scrollable__wrapper__floor--bg');
 
   @media screen and (max-width: $breakpoint-mobile) {
     background-image: none;

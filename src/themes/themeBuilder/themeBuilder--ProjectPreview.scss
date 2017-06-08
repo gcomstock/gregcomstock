@@ -3,8 +3,7 @@ $bottom: map-get($properties, 'mobileBoxBottom');
 
 
 .ProjectPreview__rightCol .Block3d__content {
-  background: map-get($properties, 'ProjectPreview__leftCol__title--background');
-
+  background: map-get($properties, 'ProjectPreview__rightCol--background');
 
   @media screen and (max-width: $breakpoint-mobile) {
     @include mobileBox(1.5rem, $side, $bottom);
@@ -32,12 +31,16 @@ $bottom: map-get($properties, 'mobileBoxBottom');
 }
 
 .ProjectPreview__leftCol__snippet .Block3d__content {
+  background: map-get($properties, 'ProjectPreview__leftCol__snippet--background');
+
   @media screen and (max-width: $breakpoint-mobile) {
     @include mobileBox(0.75rem, $side, $bottom);
   }
 }
 
 .ProjectPreview__leftCol__route .Block3d__content {
+  background: map-get($properties, 'ProjectPreview__leftCol__route--background');
+
   @media screen and (max-width: $breakpoint-mobile) {
     @include mobileBox(0.25rem, $side, $bottom);
   }

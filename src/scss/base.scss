@@ -26,6 +26,10 @@ $theme--default: (
   block--4--bg: rgb(237, 237, 237),
 
   ProjectPreview__leftCol__title--background: rgb(237, 237, 237),
+  ProjectPreview__rightCol--background: rgb(140, 100, 100),
+
+  webBoxBottom--bg:     rgb(190, 190, 190),
+  webBoxBottom--border: 1px solid rgb(150, 150, 150),
 
   mobileBoxSide: rgb(200, 200, 200),
   mobileBoxBottom: rgb(160, 160, 160)
@@ -45,6 +49,7 @@ $theme--game: (
   block--4--bg: rgb(100, 100, 100),
 
   ProjectPreview__leftCol__title--background: rgb(100, 100, 100),
+  ProjectPreview__rightCol--background: rgb(140, 100, 100),
 
   mobileBoxSide: rgb(100, 200, 200),
   mobileBoxBottom: rgb(80, 180, 180)
@@ -52,20 +57,31 @@ $theme--game: (
 
 $theme--tech: (
   highlightColor: rgb(0,0,0),
-  title--font: '../themes/tech/voyager-grotesque.woff',
-  title--font2: '../themes/tech/voyager-grotesque.woff2',
-  title--fontSize: 1.4rem,
+  title--font: '../themes/tech/goku.woff',
+  title--font2: '../themes/tech/goku.woff2',
+  title--fontSize: 3rem,
   title--fontSpacing: 0.06rem,
-  title--textTransform: uppercase,
-  title--color: rgb(255, 0, 0),
+  //title--textTransform: uppercase,
+  title--textTransform: none,
+  title--color: rgb(255, 255, 255),
+
+  text--color: rgb(255, 255, 0),
 
   block--4--outline: 1px solid rgb(255, 0, 0),
   block--4--bg: rgb(0, 0, 0),
 
-  ProjectPreview__leftCol__title--background: url('../themes/tech/content.png') rgb(100, 100, 100),
+  ProjectPreview__leftCol__title--background:   rgb(100, 40, 40),
+  ProjectPreview__leftCol__snippet--background: rgb(120, 40, 40),
+  ProjectPreview__leftCol__route--background:   rgb(80, 40, 40),
+  ProjectPreview__rightCol--background:         rgb(140, 40, 40),
+
+  App__body__scrollable__wrapper__floor--bg: url(../themes/default/bg-10x10.png) top left / 5px rgb(20, 92, 92),
+
+  webBoxBottom--bg:     transparent, //rgb(0, 0, 0),
+  webBoxBottom--border: 2px solid rgb(250, 0, 0),
 
   mobileBoxSide: rgb(100, 200, 200),
-  mobileBoxBottom: rgb(80, 180, 180)
+  mobileBoxBottom: rgb(80, 180, 180),
 );
 
 @include themeBuilder('default', $theme--default);

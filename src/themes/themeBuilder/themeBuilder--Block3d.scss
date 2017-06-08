@@ -11,10 +11,8 @@
   background-color: rgb(220, 220, 220);
 }
 .Block3d__face--bottom {
-  background-color: rgb(190, 190, 190);
-  border-left: 1px solid rgb(150, 150, 150);
-  border-right: 1px solid rgb(150, 150, 150);
-  border-bottom: 2px solid #888; /* bottom border */
+  background-color: map-get($properties, 'webBoxBottom--bg');
+  border: map-get($properties, 'webBoxBottom--border');
 }
 .Block3d__face--left,
 .Block3d__face--right {
@@ -34,7 +32,13 @@
 .Block3d__content {
   /*outline: 1px solid rgb(235,235,235);*/
   background-color: rgb(255, 255, 255);
+
+  //TODO: titles go in h tag?
   color: map-get($properties, 'title--color');
+
+  p {
+    color: map-get($properties, 'text--color');
+  }
 }
 .Block3d__content--14 {
   /*outline: 1px solid rgb(165,165,165);*/
