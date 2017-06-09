@@ -26,7 +26,7 @@ $theme--default: (
   block--4--bg: rgb(237, 237, 237),
 
   ProjectPreview__leftCol__title--background: rgb(237, 237, 237),
-  ProjectPreview__rightCol--background: rgb(140, 100, 100),
+  ProjectPreview__rightCol--background: rgb(255, 255, 255),
 
   webBoxBottom--bg:     rgb(190, 190, 190),
   webBoxBottom--border: 1px solid rgb(150, 150, 150),
@@ -59,9 +59,8 @@ $theme--tech: (
   highlightColor: rgb(0,0,0),
   title--font: '../themes/tech/goku.woff',
   title--font2: '../themes/tech/goku.woff2',
-  title--fontSize: 3rem,
+  title--fontSize: 3.4rem,
   title--fontSpacing: 0.06rem,
-  //title--textTransform: uppercase,
   title--textTransform: none,
   title--color: rgb(255, 255, 255),
 
@@ -75,7 +74,7 @@ $theme--tech: (
   ProjectPreview__leftCol__route--background:   rgb(80, 40, 40),
   ProjectPreview__rightCol--background:         rgb(140, 40, 40),
 
-  App__body__scrollable__wrapper__floor--bg: url(../themes/default/bg-10x10.png) top left / 5px rgb(20, 92, 92),
+  App__body__scrollable__wrapper__floor--bg: url(../themes/default/bg-10x10.png) top left / 5px rgb(20, 192, 192),
 
   webBoxBottom--bg:     transparent, //rgb(0, 0, 0),
   webBoxBottom--border: 2px solid rgb(250, 0, 0),

@@ -25,7 +25,7 @@ export const ScreensimLayout = React.createClass({
 
 export const ScreensimConsts = Object.freeze({
   ROUTE: '/project/screensim',
-  TITLE: 'screensim.com',
+  TITLE: 'Screen Sim',
   EXTERNAL_URL: '//screensim.com',
   SNIPPET: 'Although there are many ways a developer can measure and preview screen sizes, I wanted to create a user-friendly site with shareable links to demonstrate responsive site design for everyone.',
   THUMBNAIL_PATH: 'work/screensim/tn.jpg',

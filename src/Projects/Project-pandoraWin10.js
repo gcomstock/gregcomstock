@@ -25,7 +25,7 @@ export const PandoraWin10Layout = React.createClass({
 
 export const PandoraWin10Consts = Object.freeze({
   ROUTE: '/project/pandora-windows10',
-  TITLE: 'pandora, windows 10',
+  TITLE: 'Pandora for Windows 10',
   EXTERNAL_URL: 'https://www.microsoft.com/en-us/store/p/pandora/9wzdncrfj46v',
   SNIPPET: 'Working with a small team, we leveraged the WinJS framework to create a touch-friendly desktop application running on javascript structured with backbone.js.',
   THUMBNAIL_PATH: 'work/pandora-windows10/tn.jpg',

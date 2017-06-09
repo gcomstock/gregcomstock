@@ -11,10 +11,11 @@
 
 .ProjectPreview__rightCol {
   position: relative;
-  width: 24rem;
+  width: 28rem;
   display: inline-block;
   text-align: left;
   vertical-align: top;
+  margin-left: 4rem;
 
   @media screen and (max-width: $breakpoint-mobile){
     width: 100%;
@@ -25,7 +26,7 @@
 .ProjectPreview__leftCol {
   width: 22rem;
   display: inline-block;
-  text-align: right;
+  //text-align: right;
   vertical-align: top;
 
   @media screen and (max-width: $breakpoint-mobile){
