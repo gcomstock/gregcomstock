@@ -39,8 +39,6 @@ $bottom: map-get($properties, 'mobileBoxBottom');
 }
 
 .ProjectPreview__leftCol__route .Block3d__content {
-  background: map-get($properties, 'ProjectPreview__leftCol__route--background');
-
   @media screen and (max-width: $breakpoint-mobile) {
     @include mobileBox(0.25rem, $side, $bottom);
   }

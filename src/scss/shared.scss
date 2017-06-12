@@ -1,8 +1,7 @@
-$buttonBoxShadow: inset 0 0 0 0.1rem #fff;
 $xButtonBoxShadow: inset 0 0 0 1px #fff;
 
 // button background, text, outline, and arrow
-$buttonHoverTransition: background-color 150ms linear, color 150ms linear, stroke 150ms linear, border-color 150ms linear;
+$buttonHoverTransition: background-color 150ms linear, color 150ms linear, stroke 150ms linear, border-color 150ms linear, box-shadow 150ms linear;
 
 $breakpoint-mobile: 1020px;
 
@@ -123,7 +122,6 @@ $headerHeight: 2rem;
 
   .Block3d__content {
     padding: 0.6rem;
-    box-shadow: $buttonBoxShadow;
     transition: $buttonHoverTransition;
 
     @media screen and (max-width: $breakpoint-mobile){

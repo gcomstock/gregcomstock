@@ -40,10 +40,10 @@ export const ProjectPreview = React.createClass({
         <div className='ProjectPreview__rightCol'>
           <Block3d
             width='100%'
-            depth='14'
+            depth='16'
             z='0'
-            noRight={true}
-            noLeft={true}
+            noRight={false}
+            noLeft={false}
             isMobile={this.props.isMobile}
           >
             <img width='100%' src={this.props.thumbnailPath} alt='portfolio'/>
@@ -59,10 +59,11 @@ export const ProjectPreview = React.createClass({
         <div className='ProjectPreview__leftCol'>
           <Block3d
             cssClass='ProjectPreview__leftCol__title'
-            depth='10'
+            depth='4'
             z='-4'
-            noRight={true}
             noLeft={true}
+            shadow={true}
+            shadowDepth={-15.99}
             isMobile={this.props.isMobile}
           >
             <div dangerouslySetInnerHTML={this.renderTitleHTML()} />
@@ -74,10 +75,8 @@ export const ProjectPreview = React.createClass({
             cssClass='ProjectPreview__leftCol__snippet'
             width='100%'
             depth='8'
-            z='-6'
-            noTop={true}
+            z='-8'
             noLeft={true}
-            noRight={true}
             isMobile={this.props.isMobile}
           >
             <p className='snippet'>{this.props.snippet}</p>
@@ -87,15 +86,15 @@ export const ProjectPreview = React.createClass({
             <Block3d
               cssClass='ProjectPreview__leftCol__route button'
               route={this.props.route}
-              depth='1'
+              depth='2'
+              z='0'
               noLeft={true}
-              noRight={true}
               shadow={true}
-              shadowDepth={-13.99}
+              shadowDepth={-15.99}
               isMobile={this.props.isMobile}
               padding={[0.75]}
             >
-              <div className='button__text button__text--arrowRight'>learn more</div>
+              <div className='button__text button__text--arrowRight'>Learn More</div>
             </Block3d>
           </div>
         </div>

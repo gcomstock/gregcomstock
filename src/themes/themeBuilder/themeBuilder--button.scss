@@ -1,47 +1,55 @@
-.button:hover {
+.button {
   .button__text {
-    color: #fff;
+    @extend .title--button--#{$name};
+    color: map-get($properties, 'button--color');
+    text-transform: map-get($properties, 'title--textTransform');
   }
   .Block3d__content {
-    background-color: map-get($properties, 'highlightColor');
+    box-shadow: map-get($properties, 'button--boxShadow');
+    background: map-get($properties, 'button--bg');
   }
-  .button__text--arrowRight:after {
-    border-left-color: #fff;
-  }
-  .button__text--arrowBottom:after {
-    border-top-color: #fff;
+
+  &:hover {
+    .button__text {
+      color: map-get($properties, 'button--hover--color');
+    }
+    .Block3d__content {
+      box-shadow: map-get($properties, 'button--hover--boxShadow');
+      background-color: map-get($properties, 'button--hover--bg');
+    }
+    .button__text--arrowRight:after {
+      border-left-color: map-get($properties, 'button--hover--arrowColor');
+    }
+    .button__text--arrowBottom:after {
+      border-top-color: map-get($properties, 'button--hover--arrowColor');
+    }
   }
 }
 
-
-.button__text {
-  @extend .title--button--#{$name};
-  color: map-get($properties, 'title--color');
-  text-transform: map-get($properties, 'title--textTransform');
-}
 
 .button__text--arrowRight {
   padding-right: 0.4rem;
 
   &:after {
     transition: $buttonHoverTransition;
-    @include rightArrow(0.22, map-get($properties, 'title--color'));
+    @include rightArrow(0.22, map-get($properties, 'button--arrowColor'));
 
     @media screen and (max-width: $breakpoint-mobile){
-      @include rightArrow(0.3, map-get($properties, 'title--color'));
+      @include rightArrow(0.3, map-get($properties, 'button--arrowColor'));
     }
   }
 }
+
 
 .button__text--arrowBottom {
   padding-bottom: 0.1rem;
 
   &:after {
     transition: $buttonHoverTransition;
-    @include bottomArrow(0.22, map-get($properties, 'title--color'));
+    @include bottomArrow(0.22, map-get($properties, 'button--arrowColor'));
 
     @media screen and (max-width: $breakpoint-mobile) {
-      @include bottomArrow(0.3, map-get($properties, 'title--color'));
+      @include bottomArrow(0.3, map-get($properties, 'button--arrowColor'));
     }
   }
 }

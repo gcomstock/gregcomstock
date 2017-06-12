@@ -16,13 +16,8 @@
 }
 .Block3d__face--left,
 .Block3d__face--right {
-  background-color: rgb(200, 200, 200);
-}
-.Block3d__face--right {
-  border-right: 2px solid #888; /* bottom border */
-}
-.Block3d__face--left {
-  border-left: 2px solid #888; /* bottom border */
+  background-color: map-get($properties, 'webBoxSide--bg');
+  border: map-get($properties, 'webBoxSide--border');
 }
 
 

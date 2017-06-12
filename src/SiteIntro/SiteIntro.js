@@ -88,13 +88,13 @@ export const SiteIntro = React.createClass({
           depth='1'
           z='0'
           shadow={true}
-          shadowDepth={-14}
+          shadowDepth={-16}
           noRight={true}
           noLeft={true}
           clickHandler={this.onViewWorkClick}
           isMobile={this.props.isMobile}
         >
-          <div className='button__text button__text--arrowBottom'>view work</div>
+          <div className='button__text button__text--arrowBottom'>View Work</div>
         </Block3d>
 
       </div>

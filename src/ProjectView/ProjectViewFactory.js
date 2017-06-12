@@ -140,10 +140,10 @@ export default function projectViewFactory(WrappedComponent, projectData) {
           <div>
             <div className='App__body__scrollable__wrapper__floor'></div>
             <div className='App__body__scrollable__wrapper__leftFrame'>
-              <Block3d width='20rem' height='100%' depth='10' z='-4'/>
+              <Block3d width='20rem' height='100%' depth='14' z='-4'/>
             </div>
             <div className='App__body__scrollable__wrapper__rightFrame'>
-              <Block3d width='20rem' height='100%' depth='10' z='-4'/>
+              <Block3d width='20rem' height='100%' depth='14' z='-4'/>
             </div>
           </div>
         )

@@ -31,6 +31,8 @@ $theme--default: (
   webBoxBottom--bg:     rgb(190, 190, 190),
   webBoxBottom--border: 1px solid rgb(150, 150, 150),
 
+  webBoxSide--border:   none,
+
   mobileBoxSide: rgb(200, 200, 200),
   mobileBoxBottom: rgb(160, 160, 160)
 );
@@ -57,27 +59,48 @@ $theme--game: (
 
 $theme--tech: (
   highlightColor: rgb(0,0,0),
+
+  // TITLE
   title--font: '../themes/tech/goku.woff',
   title--font2: '../themes/tech/goku.woff2',
   title--fontSize: 3.4rem,
   title--fontSpacing: 0.06rem,
   title--textTransform: none,
-  title--color: rgb(255, 255, 255),
+  title--color: rgb(60, 60, 60),
 
-  text--color: rgb(255, 255, 0),
+  text--color: rgb(80, 80, 80),
 
-  block--4--outline: 1px solid rgb(255, 0, 0),
-  block--4--bg: rgb(0, 0, 0),
+  button--bg: rgb(60, 60, 60),
+  button--color: rgb(255, 255, 255),
+  button--arrowColor: rgb(255, 255, 255),
+  button--boxShadow: inset 0 0 0 0.1rem #fff,
 
-  ProjectPreview__leftCol__title--background:   rgb(100, 40, 40),
-  ProjectPreview__leftCol__snippet--background: rgb(120, 40, 40),
-  ProjectPreview__leftCol__route--background:   rgb(80, 40, 40),
-  ProjectPreview__rightCol--background:         rgb(140, 40, 40),
+  button--hover--bg: rgb(40, 40, 40),
+  button--hover--color: #3ee4d2,
+  button--hover--arrowColor: #3ee4d2,
+  button--hover--boxShadow: inset 0 0 0 0.1rem #3ee4d2,
 
-  App__body__scrollable__wrapper__floor--bg: url(../themes/default/bg-10x10.png) top left / 5px rgb(20, 192, 192),
 
-  webBoxBottom--bg:     transparent, //rgb(0, 0, 0),
-  webBoxBottom--border: 2px solid rgb(250, 0, 0),
+  block--4--outline: none,
+  block--4--bg: rgb(235, 235, 245),
+
+
+  //PROJECT PREVIEW
+  ProjectPreview__leftCol__title--background:   rgb(245, 245, 245),
+  ProjectPreview__leftCol__snippet--background: rgb(245, 245, 245),
+  ProjectPreview__rightCol--background:         rgb(255, 255, 255),
+
+
+
+  App__body__scrollable__wrapper__floor--bg: url(../themes/default/bg-10x10.png) top left / 5px rgb(200, 200, 200),
+
+  webBoxBottom--bg:     rgb(210, 210, 210),
+  webBoxBottom--border: none,
+  //webBoxBottom--bg:     transparent,
+  //webBoxBottom--border: 2px solid rgb(250, 0, 0),
+
+  webBoxSide--bg:       rgb(230, 230, 230),
+  webBoxSide--border:   none,
 
   mobileBoxSide: rgb(100, 200, 200),
   mobileBoxBottom: rgb(80, 180, 180),

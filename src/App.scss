@@ -97,7 +97,7 @@
 
 
 .App__body__scrollable__wrapper--WorkView {
-  width: 54rem; //46rem
+  width: 54rem;
 
   @media screen and (max-width: $breakpoint-mobile) {
     width: 100%;
@@ -171,7 +171,7 @@
   display: block;
   width: 100%;
   height: calc(100% + 10rem);
-  transform: translate3d(0,0,-14rem);
+  transform: translate3d(0,0,-16rem);
   transform-style: preserve-3d;
 }
 
