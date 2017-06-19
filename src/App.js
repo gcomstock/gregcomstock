@@ -5,9 +5,6 @@ import { Link } from 'react-router'
 
 const BREAKPOINT_MOBILE = 1020;
 
-// Intentionally not part of state, because we only need to update it on mount. Avoid un-necessary re-renders.
-let scrollY = 0;
-
 const App = React.createClass({
   getInitialState() {
 
@@ -20,6 +17,7 @@ const App = React.createClass({
     // pass handlers into children to update this App-level state when needed
     return {
       isMobile: window.innerWidth <= BREAKPOINT_MOBILE,
+      scrollY: 0,
       theme: 'tech'
       //theme: 'game'
     }
@@ -38,7 +36,7 @@ const App = React.createClass({
   handleScroll(e) {
     // WorkView calls this when it scrolls, and we store it in App.js, so we can scroll back to position when WorkView is re-mounted
     e.preventDefault();
-    scrollY = e.target.scrollTop;
+    this.setState({scrollY: e.target.scrollTop});
   },
 
   setTheme(theme) {
@@ -63,7 +61,7 @@ const App = React.createClass({
             key: location.hash,
             isMobile: this.state.isMobile,
             handleScroll: this.handleScroll,
-            scrollY
+            scrollY: this.state.scrollY
           } )}
         </ReactTransitionGroup>
       </div>

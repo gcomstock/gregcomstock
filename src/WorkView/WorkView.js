@@ -51,36 +51,103 @@ const WorkView = React.createClass({
     this.scrollableWrapper.scrollTop = this.props.scrollY;
   },
 
-  renderOuterFrames() {
-    if (!this.props.isMobile) {
+  renderContent() {
+
       return (
         <div>
-          <div className='App__body__scrollable__wrapper__leftFrame App__body__scrollable__wrapper__leftFrame--WorkView'>
-            <Block3d
-              width='20rem'
-              height='100%'
-              depth='10'
-              z='-6'
-              noTop={true}
-              noLeft={true}
-              isMobile={this.props.isMobile}
-            />
+          <div className='yerp'>
           </div>
-          <div className='App__body__scrollable__wrapper__rightFrame App__body__scrollable__wrapper__rightFrame--WorkView'>
-            <Block3d
-              width='20rem'
-              height='100%'
-              depth='10'
-              z='-6'
-              noTop={true}
-              noRight={true}
-              isMobile={this.props.isMobile}
-            />
+          <div className='yerpDerp'>
+
+            { this.renderProjectPreviews() }
+
+            if (!this.props.isMobile) {
+              <div>
+                <div className='App__body__scrollable__wrapper__leftFrame App__body__scrollable__wrapper__leftFrame--WorkView'>
+                  <Block3d
+                    width='20rem'
+                    height='100%'
+                    depth='10'
+                    z='-6'
+                    noTop={true}
+                    noLeft={true}
+                    isMobile={this.props.isMobile}
+                  />
+                </div>
+                <div className='App__body__scrollable__wrapper__rightFrame App__body__scrollable__wrapper__rightFrame--WorkView'>
+                  <Block3d
+                    width='20rem'
+                    height='100%'
+                    depth='10'
+                    z='-6'
+                    noTop={true}
+                    noRight={true}
+                    isMobile={this.props.isMobile}
+                  />
+                </div>
+                <div className='App__body__scrollable__wrapper__floor App__body__scrollable__wrapper__floor--WorkView'></div>
+              </div>
+            }
+
           </div>
-          <div className='App__body__scrollable__wrapper__floor App__body__scrollable__wrapper__floor--WorkView'></div>
         </div>
-      )
-    }
+      );
+
+    { this.renderProjectPreviews(); }
+  },
+
+  renderProjectPreviews() {
+    return (
+      <div>
+        <ProjectPreview
+          route={PandoraConsts.ROUTE}
+          title={PandoraConsts.TITLE}
+          snippet={PandoraConsts.SNIPPET}
+          thumbnailPath={PandoraConsts.THUMBNAIL_PATH}
+          isMobile={this.props.isMobile}
+        />
+
+        <ProjectPreview
+          route={PandoraAdsConsts.ROUTE}
+          title={PandoraAdsConsts.TITLE}
+          snippet={PandoraAdsConsts.SNIPPET}
+          thumbnailPath={PandoraAdsConsts.THUMBNAIL_PATH}
+          isMobile={this.props.isMobile}
+        />
+
+        <ProjectPreview
+          route={ChristyNatsumiConsts.ROUTE}
+          title={ChristyNatsumiConsts.TITLE}
+          snippet={ChristyNatsumiConsts.SNIPPET}
+          thumbnailPath={ChristyNatsumiConsts.THUMBNAIL_PATH}
+          isMobile={this.props.isMobile}
+        />
+
+        <ProjectPreview
+          route={PandoraWin10Consts.ROUTE}
+          title={PandoraWin10Consts.TITLE}
+          snippet={PandoraWin10Consts.SNIPPET}
+          thumbnailPath={PandoraWin10Consts.THUMBNAIL_PATH}
+          isMobile={this.props.isMobile}
+        />
+
+        <ProjectPreview
+          route={RiddickartConsts.ROUTE}
+          title={RiddickartConsts.TITLE}
+          snippet={RiddickartConsts.SNIPPET}
+          thumbnailPath={RiddickartConsts.THUMBNAIL_PATH}
+          isMobile={this.props.isMobile}
+        />
+
+        <ProjectPreview
+          route={ScreensimConsts.ROUTE}
+          title={ScreensimConsts.TITLE}
+          snippet={ScreensimConsts.SNIPPET}
+          thumbnailPath={ScreensimConsts.THUMBNAIL_PATH}
+          isMobile={this.props.isMobile}
+        />
+      </div>
+    )
   },
 
   render() {
@@ -98,58 +165,9 @@ const WorkView = React.createClass({
         <div className='App__body__scrollable' ref={(scrollableWrapper) => { this.scrollableWrapper = scrollableWrapper; }} onScroll={this.props.handleScroll}>
           <div className='App__body__scrollable__wrapper App__body__scrollable__wrapper--WorkView'>
 
-            { this.renderOuterFrames() }
+            <SiteIntro isMobile={this.props.isMobile} scrollY={this.props.scrollY}/>
 
-            <SiteIntro isMobile={this.props.isMobile}/>
-
-            <ProjectPreview
-              route={PandoraConsts.ROUTE}
-              title={PandoraConsts.TITLE}
-              snippet={PandoraConsts.SNIPPET}
-              thumbnailPath={PandoraConsts.THUMBNAIL_PATH}
-              isMobile={this.props.isMobile}
-            />
-
-            <ProjectPreview
-              route={PandoraAdsConsts.ROUTE}
-              title={PandoraAdsConsts.TITLE}
-              snippet={PandoraAdsConsts.SNIPPET}
-              thumbnailPath={PandoraAdsConsts.THUMBNAIL_PATH}
-              isMobile={this.props.isMobile}
-            />
-
-            <ProjectPreview
-              route={ChristyNatsumiConsts.ROUTE}
-              title={ChristyNatsumiConsts.TITLE}
-              snippet={ChristyNatsumiConsts.SNIPPET}
-              thumbnailPath={ChristyNatsumiConsts.THUMBNAIL_PATH}
-              isMobile={this.props.isMobile}
-            />
-
-            <ProjectPreview
-              route={PandoraWin10Consts.ROUTE}
-              title={PandoraWin10Consts.TITLE}
-              snippet={PandoraWin10Consts.SNIPPET}
-              thumbnailPath={PandoraWin10Consts.THUMBNAIL_PATH}
-              isMobile={this.props.isMobile}
-            />
-
-            <ProjectPreview
-              route={RiddickartConsts.ROUTE}
-              title={RiddickartConsts.TITLE}
-              snippet={RiddickartConsts.SNIPPET}
-              thumbnailPath={RiddickartConsts.THUMBNAIL_PATH}
-              isMobile={this.props.isMobile}
-            />
-
-            <ProjectPreview
-              route={ScreensimConsts.ROUTE}
-              title={ScreensimConsts.TITLE}
-              snippet={ScreensimConsts.SNIPPET}
-              thumbnailPath={ScreensimConsts.THUMBNAIL_PATH}
-              isMobile={this.props.isMobile}
-            />
-
+            { this.renderContent() }
           </div>
 
           <div className='App__body__scrollable__footer'>

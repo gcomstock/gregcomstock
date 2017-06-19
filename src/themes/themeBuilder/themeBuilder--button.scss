@@ -17,6 +17,15 @@
       box-shadow: map-get($properties, 'button--hover--boxShadow');
       background-color: map-get($properties, 'button--hover--bg');
     }
+
+    .Block3d__face--bottom {
+      background-color: map-get($properties, 'button--hover--face--bottom');
+    }
+    .Block3d__face--left,
+    .Block3d__face--right {
+      background-color: map-get($properties, 'button--hover--face--side');
+    }
+
     .button__text--arrowRight:after {
       border-left-color: map-get($properties, 'button--hover--arrowColor');
     }

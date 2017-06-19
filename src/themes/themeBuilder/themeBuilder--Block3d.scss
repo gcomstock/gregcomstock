@@ -2,8 +2,7 @@
 .App__body__scrollable__wrapper__rightFrame {
 
   .Block3d__content {
-    background-image: url(../themes/default/bg-8x8--back.png);
-    background-size: 4px;
+    background: map-get($properties, 'App__body__scrollable__wrapper__leftFrame');
   }
 }
 
@@ -36,30 +35,35 @@
   }
 }
 .Block3d__content--14 {
+  background: red;
   /*outline: 1px solid rgb(165,165,165);*/
-  background-color: rgb(192, 192, 192);
+  //background-color: rgb(192, 192, 192);
 }
 .Block3d__content--12 {
+  background: red;
   /*outline: 1px solid rgb(175,175,175);*/
-  background-color: rgb(201, 201, 201);
+  //background-color: rgb(201, 201, 201);
 }
 .Block3d__content--10 {
+  background: red;
   /*outline: 1px solid rgb(185,185,185);*/
-  background-color: rgb(210, 210, 210);
+  //background-color: rgb(210, 210, 210);
 }
 .Block3d__content--8 {
+  background: red;
   /*outline: 1px solid rgb(195,195,195);*/
-  background-color: rgb(219, 219, 219);
+  //background-color: rgb(219, 219, 219);
 }
 .Block3d__content--6 {
+  background: red;
   /*outline: 1px solid rgb(205,205,205);*/
-  background-color: rgb(228, 228, 228);
+  //background-color: rgb(228, 228, 228);
 }
 .Block3d__content--4 {
-  background: map-get($properties, 'block--4--bg');
-  outline:    map-get($properties, 'block--4--outline');
+  background: red;
 }
 .Block3d__content--2 {
+  background: red;
   /* outline: 1px solid rgb(225,225,225); */
-  background-color: rgb(246, 246, 246);
+  //background-color: rgb(246, 246, 246);
 }

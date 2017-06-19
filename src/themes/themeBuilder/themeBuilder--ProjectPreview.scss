@@ -20,6 +20,12 @@ $bottom: map-get($properties, 'mobileBoxBottom');
   }
 }
 
+.ProjectPreview__leftCol__title__text {
+  background: map-get($properties, 'ProjectPreview__leftCol__title__text--background');
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 
 
 

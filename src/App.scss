@@ -203,11 +203,23 @@
   text-align: left;
 }
 
+
+.yerp {
+  height: $siteIntroHeight;
+  min-height: $siteIntroMinHeight;
+}
+
+.yerpDerp {
+  position: relative;
+  height: calc(100% - #{$siteIntroHeight});
+}
+
+
 .App__body__scrollable__wrapper__leftFrame--WorkView,
 .App__body__scrollable__wrapper__rightFrame--WorkView,
 .App__body__scrollable__wrapper__floor--WorkView {
-  top: $siteIntroHeight;
-  height: calc(100% - #{$siteIntroHeight});
+  top: 0;//$siteIntroHeight;
+  //height: calc(100% - #{$siteIntroHeight});
 
   @media screen and (max-width: $breakpoint-mobile){
     top: $siteIntroHeight--mobile;
