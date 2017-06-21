@@ -18,8 +18,8 @@ const App = React.createClass({
     return {
       isMobile: window.innerWidth <= BREAKPOINT_MOBILE,
       scrollY: 0,
-      theme: 'tech'
-      //theme: 'game'
+      theme: 'tech',
+      rootFontSize: 0
     }
   },
 
@@ -31,6 +31,9 @@ const App = React.createClass({
     if (e.target.innerWidth > BREAKPOINT_MOBILE && this.state.isMobile === true) {
       this.setState({isMobile: false});
     }
+
+
+    //this.setState({rootFontSize: false});
   },
 
   handleScroll(e) {
@@ -44,7 +47,6 @@ const App = React.createClass({
   },
 
   render() {
-
     return (
       <div className={`App theme--${this.state.theme}`}>
         <div className='App__header'>

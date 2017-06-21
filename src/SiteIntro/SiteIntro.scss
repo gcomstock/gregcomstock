@@ -1,23 +1,18 @@
 @import '../scss/shared.scss';
 
 
+$deviceBackground: rgba(255,255,255,1);
+$deviceBorder: none; //0.125rem solid rgba(100,100,100,1);
+$deviceBoxShadow: none; //inset 0 0 0 1px rgba(200,200,200,1);
+
+
+
 .SiteIntro {
   width: 100%;
   height: $siteIntroHeight;
   min-height: $siteIntroMinHeight;
   position: absolute;
-  transform-style: preserve-3d;
-
-  //background-color: rgba(0,0,255,0.1);
-  //overflow: hidden;
-  //transform: translate3d(0,0,-16.01rem);
-
-  background-repeat: no-repeat;
-  background-size: 54rem;
-  //background-image: url(../themes/default/siteIntro.png);
-  background-position: 50% 0;
-  background-attachment: fixed;
-  background-color: #00b400;
+  //transform-style: preserve-3d;
 
   @media screen and (max-width: $breakpoint-mobile){
     margin: 1.5rem 1.5rem 6rem 1.5rem;
@@ -25,32 +20,50 @@
   }
 }
 
+.SiteIntro__background {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $siteIntroMinHeight;
+  position: absolute;
+
+  //background-color: rgba(0,0,255,0.1);
+
+  background-repeat: no-repeat;
+  background-size: 54rem;
+  background-image: url(../themes/default/siteIntro--onScreen.png);
+  background-position: 50% 0;
+}
+
 
 .SiteIntro__device {
+  left: 50%;
   font-size: 3rem;
   position: absolute;
-  border: 1px solid #333;
+  box-shadow: $deviceBoxShadow;
   border-radius: 0.5rem;
-  background-color: rgba(255,255,255,1);
+  background: $deviceBackground;
+
+  &::before,
+  &::after {
+    box-shadow: $deviceBoxShadow;
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    background: $deviceBackground;
+  }
 }
 
 .SiteIntro__device__screen {
   border-radius: 0.125rem;
   width: 100%;
   height: 100%;
-  border: 1px solid #333;
-
-  //background-color: rgba(255,255,0,1);
-  background-repeat: no-repeat;
-  background-size: 54rem;
-  background-image: url(../themes/default/siteIntro--onScreen.png);
-  background-position: 50% 0;
-  background-attachment: fixed;
+  box-shadow: $deviceBoxShadow;
 }
 
 .SiteIntro__device--monitor {
   top: 0;
-  left: 50%;
   width: 26rem;
   height: 16rem;
   margin-left: -13rem;
@@ -58,77 +71,91 @@
 
   // neck
   &::after {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: -3.25rem;
-    left: 50%;
+    bottom: -3rem;
     margin-left: -3rem;
     width: 6rem;
-    height: 3rem;
-    border: 1px solid red;
+    height: calc(3rem - 2px);
     border-radius: 0;
-    background-color: rgba(255,0,0,0.2);
   }
 
   // base
   &::before {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: -4rem;
-    left: 50%;
+    bottom: calc(-2px - 3.5rem);
     margin-left: -4rem;
     width: 8rem;
     height: 0.5rem;
-    border: 1px solid red;
     border-radius: 0;
-    background-color: rgba(255,0,0,0.2);
+  }
+}
+
+.SiteIntro__device--watch {
+  width: 3rem;
+  height: 3.5rem;
+  margin-left: 22.5rem;
+  padding: 0.375rem;
+  transform: translateY(-4px);
+
+  // top band
+  &::after {
+    top: calc(-2px - 1.5rem);
+    margin-left: -1rem;
+    width: 2rem;
+    height: 1.5rem;
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+
+  // bottom band
+  &::before {
+    bottom: calc(-2px - 1.5rem);
+    margin-left: -1rem;
+    width: 2rem;
+    height: 1.5rem;
+    border-radius: 0 0 0.5rem 0.5rem;
   }
 }
 
 .SiteIntro__device--ipad {
-  //top: 7rem;
-  left: 50%;
-  width: 9rem;
-  height: 13rem;
-  margin-left: -20rem;
+  width: 10.5rem;
+  height: 14rem;
+  margin-left: 11rem;
   padding: 1rem 0.25rem;
-  //box-shadow: 0.125rem 0.125rem 0 0 #000;
 }
 
 .SiteIntro__device--iphone {
-  //top: 12rem;
-  left: 50%;
   width: 4rem;
   height: 8rem;
-  margin-left: -10rem;
+  margin-left: 6rem;
   padding: 1rem 0.25rem;
-  //box-shadow: 0.125rem 0.125rem 0 0 #000;
 }
 
 .SiteIntro__device--macbook {
-  //top: 6.75rem;
-  left: 50%;
-  width: 18rem;
-  height: 12rem;
-  margin-left: 8rem;
+  width: 17rem;
+  height: 11rem;
+  margin-left: -25rem;
   border-radius: 0.5rem 0.5rem 0 0;
   padding: 0.75rem;
 
   &::after {
-    content: '';
-    display: block;
-    position: absolute;
-    bottom: -1.25rem;
+    bottom: calc(-2px - 1rem);
     left: -2rem;
-    width: 22rem;
+    width: 21rem;
     height: 1rem;
-    border: 1px solid red;
     border-radius: 0 0 0.5rem 0.5rem;
-    background-color: rgba(255,0,0,0.2);
   }
 }
+
+
+.SiteIntro__device .SiteIntro__device__screen {
+  background-repeat: no-repeat;
+  background-size: 54rem;
+  background-position: 50% 64px;
+  background-attachment: fixed;
+  //background-image: url(../themes/default/siteIntro--onScreen.png), linear-gradient(to bottom, #7abcff 0%,#60abf8 44%,#4096ee 100%);
+  background-color: #eeeeee;
+  background-image: url(../themes/default/siteIntro--onScreen.png);
+}
+
+
 
 
 
