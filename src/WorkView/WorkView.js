@@ -52,46 +52,44 @@ const WorkView = React.createClass({
   },
 
   renderContent() {
-
-      return (
-        <div>
-          <div className='yerp'>
-          </div>
-          <div className='yerpDerp'>
-
-            { this.renderProjectPreviews() }
-
-            if (!this.props.isMobile) {
-              <div>
-                <div className='App__body__scrollable__wrapper__leftFrame App__body__scrollable__wrapper__leftFrame--WorkView'>
-                  <Block3d
-                    width='20rem'
-                    height='100%'
-                    depth='10'
-                    z='-6'
-                    noTop={true}
-                    noLeft={true}
-                    isMobile={this.props.isMobile}
-                  />
-                </div>
-                <div className='App__body__scrollable__wrapper__rightFrame App__body__scrollable__wrapper__rightFrame--WorkView'>
-                  <Block3d
-                    width='20rem'
-                    height='100%'
-                    depth='10'
-                    z='-6'
-                    noTop={true}
-                    noRight={true}
-                    isMobile={this.props.isMobile}
-                  />
-                </div>
-                <div className='App__body__scrollable__wrapper__floor App__body__scrollable__wrapper__floor--WorkView'></div>
-              </div>
-            }
-
-          </div>
+    return (
+      <div>
+        <div className='yerp'>
         </div>
-      );
+        <div className='yerpDerp'>
+
+          { this.renderProjectPreviews() }
+
+          if (!this.props.isMobile) {
+            <div>
+              <div className='App__body__scrollable__wrapper__leftFrame App__body__scrollable__wrapper__leftFrame--WorkView'>
+                <Block3d
+                  width='20rem'
+                  height='100%'
+                  depth='10'
+                  z='-6'
+                  noTop={true}
+                  noLeft={true}
+                  isMobile={this.props.isMobile}
+                />
+              </div>
+              <div className='App__body__scrollable__wrapper__rightFrame App__body__scrollable__wrapper__rightFrame--WorkView'>
+                <Block3d
+                  width='20rem'
+                  height='100%'
+                  depth='10'
+                  z='-6'
+                  noTop={true}
+                  noRight={true}
+                  isMobile={this.props.isMobile}
+                />
+              </div>
+              <div className='App__body__scrollable__wrapper__floor App__body__scrollable__wrapper__floor--WorkView'></div>
+            </div>
+          }
+        </div>
+      </div>
+    );
 
     { this.renderProjectPreviews(); }
   },

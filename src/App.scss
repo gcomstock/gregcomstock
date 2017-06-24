@@ -69,8 +69,8 @@
   position: relative;
   height: 100vh;
 
-  perspective-origin: 50% 80%; // x-center y-top
-  perspective: 54rem;          // should match width of App__wrapper for best cube appearance
+  perspective-origin: 50% $siteIntroHeight; // x-center y-top
+  perspective: $bodyWidth; // should match width of body for best cube appearance
   overflow-y: scroll;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
@@ -85,7 +85,7 @@
 // maintains fixed width for layout
 .App__body__scrollable__wrapper {
   position: relative;
-  width: 54rem;
+  width: $bodyWidth;
   margin: 0 auto;
   transform-style: preserve-3d;
   padding-bottom: 14rem;
@@ -97,7 +97,7 @@
 
 
 .App__body__scrollable__wrapper--WorkView {
-  width: 54rem;
+  width: $bodyWidth;
 
   @media screen and (max-width: $breakpoint-mobile) {
     width: 100%;
@@ -208,7 +208,6 @@
   height: $siteIntroHeight;
   min-height: $siteIntroMinHeight;
 }
-
 .yerpDerp {
   padding-top: 12rem;
   position: relative;

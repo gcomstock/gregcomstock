@@ -41,9 +41,7 @@ export const SiteIntro = React.createClass({
 
   getDeviceOffset(initialYRem, multiplier) {
     const htmlStyles = window.getComputedStyle(document.documentElement, null);
-    const htmlFontSize = parseInt(htmlStyles['font-size']);
-
-    console.log(htmlFontSize);
+    const htmlFontSize = parseInt(htmlStyles['font-size'], 10);
 
     return initialYRem * htmlFontSize + this.props.scrollY * multiplier + 'px';
   },
@@ -56,24 +54,25 @@ export const SiteIntro = React.createClass({
       <div className='SiteIntro'>
 
         <div className='SiteIntro__background'></div>
-        <div className='SiteIntro__device SiteIntro__device--monitor' style={{top: this.getDeviceOffset(0, 0.3)}}>
+
+        <div className='SiteIntro__device SiteIntro__device--monitor' style={{top: this.getDeviceOffset(2, 0.3)}}>
           <div className='SiteIntro__device__screen'>
           </div>
         </div>
-        <div className='SiteIntro__device SiteIntro__device--watch' style={{top: this.getDeviceOffset(14.5, 0.05)}}>
+        <div className='SiteIntro__device SiteIntro__device--watch' style={{top: this.getDeviceOffset(16.5, -0.4)}}>
           <div className='SiteIntro__device__screen'>
           </div>
         </div>
-        <div className='SiteIntro__device SiteIntro__device--ipad' style={{top: this.getDeviceOffset(5.5, 0.25)}}>
+        <div className='SiteIntro__device SiteIntro__device--ipad' style={{top: this.getDeviceOffset(7.5, 0.075)}}>
           <div className='SiteIntro__device__screen'>
           </div>
         </div>
         <div className='SiteIntro__device SiteIntro__device--iphone'
-             style={{top: this.getDeviceOffset(11.5, -0.25)}}>
+             style={{top: this.getDeviceOffset(13.5, -0.25)}}>
           <div className='SiteIntro__device__screen'>
           </div>
         </div>
-        <div className='SiteIntro__device SiteIntro__device--macbook' style={{top: this.getDeviceOffset(7.5, 0.1)}}>
+        <div className='SiteIntro__device SiteIntro__device--macbook' style={{top: this.getDeviceOffset(9.5, 0.1)}}>
           <div className='SiteIntro__device__screen'>
           </div>
         </div>

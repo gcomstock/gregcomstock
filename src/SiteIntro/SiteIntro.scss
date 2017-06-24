@@ -2,8 +2,8 @@
 
 
 $deviceBackground: rgba(255,255,255,1);
-$deviceBorder: none; //0.125rem solid rgba(100,100,100,1);
-$deviceBoxShadow: none; //inset 0 0 0 1px rgba(200,200,200,1);
+$deviceBorder: 0.125rem solid rgba(160,160,160,1);
+$deviceBoxShadow: inset 0 0 0 1px rgba(160,160,160,1);
 
 
 
@@ -12,7 +12,6 @@ $deviceBoxShadow: none; //inset 0 0 0 1px rgba(200,200,200,1);
   height: $siteIntroHeight;
   min-height: $siteIntroMinHeight;
   position: absolute;
-  //transform-style: preserve-3d;
 
   @media screen and (max-width: $breakpoint-mobile){
     margin: 1.5rem 1.5rem 6rem 1.5rem;
@@ -63,10 +62,11 @@ $deviceBoxShadow: none; //inset 0 0 0 1px rgba(200,200,200,1);
 }
 
 .SiteIntro__device--monitor {
-  top: 0;
-  width: 26rem;
+  width: 30rem;
   height: 16rem;
-  margin-left: -13rem;
+  margin-left: -15rem;
+
+
   padding: 1rem;
 
   // neck
@@ -148,12 +148,35 @@ $deviceBoxShadow: none; //inset 0 0 0 1px rgba(200,200,200,1);
 .SiteIntro__device .SiteIntro__device__screen {
   background-repeat: no-repeat;
   background-size: 54rem;
-  background-position: 50% 64px;
+  background-position: 50% $headerHeight, center;
   background-attachment: fixed;
   //background-image: url(../themes/default/siteIntro--onScreen.png), linear-gradient(to bottom, #7abcff 0%,#60abf8 44%,#4096ee 100%);
-  background-color: #eeeeee;
-  background-image: url(../themes/default/siteIntro--onScreen.png);
+  //background-color: #eeeeee;
+  //background-image: url(../themes/default/siteIntro--onScreen.png);
 }
+
+
+.SiteIntro__device--monitor .SiteIntro__device__screen {
+  background-image: url(../themes/default/siteIntro--onScreen.png), linear-gradient(to bottom, #bfe0ff 0%,#e5efff 100%);
+}
+
+.SiteIntro__device--macbook .SiteIntro__device__screen {
+  background-image: url(../themes/default/siteIntro--onScreen.png), linear-gradient(to bottom, #bfffe9 0%,#e5fffe 100%);
+}
+
+.SiteIntro__device--iphone .SiteIntro__device__screen {
+  background-image: url(../themes/default/siteIntro--onScreen.png), linear-gradient(to bottom, #fff29a 0%,#fffbca 100%);
+}
+
+.SiteIntro__device--ipad .SiteIntro__device__screen {
+  background-image: url(../themes/default/siteIntro--onScreen.png), linear-gradient(to bottom, #ffcabf 0%,#ffe5e5 100%);
+}
+
+.SiteIntro__device--watch .SiteIntro__device__screen {
+  background-image: url(../themes/default/siteIntro--onScreen.png), linear-gradient(to bottom, #f4bfff 0%,#fbe5ff 100%);
+}
+
+
 
 
 

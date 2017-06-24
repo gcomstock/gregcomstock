@@ -67,8 +67,7 @@ $theme--tech: (
   title--fontSize: 3.4rem,
   title--fontSpacing: 0,
   title--textTransform: none,
-  title--color: rgb(60, 60, 60), //3ee4d2
-
+  title--color: rgb(60, 60, 60),
   text--color: rgb(80, 80, 80),
 
   button--bg: rgb(60, 60, 60),
@@ -91,8 +90,13 @@ $theme--tech: (
   ProjectPreview__rightCol--background:             rgb(255, 255, 255),
 
 
+  App__body--bg: url(../themes/default/siteIntro__bg.png) top left / 900px rgb(170, 170, 170),
+  App__body--mobile--bg: url(../themes/default/siteIntro__bg.png) top left / 600px rgb(170, 170, 170),
   App__body__scrollable__wrapper__leftFrame: url(../themes/default/bg-8x8--back.png) top left / 4px rgb(250, 250, 250),
   App__body__scrollable__wrapper__floor--bg: url(../themes/default/bg-10x10.png) top left / 5px rgb(210, 210, 210),
+
+
+
 
   webBoxBottom--bg:     rgb(210, 210, 210),
   webBoxBottom--border: none,

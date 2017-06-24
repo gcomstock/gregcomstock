@@ -31,9 +31,6 @@ const App = React.createClass({
     if (e.target.innerWidth > BREAKPOINT_MOBILE && this.state.isMobile === true) {
       this.setState({isMobile: false});
     }
-
-
-    //this.setState({rootFontSize: false});
   },
 
   handleScroll(e) {
