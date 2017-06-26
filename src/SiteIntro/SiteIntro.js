@@ -53,7 +53,7 @@ export const SiteIntro = React.createClass({
     return (
       <div className='SiteIntro'>
 
-        <div className='SiteIntro__background'></div>
+        {/* <div className='SiteIntro__background'></div> */}
 
         <div className='SiteIntro__device SiteIntro__device--monitor' style={{top: this.getDeviceOffset(2, 0.3)}}>
           <div className='SiteIntro__device__screen'>
