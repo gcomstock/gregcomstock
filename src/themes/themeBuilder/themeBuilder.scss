@@ -30,7 +30,7 @@
     text-transform: map-get($properties, 'title--textTransform');
 
     @media screen and (max-width: $breakpoint-mobile) {
-      font-size: 1.8rem;
+      font-size: map-get($properties, 'title--fontSize--mobile');
     }
   }
 
@@ -38,7 +38,7 @@
     font-family:   'title--#{$name}';
     font-size:      0.8rem;
     letter-spacing: 0.05rem;
-    color:          map-get($properties, 'highlightColor');
+    color:          red;
 
     @media screen and (max-width: $breakpoint-mobile) {
       font-size: 1.2rem;

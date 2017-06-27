@@ -79,11 +79,10 @@
 
 
 .ProjectPreview__leftCol__routeWrapper {
-  //position: relative;
   text-align: right;
 
   @media screen and (max-width: $breakpoint-mobile){
-    //text-align: right;
+    position: relative; // so it floats above text on mobile
     z-index: 2;
   }
 }

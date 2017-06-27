@@ -21,8 +21,9 @@
 
 
 
-/* TODO: be smarter about calculating these values later...keep it loose for now */
 
+
+//TODO: maybe remove these
 .Block3d__content {
   /*outline: 1px solid rgb(235,235,235);*/
   background-color: rgb(255, 255, 255);
@@ -34,6 +35,9 @@
     color: map-get($properties, 'text--color');
   }
 }
+
+
+//TODO: remove these when safe to do so
 .Block3d__content--14 {
   background: red;
   /*outline: 1px solid rgb(165,165,165);*/

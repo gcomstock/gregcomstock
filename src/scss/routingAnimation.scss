@@ -17,12 +17,12 @@ $opacityIn:  opacity 450ms 100ms cubic-bezier(0.215, 0.610, 0.355, 1.000); /* ea
 
 
   // we animate the faces instead of the whole block, so 3d is preserved for web
-  .Block3d__face,
   .Block3d--shadow,
   .App__body__scrollable__wrapper__floor {
     transition: $opacityIn;
   }
 
+  .Block3d__face,
   .Block3d__content,
   .Block3d__content:before,
   .Block3d__content:after {
