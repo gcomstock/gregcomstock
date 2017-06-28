@@ -1,6 +1,16 @@
 .App__header {
   background-color: #ffffff;
+  font-size: 2rem;
 }
+
+.App__header__title {
+  @extend .title--subhead--#{$name};
+  font-size: 1rem;
+  //text-transform: uppercase;
+}
+
+
+
 
 .App__body {
   color: #333;

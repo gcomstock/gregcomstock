@@ -52,9 +52,6 @@ const WorkView = React.createClass({
   },
 
   renderContent() {
-    console.log('this.props.isMobile');
-    console.log(this.props.isMobile);
-
     return (
       <div>
         <div className='yerp'>

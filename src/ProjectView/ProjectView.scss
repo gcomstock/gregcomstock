@@ -4,7 +4,7 @@
 
 .ProjectView {
   margin-top: 2rem;
-  width: 36rem;
+  //width: 36rem;
   display: inline-block;
   text-align: left;
   vertical-align: top;
@@ -12,6 +12,11 @@
   @media screen and (max-width: $breakpoint-mobile) {
     width: 100%;
   }
+}
+
+.ProjectView__title {
+  font-size: 40px;
+  text-align: center;
 }
 
 .ProjectView__pic {

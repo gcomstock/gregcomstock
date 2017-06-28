@@ -11,15 +11,15 @@
   top: 0;
   width: 100%;
   z-index: 99999;
-  font-size: 2rem;
-/*
+
+
   &:after {
     position: absolute;
     bottom: calc(1px - 0.25rem);
     left: 0;
     content: '';
     width: 50%;
-    border-top: 0.25rem solid #ccc;
+    border-top: 0.25rem solid #aaa;
     border-left: 0.25rem solid transparent;
   }
 
@@ -29,17 +29,16 @@
     right: 0;
     content: '';
     width: 50%;
-    border-top: 0.25rem solid #ccc;
+    border-top: 0.25rem solid #aaa;
     border-right: 0.25rem solid transparent;
   }
-  */
 }
 
 .App__header__title {
-  font-size: 1rem;
-  text-transform: uppercase;
   display: inline-block;
-  margin-right: 1rem;
+  margin: 0 1rem;
+  line-height: 44px;
+  vertical-align: top;
 }
 
 .App__header__theme {
@@ -48,6 +47,30 @@
   height: 2rem;
   background-color: #999;
 }
+
+
+.App__header__x {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 43px;
+  height: 43px;
+  cursor: pointer;
+  background-color: red;
+
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    width: $mobileMinSize;
+    height: $mobileMinSize;
+    margin: 0 0.75rem 0 0;
+
+    .Block3d__content {
+      background-position-x: 100%;
+    }
+  }
+}
+
+
 
 
 // containing element to allow scrollable and non-scrollable content on a view

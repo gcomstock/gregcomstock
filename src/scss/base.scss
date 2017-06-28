@@ -11,69 +11,14 @@
 //define theme vars and generate the css for them
 @import '../themes/themeBuilder/themeBuilder';
 
-
-$theme--tech--title--colorGradient--startColor: #1a4f5c;
-$theme--tech--title--colorGradient--endColor: #349cb6;
-$theme--tech--activeColor--low: #28788c;
-$theme--tech--activeColor--mid: #349cb6;
-$theme--tech--activeColor--high: #41c4e5;
-
-
-$theme--tech: (
-  // TITLE
-  title--font: '../themes/tech/goku.woff',
-  title--font2: '../themes/tech/goku.woff2',
-  title--fontSize: 3.4rem,
-  title--fontSize--mobile: 3rem,
-  title--fontSpacing: 0,
-  title--textTransform: none,
-  title--color: rgb(60, 60, 60),
-
-  text--color: rgb(80, 80, 80),
-
-  button--bg: rgb(60, 60, 60),
-  button--color: rgb(255, 255, 255),
-  button--arrowColor: rgb(255, 255, 255),
-  button--boxShadow: inset 0 0 0 0.1rem #fff,
-
-  button--hover--bg: rgb(30, 30, 30),
-  button--hover--color: $theme--tech--activeColor--high,
-  button--hover--arrowColor: $theme--tech--activeColor--high,
-  button--hover--boxShadow: inset 0 0 0 0.1rem $theme--tech--activeColor--high,
-  button--hover--face--side: $theme--tech--activeColor--mid,
-  button--hover--face--bottom: $theme--tech--activeColor--low,
-
-
-  App__body--bg: url(../themes/default/siteIntro__bg.png) top left / 900px rgb(170, 170, 170),
-  App__body--mobile--bg: url(../themes/default/siteIntro__bg.png) top left / 600px rgb(170, 170, 170),
-  App__body__scrollable__wrapper__leftFrame: url(../themes/default/bg-8x8--back.png) top left / 4px rgb(250, 250, 250),
-  App__body__scrollable__wrapper__floor--bg: url(../themes/default/bg-10x10.png) top left / 5px rgb(210, 210, 210),
-
-
-  //PROJECT PREVIEW
-  ProjectPreview__leftCol__title--background:       rgb(245, 245, 245),
-  ProjectPreview__leftCol__title__text--background: -webkit-linear-gradient($theme--tech--title--colorGradient--startColor, $theme--tech--title--colorGradient--endColor),
-  ProjectPreview__leftCol__snippet--background:     rgb(245, 245, 245),
-  ProjectPreview__rightCol--background:             rgb(255, 255, 255),
-
-
-  webBoxBottom--bg:     rgb(210, 210, 210),
-  webBoxBottom--border: none,
-  webBoxSide--bg:       rgb(230, 230, 230),
-  webBoxSide--border:   none,
-  mobileBoxSide: rgb(100, 200, 200),
-  mobileBoxBottom: rgb(80, 180, 180)
-
-  //webBoxBottom--bg:     transparent,
-  //webBoxBottom--border: 2px solid rgb(250, 0, 0),
-);
+@import "../themes/default/manifest.scss";
 
 
 
 
 //@include themeBuilder('default', $theme--default);
 //@include themeBuilder('game', $theme--game);
-@include themeBuilder('tech', $theme--tech);
+@include themeBuilder('default', $theme--default);
 
 
 

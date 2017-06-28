@@ -60,10 +60,13 @@ export default function projectViewFactory(WrappedComponent, projectData) {
     },
 
     renderProjectDesc(mode) {
+      //return false;
+
       if (this.props.isMobile && mode === 'mobile' || !this.props.isMobile && mode === 'web') {
         return (
           <div className='ProjectDesc'>
             <div className='ProjectDesc__content'>
+              {/*
               <Block3d
                 cssClass='ProjectDesc__content__x'
                 route={'/'}
@@ -74,6 +77,7 @@ export default function projectViewFactory(WrappedComponent, projectData) {
                 noRight={true}
                 padding={[0]}
               />
+               */}
 
               <Block3d
                 cssClass='ProjectDesc__content__title'
