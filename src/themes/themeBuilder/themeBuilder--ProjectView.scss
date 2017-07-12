@@ -1,5 +1,22 @@
+.ProjectView__title .Block3d__content {
+  @extend .title--ProjectView--#{$name};
+  background: map-get($properties, 'ProjectView__title--bg');
+}
+
+
 .ProjectView__pic .Block3d__content {
   @media screen and (max-width: $breakpoint-mobile) {
     @include mobileBox(2.25rem, transparent, rgb(160, 160, 160));
   }
+}
+
+
+
+
+.ProjectView__textCol__subhead {
+  @extend .title--ProjectView__subhead--#{$name};
+}
+
+.ProjectView__textCol__text .Block3d__content {
+  background: map-get($properties, 'ProjectView__textCol__text--bg');
 }

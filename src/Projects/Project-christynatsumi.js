@@ -26,7 +26,7 @@ export const ChristynNatsumiLayout = React.createClass({
           }}></div>
         </Block3d>
 
-        <Block3d cssClass='ProjectView__pic ProjectView__pic--mobile ProjectView__pic--margin' depth='3' z='0'>
+        <Block3d cssClass='ProjectView__pic ProjectView__pic--mobile' depth='3' z='0'>
           <div className='Block3d__content__imgFrame' style={{
             width: '12.75rem',
             height: '21.5rem',
@@ -58,7 +58,7 @@ export const ChristynNatsumiLayout = React.createClass({
           }}></div>
         </Block3d>
 
-        <Block3d cssClass='ProjectView__pic ProjectView__pic--mobile ProjectView__pic--margin' depth='3' z='0'>
+        <Block3d cssClass='ProjectView__pic ProjectView__pic--mobile' depth='3' z='0'>
           <div className='Block3d__content__imgFrame' style={{
             width: '12.75rem',
             height: '21.5rem',

@@ -10,11 +10,142 @@ export const PandoraLayout = React.createClass({
   render() {
     return (
       <div className='ProjectView'>
-        <div className="ProjectView__title">Pandora.com</div>
+        <div style={{textAlign: 'center'}}>
+          <Block3d
+            cssClass='ProjectView__title'
+            width='100%'
+            height='auto'
+            depth='4'
+            z='0'
+            shadow={true}
+            shadowDepth={-15.99}
+            noTop={true}
+            noLeft={true}
+            noRight={true}
+            isMobile={this.props.isMobile}
+          >
+            Pandora.com
+          </Block3d>
+        </div>
 
-        <Block3d cssClass='ProjectView__pic' width='100%' height='auto' depth='14' z='0' isMobile={this.props.isMobile}>
+        {/*
+        <div className="ProjectView__title">
+          Pandora Display Ad Architecture
+          <div className="ProjectView__title__shadow">
+            Pandora Display Ad Architecture
+          </div>
+        </div>
+         */}
+
+
+        <Block3d
+          cssClass='ProjectView__pic--intro'
+          width='100%'
+          height='auto'
+          depth='14'
+          z='0'
+          isMobile={this.props.isMobile}
+        >
           <img width='100%' src='work/pandora/pandora-1.jpg' alt='portfolio'/>
         </Block3d>
+
+        <div className='ProjectView__textCol'>
+          <Block3d
+            cssClass='ProjectView__textCol__subhead'
+            width='100%'
+            height='auto'
+            depth='8'
+            z='0'
+            padding={[1.5,1.5,1,1.25]}
+            shadow={true}
+            shadowDepth={-15.5}
+            isMobile={this.props.isMobile}
+          >
+            Responsibilities
+          </Block3d>
+
+          <Block3d
+            cssClass='ProjectView__textCol__text'
+            height='auto'
+            depth='6'
+            z='-2'
+            shadow={true}
+            shadowDepth={-15.5}
+            isMobile={this.props.isMobile}
+          >
+            <p>{PandoraConsts.TEXT}</p>
+          </Block3d>
+
+
+
+
+          <div className='ProjectView__textCol__half'>
+            <Block3d
+              cssClass='ProjectView__textCol__subhead'
+              width='100%'
+              height='auto'
+              depth='8'
+              z='0'
+              padding={[1.5,1.5,1,1.25]}
+              shadow={true}
+              shadowDepth={-15.5}
+              isMobile={this.props.isMobile}
+            >
+              Tech
+            </Block3d>
+            <br/>
+            <Block3d
+              cssClass='ProjectView__textCol__text'
+              height='auto'
+              depth='7'
+              z='-1'
+              shadow={true}
+              shadowDepth={-15.5}
+              isMobile={this.props.isMobile}
+            >
+              <p className='list'>React + Redux (ES6) <br/>Webpack, npm, SASS<br/>Photoshop<br/>Illustrator</p>
+            </Block3d>
+          </div>
+
+
+
+
+          <div className='ProjectView__textCol__half'>
+            <Block3d
+              cssClass='ProjectView__textCol__subhead'
+              height='auto'
+              width='100%'
+              depth='4'
+              z='0'
+              padding={[1.5,1.5,1,1.25]}
+              shadow={true}
+              shadowDepth={-15.99}
+              isMobile={this.props.isMobile}
+            >
+              Role
+            </Block3d>
+            <br/>
+            <Block3d
+              cssClass='ProjectView__textCol__text'
+              height='auto'
+              width='100%'
+              depth='3'
+              z='-1'
+              shadow={true}
+              shadowDepth={-15.99}
+              isMobile={this.props.isMobile}
+            >
+              <p className='list'>Front-end Dev <br/>Product Design (display ads)</p>
+            </Block3d>
+          </div>
+
+
+
+
+        </div>
+
+
+
 
         <Block3d cssClass='ProjectView__pic' width='100%' height='auto' depth='14' z='0' isMobile={this.props.isMobile}>
           <img width='100%' src='work/pandora/pandora-2.jpg' alt='portfolio'/>

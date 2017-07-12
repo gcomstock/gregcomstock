@@ -12,13 +12,14 @@
 @import '../themes/themeBuilder/themeBuilder';
 
 @import "../themes/default/manifest.scss";
+@import "../themes/tech/manifest.scss";
 
 
 
 
-//@include themeBuilder('default', $theme--default);
 //@include themeBuilder('game', $theme--game);
 @include themeBuilder('default', $theme--default);
+@include themeBuilder('tech', $theme--tech);
 
 
 

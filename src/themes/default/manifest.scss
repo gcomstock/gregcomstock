@@ -48,8 +48,13 @@ $theme--default: (
   webBoxSide--bg:       rgb(230, 230, 230),
   webBoxSide--border:   none,
   mobileBoxSide: rgb(100, 200, 200),
-  mobileBoxBottom: rgb(80, 180, 180)
+  mobileBoxBottom: rgb(80, 180, 180),
 
   //webBoxBottom--bg:     transparent,
   //webBoxBottom--border: 2px solid rgb(250, 0, 0),
+
+
+  //PROJECT VIEW
+  ProjectView__title--bg: rgb(255, 255, 255),
+  ProjectView__textCol__text--bg: rgb(245, 245, 245)
 );

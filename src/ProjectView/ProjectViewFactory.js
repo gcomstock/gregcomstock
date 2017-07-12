@@ -60,7 +60,7 @@ export default function projectViewFactory(WrappedComponent, projectData) {
     },
 
     renderProjectDesc(mode) {
-      //return false;
+      return false;
 
       if (this.props.isMobile && mode === 'mobile' || !this.props.isMobile && mode === 'web') {
         return (

@@ -4,6 +4,7 @@ $bottom: map-get($properties, 'mobileBoxBottom');
 
 .ProjectPreview__rightCol .Block3d__content {
   background: map-get($properties, 'ProjectPreview__rightCol--background');
+  border: map-get($properties, 'ProjectPreview__rightCol--border');
 
   @media screen and (max-width: $breakpoint-mobile) {
     @include mobileBox(1.5rem, $side, $bottom);
@@ -12,12 +13,18 @@ $bottom: map-get($properties, 'mobileBoxBottom');
 
 .ProjectPreview__leftCol__title .Block3d__content {
   background: map-get($properties, 'ProjectPreview__leftCol__title--background');
+  border: map-get($properties, 'ProjectPreview__leftCol__title--border');
 
   @extend .title--subhead--#{$name};
 
   @media screen and (max-width: $breakpoint-mobile) {
     @include mobileBox(1.5rem, $side, $bottom);
   }
+}
+
+.ProjectPreview__leftCol__title .Block3d__face--right {
+  background: map-get($properties, 'ProjectPreview__leftCol__title__side--background');
+  border: map-get($properties, 'ProjectPreview__leftCol__title__side--border');
 }
 
 .ProjectPreview__leftCol__title__text {

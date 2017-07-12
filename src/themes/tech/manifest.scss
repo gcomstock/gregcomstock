@@ -1,0 +1,70 @@
+$theme--tech--title--colorGradient--startColor: red;
+$theme--tech--title--colorGradient--endColor: white;
+$theme--default--activeColor--low: #28788c;
+$theme--default--activeColor--mid: #349cb6;
+$theme--default--activeColor--high: #41c4e5;
+
+$test: 1px solid red, 2px solid red, 3px solid red, 4px solid red;
+
+
+$theme--tech: (
+  // TITLE
+  title--font: '../themes/tech/voyager-grotesque--light.woff',
+  title--font2: '../themes/tech/voyager-grotesque--light.woff2',
+  title--fontSize: 2.85rem,
+  title--fontSize--mobile: 3rem,
+  title--fontSpacing: 1px,
+  title--textTransform: uppercase,
+  title--color: rgb(260, 60, 60),
+
+  text--color: rgb(255, 255, 255),
+
+  button--bg: rgb(60, 60, 60),
+  button--color: rgb(255, 255, 255),
+  button--arrowColor: rgb(255, 255, 255),
+  button--boxShadow: inset 0 0 0 0.1rem #fff,
+
+  button--hover--bg: rgb(30, 30, 30),
+  button--hover--color: $theme--default--activeColor--high,
+  button--hover--arrowColor: $theme--default--activeColor--high,
+  button--hover--boxShadow: inset 0 0 0 0.1rem $theme--default--activeColor--high,
+  button--hover--face--side: $theme--default--activeColor--mid,
+  button--hover--face--bottom: $theme--default--activeColor--low,
+
+
+  App__body--bg: url(../themes/tech/stars1.png) top left / 50px rgb(20, 20, 20),
+  App__body--mobile--bg: url(../themes/default/siteIntro__bg.png) top left / 600px rgb(170, 170, 170),
+  App__body__scrollable__wrapper__leftFrame: url(../themes/tech/stars3.png) top left / 200px,
+  App__body__scrollable__wrapper__floor--bg: url(../themes/tech/stars2.png) top left / 140px,
+
+
+  //PROJECT PREVIEW
+  ProjectPreview__leftCol__title--background:       rgba(255,0,0,0.1),
+  ProjectPreview__leftCol__title--border:           $test,
+  ProjectPreview__leftCol__title__text--background: -webkit-linear-gradient($theme--tech--title--colorGradient--startColor, $theme--tech--title--colorGradient--endColor),
+  ProjectPreview__leftCol__title__side--background: red,
+  ProjectPreview__leftCol__title__side--border:     4px solid white,
+
+  ProjectPreview__leftCol__snippet--background:     rgba(255,255,0,0.1),
+  //ProjectPreview__leftCol__snippet--border:         2px solid white,
+
+  ProjectPreview__rightCol--background:             rgba(0,100,255,0.2),
+  ProjectPreview__rightCol--border:                 1px solid cyan,
+
+
+
+  webBoxBottom--bg:     transparent,
+  webBoxBottom--border: 1px solid red,
+  webBoxSide--bg:       transparent,
+  webBoxSide--border:   1px solid red,
+  mobileBoxSide: rgb(100, 200, 200),
+  mobileBoxBottom: rgb(80, 180, 180),
+
+  //webBoxBottom--bg:     transparent,
+  //webBoxBottom--border: 2px solid rgb(250, 0, 0),
+
+
+  //PROJECT VIEW
+  ProjectView__title--bg: rgb(255, 255, 255),
+  ProjectView__textCol__text--bg: rgb(245, 245, 245)
+);
