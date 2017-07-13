@@ -13,40 +13,28 @@
 
 
 .ProjectView__title {
-  //margin-top: 3rem;
   margin: 2rem 0 6rem 0;
   position: relative;
   text-align: center;
-  //width: 26rem;
+  max-width: 46rem;
 }
-
-//cool text shadow
-
-//.ProjectView__title__shadow {
-//  position: absolute;
-//  top: -6rem;
-//  transform: translateZ(-14rem);
-//  color: rgba(0,0,0,0.1);
-//  z-index: -2;
-//  font-size: 6.2rem;
-//}
-
 
 
 .ProjectView__textCol {
+  vertical-align: top;
   display: inline-block;
-  width: 18rem;
+  width: 16rem;
+  //background-color: rgba(255,0,0,0.2);
+}
+.ProjectView__picCol {
+  vertical-align: top;
+  display: inline-block;
+  width: 33.5rem;
+  margin-right: 4.5rem;
+  //background-color: rgba(0,255,0,0.2);
 }
 
-.ProjectView__textCol__half {
-  width: 8rem;
-  //margin-left: 6rem;
-  display: inline-block;
 
-  &:nth-child(even) {
-    margin-left: 2rem;
-  }
-}
 
 
 .ProjectView__textCol__subhead {
@@ -56,11 +44,24 @@
 
 .ProjectView__textCol__text {
   margin-bottom: 3rem;
+  width: 100%;
 }
+
+
 
 
 .ProjectView__pic--intro {
   margin-bottom: 4.5rem;
-  width: 34rem;
-  margin-right: 2rem;
+}
+
+.ProjectView__pic {
+  margin-bottom: 4.5rem;
+  width: 54rem;
+}
+
+
+
+.ProjectView__fact {
+  width: 19rem;
+  //text-align: left;
 }

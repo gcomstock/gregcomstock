@@ -24,10 +24,18 @@ p {
     text-align: left;
   }
 
+  &.fact {
+    margin-top: 0.75rem;
+    text-align: left;
+  }
+
   @media screen and (max-width: $breakpoint-mobile){
     text-align: left;
   }
 }
+
+
+
 
 //li {
 //  font-family: 'Source Sans Pro', sans-serif;
@@ -74,6 +82,7 @@ p {
       line-height: 36px;
     }
   }
+
   //li {
   //  font-size: 15px;
   //  line-height: 21px;

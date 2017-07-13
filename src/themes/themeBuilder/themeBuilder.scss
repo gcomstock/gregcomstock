@@ -48,7 +48,19 @@
 
   .title--ProjectView__subhead--#{$name} {
     font-family:   'title--#{$name}';
-    font-size:      2.2rem; //map-get($properties, 'title--fontSize');
+    font-size:      1.8rem; //map-get($properties, 'title--fontSize');
+    letter-spacing: map-get($properties, 'title--fontSpacing');
+    color:          map-get($properties, 'title--color');
+    text-transform: map-get($properties, 'title--textTransform');
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      font-size: map-get($properties, 'title--fontSize--mobile');
+    }
+  }
+
+  .title--ProjectView__fact__title--#{$name} {
+    font-family:   'title--#{$name}';
+    font-size:      1.4rem;
     letter-spacing: map-get($properties, 'title--fontSpacing');
     color:          map-get($properties, 'title--color');
     text-transform: map-get($properties, 'title--textTransform');

@@ -29,8 +29,6 @@
   display: inline-block;
   vertical-align: top;
 
-  text-rendering: optimizeLegibility;
-
   @media screen and (max-width: $breakpoint-mobile){
     width: 100%;
     text-align: left;
