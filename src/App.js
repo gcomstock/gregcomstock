@@ -47,13 +47,30 @@ const App = React.createClass({
     return (
       <div className={`App theme--${this.state.theme}`}>
         <div className='App__header'>
+
+          <div className='App__header__themes'>
+            <div className='App__header__theme' onClick={() => this.setTheme('default')}></div>
+            <div className='App__header__theme' onClick={() => this.setTheme('tech')}></div>
+          </div>
+
           <div className='App__header__title'>
             Greg Comstock
           </div>
-          <div className='App__header__theme' onClick={() => this.setTheme('default')}>1</div>
-          <div className='App__header__theme' onClick={() => this.setTheme('game')}>2</div>
-          <div className='App__header__theme' onClick={() => this.setTheme('tech')}>3</div>
+
+          <div className='App__header__menu'>
+            <div className='App__header__menu__option'>
+              About
+            </div>
+            <div className='App__header__menu__option'>
+              Work
+            </div>
+            <div className='App__header__menu__option App__header__menu__option--sub'>
+              Pandora.com
+            </div>
+          </div>
+
           <div className='App__header__x' onClick={() => hashHistory.push('/')}></div>
+
         </div>
 
         <ReactTransitionGroup>

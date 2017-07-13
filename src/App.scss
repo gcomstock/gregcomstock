@@ -12,49 +12,96 @@
   width: 100%;
   z-index: 99999;
 
-
   &:after {
     position: absolute;
-    bottom: calc(1px - 0.25rem);
+    bottom: calc(1px - 0.125rem);
     left: 0;
     content: '';
     width: 50%;
-    border-top: 0.25rem solid #aaa;
-    border-left: 0.25rem solid transparent;
+    border-top: 0.125rem solid #ccc;
+    border-left: 0.125rem solid transparent;
   }
 
   &:before {
     position: absolute;
-    bottom: calc(1px - 0.25rem);
+    bottom: calc(1px - 0.125rem);
     right: 0;
     content: '';
     width: 50%;
-    border-top: 0.25rem solid #aaa;
-    border-right: 0.25rem solid transparent;
+    border-top: 0.125rem solid #ccc;
+    border-right: 0.125rem solid transparent;
   }
 }
 
 .App__header__title {
   display: inline-block;
-  margin: 0 1rem;
-  line-height: 44px;
+  padding: 0 1rem;
+  min-width: 10rem;
+  text-align: center;
+  line-height: $headerHeight;
   vertical-align: top;
+  border-right: 1px solid #ddd;
+  white-space: nowrap;
+}
+
+.App__header__themes {
+  display: inline-block;
+  //margin-right: 1rem;
+  height: $headerHeight;
 }
 
 .App__header__theme {
   display: inline-block;
-  width: 2rem;
-  height: 2rem;
-  background-color: #999;
+  width: $headerHeight;
+  height: $headerHeight;
+  margin-right: 1px;
+  background-color: #ddd;
+  cursor: pointer;
+  vertical-align: top;
 }
+
+.App__header__menu {
+  display: inline-block;
+  height: $headerHeight;
+  vertical-align: top;
+}
+
+.App__header__menu__option {
+  vertical-align: top;
+  display: inline-block;
+  font-size: 12px;
+  height: 100%;
+  line-height: $headerHeight;
+  padding: 0 0.75rem;
+  cursor: pointer;
+  border-right: 1px solid #ddd;
+}
+
+.App__header__menu__option--sub {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: '';
+    left: 0;
+
+    @include rightArrow(0.18, #ddd);
+
+    @media screen and (max-width: $breakpoint-mobile){
+      @include rightArrow(0.3, #ddd);
+    }
+  }
+}
+
+
 
 
 .App__header__x {
   position: absolute;
   top: 0;
   right: 0;
-  width: 43px;
-  height: 43px;
+  width: $headerHeight;
+  height: $headerHeight;
   cursor: pointer;
   background-color: red;
 
