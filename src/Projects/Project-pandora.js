@@ -80,7 +80,7 @@ export const PandoraLayout = React.createClass({
             shadowDepth={-15.99}
             isMobile={this.props.isMobile}
           >
-            <p>{PandoraConsts.TEXT}</p>
+            <p className='z4'>{PandoraConsts.TEXT}</p>
           </Block3d>
 
 
@@ -103,12 +103,12 @@ export const PandoraLayout = React.createClass({
             height='auto'
             width='100%'
             depth='6'
-            z='-2'
+            z='0'
             shadow={true}
             shadowDepth={-15.99}
             isMobile={this.props.isMobile}
           >
-            <p className='list'>React + Redux (ES6) <br/>Webpack, npm, SASS<br/>Photoshop<br/>Illustrator</p>
+            <p>React + Redux (ES6) <br/>Webpack, npm, SASS<br/>Photoshop<br/>Illustrator</p>
           </Block3d>
 
 
@@ -136,7 +136,7 @@ export const PandoraLayout = React.createClass({
             shadowDepth={-15.99}
             isMobile={this.props.isMobile}
           >
-            <p className='list'>
+            <p>
               Front-end Engineer<br/>
               Product Designer (display advertising)
             </p>
@@ -160,7 +160,7 @@ export const PandoraLayout = React.createClass({
           <div className='ProjectView__fact__title'>
             Video:<br/>Animation Showcase
           </div>
-          <p className='fact'>A selection of interaction designs that I implemented by collaborating closely with Pandora's product design team.</p>
+          <p>A selection of interaction designs that I implemented by collaborating closely with Pandora's product design team.</p>
         </Block3d>
 
         <Block3d

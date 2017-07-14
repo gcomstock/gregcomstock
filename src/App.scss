@@ -14,7 +14,8 @@
 
   &:after {
     position: absolute;
-    bottom: calc(1px - 0.125rem);
+    //bottom: calc(1px - 0.125rem);
+    bottom: -0.125rem;
     left: 0;
     content: '';
     width: 50%;
@@ -22,9 +23,10 @@
     border-left: 0.125rem solid transparent;
   }
 
+
   &:before {
     position: absolute;
-    bottom: calc(1px - 0.125rem);
+    bottom: -0.125rem;
     right: 0;
     content: '';
     width: 50%;

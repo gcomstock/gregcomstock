@@ -79,7 +79,7 @@ export const ProjectPreview = React.createClass({
             noLeft={true}
             isMobile={this.props.isMobile}
           >
-            <p className='snippet'>{this.props.snippet}</p>
+            <p className='z8'>{this.props.snippet}</p>
           </Block3d>
 
           <div className='ProjectPreview__leftCol__routeWrapper'>

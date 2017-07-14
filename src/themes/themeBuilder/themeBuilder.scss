@@ -28,6 +28,7 @@
     letter-spacing: map-get($properties, 'title--fontSpacing');
     color:          map-get($properties, 'title--color');
     text-transform: map-get($properties, 'title--textTransform');
+    //text-rendering: optimizeLegibility;
 
     @media screen and (max-width: $breakpoint-mobile) {
       font-size: map-get($properties, 'title--fontSize--mobile');
@@ -52,6 +53,7 @@
     letter-spacing: map-get($properties, 'title--fontSpacing');
     color:          map-get($properties, 'title--color');
     text-transform: map-get($properties, 'title--textTransform');
+    //text-rendering: geometricPrecision;
 
     @media screen and (max-width: $breakpoint-mobile) {
       font-size: map-get($properties, 'title--fontSize--mobile');

@@ -8,53 +8,23 @@ html {
 
 p {
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 14px;
-  line-height: 34px;
   text-align: justify;
+  font-size: 14px;
+  line-height: 32px;
 
-  &.snippet {
-    font-size: 18px;
+  &.z4 {
+    font-size: 15px;
+    line-height: 34px;
+  }
+  &.z8 {
+    font-size: 16px;
     line-height: 36px;
-  }
-
-  &.list {
-    font-weight: bold;
-    font-size: 22px;
-    line-height: 40px;
-    text-align: left;
-  }
-
-  &.fact {
-    margin-top: 0.75rem;
-    text-align: left;
   }
 
   @media screen and (max-width: $breakpoint-mobile){
     text-align: left;
   }
 }
-
-
-
-
-//li {
-//  font-family: 'Source Sans Pro', sans-serif;
-//  font-size: 16px;
-//  line-height: 22px;
-//  margin-bottom: 18px;
-//
-//  &:last-child {
-//    margin-bottom: 0;
-//  }
-//}
-
-//ul {
-//  color: #555;
-//  list-style-type: square;
-//  margin-left: 0.5rem; // so bullet is flush with text
-//}
-
-
 
 
 @media screen and (max-width: 1800px){
@@ -67,28 +37,6 @@ p {
   html {
     font-size: 28px;
   }
-
-  p {
-    font-size: 13px;
-    line-height: 28px;
-
-    &.snippet {
-      font-size: 15px;
-      line-height: 28px;
-    }
-
-    &.list {
-      font-size: 20px;
-      line-height: 36px;
-    }
-  }
-
-  //li {
-  //  font-size: 15px;
-  //  line-height: 21px;
-  //  margin-bottom: 14px;
-  //  font-weight: bold;
-  //}
 }
 
 @media screen and (max-width: 1600px){
@@ -102,24 +50,18 @@ p {
     font-size: 24px;
   }
   p {
-    font-size: 14px;
+    font-size: 13px;
     line-height: 28px;
 
-    &.snippet {
+    &.z4 {
       font-size: 14px;
-      line-height: 28px;
+      line-height: 32px;
     }
-
-    &.list {
-      font-size: 14px;
-      line-height: 28px;
+    &.z8 {
+      font-size: 15px;
+      line-height: 34px;
     }
   }
-  //li {
-  //  font-size: 14px;
-  //  line-height: 18px;
-  //  margin-bottom: 12px;
-  //}
 }
 
 @media screen and (max-width: 1400px){

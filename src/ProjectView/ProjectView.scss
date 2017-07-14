@@ -20,18 +20,20 @@
 }
 
 
-.ProjectView__textCol {
-  vertical-align: top;
-  display: inline-block;
-  width: 16rem;
-  //background-color: rgba(255,0,0,0.2);
-}
+
+
 .ProjectView__picCol {
   vertical-align: top;
   display: inline-block;
-  width: 33.5rem;
+  width: 33rem;
   margin-right: 4.5rem;
   //background-color: rgba(0,255,0,0.2);
+}
+.ProjectView__textCol {
+  vertical-align: top;
+  display: inline-block;
+  width: 16.5rem;
+  //background-color: rgba(255,0,0,0.2);
 }
 
 
@@ -41,7 +43,6 @@
   font-size: 3rem;
   width: 100%;
 }
-
 .ProjectView__textCol__text {
   margin-bottom: 3rem;
   width: 100%;
