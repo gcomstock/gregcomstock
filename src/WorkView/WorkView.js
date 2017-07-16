@@ -76,7 +76,6 @@ const WorkView = React.createClass({
               height='100%'
               depth='10'
               z='-6'
-              noTop={true}
               noLeft={true}
               isMobile={this.props.isMobile}
             />
@@ -87,7 +86,6 @@ const WorkView = React.createClass({
               height='100%'
               depth='10'
               z='-6'
-              noTop={true}
               noRight={true}
               isMobile={this.props.isMobile}
             />

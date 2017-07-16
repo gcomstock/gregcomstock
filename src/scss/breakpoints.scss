@@ -12,6 +12,7 @@ p {
   font-size: 14px;
   line-height: 32px;
 
+
   &.z4 {
     font-size: 15px;
     line-height: 34px;
@@ -20,12 +21,7 @@ p {
     font-size: 16px;
     line-height: 36px;
   }
-
-  @media screen and (max-width: $breakpoint-mobile){
-    text-align: left;
-  }
 }
-
 
 @media screen and (max-width: 1800px){
   html {
@@ -85,5 +81,18 @@ p {
 @media screen and (max-width: $breakpoint-mobile){
   html {
     font-size: 14px;
+  }
+  p {
+    text-align: left;
+
+    // no text resizing for mobile because no 3d
+    &.z4 {
+      font-size: 14px;
+      line-height: 32px;
+    }
+    &.z8 {
+      font-size: 14px;
+      line-height: 32px;
+    }
   }
 }

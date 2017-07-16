@@ -1,10 +1,9 @@
-$side: map-get($properties, 'mobileBoxSide');
-$bottom: map-get($properties, 'mobileBoxBottom');
-
+$side: map-get($properties, 'ProjectPreview__leftCol__title__side--background');
+$bottom: map-get($properties, 'ProjectPreview__leftCol__title__bottom--background');
 
 .ProjectPreview__rightCol .Block3d__content {
   background: map-get($properties, 'ProjectPreview__rightCol--background');
-  border: map-get($properties, 'ProjectPreview__rightCol--border');
+  box-shadow: map-get($properties, 'ProjectPreview__rightCol--boxShadow');
 
   @media screen and (max-width: $breakpoint-mobile) {
     @include mobileBox(1.5rem, $side, $bottom);
@@ -13,18 +12,31 @@ $bottom: map-get($properties, 'mobileBoxBottom');
 
 .ProjectPreview__leftCol__title .Block3d__content {
   background: map-get($properties, 'ProjectPreview__leftCol__title--background');
-  border: map-get($properties, 'ProjectPreview__leftCol__title--border');
+  box-shadow: map-get($properties, 'ProjectPreview__leftCol__title--boxShadow');
 
   @extend .title--subhead--#{$name};
 
   @media screen and (max-width: $breakpoint-mobile) {
-    @include mobileBox(1.5rem, $side, $bottom);
+    box-shadow: map-get($properties, 'ProjectPreview__leftCol__title--boxShadow--mobile');
+
+    @include mobileBox(
+        1.5rem,
+        $side,
+        $bottom,
+        map-get($properties, 'ProjectPreview__leftCol__title__side--boxShadow--mobile'),
+        map-get($properties, 'ProjectPreview__leftCol__title__bottom--boxShadow--mobile')
+    );
   }
 }
 
 .ProjectPreview__leftCol__title .Block3d__face--right {
   background: map-get($properties, 'ProjectPreview__leftCol__title__side--background');
-  border: map-get($properties, 'ProjectPreview__leftCol__title__side--border');
+  box-shadow: map-get($properties, 'ProjectPreview__leftCol__title__side--boxShadow');
+}
+
+.ProjectPreview__leftCol__title .Block3d__face--bottom {
+  background: map-get($properties, 'ProjectPreview__leftCol__title__bottom--background');
+  box-shadow: map-get($properties, 'ProjectPreview__leftCol__title__bottom--boxShadow');
 }
 
 .ProjectPreview__leftCol__title__text {
@@ -45,6 +57,7 @@ $bottom: map-get($properties, 'mobileBoxBottom');
 
 .ProjectPreview__leftCol__snippet .Block3d__content {
   background: map-get($properties, 'ProjectPreview__leftCol__snippet--background');
+  box-shadow: map-get($properties, 'ProjectPreview__leftCol__snippet--boxShadow');
 
   @media screen and (max-width: $breakpoint-mobile) {
     @include mobileBox(0.75rem, $side, $bottom);

@@ -18,8 +18,7 @@ export const PandoraLayout = React.createClass({
             depth='4'
             z='0'
             shadow={true}
-            shadowDepth={-15.99}
-            noTop={true}
+            shadowDepth={-16}
             noLeft={true}
             noRight={true}
             isMobile={this.props.isMobile}
@@ -65,7 +64,7 @@ export const PandoraLayout = React.createClass({
             z='0'
             padding={[1.5,1.5,1.5,1.25]}
             shadow={true}
-            shadowDepth={-15.99}
+            shadowDepth={-16}
             isMobile={this.props.isMobile}
           >
             Synopsis
@@ -77,7 +76,7 @@ export const PandoraLayout = React.createClass({
             depth='6'
             z='-2'
             shadow={true}
-            shadowDepth={-15.99}
+            shadowDepth={-16}
             isMobile={this.props.isMobile}
           >
             <p className='z4'>{PandoraConsts.TEXT}</p>
@@ -92,7 +91,7 @@ export const PandoraLayout = React.createClass({
             z='0'
             padding={[1.5,1.5,1,1.25]}
             shadow={true}
-            shadowDepth={-15.99}
+            shadowDepth={-16}
             isMobile={this.props.isMobile}
           >
             Technologies
@@ -103,12 +102,12 @@ export const PandoraLayout = React.createClass({
             height='auto'
             width='100%'
             depth='6'
-            z='0'
+            z='-2'
             shadow={true}
-            shadowDepth={-15.99}
+            shadowDepth={-16}
             isMobile={this.props.isMobile}
           >
-            <p>React + Redux (ES6) <br/>Webpack, npm, SASS<br/>Photoshop<br/>Illustrator</p>
+            <p className='z4'>React + Redux (ES6)<br/>Webpack, npm, SASS<br/>Photoshop<br/>Illustrator</p>
           </Block3d>
 
 
@@ -120,7 +119,7 @@ export const PandoraLayout = React.createClass({
             z='0'
             padding={[1.5,1.5,1,1.25]}
             shadow={true}
-            shadowDepth={-15.99}
+            shadowDepth={-16}
             isMobile={this.props.isMobile}
           >
             Role
@@ -133,13 +132,10 @@ export const PandoraLayout = React.createClass({
             depth='6'
             z='-2'
             shadow={true}
-            shadowDepth={-15.99}
+            shadowDepth={-16}
             isMobile={this.props.isMobile}
           >
-            <p>
-              Front-end Engineer<br/>
-              Product Designer (display advertising)
-            </p>
+            <p className='z4'>Front-end Engineer<br/>Product Designer (display advertising)</p>
           </Block3d>
         </div>
 

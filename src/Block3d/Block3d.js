@@ -15,7 +15,6 @@ const Block3d = React.createClass({
     animationDelay: React.PropTypes.string,
     shadow: React.PropTypes.bool,
     shadowDepth: React.PropTypes.number,
-    noTop: React.PropTypes.bool,
     noLeft: React.PropTypes.bool,
     noRight: React.PropTypes.bool,
     noBottom: React.PropTypes.bool,
@@ -151,10 +150,10 @@ const Block3d = React.createClass({
           }}>
             { this.props.children }
           </div>
-          { !this.props.isMobile && !this.props.noTop && <div className='Block3d__face Block3d__face--top' style={{height: this.applyDepth() + 'rem'}}></div> }
+          {/* !this.props.isMobile && !this.props.noTop && <div className='Block3d__face Block3d__face--top' style={{height: this.applyDepth() + 'rem'}}></div> */}
           { !this.props.isMobile && !this.props.noLeft && <div className='Block3d__face Block3d__face--left' style={{width: this.applyDepth() + 'rem'}}></div> }
           { !this.props.isMobile && !this.props.noRight && <div className='Block3d__face Block3d__face--right' style={{width: this.applyDepth() + 'rem'}}></div> }
-          { !this.props.isMobile && !this.props.noBottom && <div className='Block3d__face Block3d__face--bottom' style={{height: this.applyDepth() + 'rem'}}></div> }
+          { !this.props.isMobile && !this.props.noBottom && <div className='Block3d__face Block3d__face--bottom' style={{height: this.applyDepth() + 'rem'}}><div className="Block3d__face--bottom__border"></div></div> }
         </div>
       </div>
     )

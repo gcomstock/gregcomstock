@@ -42,8 +42,8 @@ export const ProjectPreview = React.createClass({
             width='100%'
             depth='16'
             z='0'
-            noRight={false}
-            noLeft={false}
+            noLeft={true}
+            noRight={true}
             isMobile={this.props.isMobile}
           >
             <img width='100%' src={this.props.thumbnailPath} alt='portfolio'/>

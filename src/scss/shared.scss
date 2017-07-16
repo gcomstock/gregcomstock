@@ -41,7 +41,7 @@ $bodyWidth: 54rem;
   border-right: ($size*1.25)+rem solid transparent;
 }
 
-@mixin mobileBox($depth, $colorRight, $colorBottom) {
+@mixin mobileBox($depth, $colorRight, $colorBottom, $sideBoxShadow:"none", $bottomBoxShadow:"none") {
   &:after {
     content: '';
     position: absolute;
@@ -54,6 +54,7 @@ $bodyWidth: 54rem;
     transform: skewY(45deg);
     transform-origin: 0 0;
     background-color: $colorRight;
+    box-shadow: #{$sideBoxShadow};
   }
 
   &:before {
@@ -68,6 +69,7 @@ $bodyWidth: 54rem;
     transform: skewX(45deg);
     transform-origin: top center;
     background-color: $colorBottom;
+    box-shadow: #{$bottomBoxShadow};
   }
 }
 

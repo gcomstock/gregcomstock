@@ -73,7 +73,6 @@ export default function projectViewFactory(WrappedComponent, projectData) {
                 width='100%'
                 height='100%'
                 depth='0.25'
-                noTop={true}
                 noRight={true}
                 padding={[0]}
               />
@@ -83,7 +82,6 @@ export default function projectViewFactory(WrappedComponent, projectData) {
                 cssClass='ProjectDesc__content__title'
                 width='100%'
                 depth='2.5'
-                noTop={true}
                 noRight={true}
                 isMobile={this.props.isMobile}
               >
@@ -94,7 +92,6 @@ export default function projectViewFactory(WrappedComponent, projectData) {
                 cssClass='ProjectDesc__content__text'
                 width='100%'
                 depth='2.5'
-                noTop={true}
                 noRight={true}
                 isMobile={this.props.isMobile}
                 padding={[0.75,1.25]}

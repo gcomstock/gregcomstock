@@ -13,8 +13,10 @@ $deviceBoxShadow: inset 0 0 0 1px rgba(160,160,160,1);
   min-height: $siteIntroMinHeight;
   position: absolute;
 
+  background-color: red;
+
   @media screen and (max-width: $breakpoint-mobile){
-    margin: 1.5rem 1.5rem 6rem 1.5rem;
+    //margin: 1.5rem 1.5rem 6rem 1.5rem;
     height: $siteIntroHeight--mobile;
   }
 }

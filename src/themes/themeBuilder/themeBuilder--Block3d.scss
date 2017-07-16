@@ -1,25 +1,33 @@
 .App__body__scrollable__wrapper__leftFrame,
 .App__body__scrollable__wrapper__rightFrame {
-
   .Block3d__content {
     background: map-get($properties, 'App__body__scrollable__wrapper__leftFrame');
   }
 }
 
-.Block3d__face--top {
-  background-color: rgb(220, 220, 220);
-}
+
 .Block3d__face--bottom {
-  background-color: map-get($properties, 'webBoxBottom--bg');
-  border: map-get($properties, 'webBoxBottom--border');
+  background-color: map-get($properties, 'webBoxBottom--background');
+  box-shadow: map-get($properties, 'webBoxBottom--boxShadow');
+}
+.Block3d__face--bottom__border {
+  background: map-get($properties, 'webBox--borderColor');
 }
 .Block3d__face--left,
 .Block3d__face--right {
-  background-color: map-get($properties, 'webBoxSide--bg');
-  border: map-get($properties, 'webBoxSide--border');
+  background: map-get($properties, 'webBoxSide--background');
+  box-shadow: map-get($properties, 'webBoxSide--boxShadow');
 }
 
-
+// these pseudo elements are applied to help increase visibility of the box shadow borders
+.Block3d__face--left,
+.Block3d__face--right,
+.Block3d__face--bottom {
+  &:after,
+  &:before {
+    background: map-get($properties, 'webBox--borderColor');
+  }
+}
 
 
 
