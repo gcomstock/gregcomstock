@@ -86,7 +86,7 @@ export const ProjectPreview = React.createClass({
             <Block3d
               cssClass='ProjectPreview__leftCol__route button'
               route={this.props.route}
-              depth='2'
+              depth='1'
               z='0'
               noLeft={true}
               shadow={true}

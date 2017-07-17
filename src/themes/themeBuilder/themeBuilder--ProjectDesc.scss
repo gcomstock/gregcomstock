@@ -5,7 +5,7 @@
 
   &:hover {
     .Block3d__content {
-      background-color: map-get($properties, 'button--hover--bg');
+      background-color: map-get($properties, 'button--hover--background');
       background-position-x: 100%;
     }
   }

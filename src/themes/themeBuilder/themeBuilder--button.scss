@@ -6,7 +6,7 @@
   }
   .Block3d__content {
     box-shadow: map-get($properties, 'button--boxShadow');
-    background: map-get($properties, 'button--bg');
+    background: map-get($properties, 'button--background');
   }
 
   &:hover {
@@ -15,7 +15,7 @@
     }
     .Block3d__content {
       box-shadow: map-get($properties, 'button--hover--boxShadow');
-      background-color: map-get($properties, 'button--hover--bg');
+      background-color: map-get($properties, 'button--hover--background');
     }
 
     .Block3d__face--bottom {
