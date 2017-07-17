@@ -141,7 +141,8 @@
   position: relative;
   height: 100vh;
 
-  perspective-origin: 50% $siteIntroHeight; // x-center y-top
+  //perspective-origin: 50% $siteIntroHeight; // x-center y-top
+  perspective-origin: 50% calc(100% - #{$headerHeight}); // x-center y-top
   perspective: $bodyWidth; // should match width of body for best cube appearance
   overflow-y: scroll;
   overflow-x: hidden;

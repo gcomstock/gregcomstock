@@ -1,11 +1,10 @@
-$theme--tech--title--colorGradient--startColor: red;
-$theme--tech--title--colorGradient--endColor: white;
-$theme--default--activeColor--low: #28788c;
-$theme--default--activeColor--mid: #349cb6;
-$theme--default--activeColor--high: #41c4e5;
-
-
-$borderColor: cyan;
+$theme--tech--title--colorGradient--startColor: #cd48b9;
+$theme--tech--title--colorGradient--endColor: #ffccf7;
+$theme--tech--activeColor--low: rgba(150, 0, 100, 0.6);
+$theme--tech--activeColor--mid: rgba(210, 0, 140, 0.6);
+$theme--tech--activeColor--high: rgba(255, 100, 200, 1);
+$borderColor: #d9008f;
+$borderColorBright: rgba(255, 100, 200, 1);
 
 // left and right borders
 $theme--tech--webBoxBottom--boxShadow: inset -2px 0 0 0 $borderColor, inset 2px 0 0 0 $borderColor;
@@ -25,17 +24,17 @@ $theme--tech: (
 
   text--color: rgb(255, 255, 255),
 
-  button--bg: rgb(60, 60, 60),
-  button--color: rgb(255, 255, 255),
-  button--arrowColor: rgb(255, 255, 255),
-  button--boxShadow: inset 0 0 0 0.1rem #fff,
+  button--bg: #370030,
+  button--color: $borderColorBright,
+  button--arrowColor: $borderColorBright,
+  button--boxShadow: inset 0 0 0 2px $borderColorBright,
 
-  button--hover--bg: rgb(30, 30, 30),
-  button--hover--color: $theme--default--activeColor--high,
-  button--hover--arrowColor: $theme--default--activeColor--high,
-  button--hover--boxShadow: inset 0 0 0 0.1rem $theme--default--activeColor--high,
-  button--hover--face--side: $theme--default--activeColor--mid,
-  button--hover--face--bottom: $theme--default--activeColor--low,
+  button--hover--bg: $theme--tech--activeColor--high,
+  button--hover--color: #000,
+  button--hover--arrowColor: #000,
+  button--hover--boxShadow: inset 0 0 0 2px $theme--tech--activeColor--high,
+  button--hover--face--side: $theme--tech--activeColor--mid,
+  button--hover--face--bottom: $theme--tech--activeColor--low,
 
 
   App__body--bg: url(../themes/tech/stars1.png) top left / 50px rgb(20, 20, 20),
@@ -45,16 +44,16 @@ $theme--tech: (
 
 
   //PROJECT PREVIEW
-  ProjectPreview__leftCol__title--background: rgba(255,0,0,0.6),
-  ProjectPreview__leftCol__title--boxShadow: inset 0 0 0 1px yellow,
+  ProjectPreview__leftCol__title--background: rgba(0,0,0,0.8),
+  ProjectPreview__leftCol__title--boxShadow: inset 0 0 0 2px $borderColor,
   ProjectPreview__leftCol__title--boxShadow--mobile: inset 0 0 0 1px orange,
 
-  ProjectPreview__leftCol__title__side--background: rgba(200,0,0,0.6),
-  ProjectPreview__leftCol__title__side--boxShadow: none,
+  ProjectPreview__leftCol__title__side--background: rgba(0,0,0,0),
+  //ProjectPreview__leftCol__title__side--boxShadow:
   ProjectPreview__leftCol__title__side--boxShadow--mobile: inset -1px 1px 0 0px red,
 
-  ProjectPreview__leftCol__title__bottom--background: rgba(100,0,0,0.6),
-  ProjectPreview__leftCol__title__bottom--boxShadow: none,
+  ProjectPreview__leftCol__title__bottom--background: rgba(0,0,0,0),
+  //ProjectPreview__leftCol__title__bottom--boxShadow:
   ProjectPreview__leftCol__title__bottom--boxShadow--mobile: inset 0 0 0 2px red,
 
   ProjectPreview__leftCol__title__text--background: -webkit-linear-gradient($theme--tech--title--colorGradient--startColor, $theme--tech--title--colorGradient--endColor),
