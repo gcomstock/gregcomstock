@@ -70,7 +70,7 @@ const WorkView = React.createClass({
     if (!this.props.isMobile) {
       return (
         <div>
-          <div className='App__body__scrollable__wrapper__leftFrame App__body__scrollable__wrapper__leftFrame--WorkView'>
+          <div className='App__body__scrollable__wrapper__outerFrame App__body__scrollable__wrapper__leftFrame App__body__scrollable__wrapper__leftFrame--WorkView'>
             <Block3d
               width='20rem'
               height='100%'
@@ -80,7 +80,7 @@ const WorkView = React.createClass({
               isMobile={this.props.isMobile}
             />
           </div>
-          <div className='App__body__scrollable__wrapper__rightFrame App__body__scrollable__wrapper__rightFrame--WorkView'>
+          <div className='App__body__scrollable__wrapper__outerFrame App__body__scrollable__wrapper__rightFrame App__body__scrollable__wrapper__rightFrame--WorkView'>
             <Block3d
               width='20rem'
               height='100%'

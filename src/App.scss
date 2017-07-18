@@ -253,8 +253,7 @@
 
 
 /* ancillary visual fluff goes in these */
-.App__body__scrollable__wrapper__leftFrame,
-.App__body__scrollable__wrapper__rightFrame {
+.App__body__scrollable__wrapper__outerFrame {
   top: -10rem;
   width: 20rem;
   height: calc(100% + 10rem);
@@ -291,7 +290,7 @@
 .App__body__scrollable__wrapper__leftFrame--WorkView,
 .App__body__scrollable__wrapper__rightFrame--WorkView,
 .App__body__scrollable__wrapper__floor--WorkView {
-  top: 0;//$siteIntroHeight;
+  top: 0; //$siteIntroHeight;
   //height: calc(100% - #{$siteIntroHeight});
 
   @media screen and (max-width: $breakpoint-mobile){

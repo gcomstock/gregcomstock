@@ -34,14 +34,15 @@ $theme--tech: (
   button--hover--face--bottom: $activeColor--low,
 
 
-  App__body--bg: url(../themes/tech/stars1.png) top left / 50px rgb(20, 20, 20),
-  App__body--mobile--bg: url(../themes/default/siteIntro__bg.png) top left / 600px rgb(170, 170, 170),
-  App__body__scrollable__wrapper__leftFrame: url(../themes/tech/stars3.png) top left / 200px,
-  App__body__scrollable__wrapper__floor--bg: url(../themes/tech/stars2.png) top left / 140px,
+  App__body--background: url(../themes/tech/stars1.png) top left / 50px rgb(20, 20, 20),
+  App__body--mobile--background: url(../themes/default/siteIntro__bg.png) top left / 600px rgb(170, 170, 170),
+  App__body__scrollable__wrapper__outerFrame--background: url(../themes/tech/stars3.png) top left / 100px,
+  App__body__scrollable__wrapper__outerFrame--boxShadow: inset 0 0 0 2px $activeColor--low,
+  App__body__scrollable__wrapper__floor--background: url(../themes/tech/stars2.png) top left / 140px,
 
 
-  //PROJECT PREVIEW
-  ProjectPreview__leftCol__title--background: rgba(0,0,0,0.8),
+  // PROJECT PREVIEW
+  ProjectPreview__leftCol__title--background: url(../themes/tech/bg-diagonal.png) top left / 4px, //rgba(0,0,0,0.8),
   ProjectPreview__leftCol__title--boxShadow: inset 0 0 0 2px $borderColor,
   ProjectPreview__leftCol__title--boxShadow--mobile: inset 0 0 0 1px orange,
 

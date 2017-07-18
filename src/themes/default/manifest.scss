@@ -34,10 +34,10 @@ $theme--default: (
   button--hover--face--bottom: $activeColor--low,
 
 
-  App__body--bg: url(../themes/default/siteIntro__bg.png) top left / 900px rgb(170, 170, 170),
-  App__body--mobile--bg: url(../themes/default/siteIntro__bg.png) top left / 600px rgb(170, 170, 170),
-  App__body__scrollable__wrapper__leftFrame: url(../themes/default/bg-8x8--back.png) top left / 4px rgb(250, 250, 250),
-  App__body__scrollable__wrapper__floor--bg: url(../themes/default/bg-10x10.png) top left / 5px rgb(210, 210, 210),
+  App__body--background: url(../themes/default/siteIntro__bg.png) top left / 900px rgb(170, 170, 170),
+  App__body--mobile--background: url(../themes/default/siteIntro__bg.png) top left / 600px rgb(170, 170, 170),
+  App__body__scrollable__wrapper__outerFrame--background: url(../themes/default/bg-8x8--back.png) top left / 4px rgb(250, 250, 250),
+  App__body__scrollable__wrapper__floor--background: url(../themes/default/bg-10x10.png) top left / 5px rgb(210, 210, 210),
 
 
   //PROJECT PREVIEW

@@ -1,11 +1,3 @@
-.App__body__scrollable__wrapper__leftFrame,
-.App__body__scrollable__wrapper__rightFrame {
-  .Block3d__content {
-    background: map-get($properties, 'App__body__scrollable__wrapper__leftFrame');
-  }
-}
-
-
 .Block3d__face--bottom {
   background-color: map-get($properties, 'webBoxBottom--background');
   box-shadow: map-get($properties, 'webBoxBottom--boxShadow');

@@ -6,7 +6,6 @@
 .App__header__title {
   @extend .title--subhead--#{$name};
   font-size: 1rem;
-  //text-transform: uppercase;
 }
 
 
@@ -14,16 +13,22 @@
 
 .App__body {
   color: #333;
-
-  background: map-get($properties, 'App__body--bg');
+  background: map-get($properties, 'App__body--background');
 
   @media screen and (max-width: $breakpoint-mobile) {
-    background: map-get($properties, 'App__body--mobile--bg');
+    background: map-get($properties, 'App__body--mobile--background');
+  }
+}
+
+.App__body__scrollable__wrapper__outerFrame {
+  .Block3d__content {
+    background: map-get($properties, 'App__body__scrollable__wrapper__outerFrame--background');
+    box-shadow: map-get($properties, 'App__body__scrollable__wrapper__outerFrame--boxShadow');
   }
 }
 
 .App__body__scrollable__wrapper__floor {
-  background: map-get($properties, 'App__body__scrollable__wrapper__floor--bg');
+  background: map-get($properties, 'App__body__scrollable__wrapper__floor--background');
 
   @media screen and (max-width: $breakpoint-mobile) {
     background-image: none;
