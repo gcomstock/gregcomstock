@@ -1,16 +1,27 @@
 $title--colorGradient--startColor: #cd48b9;
 $title--colorGradient--endColor: #ffccf7;
+
 $activeColor--low: rgba(150, 0, 100, 0.6);
 $activeColor--mid: rgba(210, 0, 140, 0.6);
 $activeColor--high: rgba(255, 100, 200, 1);
 $borderColor: #d9008f;
 $borderColorBright: rgba(255, 100, 200, 1);
 
+$buttonBackground: #370030;
 $webBoxBottom--boxShadow: inset -2px 0 0 0 $borderColor, inset 2px 0 0 0 $borderColor;
 $webBoxSide--boxShadow: inset 0 2px 0 0 $borderColor;
 
 $theme--tech: (
-  // TITLE
+  // APP HEADER
+  App__header--background: $buttonBackground,
+  App__headerBefore--background: $borderColor,
+  App__headerAfter--background: rgba(150, 0, 100, 1),
+  App__header__title--color: $borderColor,
+  App__header__menu__option--color: $borderColor,
+  App__header__menu__option--borderColor: $borderColor,
+
+
+  // TITLES
   title--font: '../themes/tech/voyager-grotesque--light.woff',
   title--font2: '../themes/tech/voyager-grotesque--light.woff2',
   title--fontSize: 2.85rem,
@@ -21,7 +32,7 @@ $theme--tech: (
 
   text--color: rgb(255, 255, 255),
 
-  button--background: #370030,
+  button--background: $buttonBackground,
   button--color: $borderColorBright,
   button--arrowColor: $borderColorBright,
   button--boxShadow: inset 0 0 0 2px $borderColorBright,
@@ -35,9 +46,10 @@ $theme--tech: (
 
 
   App__body--background: url(../themes/tech/stars1.png) top left / 50px rgb(20, 20, 20),
+  //App__body--background: url(../themes/tech/bg-stars.jpg) top left / 201px,
   App__body--mobile--background: url(../themes/default/siteIntro__bg.png) top left / 600px rgb(170, 170, 170),
   App__body__scrollable__wrapper__outerFrame--background: url(../themes/tech/stars3.png) top left / 100px,
-  App__body__scrollable__wrapper__outerFrame--boxShadow: inset 0 0 0 2px $activeColor--low,
+  App__body__scrollable__wrapper__outerFrame--boxShadow: inset 0 0 0 2px $borderColor,
   App__body__scrollable__wrapper__floor--background: url(../themes/tech/stars2.png) top left / 140px,
 
 

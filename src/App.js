@@ -48,10 +48,7 @@ const App = React.createClass({
       <div className={`App theme--${this.state.theme}`}>
         <div className='App__header'>
 
-          <div className='App__header__themes'>
-            <div className='App__header__theme' onClick={() => this.setTheme('default')}></div>
-            <div className='App__header__theme' onClick={() => this.setTheme('tech')}></div>
-          </div>
+          <div className='App__header__x' onClick={() => hashHistory.push('/')}></div>
 
           <div className='App__header__title'>
             Greg Comstock
@@ -59,17 +56,20 @@ const App = React.createClass({
 
           <div className='App__header__menu'>
             <div className='App__header__menu__option'>
-              About
+              <p className='header'>About</p>
             </div>
             <div className='App__header__menu__option'>
-              Work
+              <p className='header'>Work</p>
             </div>
             <div className='App__header__menu__option App__header__menu__option--sub'>
-              Pandora.com
+              <p className='header'>Pandora.com</p>
             </div>
           </div>
 
-          <div className='App__header__x' onClick={() => hashHistory.push('/')}></div>
+          <div className='App__header__themes'>
+            <div className='App__header__theme' onClick={() => this.setTheme('default')}></div>
+            <div className='App__header__theme' onClick={() => this.setTheme('tech')}></div>
+          </div>
 
         </div>
 

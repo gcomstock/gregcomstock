@@ -12,9 +12,27 @@
   width: 100%;
   z-index: 99999;
 
+  &:before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 1px;
+  }
+  
   &:after {
     position: absolute;
-    //bottom: calc(1px - 0.125rem);
+    bottom: -0.125rem;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 0.125rem;
+  }
+
+  /*
+  &:after {
+    position: absolute;
     bottom: -0.125rem;
     left: 0;
     content: '';
@@ -22,8 +40,6 @@
     border-top: 0.125rem solid #ccc;
     border-left: 0.125rem solid transparent;
   }
-
-
   &:before {
     position: absolute;
     bottom: -0.125rem;
@@ -33,22 +49,25 @@
     border-top: 0.125rem solid #ccc;
     border-right: 0.125rem solid transparent;
   }
+  */
 }
 
 .App__header__title {
   display: inline-block;
+  margin-left: $headerHeight; //for x button
   padding: 0 1rem;
   min-width: 10rem;
   text-align: center;
   line-height: $headerHeight;
   vertical-align: top;
-  border-right: 1px solid #ddd;
   white-space: nowrap;
 }
 
 .App__header__themes {
+  position: absolute;
+  top: 0;
+  right: 0;
   display: inline-block;
-  //margin-right: 1rem;
   height: $headerHeight;
 }
 
@@ -71,12 +90,12 @@
 .App__header__menu__option {
   vertical-align: top;
   display: inline-block;
-  font-size: 12px;
   height: 100%;
   line-height: $headerHeight;
   padding: 0 0.75rem;
   cursor: pointer;
-  border-right: 1px solid #ddd;
+  border-left-width: 1px;
+  border-left-style: solid;
 }
 
 .App__header__menu__option--sub {
@@ -86,12 +105,6 @@
     position: absolute;
     content: '';
     left: 0;
-
-    @include rightArrow(0.18, #ddd);
-
-    @media screen and (max-width: $breakpoint-mobile){
-      @include rightArrow(0.3, #ddd);
-    }
   }
 }
 
@@ -101,7 +114,7 @@
 .App__header__x {
   position: absolute;
   top: 0;
-  right: 0;
+  left: 0;
   width: $headerHeight;
   height: $headerHeight;
   cursor: pointer;
@@ -141,7 +154,6 @@
   position: relative;
   height: 100vh;
 
-  //perspective-origin: 50% $siteIntroHeight; // x-center y-top
   perspective-origin: 50% calc(100% - #{$headerHeight}); // x-center y-top
   perspective: $bodyWidth; // should match width of body for best cube appearance
   overflow-y: scroll;

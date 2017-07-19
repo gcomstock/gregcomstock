@@ -1,18 +1,42 @@
 .App__header {
-  background-color: #ffffff;
+  background: map-get($properties, 'App__header--background');
   font-size: 2rem;
+
+  &:before {
+    background: map-get($properties, 'App__headerBefore--background');
+  }
+  &:after {
+    background: map-get($properties, 'App__headerAfter--background');
+  }
 }
 
 .App__header__title {
   @extend .title--subhead--#{$name};
   font-size: 1rem;
+  color: map-get($properties, 'App__header__title--color');
+}
+
+.App__header__menu__option {
+  color: map-get($properties, 'App__header__menu__option--color');
+  border-left-color: map-get($properties, 'App__header__menu__option--borderColor');
+}
+
+// arrow for sub menu items
+.App__header__menu__option--sub {
+  &:before {
+    @include rightArrow(0.18, map-get($properties, 'App__header__menu__option--borderColor'));
+
+    @media screen and (max-width: $breakpoint-mobile){
+      @include rightArrow(0.3, map-get($properties, 'App__header__menu__option--borderColor'));
+    }
+  }
 }
 
 
 
 
+
 .App__body {
-  color: #333;
   background: map-get($properties, 'App__body--background');
 
   @media screen and (max-width: $breakpoint-mobile) {
