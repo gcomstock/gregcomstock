@@ -32,6 +32,7 @@ $theme--tech: (
 
   text--color: rgb(255, 255, 255),
 
+  // BUTTONS
   button--background: $buttonBackground,
   button--color: $borderColorBright,
   button--arrowColor: $borderColorBright,
@@ -54,7 +55,7 @@ $theme--tech: (
 
 
   // PROJECT PREVIEW
-  ProjectPreview__leftCol__title--background: url(../themes/tech/bg-diagonal.png) top left / 4px, //rgba(0,0,0,0.8),
+  ProjectPreview__leftCol__title--background: url(../themes/tech/bg-diagonal.png) top left / 4px,
   ProjectPreview__leftCol__title--boxShadow: inset 0 0 0 2px $borderColor,
   ProjectPreview__leftCol__title--boxShadow--mobile: inset 0 0 0 1px orange,
 
@@ -86,6 +87,7 @@ $theme--tech: (
 
 
   //PROJECT VIEW
-  ProjectView__title--bg: rgb(255, 255, 255),
-  ProjectView__textCol__text--bg: rgb(245, 245, 245)
+  ProjectView__title--background: url(../themes/tech/bg-diagonal.png) top left / 4px,
+  ProjectView__title--boxShadow: inset 0 0 0 2px $borderColor,
+  ProjectView__title__text--background: -webkit-linear-gradient($title--colorGradient--startColor, $title--colorGradient--endColor)
 );

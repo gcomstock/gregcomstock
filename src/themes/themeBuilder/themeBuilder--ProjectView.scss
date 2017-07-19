@@ -1,6 +1,13 @@
 .ProjectView__title .Block3d__content {
   @extend .title--ProjectView--#{$name};
-  background: map-get($properties, 'ProjectView__title--bg');
+  background: map-get($properties, 'ProjectView__title--background');
+  box-shadow: map-get($properties, 'ProjectView__title--boxShadow');
+}
+
+.ProjectView__title__text {
+  background: map-get($properties, 'ProjectView__title__text--background');
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 
@@ -20,7 +27,6 @@
 .ProjectView__textCol__text .Block3d__content {
   background: map-get($properties, 'ProjectView__textCol__text--bg');
 }
-
 
 .ProjectView__fact__title {
   @extend .title--ProjectView__fact__title--#{$name};

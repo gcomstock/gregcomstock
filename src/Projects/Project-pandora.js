@@ -23,7 +23,7 @@ export const PandoraLayout = React.createClass({
             noRight={true}
             isMobile={this.props.isMobile}
           >
-            Pandora.com
+            <div className='ProjectView__title__text'>Pandora.com</div>
           </Block3d>
         </div>
 
