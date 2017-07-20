@@ -54,9 +54,9 @@ const WorkView = React.createClass({
   renderContent() {
     return (
       <div>
-        <div className='yerp'>
+        <div className='yerp wrapper'>
         </div>
-        <div className='yerpDerp'>
+        <div className='yerpDerp wrapper'>
           { this.renderProjectPreviews() }
           { this.renderSideFrames() }
         </div>
@@ -98,7 +98,7 @@ const WorkView = React.createClass({
 
   renderProjectPreviews() {
     return (
-      <div>
+      <div className='wrapper'>
         <ProjectPreview
           route={PandoraConsts.ROUTE}
           title={PandoraConsts.TITLE}

@@ -138,3 +138,12 @@ $bodyWidth: 54rem;
   transition: $buttonHoverTransition;
   position: relative;
 }
+
+
+.wrapper {
+  transform-style: inherit; // firefox
+}
+
+.wrapper--centered {
+  text-align: center;
+}

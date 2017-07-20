@@ -10,7 +10,7 @@ export const PandoraLayout = React.createClass({
   render() {
     return (
       <div className='ProjectView'>
-        <div style={{textAlign: 'center'}}>
+        <div className='wrapper wrapper--centered'>
           <Block3d
             cssClass='ProjectView__title'
             width='100%'

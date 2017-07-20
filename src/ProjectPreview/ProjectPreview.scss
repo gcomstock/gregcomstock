@@ -2,6 +2,7 @@
 
 .ProjectPreview {
   margin-bottom: 8rem;
+  transform-style: inherit; // firefox
 
   @media screen and (max-width: $breakpoint-mobile){
     margin-bottom: 4rem;
@@ -15,9 +16,7 @@
   display: inline-block;
   text-align: left;
   vertical-align: top;
-
-  //width: 24rem;
-  //margin-left: 6rem;
+  //transform-style: inherit; // firefox
 
   @media screen and (max-width: $breakpoint-mobile){
     width: 100%;
@@ -30,6 +29,7 @@
   margin-right: 2rem;
   display: inline-block;
   vertical-align: top;
+  //transform-style: inherit; // firefox
 
   @media screen and (max-width: $breakpoint-mobile){
     width: 100%;
@@ -41,6 +41,7 @@
 .ProjectPreview__leftCol__title {
   width: 100%;
   margin-bottom: 2rem;
+  //transform-style: inherit; // firefox
 
   @media screen and (max-width: $breakpoint-mobile){
     width: auto;

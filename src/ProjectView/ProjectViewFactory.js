@@ -66,17 +66,6 @@ export default function projectViewFactory(WrappedComponent, projectData) {
         return (
           <div className='ProjectDesc'>
             <div className='ProjectDesc__content'>
-              {/*
-              <Block3d
-                cssClass='ProjectDesc__content__x'
-                route={'/'}
-                width='100%'
-                height='100%'
-                depth='0.25'
-                noRight={true}
-                padding={[0]}
-              />
-               */}
 
               <Block3d
                 cssClass='ProjectDesc__content__title'
@@ -163,7 +152,6 @@ export default function projectViewFactory(WrappedComponent, projectData) {
 
       return (
         <div className={App__body}>
-
           {this.renderProjectDesc('web')}
 
           <div className='App__body__scrollable'>
@@ -173,10 +161,8 @@ export default function projectViewFactory(WrappedComponent, projectData) {
 
               {this.renderOuterFrames()}
 
-              <div className='App__body__scrollable__wrapper__content'>
-                {/* TODO: pass in props (theme?) */}
-                <WrappedComponent />
-              </div>
+              {/* TODO: pass in props for theme-specific js (maybe?) */}
+              <WrappedComponent />
             </div>
           </div>
         </div>

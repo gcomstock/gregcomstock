@@ -12,7 +12,6 @@ $deviceBoxShadow: inset 0 0 0 1px rgba(160,160,160,1);
   height: $siteIntroHeight;
   min-height: $siteIntroMinHeight;
   position: absolute;
-
   background-color: red;
 
   @media screen and (max-width: $breakpoint-mobile){
@@ -185,7 +184,8 @@ $deviceBoxShadow: inset 0 0 0 1px rgba(160,160,160,1);
 
 .SiteIntro__viewWork {
   position: absolute;
-  top: calc(#{$siteIntroHeight} - 1.5rem);
+  //top: calc(#{$siteIntroHeight} - 1.5rem);
+  bottom: -2rem;
   left: 50%;
   transform: translate3d(-50%,0,0);
   height: auto;
