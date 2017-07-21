@@ -48,16 +48,31 @@
 
 
 
-
-.ProjectView__pic--intro {
+.ProjectView__picCol__pic {
   margin-bottom: 4.5rem;
 }
-
-.ProjectView__pic {
-  margin-bottom: 4.5rem;
-  width: 54rem;
+.ProjectView__picCol__pic--intro {
+  //width: 33rem;
 }
+
 
 .ProjectView__fact {
   width: 19rem;
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+}
+
+.ProjectView__factPic .Block3d__content {
+
+  // this creates a border at the top of the box that does not span the full width (to connect with fact tab)
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: calc(100% - 19rem + 2px); // fact + border width
+  }
 }

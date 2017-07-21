@@ -8,8 +8,12 @@ $borderColor: #d9008f;
 $borderColorBright: rgba(255, 100, 200, 1);
 
 $buttonBackground: #370030;
+
 $webBoxBottom--boxShadow: inset -2px 0 0 0 $borderColor, inset 2px 0 0 0 $borderColor;
 $webBoxSide--boxShadow: inset 0 2px 0 0 $borderColor;
+$fact--boxShadow: inset 0 2px 0 0 $borderColor, inset 2px 0 0 0 $borderColor, inset -2px 0 0 0 $borderColor;
+$factPic--boxShadow: inset -50px 2px 0 -50px $borderColor, inset 2px 0 0 0 $borderColor, inset -2px 0 0 0 $borderColor;
+
 
 $theme--tech: (
   // APP HEADER
@@ -29,6 +33,7 @@ $theme--tech: (
   title--fontSpacing: 1px,
   title--textTransform: uppercase,
   title--color: rgb(260, 60, 60),
+  title--background: -webkit-linear-gradient($title--colorGradient--startColor, $title--colorGradient--endColor),
 
   text--color: rgb(255, 255, 255),
 
@@ -89,5 +94,16 @@ $theme--tech: (
   //PROJECT VIEW
   ProjectView__title--background: url(../themes/tech/bg-diagonal.png) top left / 4px,
   ProjectView__title--boxShadow: inset 0 0 0 2px $borderColor,
-  ProjectView__title__text--background: -webkit-linear-gradient($title--colorGradient--startColor, $title--colorGradient--endColor)
+  //ProjectView__title__text--background: -webkit-linear-gradient($title--colorGradient--startColor, $title--colorGradient--endColor),
+  ProjectView__picCol__pic--background: rgba(0,0,0,0.5),
+  ProjectView__picCol__pic--boxShadow: inset 0 0 0 2px $borderColor,
+  ProjectView__textCol__subhead--background: url(../themes/tech/bg-diagonal.png) top left / 4px,
+  ProjectView__textCol__subhead--boxShadow: inset 0 0 0 2px $borderColor,
+  ProjectView__textCol__text--background: rgba(0,0,0,0.5),
+  ProjectView__textCol__text--boxShadow: inset 0 0 0 2px $borderColor,
+  ProjectView__fact--background: rgba(0,0,0,0.5),
+  ProjectView__fact--boxShadow: $fact--boxShadow,
+  ProjectView__factPic--background: rgba(0,0,0,0.5),
+  ProjectView__factPic--boxShadow: $factPic--boxShadow,
+  ProjectView__factPic--topBorder: $borderColor
 );

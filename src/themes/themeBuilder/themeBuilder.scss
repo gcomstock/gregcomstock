@@ -41,6 +41,10 @@
     letter-spacing: map-get($properties, 'title--fontSpacing');
     color:          map-get($properties, 'title--color');
     text-transform: map-get($properties, 'title--textTransform');
+    background:     map-get($properties, 'title--background');
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    //ProjectView__title__text
 
     @media screen and (max-width: $breakpoint-mobile) {
       font-size: map-get($properties, 'title--fontSize--mobile');
@@ -51,8 +55,10 @@
     font-family:   'title--#{$name}';
     font-size:      1.8rem; //map-get($properties, 'title--fontSize');
     letter-spacing: map-get($properties, 'title--fontSpacing');
-    color:          map-get($properties, 'title--color');
     text-transform: map-get($properties, 'title--textTransform');
+    background:     map-get($properties, 'title--background');
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     //text-rendering: geometricPrecision;
 
     @media screen and (max-width: $breakpoint-mobile) {
@@ -60,12 +66,15 @@
     }
   }
 
-  .title--ProjectView__fact__title--#{$name} {
+  .title--ProjectView__fact--#{$name} {
     font-family:   'title--#{$name}';
     font-size:      1.4rem;
     letter-spacing: map-get($properties, 'title--fontSpacing');
     color:          map-get($properties, 'title--color');
     text-transform: map-get($properties, 'title--textTransform');
+    background:     map-get($properties, 'title--background');
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
     @media screen and (max-width: $breakpoint-mobile) {
       font-size: map-get($properties, 'title--fontSize--mobile');

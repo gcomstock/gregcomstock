@@ -5,10 +5,8 @@ $buttonHoverTransition: background-color 150ms linear, color 150ms linear, strok
 
 $breakpoint-mobile: 1020px;
 
-
 $siteIntroHeight: calc(100vh - 5rem);
 $siteIntroMinHeight: 24rem;
-
 
 $siteIntroHeight--mobile: 60vh;
 $mobileMinSize: 2.5rem;
@@ -26,6 +24,19 @@ $bodyWidth: 54rem;
   border-top: $size+rem solid transparent;
   border-bottom: $size+rem solid transparent;
   border-left: ($size*1.25)+rem solid $color;
+}
+
+@mixin backArrow($size, $color) {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -($size*0.95)+rem;
+  margin-left: -($size/2)+rem;
+
+  border-top: $size+rem solid transparent;
+  border-bottom: $size+rem solid transparent;
+  border-right: ($size*1.25)+rem solid $color;
 }
 
 @mixin bottomArrow($size, $color) {
@@ -113,7 +124,6 @@ $bodyWidth: 54rem;
 
 
 
-
 .button {
   cursor: pointer;
   pointer-events: all;
@@ -132,18 +142,17 @@ $bodyWidth: 54rem;
     }
   }
 }
-
-
 .button__text {
   transition: $buttonHoverTransition;
   position: relative;
 }
 
 
+
+
 .wrapper {
   transform-style: inherit; // firefox
 }
-
 .wrapper--centered {
   text-align: center;
 }
