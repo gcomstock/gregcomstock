@@ -7,6 +7,11 @@
   .Block3d__content {
     box-shadow: map-get($properties, 'button--boxShadow');
     background: map-get($properties, 'button--background');
+
+    @media screen and (max-width: $breakpoint-mobile){
+      box-shadow: map-get($properties, 'button--boxShadow--mobile');
+      background: map-get($properties, 'button--background--mobile');
+    }
   }
 
   &:hover {

@@ -136,10 +136,10 @@ $bodyWidth: 54rem;
     padding: 0.6rem;
     transition: $buttonHoverTransition;
 
-    @media screen and (max-width: $breakpoint-mobile){
-      @include mobileBox(0.25rem, rgb(200,200,200), rgb(160,160,160));
-      padding: 1rem 1.4rem 1rem 1rem;
-    }
+    //@media screen and (max-width: $breakpoint-mobile){
+    //  @include mobileBox(0.25rem, rgb(200,200,200), rgb(160,160,160));
+    //  padding: 1rem 1.4rem 1rem 1rem;
+    //}
   }
 }
 .button__text {

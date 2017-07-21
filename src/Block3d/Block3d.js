@@ -62,6 +62,11 @@ const Block3d = React.createClass({
   },
 
   applyDefaultContentClasses() {
+    return 'Block3d__content';
+
+    // TODO: remove this later? I decided there should only be one default block class, and one override within
+    // the theme manifest...these felt too in-between and added confusion
+
     // the class added here determines default background and border css properties for the element,
     // so lower elements appear darker
     const z = parseInt(this.props.z, 10);

@@ -150,9 +150,6 @@ $deviceBoxShadow: inset 0 0 0 1px rgba(160,160,160,1);
   background-size: 54rem;
   background-position: 50% $headerHeight, center;
   background-attachment: fixed;
-  //background-image: url(../themes/default/siteIntro--onScreen.png), linear-gradient(to bottom, #7abcff 0%,#60abf8 44%,#4096ee 100%);
-  //background-color: #eeeeee;
-  //background-image: url(../themes/default/siteIntro--onScreen.png);
 }
 
 
@@ -184,11 +181,11 @@ $deviceBoxShadow: inset 0 0 0 1px rgba(160,160,160,1);
 
 .SiteIntro__viewWork {
   position: absolute;
-  //top: calc(#{$siteIntroHeight} - 1.5rem);
-  bottom: -2rem;
+  bottom: -1.5rem;
   left: 50%;
   transform: translate3d(-50%,0,0);
   height: auto;
+  z-index: 9999;
 
   @media screen and (max-width: $breakpoint-mobile){
     top: calc(#{$siteIntroHeight--mobile} - 1.5rem);

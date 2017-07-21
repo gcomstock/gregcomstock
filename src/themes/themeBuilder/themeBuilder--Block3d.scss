@@ -1,14 +1,28 @@
+.Block3d__content {
+  background: map-get($properties, 'webBlock--background');
+  box-shadow: map-get($properties, 'webBlock--boxShadow');
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    background: map-get($properties, 'mobileBlock--background');
+    box-shadow: map-get($properties, 'mobileBlock--boxShadow');
+  }
+
+  p {
+    color: map-get($properties, 'text--color');
+  }
+}
+
 .Block3d__face--bottom {
-  background-color: map-get($properties, 'webBoxBottom--background');
-  box-shadow: map-get($properties, 'webBoxBottom--boxShadow');
+  background-color: map-get($properties, 'webBlockBottom--background');
+  box-shadow: map-get($properties, 'webBlockBottom--boxShadow');
 }
 .Block3d__face--bottom__border {
-  background: map-get($properties, 'webBox--borderColor');
+  background: map-get($properties, 'webBlock--borderColor');
 }
 .Block3d__face--left,
 .Block3d__face--right {
-  background: map-get($properties, 'webBoxSide--background');
-  box-shadow: map-get($properties, 'webBoxSide--boxShadow');
+  background: map-get($properties, 'webBlockSide--background');
+  box-shadow: map-get($properties, 'webBlockSide--boxShadow');
 }
 
 // these pseudo elements are applied to help increase visibility of the box shadow borders
@@ -17,57 +31,6 @@
 .Block3d__face--bottom {
   &:after,
   &:before {
-    background: map-get($properties, 'webBox--borderColor');
+    background: map-get($properties, 'webBlock--borderColor');
   }
-}
-
-
-
-//TODO: maybe remove these
-.Block3d__content {
-  /*outline: 1px solid rgb(235,235,235);*/
-  background-color: rgb(255, 255, 255);
-
-  //TODO: titles go in h tag?
-  color: map-get($properties, 'title--color');
-
-  p {
-    color: map-get($properties, 'text--color');
-  }
-}
-
-
-//TODO: remove these when safe to do so
-.Block3d__content--14 {
-  background: red;
-  /*outline: 1px solid rgb(165,165,165);*/
-  //background-color: rgb(192, 192, 192);
-}
-.Block3d__content--12 {
-  background: red;
-  /*outline: 1px solid rgb(175,175,175);*/
-  //background-color: rgb(201, 201, 201);
-}
-.Block3d__content--10 {
-  background: red;
-  /*outline: 1px solid rgb(185,185,185);*/
-  //background-color: rgb(210, 210, 210);
-}
-.Block3d__content--8 {
-  background: red;
-  /*outline: 1px solid rgb(195,195,195);*/
-  //background-color: rgb(219, 219, 219);
-}
-.Block3d__content--6 {
-  background: red;
-  /*outline: 1px solid rgb(205,205,205);*/
-  //background-color: rgb(228, 228, 228);
-}
-.Block3d__content--4 {
-  background: red;
-}
-.Block3d__content--2 {
-  background: red;
-  /* outline: 1px solid rgb(225,225,225); */
-  //background-color: rgb(246, 246, 246);
 }

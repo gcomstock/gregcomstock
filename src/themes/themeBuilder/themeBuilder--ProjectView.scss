@@ -40,9 +40,10 @@
   box-shadow: map-get($properties, 'ProjectView__fact--boxShadow');
 
   h2 {
-    @extend .title--ProjectView__fact--#{$name};
+    @extend .title--ProjectView__subhead--#{$name};
   }
 }
+
 
 .ProjectView__factPic .Block3d__content {
   background: map-get($properties, 'ProjectView__factPic--background');
