@@ -66,7 +66,7 @@ export const ProjectPreview = React.createClass({
             shadowDepth={-15.99}
             isMobile={this.props.isMobile}
           >
-            <div className='ProjectPreview__leftCol__title__text' dangerouslySetInnerHTML={this.renderTitleHTML()} />
+            <h2 dangerouslySetInnerHTML={this.renderTitleHTML()} />
           </Block3d>
 
           {this.renderMobileThumbnail()}

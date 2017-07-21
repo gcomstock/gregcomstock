@@ -36,6 +36,9 @@
     letter-spacing: map-get($properties, 'title--fontSpacing');
     color:          map-get($properties, 'title--color');
     text-transform: map-get($properties, 'title--textTransform');
+    background:     map-get($properties, 'title--background');
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     //text-rendering: optimizeLegibility;
 
     @media screen and (max-width: $breakpoint-mobile) {

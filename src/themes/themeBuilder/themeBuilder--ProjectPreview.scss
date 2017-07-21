@@ -17,7 +17,9 @@
   background: map-get($properties, 'ProjectPreview__leftCol__title--background');
   box-shadow: map-get($properties, 'ProjectPreview__leftCol__title--boxShadow');
 
-  @extend .title--subhead--#{$name};
+  h2 {
+    @extend .title--subhead--#{$name};
+  }
 
   @media screen and (max-width: $breakpoint-mobile) {
     box-shadow: $boxShadow--mobile;
@@ -40,12 +42,6 @@
 .ProjectPreview__leftCol__title .Block3d__face--bottom {
   background: map-get($properties, 'ProjectPreview__leftCol__title__bottom--background');
   box-shadow: map-get($properties, 'ProjectPreview__leftCol__title__bottom--boxShadow');
-}
-
-.ProjectPreview__leftCol__title__text {
-  background: map-get($properties, 'ProjectPreview__leftCol__title__text--background');
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 
