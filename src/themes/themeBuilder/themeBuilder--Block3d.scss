@@ -16,8 +16,14 @@
   background-color: map-get($properties, 'webBlockBottom--background');
   box-shadow: map-get($properties, 'webBlockBottom--boxShadow');
 }
+
+// gives visual depth to border. not needed on mobile
 .Block3d__face--bottom__border {
   background: map-get($properties, 'webBlock--borderColor');
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    display: none;
+  }
 }
 .Block3d__face--left,
 .Block3d__face--right {

@@ -23,11 +23,6 @@
 .Block3d__content {
   transform: translateZ(0); /* to prevent flicker */
   transform-style: preserve-3d;
-  //padding: 3rem;
-  //
-  //@media screen and (max-width: $breakpoint-mobile) {
-  //  padding: 1.5rem;
-  //}
 }
 
 .Block3d__content img {
@@ -78,6 +73,10 @@
     width: 1px;
     height: 100%;
     transform: rotate3d(0,1,0,-90deg);
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      display: none;
+    }
   }
 
   // left border
@@ -89,6 +88,10 @@
     width: 1px;
     height: 100%;
     transform: rotate3d(0,1,0,90deg);
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      display: none;
+    }
   }
 }
 
@@ -114,6 +117,10 @@
     height: 100%;
     width: 1px;
     transform: rotate3d(0,1,0,90deg);
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      display: none;
+    }
   }
 
   //back border
@@ -125,6 +132,10 @@
     height: 1px;
     width: 100%;
     transform: rotate3d(1,0,0,90deg);
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      display: none;
+    }
   }
 }
 .Block3d__face--right {
@@ -141,6 +152,10 @@
     height: 100%;
     width: 1px;
     transform: rotate3d(0,1,0,90deg);
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      display: none;
+    }
   }
 
   //back border
@@ -152,6 +167,10 @@
     height: 1px;
     width: 100%;
     transform: rotate3d(1,0,0,90deg);
+  
+    @media screen and (max-width: $breakpoint-mobile) {
+      display: none;
+    }
   }
 }
 

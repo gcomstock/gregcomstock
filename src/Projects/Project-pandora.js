@@ -163,7 +163,7 @@ export const PandoraLayout = React.createClass({
           isMobile={this.props.isMobile}
         >
           <h2>
-            Video:<br/>Animation Showcase
+            Animation Showcase
           </h2>
           <p>A selection of interaction designs that I implemented by collaborating closely with Pandora's product design team.</p>
         </Block3d>

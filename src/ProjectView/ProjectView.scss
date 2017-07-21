@@ -26,12 +26,22 @@
   width: 33rem;
   margin-right: 4.5rem;
   transform-style: inherit; // firefox
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    width: 100%;
+    margin-right: 0;
+  }
 }
 .ProjectView__textCol {
   vertical-align: top;
   display: inline-block;
   width: 16.5rem;
   transform-style: inherit; // firefox
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    width: 100%;
+    margin-right: 0;
+  }
 }
 
 
@@ -62,6 +72,11 @@
   h2 {
     margin-bottom: 1rem;
   }
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    width: 100%;
+    //margin-right: 0;
+  }
 }
 
 .ProjectView__factPic .Block3d__content {
@@ -74,5 +89,9 @@
     right: 0;
     height: 2px;
     width: calc(100% - 19rem + 2px); // fact + border width
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      display: none;
+    }
   }
 }
