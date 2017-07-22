@@ -11,7 +11,7 @@ export const PandoraLayout = React.createClass({
     return (
       <div className='ProjectView'>
 
-        
+
         <div className='wrapper wrapper--centered'>
           <Block3d
             cssClass='ProjectView__title'
@@ -176,6 +176,8 @@ export const PandoraLayout = React.createClass({
           height='auto'
           depth='16'
           z='0'
+          noLeft={true}
+          noRight={true}
           isMobile={this.props.isMobile}
         >
           <img width='100%' src='work/pandora/pandora-2.jpg' alt='portfolio'/>
