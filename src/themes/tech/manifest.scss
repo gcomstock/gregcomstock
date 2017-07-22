@@ -1,6 +1,7 @@
 $title--colorGradient--startColor: #cd48b9;
 $title--colorGradient--endColor: #ffccf7;
 
+$activeColor--xLow: rgba(110, 0, 80, 0.6);
 $activeColor--low: rgba(150, 0, 100, 0.6);
 $activeColor--mid: rgba(210, 0, 140, 0.6);
 $activeColor--high: rgba(255, 100, 200, 1);
@@ -9,8 +10,8 @@ $borderColorBright: rgba(255, 100, 200, 1);
 
 $buttonBackground: #370030;
 
-$webBlockSide--boxShadow: inset 0 2px 0 0 $borderColor;
-$webBlockBottom--boxShadow: inset -2px 0 0 0 $borderColor, inset 2px 0 0 0 $borderColor;
+$webBlockSide--boxShadow: inset 0 2px 0 0 $activeColor--low;
+$webBlockBottom--boxShadow: inset -2px 0 0 0 $activeColor--low, inset 2px 0 0 0 $activeColor--mid;
 $fact--boxShadow: inset 0 2px 0 0 $borderColor, inset 2px 0 0 0 $borderColor, inset -2px 0 0 0 $borderColor;
 $factPic--boxShadow: inset 0 -2px 0 0 $borderColor, inset 2px 0 0 0 $borderColor, inset -2px 0 0 0 $borderColor;
 $mobileBlockSide--boxShadow: inset -1px 0 0 0 $borderColor, inset 0 1px 0 0 $borderColor;
@@ -79,13 +80,16 @@ $theme--tech: (
   App__body--background: url(../themes/tech/stars1.png) top left / 50px rgb(20, 20, 20),
   App__body--mobile--background: url(../themes/tech/stars1.png) top left / 50px rgb(20, 20, 20),
   App__body__scrollable__wrapper__outerFrame--background: url(../themes/tech/stars3.png) top left / 100px,
-  App__body__scrollable__wrapper__outerFrame--boxShadow: inset 0 0 0 2px $borderColor,
+  App__body__scrollable__wrapper__outerFrame--boxShadow: inset 0 0 0 2px $activeColor--low,
+  App__body__scrollable__wrapper__outerFrame__side--boxShadow: inset 0 0 0 2px $activeColor--xLow,
+  App__body__scrollable__wrapper__outerFrame__sidePsuedo--background: $activeColor--xLow,
   App__body__scrollable__wrapper__floor--background: url(../themes/tech/stars2.png) top left / 140px,
+
 
 
   // PROJECT PREVIEW
   ProjectPreview__leftCol__title--background: url(../themes/tech/bg-diagonal.png) top left / 4px,
-  ProjectPreview__leftCol__title--boxShadow: inset 0 0 0 2px $borderColor,
+  //ProjectPreview__leftCol__title--boxShadow: inset 0 0 0 2px $borderColor,
   //ProjectPreview__leftCol__title--boxShadow--mobile: inset 0 0 0 1px orange,
   //ProjectPreview__leftCol__title__side--background: rgba(0,0,0,0),
   //ProjectPreview__leftCol__title__side--boxShadow:
@@ -95,8 +99,8 @@ $theme--tech: (
   //ProjectPreview__leftCol__title__bottom--boxShadow--mobile: inset 0 0 0 2px red,
   //ProjectPreview__leftCol__snippet--background:
   //ProjectPreview__leftCol__snippet--boxShadow:
-  ProjectPreview__rightCol--background: rgba(0,0,0,0.5),
-  ProjectPreview__rightCol--boxShadow: inset 0 0 0 2px $borderColor,
+  //ProjectPreview__rightCol--background: rgba(0,0,0,0.5),
+  //ProjectPreview__rightCol--boxShadow: inset 0 0 0 2px $borderColor,
 
 
   // PROJECT VIEW

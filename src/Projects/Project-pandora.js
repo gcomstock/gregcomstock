@@ -165,9 +165,7 @@ export const PandoraLayout = React.createClass({
           padding={[1.5,1.5,0,1.5]}
           isMobile={this.props.isMobile}
         >
-          <h2>
-            Animation Showcase
-          </h2>
+          <h2>Interaction Showcase</h2>
           <p>A selection of interaction designs that I implemented by collaborating closely with Pandora's product design team.</p>
         </Block3d>
 

@@ -59,6 +59,15 @@
     background: map-get($properties, 'App__body__scrollable__wrapper__outerFrame--background');
     box-shadow: map-get($properties, 'App__body__scrollable__wrapper__outerFrame--boxShadow');
   }
+  .Block3d__face--left,
+  .Block3d__face--right {
+    box-shadow: map-get($properties, 'App__body__scrollable__wrapper__outerFrame__side--boxShadow');
+
+    &:after,
+    &:before {
+      background: map-get($properties, 'App__body__scrollable__wrapper__outerFrame__sidePsuedo--background');
+    }
+  }
 }
 
 .App__body__scrollable__wrapper__floor {
