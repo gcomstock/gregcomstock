@@ -39,16 +39,24 @@ const App = React.createClass({
     this.setState({scrollY: e.target.scrollTop});
   },
 
+  renderXButton() {
+    if (location.hash !== '#/') {
+      return <div className='App__header__x' onClick={() => hashHistory.push('/')}></div>;
+    }
+  },
+
   setTheme(theme) {
     this.setState({theme});
   },
 
   render() {
+    console.log(location.hash);
+
     return (
       <div className={`App theme--${this.state.theme}`}>
         <div className='App__header'>
 
-          <div className='App__header__x' onClick={() => hashHistory.push('/')}></div>
+          {this.renderXButton()}
 
           <div className='App__header__title'>
             Greg Comstock
