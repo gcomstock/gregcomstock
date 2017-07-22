@@ -4,24 +4,18 @@
 @import '../Block3d/Block3d';
 @import '../ProjectPreview/ProjectPreview';
 @import '../ProjectView/ProjectView';
-@import '../ProjectView/ProjectDesc';
 @import '../SiteIntro/SiteIntro';
 
 
 //define theme vars and generate the css for them
 @import '../themes/themeBuilder/themeBuilder';
-
 @import "../themes/default/manifest.scss";
 @import "../themes/tech/manifest.scss";
-
-
 
 
 //@include themeBuilder('game', $theme--game);
 @include themeBuilder('default', $theme--default);
 @include themeBuilder('tech', $theme--tech);
-
-
 
 
 // import all shared sass files

@@ -59,71 +59,6 @@ export default function projectViewFactory(WrappedComponent, projectData) {
       }
     },
 
-    renderProjectDesc(mode) {
-      return false;
-
-      if (this.props.isMobile && mode === 'mobile' || !this.props.isMobile && mode === 'web') {
-        return (
-          <div className='ProjectDesc'>
-            <div className='ProjectDesc__content'>
-
-              <Block3d
-                cssClass='ProjectDesc__content__title'
-                width='100%'
-                depth='2.5'
-                noRight={true}
-                isMobile={this.props.isMobile}
-              >
-                <div dangerouslySetInnerHTML={this.renderTitleHTML()} />
-              </Block3d>
-
-              <Block3d
-                cssClass='ProjectDesc__content__text'
-                width='100%'
-                depth='2.5'
-                noRight={true}
-                isMobile={this.props.isMobile}
-                padding={[0.75,1.25]}
-              >
-                {projectData.TEXT.map((item) => {
-                  return <p>{item}</p>;
-                })}
-              </Block3d>
-
-              <div className='ProjectDesc__content__note ProjectDesc__content__note--responsibilities'>
-                <Block3d
-                  cssClass='ProjectDesc__content__note__title'
-                  width='100%'
-                  depth='2.5'
-                  noRight={true}
-                  isMobile={this.props.isMobile}
-                  padding={[0.75,1.25]}
-                >
-                  key responsibilities
-                </Block3d>
-                <Block3d
-                  cssClass='ProjectDesc__content__note__text'
-                  width='100%'
-                  depth='2.5'
-                  noRight={true}
-                  isMobile={this.props.isMobile}
-                  padding={[1,1.25]}
-                >
-                  <ul>
-                    {projectData.RESPONSIBILITIES.map((item) => {
-                      return <li>{item}</li>;
-                    })}
-                  </ul>
-                </Block3d>
-              </div>
-
-              {this.renderLaunchButton()}
-            </div>
-          </div>
-        )
-      }
-    },
-
     renderOuterFrames() {
       if (!this.props.isMobile) {
         return (
@@ -152,13 +87,8 @@ export default function projectViewFactory(WrappedComponent, projectData) {
 
       return (
         <div className={App__body}>
-          {this.renderProjectDesc('web')}
-
           <div className='App__body__scrollable'>
             <div className='App__body__scrollable__wrapper'>
-
-              {this.renderProjectDesc('mobile')}
-
               {this.renderOuterFrames()}
 
               {/* TODO: pass in props for theme-specific js (maybe?) */}
