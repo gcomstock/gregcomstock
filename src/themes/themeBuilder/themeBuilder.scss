@@ -22,12 +22,18 @@
     font-style:     normal;
   }
 
+
+
   .title--head--#{$name} {
     font-family:   'title--#{$name}';
     font-size:      2rem;
     letter-spacing: 0.08rem;
     color:          map-get($properties, 'highlightColor');
     text-transform: map-get($properties, 'title--textTransform');
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      font-size: map-get($properties, 'title--fontSize--mobile');
+    }
   }
 
   .title--subhead--#{$name} {
@@ -76,23 +82,6 @@
       font-size: map-get($properties, 'title--fontSize--mobile');
     }
   }
-
-  /*
-  .title--ProjectView__fact--#{$name} {
-    font-family:   'title--#{$name}';
-    font-size:      1.4rem;
-    letter-spacing: map-get($properties, 'title--fontSpacing');
-    color:          map-get($properties, 'title--color');
-    text-transform: map-get($properties, 'title--textTransform');
-    background:     map-get($properties, 'title--background');
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    @media screen and (max-width: $breakpoint-mobile) {
-      font-size: map-get($properties, 'title--fontSize--mobile');
-    }
-  }
-  */
 
   .title--button--#{$name} {
     font-family:   'title--#{$name}';

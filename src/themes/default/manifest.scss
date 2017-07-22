@@ -63,6 +63,8 @@ $theme--default: (
   App__header--background: #fff,
   App__headerBefore--background: #93d6e6,
   App__headerAfter--background: -webkit-linear-gradient($title--colorGradient--startColor, $title--colorGradient--endColor),
+  App__header__x--color: $title--colorGradient--endColor,
+  App__header__title--marginTop: 0.05rem, //visual offset
   App__header__menu__option--color: #909090,
   App__header__menu__option--borderColor: #93d6e6, //$borderColor,
 

@@ -1,6 +1,5 @@
 .App__header {
   background: map-get($properties, 'App__header--background');
-  font-size: 2rem;
 
   &:before {
     background: map-get($properties, 'App__headerBefore--background');
@@ -12,13 +11,20 @@
 
 .App__header__x {
   &:after {
-    @include backArrow(0.22, map-get($properties, 'button--arrowColor'));
+    @include backArrow(0.22, map-get($properties, 'App__header__x--color'));
   }
 }
 
 .App__header__title {
   @extend .title--subhead--#{$name};
+  margin-top: map-get($properties, 'App__header__title--marginTop');
+
+  //TODO: move sizes to mixin
   font-size: 1rem;
+
+  @media screen and (max-width: $breakpoint-mobile){
+    font-size: 1.5rem;
+  }
 }
 
 .App__header__menu__option {

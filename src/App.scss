@@ -29,17 +29,25 @@
     width: 100%;
     height: 0.125rem;
   }
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    height: $headerHeight--mobile;
+  }
 }
 
 .App__header__title {
   display: inline-block;
   margin-left: $headerHeight; //for x button
-  padding: 0 1rem;
-  min-width: 10rem;
-  text-align: center;
-  line-height: $headerHeight;
+  padding: 0 1.25rem;
   vertical-align: top;
   white-space: nowrap;
+  line-height: $headerHeight;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    padding: 0;
+    line-height: $headerHeight--mobile;
+    margin-left: $headerHeight--mobile;
+  }
 }
 
 .App__header__themes {
@@ -48,30 +56,42 @@
   right: 0;
   display: inline-block;
   height: $headerHeight;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    height: $headerHeight--mobile;
+  }
 }
 
 .App__header__theme {
   display: inline-block;
-  width: calc(2rem - 6px);
-  height: calc(2rem - 6px);
-  margin-top: 2px;
-  margin-right: 2px;
+  margin-top: 4px;
+  margin-right: 4px;
   background-color: rgba(255,255,255,0.1);
   cursor: pointer;
   vertical-align: top;
+  width: calc(#{$headerHeight} - 10px);
+  height: calc(#{$headerHeight} - 10px);
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    width: calc(#{$headerHeight--mobile} - 10px);
+    height: calc(#{$headerHeight--mobile} - 10px);
+  }
 }
 
 .App__header__menu {
   display: inline-block;
   height: $headerHeight;
   vertical-align: top;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    height: $headerHeight--mobile;
+    display: none;
+  }
 }
 
 .App__header__menu__option {
   vertical-align: top;
   display: inline-block;
-  height: 100%;
-  line-height: $headerHeight;
   padding: 0 1.25rem;
   cursor: pointer;
   border-left-width: 1px;
@@ -99,15 +119,9 @@
   height: $headerHeight;
   cursor: pointer;
 
-
   @media screen and (max-width: $breakpoint-mobile) {
-    width: $mobileMinSize;
-    height: $mobileMinSize;
-    margin: 0 0.75rem 0 0;
-
-    .Block3d__content {
-      background-position-x: 100%;
-    }
+    width: $headerHeight--mobile;
+    height: $headerHeight--mobile;
   }
 }
 

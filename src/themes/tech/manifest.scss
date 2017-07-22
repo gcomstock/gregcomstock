@@ -65,6 +65,8 @@ $theme--tech: (
   App__header--background: $buttonBackground,
   App__headerBefore--background: $borderColor,
   App__headerAfter--background: rgba(150, 0, 100, 1),
+  App__header__x--color: $title--colorGradient--startColor,
+  //App__header__title--marginTop:
   App__header__menu__option--color: $borderColor,
   App__header__menu__option--borderColor: $borderColor,
 
