@@ -19,6 +19,7 @@ export const PandoraLayout = React.createClass({
             height='auto'
             depth='4'
             z='0'
+            padding={[1.5,2.75,1.5,3]}
             shadow={true}
             shadowDepth={-16}
             noLeft={true}

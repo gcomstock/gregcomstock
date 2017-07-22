@@ -76,6 +76,7 @@
     background:     map-get($properties, 'title--background');
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    line-height:    map-get($properties, 'title--lineHeight');
     //text-rendering: geometricPrecision;
 
     @media screen and (max-width: $breakpoint-mobile) {
