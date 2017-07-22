@@ -19,7 +19,6 @@
 .App__header__title {
   @extend .title--subhead--#{$name};
   font-size: 1rem;
-  color: map-get($properties, 'App__header__title--color');
 }
 
 .App__header__menu__option {

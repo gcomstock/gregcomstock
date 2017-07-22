@@ -24,7 +24,7 @@
   vertical-align: top;
   display: inline-block;
   width: 33rem;
-  margin-right: 4.5rem;
+  margin-right: 3rem;
   transform-style: inherit; // firefox
 
   @media screen and (max-width: $breakpoint-mobile) {
@@ -35,7 +35,7 @@
 .ProjectView__textCol {
   vertical-align: top;
   display: inline-block;
-  width: 16.5rem;
+  width: 18rem;
   transform-style: inherit; // firefox
 
   @media screen and (max-width: $breakpoint-mobile) {

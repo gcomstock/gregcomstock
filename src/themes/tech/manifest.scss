@@ -9,7 +9,6 @@ $borderColorBright: rgba(255, 100, 200, 1);
 
 $buttonBackground: #370030;
 
-// I dont know how to use comma below, so storing as vas for now
 $webBlockSide--boxShadow: inset 0 2px 0 0 $borderColor;
 $webBlockBottom--boxShadow: inset -2px 0 0 0 $borderColor, inset 2px 0 0 0 $borderColor;
 $fact--boxShadow: inset 0 2px 0 0 $borderColor, inset 2px 0 0 0 $borderColor, inset -2px 0 0 0 $borderColor;
@@ -18,7 +17,6 @@ $mobileBlockSide--boxShadow: inset -1px 0 0 0 $borderColor, inset 0 1px 0 0 $bor
 $mobileBlockBottom--boxShadow: inset 1px 0 0 0 $borderColor, inset 0 -1px 0 0 $borderColor, inset -1px 0 0 0 $borderColor;
 $mobileFact--boxShadow: inset 0 1px 0 0 $borderColor, inset 1px 0 0 0 $borderColor, inset -1px 0 0 0 $borderColor;
 $mobileFactPic--boxShadow: inset 1px 0 0 0 $borderColor, inset 0 -1px 0 0 $borderColor, inset -1px 0 0 0 $borderColor;
-
 
 
 $theme--tech: (
@@ -50,15 +48,6 @@ $theme--tech: (
   button--hover--face--bottom: $activeColor--low,
 
 
-  // APP HEADER
-  App__header--background: $buttonBackground,
-  App__headerBefore--background: $borderColor,
-  App__headerAfter--background: rgba(150, 0, 100, 1),
-  App__header__title--color: $borderColor,
-  App__header__menu__option--color: $borderColor,
-  App__header__menu__option--borderColor: $borderColor,
-
-
   // DEFAULT BLOCK3D VALUES, INDIVIDUAL STYLES CAN OVERRIDE THESE
   webBlock--background: rgba(0,0,0,0.5),
   webBlock--boxShadow: inset 0 0 0 2px $borderColor,
@@ -72,8 +61,15 @@ $theme--tech: (
   mobileBlockBottom--boxShadow: $mobileBlockBottom--boxShadow,
 
 
+  // APP HEADER
+  App__header--background: $buttonBackground,
+  App__headerBefore--background: $borderColor,
+  App__headerAfter--background: rgba(150, 0, 100, 1),
+  App__header__menu__option--color: $borderColor,
+  App__header__menu__option--borderColor: $borderColor,
+
+
   App__body--background: url(../themes/tech/stars1.png) top left / 50px rgb(20, 20, 20),
-  //App__body--background: url(../themes/tech/bg-stars.jpg) top left / 201px,
   App__body--mobile--background: url(../themes/tech/stars1.png) top left / 50px rgb(20, 20, 20),
   App__body__scrollable__wrapper__outerFrame--background: url(../themes/tech/stars3.png) top left / 100px,
   App__body__scrollable__wrapper__outerFrame--boxShadow: inset 0 0 0 2px $borderColor,
@@ -84,7 +80,6 @@ $theme--tech: (
   ProjectPreview__leftCol__title--background: url(../themes/tech/bg-diagonal.png) top left / 4px,
   ProjectPreview__leftCol__title--boxShadow: inset 0 0 0 2px $borderColor,
   //ProjectPreview__leftCol__title--boxShadow--mobile: inset 0 0 0 1px orange,
-
   ProjectPreview__leftCol__title__side--background: rgba(0,0,0,0),
   //ProjectPreview__leftCol__title__side--boxShadow:
   //ProjectPreview__leftCol__title__side--boxShadow--mobile: inset -1px 1px 0 0 red,
@@ -93,12 +88,11 @@ $theme--tech: (
   //ProjectPreview__leftCol__title__bottom--boxShadow--mobile: inset 0 0 0 2px red,
   //ProjectPreview__leftCol__snippet--background:
   //ProjectPreview__leftCol__snippet--boxShadow:
-
   ProjectPreview__rightCol--background: rgba(0,0,0,0.5),
   ProjectPreview__rightCol--boxShadow: inset 0 0 0 2px $borderColor,
 
 
-  //PROJECT VIEW
+  // PROJECT VIEW
   ProjectView__title--background: url(../themes/tech/bg-diagonal.png) top left / 4px,
   ProjectView__title--boxShadow: inset 0 0 0 2px $borderColor,
   ProjectView__picCol__pic--background: rgba(0,0,0,0.5),
