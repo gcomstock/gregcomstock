@@ -92,7 +92,7 @@ export const ProjectPreview = React.createClass({
               shadow={true}
               shadowDepth={-15.99}
               isMobile={this.props.isMobile}
-              padding={[0.75]}
+              padding={[1]}
             >
               <div className='button__text button__text--arrowRight'>Learn More</div>
             </Block3d>

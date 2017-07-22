@@ -38,7 +38,7 @@
 .App__header__title {
   display: inline-block;
   margin-left: $headerHeight; //for x button
-  padding: 0 1.25rem;
+  padding: 0 1.25rem 0 1.75rem;
   vertical-align: top;
   white-space: nowrap;
   line-height: $headerHeight;
@@ -66,15 +66,15 @@
   display: inline-block;
   margin-top: 4px;
   margin-right: 4px;
-  background-color: rgba(255,255,255,0.1);
+  background-color: rgba(150,150,150,0.3);
   cursor: pointer;
   vertical-align: top;
-  width: calc(#{$headerHeight} - 10px);
-  height: calc(#{$headerHeight} - 10px);
+  width: calc(#{$headerHeight} - 8px);
+  height: calc(#{$headerHeight} - 8px);
 
   @media screen and (max-width: $breakpoint-mobile) {
-    width: calc(#{$headerHeight--mobile} - 10px);
-    height: calc(#{$headerHeight--mobile} - 10px);
+    width: calc(#{$headerHeight--mobile} - 8px);
+    height: calc(#{$headerHeight--mobile} - 8px);
   }
 }
 

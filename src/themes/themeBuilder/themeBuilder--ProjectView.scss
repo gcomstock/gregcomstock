@@ -67,7 +67,6 @@
 
 
   @media screen and (max-width: $breakpoint-mobile) {
-    margin: 1.75rem 0.75rem 0 0.75rem;
     box-shadow: $boxShadow--mobile;
 
     @include mobileBox(

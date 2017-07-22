@@ -7,15 +7,6 @@ $activeColor--high: #41c4e5;
 $borderColor: #ccc;
 $borderColorBright: rgba(255, 100, 200, 1);
 
-//$webBlockSide--boxShadow: inset 0 2px 0 0 $borderColor;
-//$webBlockBottom--boxShadow: inset -2px 0 0 0 $borderColor, inset 2px 0 0 0 $borderColor;
-//$fact--boxShadow: inset 0 2px 0 0 $borderColor, inset 2px 0 0 0 $borderColor, inset -2px 0 0 0 $borderColor;
-//$factPic--boxShadow: inset 0 -2px 0 0 $borderColor, inset 2px 0 0 0 $borderColor, inset -2px 0 0 0 $borderColor;
-//$mobileBlockSide--boxShadow: inset -1px 0 0 0 $borderColor, inset 0 1px 0 0 $borderColor;
-//$mobileBlockBottom--boxShadow: inset 1px 0 0 0 $borderColor, inset 0 -1px 0 0 $borderColor, inset -1px 0 0 0 $borderColor;
-//$mobileFact--boxShadow: inset 0 1px 0 0 $borderColor, inset 1px 0 0 0 $borderColor, inset -1px 0 0 0 $borderColor;
-//$mobileFactPic--boxShadow: inset 1px 0 0 0 $borderColor, inset 0 -1px 0 0 $borderColor, inset -1px 0 0 0 $borderColor;
-
 
 $theme--default: (
   // TITLE
@@ -37,7 +28,7 @@ $theme--default: (
   button--background: rgb(40,40,40),
   button--boxShadow: inset 0 0 0 2px rgb(240,240,240),
   button--background--mobile: rgb(30,30,30),
-  button--boxShadow--mobile: inset 0 0 0 2px $borderColorBright,
+  button--boxShadow--mobile: inset 0 0 0 2px rgb(240,240,240),
 
   button--hover--background: rgb(30, 30, 30),
   button--hover--color: $activeColor--high,
@@ -49,15 +40,11 @@ $theme--default: (
 
   // DEFAULT BLOCK3D VALUES, INDIVIDUAL STYLES CAN OVERRIDE THESE
   webBlock--background: rgb(245,245,245),
-  //webBlock--boxShadow: inset 0 0 0 2px $borderColor,
   webBlockSide--background: rgb(215,215,215),
-  //webBlockSide--boxShadow: $webBlockSide--boxShadow,
   webBlockBottom--background: rgb(195,195,195),
-  //webBlockBottom--boxShadow: $webBlockBottom--boxShadow,
-  //webBlock--borderColor: $borderColor, // used for extra visual beef
-  //mobileBlock--boxShadow: inset 0 0 0 1px $borderColor,
-  //mobileBlockSide--boxShadow: $mobileBlockSide--boxShadow,
-  //mobileBlockBottom--boxShadow: $mobileBlockBottom--boxShadow,
+  mobileBlock--background: rgb(255,255,255),
+  mobileBlockSide--background: rgb(215,215,215),
+  mobileBlockBottom--background: rgb(195,195,195),
 
 
   // APP HEADER
@@ -79,34 +66,11 @@ $theme--default: (
 
   // PROJECT PREVIEW
   ProjectPreview__leftCol__title--background: rgb(245, 245, 245),
-  //ProjectPreview__leftCol__title--boxShadow: inset 0 0 0 2px $borderColor,
-  //ProjectPreview__leftCol__title--boxShadow--mobile: inset 0 0 0 1px orange,
-  //ProjectPreview__leftCol__title__side--background: rgb(230, 230, 230),
-  //ProjectPreview__leftCol__title__side--boxShadow:
-  //ProjectPreview__leftCol__title__side--boxShadow--mobile: inset -1px 1px 0 0 red,
-  //ProjectPreview__leftCol__title__bottom--background: rgb(210, 210, 210),
-  //ProjectPreview__leftCol__title__bottom--boxShadow:
-  //ProjectPreview__leftCol__title__bottom--boxShadow--mobile: inset 0 0 0 2px red,
   ProjectPreview__leftCol__snippet--background: rgb(235, 235, 235),
-  //ProjectPreview__leftCol__snippet--boxShadow:
   ProjectPreview__rightCol--background: rgb(255, 255, 255),
-  //ProjectPreview__rightCol--boxShadow: inset 0 0 0 2px $borderColor,
 
 
   // PROJECT VIEW
   ProjectView__title--background: rgb(255, 255, 255),
-  //ProjectView__title--boxShadow: inset 0 0 0 2px $borderColor,
-  //ProjectView__picCol__pic--background: rgba(0,0,0,0.5),
-  //ProjectView__picCol__pic--boxShadow: inset 0 0 0 2px $borderColor,
-  //ProjectView__textCol__subhead--background: url(../themes/tech/bg-diagonal.png) top left / 4px,
-  //ProjectView__textCol__subhead--boxShadow: inset 0 0 0 2px $borderColor,
-  ProjectView__textCol__text--background: rgb(245, 245, 245),
-  //ProjectView__textCol__text--boxShadow: inset 0 0 0 2px $borderColor,
-  //ProjectView__fact--background: rgba(0,0,0,0.5),
-  //ProjectView__fact--boxShadow: $fact--boxShadow,
-  //ProjectView__fact--boxShadow--mobile: $mobileFact--boxShadow,
-  //ProjectView__factPic--background: rgba(0,0,0,0.5),
-  //ProjectView__factPic--boxShadow: $factPic--boxShadow,
-  //ProjectView__factPic--topBorder: $borderColor, // web only, hidden for mobile
-  //ProjectView__factPic--boxShadow--mobile: $mobileFactPic--boxShadow,
+  ProjectView__textCol__text--background: rgb(245, 245, 245)
 );

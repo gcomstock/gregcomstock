@@ -59,6 +59,11 @@ $theme--tech: (
   mobileBlock--boxShadow: inset 0 0 0 1px $borderColor,
   mobileBlockSide--boxShadow: $mobileBlockSide--boxShadow,
   mobileBlockBottom--boxShadow: $mobileBlockBottom--boxShadow,
+  mobileBlockSide--background: transparent,
+  mobileBlockBottom--background: transparent,
+
+  //$side--mobile: map-get($properties, 'mobileBlockSide--background');
+  //$bottom--mobile: map-get($properties, 'mobileBlockBottom--background');
 
 
   // APP HEADER
@@ -82,10 +87,10 @@ $theme--tech: (
   ProjectPreview__leftCol__title--background: url(../themes/tech/bg-diagonal.png) top left / 4px,
   ProjectPreview__leftCol__title--boxShadow: inset 0 0 0 2px $borderColor,
   //ProjectPreview__leftCol__title--boxShadow--mobile: inset 0 0 0 1px orange,
-  ProjectPreview__leftCol__title__side--background: rgba(0,0,0,0),
+  //ProjectPreview__leftCol__title__side--background: rgba(0,0,0,0),
   //ProjectPreview__leftCol__title__side--boxShadow:
   //ProjectPreview__leftCol__title__side--boxShadow--mobile: inset -1px 1px 0 0 red,
-  ProjectPreview__leftCol__title__bottom--background: rgba(0,0,0,0),
+  //ProjectPreview__leftCol__title__bottom--background: rgba(0,0,0,0),
   //ProjectPreview__leftCol__title__bottom--boxShadow:
   //ProjectPreview__leftCol__title__bottom--boxShadow--mobile: inset 0 0 0 2px red,
   //ProjectPreview__leftCol__snippet--background:

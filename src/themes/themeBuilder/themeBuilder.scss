@@ -6,11 +6,14 @@
 @mixin themeBuilder($name, $properties) {
 
   // define vars for property values we use often throughout the themebuilder files
-  $side--mobile: map-get($properties, 'ProjectPreview__leftCol__title__side--background');
-  $bottom--mobile: map-get($properties, 'ProjectPreview__leftCol__title__bottom--background');
+  //$side--mobile: map-get($properties, 'ProjectPreview__leftCol__title__side--background');
+  //$bottom--mobile: map-get($properties, 'ProjectPreview__leftCol__title__bottom--background');
+  $side--mobile: map-get($properties, 'mobileBlockSide--background');
+  $bottom--mobile: map-get($properties, 'mobileBlockBottom--background');
   $boxShadow--mobile: map-get($properties, 'mobileBlock--boxShadow');
   $sideShadow--mobile: map-get($properties, 'mobileBlockSide--boxShadow');
   $bottomShadow--mobile: map-get($properties, 'mobileBlockBottom--boxShadow');
+
 
 
   // generate name-spaced classes for theme
@@ -76,7 +79,7 @@
     background:     map-get($properties, 'title--background');
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    line-height:    map-get($properties, 'title--lineHeight');
+    padding: 0.1rem 0; // to protect descenders
     //text-rendering: geometricPrecision;
 
     @media screen and (max-width: $breakpoint-mobile) {
@@ -88,7 +91,6 @@
     font-family:   'title--#{$name}';
     font-size:      0.8rem;
     letter-spacing: 0.05rem;
-    color:          red;
 
     @media screen and (max-width: $breakpoint-mobile) {
       font-size: 1.2rem;

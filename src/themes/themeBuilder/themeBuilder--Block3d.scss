@@ -16,6 +16,14 @@
   background-color: map-get($properties, 'webBlockBottom--background');
   box-shadow: map-get($properties, 'webBlockBottom--boxShadow');
 }
+.Block3d__face--left,
+.Block3d__face--right {
+  background: map-get($properties, 'webBlockSide--background');
+  box-shadow: map-get($properties, 'webBlockSide--boxShadow');
+}
+
+
+
 
 // gives visual depth to border. not needed on mobile
 .Block3d__face--bottom__border {
@@ -25,12 +33,6 @@
     display: none;
   }
 }
-.Block3d__face--left,
-.Block3d__face--right {
-  background: map-get($properties, 'webBlockSide--background');
-  box-shadow: map-get($properties, 'webBlockSide--boxShadow');
-}
-
 // these pseudo elements are applied to help increase visibility of the box shadow borders
 .Block3d__face--left,
 .Block3d__face--right,

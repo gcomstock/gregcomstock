@@ -47,6 +47,11 @@
     max-width: calc(100% - 1.5rem);
     z-index: -1 !important; //to override Block3d inline styles
     transform: translateZ(-6rem); //TODO: figure out why this works
+
+    .Block3d--shadow {
+      top: 2.25rem;
+      left: 2.25rem;
+    }
   }
 
   .Block3d {
