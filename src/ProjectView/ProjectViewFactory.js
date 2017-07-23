@@ -92,7 +92,7 @@ export default function projectViewFactory(WrappedComponent, projectData) {
               {this.renderOuterFrames()}
 
               {/* TODO: pass in props for theme-specific js (maybe?) */}
-              <WrappedComponent />
+              <WrappedComponent isMobile={this.props.isMobile} />
             </div>
           </div>
         </div>

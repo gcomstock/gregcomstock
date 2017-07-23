@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import Block3d from '../Block3d/Block3d';
+import ProjectGroup from '../ProjectGroup/ProjectGroup';
 
 
 export const PandoraLayout = React.createClass({
@@ -10,7 +11,6 @@ export const PandoraLayout = React.createClass({
   render() {
     return (
       <div className='ProjectView'>
-
 
         <div className='wrapper wrapper--centered'>
           <Block3d
@@ -26,14 +26,14 @@ export const PandoraLayout = React.createClass({
             noRight={true}
             isMobile={this.props.isMobile}
           >
-            <h1>Pandora.com</h1>
+            <h1>{PROJECT_CONSTS.TITLE}</h1>
           </Block3d>
         </div>
 
 
         <div className='ProjectView__picCol'>
           <Block3d
-            cssClass='ProjectView__picCol__pic ProjectView__picCol__pic--intro'
+            cssClass='ProjectView__picCol__pic'
             width='100%'
             height='auto'
             depth='16'
@@ -47,7 +47,7 @@ export const PandoraLayout = React.createClass({
 
 
           <Block3d
-            cssClass='ProjectView__picCol__pic ProjectView__picCol__pic--intro'
+            cssClass='ProjectView__picCol__pic'
             width='100%'
             height='auto'
             depth='16'
@@ -145,42 +145,26 @@ export const PandoraLayout = React.createClass({
             shadowDepth={-16}
             isMobile={this.props.isMobile}
           >
-            <p className='z4'>Front-end Engineer<br/>Product Designer (display advertising)</p>
+            <p className='z4'>
+              <b>Front-end Engineer</b> - UI, display ads, animation<br/>
+              <b>Product Designer</b> - display ads<br/>
+              <b>UX Prototyping</b>
+            </p>
           </Block3d>
         </div>
 
 
 
-
-        <Block3d
-          cssClass='ProjectView__fact'
-          height='auto'
-          width='100%'
-          depth='2'
-          z='0'
-          noLeft={true}
-          noBottom={true}
-          shadow={true}
-          shadowDepth={-15.99}
-          padding={[1.5,1.5,0,1.5]}
+        <ProjectGroup
+          subhead={PROJECT_CONSTS.INTERACTION_DESIGN__SUBHEAD}
+          desc={PROJECT_CONSTS.INTERACTION_DESIGN__DESC}
+          isVideo={true}
+          videoPath={PROJECT_CONSTS.INTERACTION_DESIGN__VIDEOPATH}
+          webVideoRatio={PROJECT_CONSTS.INTERACTION_DESIGN__WEBVIDEORATIO}
+          mobileVideoRatio={PROJECT_CONSTS.INTERACTION_DESIGN__MOBILEVIDEORATIO}
           isMobile={this.props.isMobile}
-        >
-          <h2>Interaction Showcase</h2>
-          <p>A selection of interaction designs that I implemented by collaborating closely with Pandora's product design team.</p>
-        </Block3d>
+        />
 
-        <Block3d
-          cssClass='ProjectView__factPic'
-          width='100%'
-          height='auto'
-          depth='16'
-          z='0'
-          noLeft={true}
-          noRight={true}
-          isMobile={this.props.isMobile}
-        >
-          <img width='100%' src='work/pandora/pandora-2.jpg' alt='portfolio'/>
-        </Block3d>
 
 
       </div>
@@ -188,8 +172,19 @@ export const PandoraLayout = React.createClass({
   }
 });
 
+const PROJECT_CONSTS = Object.freeze({
+  TITLE: 'Pandora.com',
+  INTERACTION_DESIGN__SUBHEAD: 'Interaction Design',
+  INTERACTION_DESIGN__DESC: 'Elegant animations and meaningful interaction design is a challenge that requires both an eye for design and an understanding of technical implementation. In a React application, where direct DOM manipulation is avoided, this can be especially difficult. The journey was exciting, though, and by iterating closely with our other product designers, I believe we arrived at some effective solutions. Take a look!',
+  INTERACTION_DESIGN__VIDEOPATH: 'https://player.vimeo.com/video/226627838',
+  INTERACTION_DESIGN__WEBVIDEORATIO: 39.2,
+  INTERACTION_DESIGN__MOBILEVIDEORATIO: 60
+});
+
+
 
 export const PandoraConsts = Object.freeze({
+
   ROUTE: '/project/pandora',
   TITLE: 'Pandora.com',
   EXTERNAL_URL: 'https://pandora.com',

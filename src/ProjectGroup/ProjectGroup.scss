@@ -1,0 +1,63 @@
+.ProjectGroup {
+  position: relative;
+  margin-top: 3rem;
+}
+
+
+.ProjectGroup__text {
+  display: inline-block;
+  width: 18rem;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    width: 100%;
+  }
+}
+
+.ProjectGroup__text__subhead {
+  margin-right: 1.5rem;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    margin-right: 0.75rem;
+  }
+}
+
+.ProjectGroup__text__desc {
+  @media screen and (max-width: $breakpoint-mobile) {
+    width: calc(100% - 0.75rem);
+    margin: 1.5rem 0 1.5rem 0.75rem;
+  }
+}
+
+
+.ProjectGroup__video {
+  position: relative;
+  vertical-align: top;
+  display: inline-block;
+  width: 36rem;
+
+  & iframe {
+    border: none;
+    position: absolute;
+    width: calc(100% - 3rem);
+    height: calc(100% - 3rem);
+    top: 1.5rem;
+    left: 1.5rem;
+    z-index: 9999;
+  }
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+
+.ProjectGroup__video__block {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+
+  .Block3d__content {
+    height: 100%;
+  }
+}

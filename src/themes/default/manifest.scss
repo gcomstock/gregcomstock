@@ -39,9 +39,9 @@ $theme--default: (
 
 
   // DEFAULT BLOCK3D VALUES, INDIVIDUAL STYLES CAN OVERRIDE THESE
-  webBlock--background: rgb(245,245,245),
-  webBlockSide--background: rgb(215,215,215),
-  webBlockBottom--background: rgb(195,195,195),
+  webBlock--background: rgb(250,250,250),
+  webBlockSide--background: rgb(230,230,230),
+  webBlockBottom--background: rgb(210,210,210),
   mobileBlock--background: rgb(255,255,255),
   mobileBlockSide--background: rgb(215,215,215),
   mobileBlockBottom--background: rgb(195,195,195),
@@ -68,6 +68,8 @@ $theme--default: (
   ProjectPreview__leftCol__title--background: rgb(245, 245, 245),
   ProjectPreview__leftCol__snippet--background: rgb(235, 235, 235),
   ProjectPreview__rightCol--background: rgb(255, 255, 255),
+  //ProjectGroup__video__block--background: #fff,
+  //ProjectGroup__video__block--boxShadow:
 
 
   // PROJECT VIEW

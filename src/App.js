@@ -18,7 +18,7 @@ const App = React.createClass({
     return {
       isMobile: window.innerWidth <= BREAKPOINT_MOBILE,
       scrollY: 0,
-      theme: 'tech',
+      theme: 'default',
       rootFontSize: 0
     }
   },
@@ -27,7 +27,6 @@ const App = React.createClass({
     if (e.target.innerWidth <= BREAKPOINT_MOBILE && this.state.isMobile === false) {
       this.setState({isMobile: true});
     }
-
     if (e.target.innerWidth > BREAKPOINT_MOBILE && this.state.isMobile === true) {
       this.setState({isMobile: false});
     }
@@ -50,12 +49,9 @@ const App = React.createClass({
   },
 
   render() {
-    console.log(location.hash);
-
     return (
       <div className={`App theme--${this.state.theme}`}>
         <div className='App__header'>
-
           {this.renderXButton()}
 
           <div className='App__header__title'>
@@ -78,7 +74,6 @@ const App = React.createClass({
             <div className='App__header__theme' onClick={() => this.setTheme('default')}></div>
             <div className='App__header__theme' onClick={() => this.setTheme('tech')}></div>
           </div>
-
         </div>
 
         <ReactTransitionGroup>
