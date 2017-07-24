@@ -82,7 +82,6 @@ export const Layout = React.createClass({
         <div className='ProjectView__row'>
           <Block3d
             cssClass='ProjectView__row__mobilePic'
-            width='16rem'
             depth='3'
             z='0'
             shadow={true}
@@ -95,7 +94,6 @@ export const Layout = React.createClass({
 
           <Block3d
             cssClass='ProjectView__row__mobilePic'
-            width='16rem'
             depth='3'
             z='0'
             shadow={true}
@@ -109,7 +107,6 @@ export const Layout = React.createClass({
 
           <Block3d
             cssClass='ProjectView__row__mobilePic'
-            width='16rem'
             depth='3'
             z='0'
             shadow={true}
@@ -122,26 +119,12 @@ export const Layout = React.createClass({
         </div>
 
 
-        <Block3d
-          cssClass='ProjectView__picCol__pic'
-          width='100%'
-          height='auto'
-          depth='16'
-          z='0'
-          noLeft={true}
-          noRight={true}
-          isMobile={this.props.isMobile}
-        >
-          <img width='100%' src='work/christynatsumi/christynatsumi-3.jpg' alt='portfolio'/>
-        </Block3d>
-
-
         <ProjectGroup
-          subhead={Content.INTERACTION_DESIGN__SUBHEAD}
-          desc={Content.INTERACTION_DESIGN__DESC}
+          subhead={Content.CUSTOM_EDUCATION__SUBHEAD}
+          desc={Content.CUSTOM_EDUCATION__DESC}
           isVideo={false}
-          webImagePath={Content.INTERACTION_DESIGN__WEBIMAGEPATH}
-          mobileImagePath={Content.INTERACTION_DESIGN__MOBILEIMAGEPATH}
+          webImagePath={Content.CUSTOM_EDUCATION__WEBIMAGEPATH}
+          mobileImagePath={Content.CUSTOM_EDUCATION__MOBILEIMAGEPATH}
           isMobile={this.props.isMobile}
         />
 
@@ -168,8 +151,8 @@ export const Content = Object.freeze({
   NUGGET3__SUBHEAD: 'Technologies',
   NUGGET3__TEXT: 'Javascript, CSS/LESS, HTML templating<br/>Photoshop<br/>Illustrator<br/>Sony A7 Mirrorless DSLR',
 
-  INTERACTION_DESIGN__SUBHEAD: 'Interaction Design',
-  INTERACTION_DESIGN__DESC: 'Elegant animations and meaningful interaction design is a challenge that requires both an eye for design and an understanding of technical implementation. In a React application, where direct DOM manipulation is avoided, this can be especially difficult. The journey was exciting, though, and by iterating closely with our other product designers, I believe we arrived at some effective solutions. Take a look!',
-  INTERACTION_DESIGN__WEBIMAGEPATH: 'work/christynatsumi/christynatsumi-3.jpg',
-  INTERACTION_DESIGN__MOBILEIMAGEPATH: 'work/christynatsumi/christynatsumi-3.jpg'
+  CUSTOM_EDUCATION__SUBHEAD: 'Custom Work Education',
+  CUSTOM_EDUCATION__DESC: 'A large part of Christy Natsumi\'s business is custom jewelry. While many customers scour the internet for an unbiased education on jewelry practices and prices, we saw an opportunity to educate potential customers on what the process would like when working with Christy, and to provide clarity into everything that goes into making a piece unique and meaningful. The education plays out chronologically; a jewelry journey peppered with in-progress photography.',
+  CUSTOM_EDUCATION__WEBIMAGEPATH: 'work/christynatsumi/christynatsumi-3.jpg',
+  CUSTOM_EDUCATION__MOBILEIMAGEPATH: 'work/christynatsumi/christynatsumi-3.jpg'
 });

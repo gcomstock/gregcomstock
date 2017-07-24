@@ -36,3 +36,21 @@
     );
   }
 }
+
+
+.ProjectView__row__mobilePic .Block3d__content {
+  //background: map-get($properties, 'ProjectView__picCol__pic--background');
+  //box-shadow: map-get($properties, 'ProjectView__picCol__pic--boxShadow');
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    box-shadow: $boxShadow--mobile;
+
+    @include mobileBox(
+      2.25rem,
+      $side--mobile,
+      $bottom--mobile,
+      $sideShadow--mobile,
+      $bottomShadow--mobile
+    );
+  }
+}
