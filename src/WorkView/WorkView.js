@@ -7,10 +7,10 @@ import { SiteIntro } from '../SiteIntro/SiteIntro';
 import { ProjectPreview } from '../ProjectPreview/ProjectPreview';
 
 
-import { PandoraConsts } from '../Projects/Project-pandora';
+import { Content as PandoraContent } from '../Projects/Project-pandora';
 import { PandoraAdsConsts } from '../Projects/Project-pandora-ads';
 import { PandoraWin10Consts } from '../Projects/Project-pandoraWin10';
-import { ChristyNatsumiConsts } from '../Projects/Project-christynatsumi';
+import { Content as ChristyNatsumiContent } from '../Projects/Project-christynatsumi';
 import { RiddickartConsts } from '../Projects/Project-riddickart';
 import { ScreensimConsts } from '../Projects/Project-screensim';
 
@@ -100,10 +100,18 @@ const WorkView = React.createClass({
     return (
       <div className='wrapper'>
         <ProjectPreview
-          route={PandoraConsts.ROUTE}
-          title={PandoraConsts.PREVIEW_TITLE}
-          snippet={PandoraConsts.PREVIEW_SNIPPET}
-          thumbnailPath={PandoraConsts.PREVIEW_THUMBNAILPATH}
+          route={PandoraContent.ROUTE}
+          title={PandoraContent.PREVIEW_TITLE}
+          snippet={PandoraContent.PREVIEW_SNIPPET}
+          thumbnailPath={PandoraContent.PREVIEW_THUMBNAILPATH}
+          isMobile={this.props.isMobile}
+        />
+
+        <ProjectPreview
+          route={ChristyNatsumiContent.ROUTE}
+          title={ChristyNatsumiContent.PREVIEW_TITLE}
+          snippet={ChristyNatsumiContent.PREVIEW_SNIPPET}
+          thumbnailPath={ChristyNatsumiContent.PREVIEW_THUMBNAILPATH}
           isMobile={this.props.isMobile}
         />
 
@@ -112,14 +120,6 @@ const WorkView = React.createClass({
           title={PandoraAdsConsts.TITLE}
           snippet={PandoraAdsConsts.SNIPPET}
           thumbnailPath={PandoraAdsConsts.THUMBNAIL_PATH}
-          isMobile={this.props.isMobile}
-        />
-
-        <ProjectPreview
-          route={ChristyNatsumiConsts.ROUTE}
-          title={ChristyNatsumiConsts.TITLE}
-          snippet={ChristyNatsumiConsts.SNIPPET}
-          thumbnailPath={ChristyNatsumiConsts.THUMBNAIL_PATH}
           isMobile={this.props.isMobile}
         />
 

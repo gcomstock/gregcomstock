@@ -4,11 +4,11 @@
 
   @media screen and (max-width: $breakpoint-mobile) {
     @include mobileBox(
-        1.5rem,
-        $side--mobile,
-        $bottom--mobile,
-        $sideShadow--mobile,
-        $bottomShadow--mobile
+      1.5rem,
+      $side--mobile,
+      $bottom--mobile,
+      $sideShadow--mobile,
+      $bottomShadow--mobile
     );
   }
 }
@@ -25,11 +25,11 @@
     box-shadow: $boxShadow--mobile;
 
     @include mobileBox(
-        1.5rem,
-        $side--mobile,
-        $bottom--mobile,
-        $sideShadow--mobile,
-        $bottomShadow--mobile
+      1.5rem,
+      $side--mobile,
+      $bottom--mobile,
+      $sideShadow--mobile,
+      $bottomShadow--mobile
     );
   }
 }

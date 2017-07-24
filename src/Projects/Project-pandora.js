@@ -4,7 +4,7 @@ import ProjectNugget from '../ProjectNugget/ProjectNugget';
 import ProjectGroup from '../ProjectGroup/ProjectGroup';
 
 
-export const PandoraLayout = React.createClass({
+export const Layout = React.createClass({
   propTypes: {
     isMobile: PropTypes.bool.isRequired
   },
@@ -27,7 +27,7 @@ export const PandoraLayout = React.createClass({
             noRight={true}
             isMobile={this.props.isMobile}
           >
-            <h1>{PandoraConsts.TITLE}</h1>
+            <h1>{Content.TITLE}</h1>
           </Block3d>
         </div>
 
@@ -63,29 +63,29 @@ export const PandoraLayout = React.createClass({
 
         <div className='ProjectView__textCol'>
           <ProjectNugget
-            subhead={PandoraConsts.NUGGET1__SUBHEAD}
-            text={PandoraConsts.NUGGET1__TEXT}
+            subhead={Content.NUGGET1__SUBHEAD}
+            text={Content.NUGGET1__TEXT}
           />
 
           <ProjectNugget
-            subhead={PandoraConsts.NUGGET2__SUBHEAD}
-            text={PandoraConsts.NUGGET2__TEXT}
+            subhead={Content.NUGGET2__SUBHEAD}
+            text={Content.NUGGET2__TEXT}
           />
 
           <ProjectNugget
-            subhead={PandoraConsts.NUGGET3__SUBHEAD}
-            text={PandoraConsts.NUGGET3__TEXT}
+            subhead={Content.NUGGET3__SUBHEAD}
+            text={Content.NUGGET3__TEXT}
           />
         </div>
 
 
         <ProjectGroup
-          subhead={PandoraConsts.INTERACTION_DESIGN__SUBHEAD}
-          desc={PandoraConsts.INTERACTION_DESIGN__DESC}
+          subhead={Content.INTERACTION_DESIGN__SUBHEAD}
+          desc={Content.INTERACTION_DESIGN__DESC}
           isVideo={true}
-          videoPath={PandoraConsts.INTERACTION_DESIGN__VIDEOPATH}
-          webVideoRatio={PandoraConsts.INTERACTION_DESIGN__WEBVIDEORATIO}
-          mobileVideoRatio={PandoraConsts.INTERACTION_DESIGN__MOBILEVIDEORATIO}
+          videoPath={Content.INTERACTION_DESIGN__VIDEOPATH}
+          webVideoRatio={Content.INTERACTION_DESIGN__WEBVIDEORATIO}
+          mobileVideoRatio={Content.INTERACTION_DESIGN__MOBILEVIDEORATIO}
           isMobile={this.props.isMobile}
         />
 
@@ -94,7 +94,8 @@ export const PandoraLayout = React.createClass({
   }
 });
 
-export const PandoraConsts = Object.freeze({
+
+export const Content = Object.freeze({
   ROUTE: '/project/pandora',
   EXTERNAL_URL: 'https://pandora.com',
 
@@ -119,24 +120,3 @@ export const PandoraConsts = Object.freeze({
 
   AD_ARCH__SUBHEAD: 'Display Ad Architecture'
 });
-
-
-
-
-/*
-
-export const PandoraConsts = Object.freeze({
-  RESPONSIBILITIES: [
-    'Collaborate closely with design and product on core UI decisions',
-    'Development of react components for main application views',
-    'Display ad integration',
-    'UI animations'
-  ],
-  TECHNOLOGIES: [
-    'React, Redux, ES6',
-    'Webpack, npm, CSS/SASS',
-    'Photoshop, Illustrator'
-  ],
-  TECH: 'React, Redux, ES6, Webpack, npm, CSS/SASS, Photoshop, Illustrator'
-});
-*/
