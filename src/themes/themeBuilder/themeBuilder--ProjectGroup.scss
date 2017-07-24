@@ -1,4 +1,6 @@
 .ProjectGroup__leftCol__subhead .Block3d__content {
+  background: map-get($properties, 'ProjectGroup__leftCol__subhead--background');
+  box-shadow: map-get($properties, 'ProjectGroup__leftCol__subhead--boxShadow');
 
   h2 {
     @extend .title--ProjectView__subhead--#{$name};
