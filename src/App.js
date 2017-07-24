@@ -58,6 +58,7 @@ const App = React.createClass({
             Greg Comstock
           </div>
 
+          {/*
           <div className='App__header__menu'>
             <div className='App__header__menu__option'>
               <p className='header'>About</p>
@@ -69,10 +70,11 @@ const App = React.createClass({
               <p className='header'>Pandora.com</p>
             </div>
           </div>
+          */}
 
           <div className='App__header__themes'>
             <div className='App__header__theme' onClick={() => this.setTheme('default')}></div>
-            <div className='App__header__theme' onClick={() => this.setTheme('tech')}></div>
+            <div className='App__header__theme App__header__theme--tech' onClick={() => this.setTheme('tech')}></div>
           </div>
         </div>
 

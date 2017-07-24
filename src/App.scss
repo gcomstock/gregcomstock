@@ -67,6 +67,7 @@
   margin-top: 4px;
   margin-right: 4px;
   background-color: rgba(150,150,150,0.3);
+
   cursor: pointer;
   vertical-align: top;
   width: calc(#{$headerHeight} - 8px);
@@ -76,6 +77,10 @@
     width: calc(#{$headerHeight--mobile} - 8px);
     height: calc(#{$headerHeight--mobile} - 8px);
   }
+}
+
+.App__header__theme--tech {
+  //background: url(../themes/tech/stars3.png) top left / 20px, #000;
 }
 
 .App__header__menu {

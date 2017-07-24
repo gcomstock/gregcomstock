@@ -23,6 +23,9 @@
 }
 
 
+.Block3d__content img {
+  outline: map-get($properties, 'Block3d__content--outline');
+}
 
 
 // gives visual depth to border. not needed on mobile

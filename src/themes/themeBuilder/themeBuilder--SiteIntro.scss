@@ -1,3 +1,9 @@
+.SiteIntro__word {
+  h1 {
+    @extend .title--subhead--#{$name};
+  }
+}
+
 .SiteIntro__viewWork .Block3d__content {
   @media screen and (max-width: $breakpoint-mobile) {
     @include mobileBox(

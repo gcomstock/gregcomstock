@@ -47,37 +47,28 @@ export const SiteIntro = React.createClass({
   },
 
   render() {
-    if (this.props.scrollY > 600) {
-      return null;
+    if (this.props.scrollY > 1200) {
+      return null; //memory cleanup
     }
     return (
       <div className='SiteIntro'>
 
-        {/* <div className='SiteIntro__background'></div>
 
-        <div className='SiteIntro__device SiteIntro__device--monitor' style={{top: this.getDeviceOffset(2, 0.3)}}>
-          <div className='SiteIntro__device__screen'>
-          </div>
+        <div className='wrapper wrapper--centered'>
+          <Block3d
+            cssClass='SiteIntro__word'
+            depth='6'
+            z='0'
+            padding={[1.5,2.75,1.5,3]}
+            noRight={true}
+            noLeft={true}
+            shadow={true}
+            shadowDepth={-24}
+            isMobile={this.props.isMobile}
+          >
+            <h1>Design, UX, Web Dev, Fun!</h1>
+          </Block3d>
         </div>
-        <div className='SiteIntro__device SiteIntro__device--watch' style={{top: this.getDeviceOffset(16.5, -0.4)}}>
-          <div className='SiteIntro__device__screen'>
-          </div>
-        </div>
-        <div className='SiteIntro__device SiteIntro__device--ipad' style={{top: this.getDeviceOffset(7.5, 0.075)}}>
-          <div className='SiteIntro__device__screen'>
-          </div>
-        </div>
-        <div className='SiteIntro__device SiteIntro__device--iphone'
-             style={{top: this.getDeviceOffset(13.5, -0.25)}}>
-          <div className='SiteIntro__device__screen'>
-          </div>
-        </div>
-        <div className='SiteIntro__device SiteIntro__device--macbook' style={{top: this.getDeviceOffset(9.5, 0.1)}}>
-          <div className='SiteIntro__device__screen'>
-          </div>
-        </div>
-         */}
-
 
         <Block3d
           cssClass='SiteIntro__viewWork button'

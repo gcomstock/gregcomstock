@@ -62,6 +62,7 @@ $theme--tech: (
   mobileBlockBottom--boxShadow: $mobileBlockBottom--boxShadow,
   mobileBlockSide--background: transparent,
   mobileBlockBottom--background: transparent,
+  Block3d__content--outline: 1px solid $borderColor,
 
   //$side--mobile: map-get($properties, 'mobileBlockSide--background');
   //$bottom--mobile: map-get($properties, 'mobileBlockBottom--background');

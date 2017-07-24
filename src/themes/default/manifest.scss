@@ -7,6 +7,16 @@ $activeColor--high: #41c4e5;
 $borderColor: #ccc;
 $borderColorBright: rgba(255, 100, 200, 1);
 
+$bg-intro-end: #b7f2ff;
+$bg-intro-start: #a8e3ff;
+
+
+$bg-monitor: url(../themes/default/siteIntro__bg.png) top left fixed / 900px, url(../themes/default/siteIntro--onScreen.png), linear-gradient($bg-intro-start, $bg-intro-end);
+$bg-macbook: url(../themes/default/siteIntro__bg.png) top left fixed / 900px, url(../themes/default/siteIntro--onScreen.png), linear-gradient($bg-intro-start, $bg-intro-end);
+$bg-iphone: url(../themes/default/siteIntro__bg.png) top left fixed / 900px, url(../themes/default/siteIntro--onScreen.png), linear-gradient($bg-intro-start, $bg-intro-end);
+$bg-ipad: url(../themes/default/siteIntro__bg.png) top left fixed / 900px, url(../themes/default/siteIntro--onScreen.png), linear-gradient($bg-intro-start, $bg-intro-end);
+$bg-watch: url(../themes/default/siteIntro__bg.png) top left fixed / 900px, url(../themes/default/siteIntro--onScreen.png), linear-gradient($bg-intro-start, $bg-intro-end);
+
 
 $theme--default: (
   // TITLE
@@ -45,7 +55,7 @@ $theme--default: (
   mobileBlock--background: rgb(255,255,255),
   mobileBlockSide--background: rgb(215,215,215),
   mobileBlockBottom--background: rgb(195,195,195),
-
+  Block3d__content--outline: 1px solid $borderColor,
 
   // APP HEADER
   App__header--background: #fff,
@@ -57,12 +67,18 @@ $theme--default: (
   App__header__menu__option--borderColor: #93d6e6, //$borderColor,
 
 
-  App__body--background: url(../themes/default/siteIntro__bg.png) top left / 900px rgb(170, 170, 170),
-  App__body--mobile--background: url(../themes/default/siteIntro__bg.png) top left / 600px rgb(170, 170, 170),
-  App__body__scrollable__wrapper__outerFrame--background: url(../themes/default/bg-8x8--back.png) top left / 4px rgb(245, 245, 245),
+  App__body--background: url(../themes/default/siteIntro__bg.png) top left / 900px rgb(210, 210, 210),
+  App__body--mobile--background: url(../themes/default/siteIntro__bg.png) top left / 600px rgb(210, 210, 210),
+  App__body__scrollable__wrapper__outerFrame--background: url(../themes/default/bg-8x8--back.png) top left / 4px rgb(250, 250, 250),
   //App__body__scrollable__wrapper__outerFrame--boxShadow: inset 0 0 0 2px $borderColor,
-  App__body__scrollable__wrapper__floor--background: url(../themes/default/bg-10x10.png) top left / 5px rgb(205,205,205),
+  App__body__scrollable__wrapper__floor--background: url(../themes/default/bg-10x10.png) top left / 5px rgba(215,215,215,1),
 
+  // SITE INTRO
+  SiteIntro__device--monitor--background: $bg-monitor,
+  SiteIntro__device--macbook--background: $bg-macbook,
+  SiteIntro__device--iphone--background: $bg-iphone,
+  SiteIntro__device--ipad--background: $bg-ipad,
+  SiteIntro__device--watch--background: $bg-watch,
 
   // PROJECT PREVIEW
   ProjectPreview__leftCol__title--background: rgb(245, 245, 245),
