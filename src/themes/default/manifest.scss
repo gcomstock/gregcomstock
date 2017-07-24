@@ -50,7 +50,7 @@ $theme--default: (
 
   // DEFAULT BLOCK3D VALUES, INDIVIDUAL STYLES CAN OVERRIDE THESE
   webBlock--background: rgb(250,250,250),
-  webBlockSide--background: rgb(230,230,230),
+  webBlockSide--background: rgb(225,225,225),
   webBlockBottom--background: rgb(210,210,210),
   mobileBlock--background: rgb(255,255,255),
   mobileBlockSide--background: rgb(215,215,215),
@@ -67,8 +67,8 @@ $theme--default: (
   App__header__menu__option--borderColor: #93d6e6, //$borderColor,
 
 
-  App__body--background: url(../themes/default/siteIntro__bg.png) top left / 900px rgb(210, 210, 210),
-  App__body--mobile--background: url(../themes/default/siteIntro__bg.png) top left / 600px rgb(210, 210, 210),
+  App__body--background: url(../themes/default/siteIntro__bg.png) top left / 900px rgb(190, 190, 190),
+  App__body--mobile--background: url(../themes/default/siteIntro__bg.png) top left / 600px rgb(190, 190, 190),
   App__body__scrollable__wrapper__outerFrame--background: url(../themes/default/bg-8x8--back.png) top left / 4px rgb(250, 250, 250),
   //App__body__scrollable__wrapper__outerFrame--boxShadow: inset 0 0 0 2px $borderColor,
   App__body__scrollable__wrapper__floor--background: url(../themes/default/bg-10x10.png) top left / 5px rgba(215,215,215,1),
