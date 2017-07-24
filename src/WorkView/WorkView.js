@@ -101,9 +101,9 @@ const WorkView = React.createClass({
       <div className='wrapper'>
         <ProjectPreview
           route={PandoraConsts.ROUTE}
-          title={PandoraConsts.TITLE}
-          snippet={PandoraConsts.SNIPPET}
-          thumbnailPath={PandoraConsts.THUMBNAIL_PATH}
+          title={PandoraConsts.PREVIEW_TITLE}
+          snippet={PandoraConsts.PREVIEW_SNIPPET}
+          thumbnailPath={PandoraConsts.PREVIEW_THUMBNAILPATH}
           isMobile={this.props.isMobile}
         />
 

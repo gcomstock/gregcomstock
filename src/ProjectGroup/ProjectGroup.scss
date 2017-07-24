@@ -4,7 +4,7 @@
 }
 
 
-.ProjectGroup__text {
+.ProjectGroup__leftCol {
   display: inline-block;
   width: 18rem;
 
@@ -13,7 +13,7 @@
   }
 }
 
-.ProjectGroup__text__subhead {
+.ProjectGroup__leftCol__subhead {
   margin-right: 1.5rem;
 
   @media screen and (max-width: $breakpoint-mobile) {
@@ -21,7 +21,7 @@
   }
 }
 
-.ProjectGroup__text__desc {
+.ProjectGroup__leftCol__text {
   @media screen and (max-width: $breakpoint-mobile) {
     width: calc(100% - 0.75rem);
     margin: 1.5rem 0 1.5rem 0.75rem;

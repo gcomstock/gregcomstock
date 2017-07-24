@@ -42,9 +42,9 @@ const ProjectGroup = React.createClass({
       <div className='ProjectGroup'>
 
 
-        <div className='ProjectGroup__text'>
+        <div className='ProjectGroup__leftCol'>
           <Block3d
-            cssClass='ProjectGroup__text__subhead'
+            cssClass='ProjectGroup__leftCol__subhead'
             depth='4'
             z='0'
             noLeft={true}
@@ -56,7 +56,7 @@ const ProjectGroup = React.createClass({
           </Block3d>
 
           <Block3d
-            cssClass='ProjectGroup__text__desc'
+            cssClass='ProjectGroup__leftCol__text'
             depth='4'
             z='-2'
             noLeft={true}

@@ -1,4 +1,7 @@
-.ProjectGroup__leftCol__subhead .Block3d__content {
+
+.ProjectNugget__subhead .Block3d__content {
+  background: map-get($properties, 'ProjectNugget__subhead--background');
+  box-shadow: map-get($properties, 'ProjectNugget__subhead--boxShadow');
 
   h2 {
     @extend .title--ProjectView__subhead--#{$name};
@@ -6,6 +9,7 @@
 
   @media screen and (max-width: $breakpoint-mobile) {
     box-shadow: $boxShadow--mobile;
+    display: inline-block;
 
     @include mobileBox(
       0.75rem,
@@ -17,31 +21,16 @@
   }
 }
 
-.ProjectGroup__leftCol__text {
+
+.ProjectNugget__text .Block3d__content {
+  background: map-get($properties, 'ProjectNugget__text--background');
+  box-shadow: map-get($properties, 'ProjectNugget__text--boxShadow');
+
   @media screen and (max-width: $breakpoint-mobile) {
     box-shadow: $boxShadow--mobile;
 
     @include mobileBox(
       0.75rem,
-      $side--mobile,
-      $bottom--mobile,
-      $sideShadow--mobile,
-      $bottomShadow--mobile
-    );
-  }
-}
-
-
-
-.ProjectGroup__video__block {
-  .Block3d__content {
-    background: map-get($properties, 'ProjectGroup__video__block--background');
-    box-shadow: map-get($properties, 'ProjectGroup__video__block--boxShadow');
-  }
-
-  @media screen and (max-width: $breakpoint-mobile) {
-    @include mobileBox(
-      2.25rem,
       $side--mobile,
       $bottom--mobile,
       $sideShadow--mobile,

@@ -1,0 +1,17 @@
+.ProjectNugget__subhead {
+  width: 100%;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    width: auto;
+  }
+}
+
+.ProjectNugget__text {
+  width: 100%;
+  margin-bottom: 3rem;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    width: calc(100% - 0.75rem);
+    margin: 1.5rem 0 3rem 0.75rem;
+  }
+}

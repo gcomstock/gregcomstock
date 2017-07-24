@@ -139,6 +139,10 @@
   height: calc(100vh - #{$headerHeight});
   margin-top: $headerHeight;
   overflow: hidden;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    margin-top: $headerHeight--mobile;
+  }
 }
 
 

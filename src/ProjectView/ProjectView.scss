@@ -52,55 +52,8 @@
 }
 
 
-.ProjectView__textCol__subhead {
-  //font-size: 3rem;
-  width: 100%;
-
-  @media screen and (max-width: $breakpoint-mobile) {
-    width: auto;
-  }
-}
-.ProjectView__textCol__text {
-  margin-bottom: 3rem;
-  width: 100%;
-
-  @media screen and (max-width: $breakpoint-mobile) {
-    width: calc(100% - 0.75rem);
-    margin: 1.5rem 0 3rem 0.75rem;
-  }
-}
 
 
 .ProjectView__picCol__pic {
   margin-bottom: 4.5rem;
-}
-
-
-.ProjectView__fact {
-  width: 19rem;
-
-  h2 {
-    margin-bottom: 1rem;
-  }
-
-  @media screen and (max-width: $breakpoint-mobile) {
-    width: 100%;
-  }
-}
-
-.ProjectView__factPic .Block3d__content {
-
-  // this creates a border at the top of the box that does not span the full width (to connect with fact tab)
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 2px;
-    width: calc(100% - 19rem + 2px); // fact + border width
-
-    @media screen and (max-width: $breakpoint-mobile) {
-      display: none;
-    }
-  }
 }

@@ -8,24 +8,21 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
 body {
   font-family: sans-serif;
-  overflow: hidden;
-  height: 100%;
+  //overflow: hidden;
+  //height: 100%;
 
   @media screen and (max-width: $breakpoint-mobile){
-    overflow: visible;
+    //overflow: visible;
   }
 }
 
 #root {
   height: 100%;
 }
-
-//header {
-//  width: 200%;
-//  margin-left: -50%;
-//  position: relative;
-//  height: 120px;
-//  background-color: #f8f8f8;
-//}

@@ -101,7 +101,6 @@
 
 
   // generate styles for theme
-
   .theme--#{$name} {
     @import 'themeBuilder--button';
     @import 'themeBuilder--App';
@@ -110,5 +109,6 @@
     @import 'themeBuilder--ProjectPreview';
     @import 'themeBuilder--ProjectView';
     @import 'themeBuilder--ProjectGroup';
+    @import 'themeBuilder--ProjectNugget';
   }
 }
