@@ -52,7 +52,14 @@
 }
 
 
+.ProjectView__row__mobilePic {
+  margin-right: 3rem;
+  margin-bottom: 4.5rem;
 
+  &:nth-child(3) {
+    margin-right: 0;
+  }
+}
 
 .ProjectView__picCol__pic {
   margin-bottom: 4.5rem;

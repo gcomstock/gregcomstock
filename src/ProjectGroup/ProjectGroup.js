@@ -10,13 +10,16 @@ const ProjectGroup = React.createClass({
     videoPath: PropTypes.string,
     webVideoRatio: PropTypes.number,
     mobileVideoRatio: PropTypes.number,
+    webImagePath: PropTypes.string,
+    mobileImagePath: PropTypes.string,
     isMobile: PropTypes.bool.isRequired
   },
 
   renderContentType() {
-    const paddingBottom = this.props.isMobile ? this.props.mobileVideoRatio : this.props.webVideoRatio;
 
     if (this.props.isVideo) {
+      const paddingBottom = this.props.isMobile ? this.props.mobileVideoRatio : this.props.webVideoRatio;
+
       return (
         <div className='ProjectGroup__video' style={{paddingBottom: paddingBottom + '%'}}>
           <iframe src={this.props.videoPath} allowFullScreen></iframe>
@@ -35,6 +38,24 @@ const ProjectGroup = React.createClass({
         </div>
       )
     }
+
+    if (!this.props.isVideo) {
+      const imgPath = this.props.isMobile ? this.props.mobileImagePath : this.props.webImagePath;
+
+      return (
+        <Block3d
+          width='100%'
+          depth='16'
+          z='0'
+          noLeft={true}
+          noRight={true}
+          isMobile={this.props.isMobile}
+        >
+          <img width='100%' src={imgPath} alt='portfolio'/>
+        </Block3d>
+      )
+    }
+
   },
 
   render() {
