@@ -9,8 +9,10 @@ import { ProjectPreview } from '../ProjectPreview/ProjectPreview';
 
 import { Content as PandoraContent } from '../Projects/Project-pandora';
 import { Content as PandoraAdsContent } from '../Projects/Project-pandora-ads';
-import { PandoraWin10Consts } from '../Projects/Project-pandoraWin10';
+import { Content as PandoraInternalToolsContent } from '../Projects/Project-pandora-internal-tools';
 import { Content as ChristyNatsumiContent } from '../Projects/Project-christynatsumi';
+import { PandoraWin10Consts } from '../Projects/Project-pandoraWin10';
+
 import { RiddickartConsts } from '../Projects/Project-riddickart';
 import { ScreensimConsts } from '../Projects/Project-screensim';
 
@@ -118,6 +120,14 @@ const WorkView = React.createClass({
           title={PandoraAdsContent.PREVIEW_TITLE}
           snippet={PandoraAdsContent.PREVIEW_SNIPPET}
           thumbnailPath={PandoraAdsContent.PREVIEW_THUMBNAILPATH}
+          isMobile={this.props.isMobile}
+        />
+
+        <ProjectPreview
+          route={PandoraInternalToolsContent.ROUTE}
+          title={PandoraInternalToolsContent.PREVIEW_TITLE}
+          snippet={PandoraInternalToolsContent.PREVIEW_SNIPPET}
+          thumbnailPath={PandoraInternalToolsContent.PREVIEW_THUMBNAILPATH}
           isMobile={this.props.isMobile}
         />
 
