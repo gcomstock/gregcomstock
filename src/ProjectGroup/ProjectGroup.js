@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import Block3d from '../Block3d/Block3d';
+import Utils from '../Utils';
 
 
 const ProjectGroup = React.createClass({
@@ -75,7 +76,7 @@ const ProjectGroup = React.createClass({
             shadowDepth={-16}
             isMobile={this.props.isMobile}
           >
-            <h2>{this.props.subhead}</h2>
+            <h2 dangerouslySetInnerHTML={Utils.renderStringAsHTML(this.props.subhead)}></h2>
           </Block3d>
 
           <Block3d

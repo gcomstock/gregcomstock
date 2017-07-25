@@ -4,6 +4,30 @@ import ProjectNugget from '../ProjectNugget/ProjectNugget';
 import ProjectGroup from '../ProjectGroup/ProjectGroup';
 
 
+export const Content = Object.freeze({
+  ROUTE: '/project/christynatsumi',
+  EXTERNAL_URL: 'https://christynatsumi.com',
+
+  PREVIEW_TITLE: 'Christy Natsumi',
+  PREVIEW_SNIPPET: 'A San Francisco based independent design studio that creates modern jewelry essentials. I design, build, and maintain all of the site\'s front-end, adding updates regularly in my spare time. I also shoot most of the photography.',
+  PREVIEW_THUMBNAILPATH: 'work/christynatsumi/tn.jpg',
+
+  TITLE: 'Christy Natsumi',
+
+  NUGGET1__SUBHEAD: 'Synopsis',
+  NUGGET1__TEXT: 'I collaborate closely with founder and jewelry designer Christy Natsumi to help showcase her work in the most effective way. Because it\'s a small business, I touch every part of the process, from sketching wireframes to implementing the final layout and photos.',
+  NUGGET2__SUBHEAD: 'Role',
+  NUGGET2__TEXT: '<b>Front-end Engineer</b> - UI, Squarespace API integration<br/><b>Designer</b> - Site, branding, promotionals<br/><b>Photographer</b> - product, model',
+  NUGGET3__SUBHEAD: 'Technologies',
+  NUGGET3__TEXT: 'Javascript, CSS/LESS, HTML templating<br/>Photoshop<br/>Illustrator<br/>Sony A7 Mirrorless DSLR',
+
+  CUSTOM_EDUCATION__SUBHEAD: 'Custom Work Education',
+  CUSTOM_EDUCATION__DESC: 'A large part of Christy Natsumi\'s business is custom jewelry. While many customers scour the internet for an unbiased education on jewelry practices and prices, we saw an opportunity to educate potential customers on what the process would like when working with Christy, and to provide clarity into everything that goes into making a piece unique and meaningful. The education plays out chronologically; a jewelry journey peppered with in-progress photography.',
+  CUSTOM_EDUCATION__WEBIMAGEPATH: 'work/christynatsumi/christynatsumi-3.jpg',
+  CUSTOM_EDUCATION__MOBILEIMAGEPATH: 'work/christynatsumi/christynatsumi-3.jpg'
+});
+
+
 export const Layout = React.createClass({
   propTypes: {
     isMobile: PropTypes.bool.isRequired
@@ -131,28 +155,4 @@ export const Layout = React.createClass({
       </div>
     );
   }
-});
-
-
-export const Content = Object.freeze({
-  ROUTE: '/project/christynatsumi',
-  EXTERNAL_URL: 'https://christynatsumi.com',
-
-  PREVIEW_TITLE: 'Christy Natsumi',
-  PREVIEW_SNIPPET: 'A San Francisco based independent design studio that creates modern jewelry essentials. I design, build, and maintain all of the site\'s front-end, adding updates regularly in my spare time. I also shoot most of the photography.',
-  PREVIEW_THUMBNAILPATH: 'work/christynatsumi/tn.jpg',
-
-  TITLE: 'Christy Natsumi',
-
-  NUGGET1__SUBHEAD: 'Synopsis',
-  NUGGET1__TEXT: 'I collaborate closely with founder and jewelry designer Christy Natsumi to help showcase her work in the most effective way. Because it\'s a small business, I touch every part of the process, from sketching wireframes to implementing the final layout and photos.',
-  NUGGET2__SUBHEAD: 'Role',
-  NUGGET2__TEXT: '<b>Front-end Engineer</b> - UI, Squarespace API integration<br/><b>Designer</b> - Site, branding, promotionals<br/><b>Photographer</b> - product, model',
-  NUGGET3__SUBHEAD: 'Technologies',
-  NUGGET3__TEXT: 'Javascript, CSS/LESS, HTML templating<br/>Photoshop<br/>Illustrator<br/>Sony A7 Mirrorless DSLR',
-
-  CUSTOM_EDUCATION__SUBHEAD: 'Custom Work Education',
-  CUSTOM_EDUCATION__DESC: 'A large part of Christy Natsumi\'s business is custom jewelry. While many customers scour the internet for an unbiased education on jewelry practices and prices, we saw an opportunity to educate potential customers on what the process would like when working with Christy, and to provide clarity into everything that goes into making a piece unique and meaningful. The education plays out chronologically; a jewelry journey peppered with in-progress photography.',
-  CUSTOM_EDUCATION__WEBIMAGEPATH: 'work/christynatsumi/christynatsumi-3.jpg',
-  CUSTOM_EDUCATION__MOBILEIMAGEPATH: 'work/christynatsumi/christynatsumi-3.jpg'
 });

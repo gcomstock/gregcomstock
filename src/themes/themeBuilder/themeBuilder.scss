@@ -64,7 +64,7 @@
     background:     map-get($properties, 'title--background');
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    //ProjectView__title__text
+    padding: 0.2rem 0; // type descenders
 
     @media screen and (max-width: $breakpoint-mobile) {
       font-size: map-get($properties, 'title--fontSize--mobile');

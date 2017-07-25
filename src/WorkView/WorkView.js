@@ -8,7 +8,7 @@ import { ProjectPreview } from '../ProjectPreview/ProjectPreview';
 
 
 import { Content as PandoraContent } from '../Projects/Project-pandora';
-import { PandoraAdsConsts } from '../Projects/Project-pandora-ads';
+import { Content as PandoraAdsContent } from '../Projects/Project-pandora-ads';
 import { PandoraWin10Consts } from '../Projects/Project-pandoraWin10';
 import { Content as ChristyNatsumiContent } from '../Projects/Project-christynatsumi';
 import { RiddickartConsts } from '../Projects/Project-riddickart';
@@ -62,8 +62,6 @@ const WorkView = React.createClass({
         </div>
       </div>
     );
-
-    { this.renderProjectPreviews(); }
   },
 
   renderSideFrames() {
@@ -116,10 +114,10 @@ const WorkView = React.createClass({
         />
 
         <ProjectPreview
-          route={PandoraAdsConsts.ROUTE}
-          title={PandoraAdsConsts.TITLE}
-          snippet={PandoraAdsConsts.SNIPPET}
-          thumbnailPath={PandoraAdsConsts.THUMBNAIL_PATH}
+          route={PandoraAdsContent.ROUTE}
+          title={PandoraAdsContent.PREVIEW_TITLE}
+          snippet={PandoraAdsContent.PREVIEW_SNIPPET}
+          thumbnailPath={PandoraAdsContent.PREVIEW_THUMBNAILPATH}
           isMobile={this.props.isMobile}
         />
 
