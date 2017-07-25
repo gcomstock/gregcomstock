@@ -53,6 +53,7 @@ export const SiteIntro = React.createClass({
     return (
       <div className='SiteIntro'>
 
+        {/* <div className='wrapper wrapper--centered' style={{transformStyle: 'preserve-3d', transform: 'rotate3d(1,0,0,' + this.props.scrollY/10 +'deg)'}}> */}
 
         <div className='wrapper wrapper--centered'>
           <Block3d

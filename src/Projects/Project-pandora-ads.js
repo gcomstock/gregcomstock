@@ -19,11 +19,11 @@ export const Content = Object.freeze({
   NUGGET2__SUBHEAD: 'Role',
   NUGGET2__TEXT: '<b>Product Designer</b> - Ad layout, display animation, customization options<br/><b>Front-end Engineer</b> - Pandora.com integration, tool development<br/>',
   NUGGET3__SUBHEAD: 'Technologies',
-  NUGGET3__TEXT: 'React + Redux (Javascript ES6)<br/>Webpack, npm, SASS<br/>Photoshop<br/>Illustrator',
+  NUGGET3__TEXT: 'React + Redux (Javascript ES6)<br/>Webpack, npm, SASS<br/>Photoshop<br/>Sketch',
 
 
   ADSKIN_BUILDER__SUBHEAD: 'Display Ad Production Tool',
-  ADSKIN_BUILDER__DESC: 'With freedom comes responsibility! Because Pandora\'s new display ads have the ability to do so much with the pandora.com UI, there’s an inherent opportunity for human error, or even exploitation from an advertiser. To solve this, I designed and developed an internal tool that Pandora\'s in-house ad design team uses to generate the CSS files their corresponding display ad. The predefined form fields and visual preview ensures visual consistency with no syntax errors.',
+  ADSKIN_BUILDER__DESC: 'With freedom comes responsibility! Because Pandora\'s new display ads have the ability to do so much with the pandora.com UI, there’s an inherent possibility for human error, or even exploitation from an advertiser. To solve this, I designed and developed an internal tool that Pandora\'s in-house ad design team uses to generate the CSS file for a corresponding display ad. The predefined form fields and live preview ensures visual consistency with no syntax errors.',
   ADSKIN_BUILDER__VIDEOPATH: 'https://player.vimeo.com/video/226793914',
   ADSKIN_BUILDER__WEBVIDEORATIO: 39.2,
   ADSKIN_BUILDER__MOBILEVIDEORATIO: 60,

@@ -42,6 +42,7 @@
   vertical-align: top;
   white-space: nowrap;
   line-height: $headerHeight;
+  cursor: pointer;
 
   @media screen and (max-width: $breakpoint-mobile) {
     padding: 0;

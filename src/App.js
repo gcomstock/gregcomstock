@@ -54,7 +54,7 @@ const App = React.createClass({
         <div className='App__header'>
           {this.renderXButton()}
 
-          <div className='App__header__title'>
+          <div className='App__header__title' onClick={() => hashHistory.push('/')}>
             Greg Comstock
           </div>
 
