@@ -15,9 +15,9 @@ export const Content = Object.freeze({
   TITLE: 'Pandora.com Display Ad Architecture',
 
   NUGGET1__SUBHEAD: 'Synopsis',
-  NUGGET1__TEXT: 'Although Pandora is an audio product, display advertising remains an invaluable complement to its video and audio counterparts. Display advertising allows a brand to reach a receptive listener, giving them an opportunity to follow-through on an audio ad’s message by engaging with the brand. To make this strategy as effective as possible, Product designer Aaron Drath and I ideated on tasteful ways to allow the advertiser to seamlessly integrate with the core Pandora UI. What we arrived at is a thing of beauty, and its effectiveness is backed by higher engagement and conversion rates than standard display advertisements.',
+  NUGGET1__TEXT: 'Although Pandora is an audio product, display advertising remains an invaluable complement to its video and audio counterparts. Display advertising allows a brand to reach a receptive listener, giving them an opportunity to follow-through on an audio ad’s message by engaging with the brand. To make this strategy as effective as possible, fellow designer Aaron Drath and I ideated on tasteful ways to allow the advertiser to seamlessly integrate with the core Pandora UI. What we arrived at is a thing of beauty, and its effectiveness is backed by higher engagement and conversion rates than standard display advertisements.',
   NUGGET2__SUBHEAD: 'Role',
-  NUGGET2__TEXT: '<b>Product Designer</b> - Ad layout, animation, customization options<br/><b>Front-end Engineer</b> - Pandora.com integration, tool development<br/>',
+  NUGGET2__TEXT: '<b>Product Designer</b> - Ad layout, display animation, customization options<br/><b>Front-end Engineer</b> - Pandora.com integration, tool development<br/>',
   NUGGET3__SUBHEAD: 'Technologies',
   NUGGET3__TEXT: 'React + Redux (Javascript ES6)<br/>Webpack, npm, SASS<br/>Photoshop<br/>Illustrator',
 
@@ -30,7 +30,7 @@ export const Content = Object.freeze({
 
 
   AD_OPTIMIZATIONS__SUBHEAD: 'Optimizing the<br/>Ad Impression',
-  AD_OPTIMIZATIONS__DESC: 'While implementing display ads on the new Pandora.com, I recognized an important optimization: By toggling display ad impressions between two alternating iframes, we have the ability to invisibly preload the next display ad while the current one is still active. Once the next display ad iframe has fired its onload event, we can perform an elegant cross-fade between ads, and remove the old one from the DOM once its fadeout animation ends. This design decision ensures a display ad is always visible, because no impression time is spent waiting for ad assets to load. The result has been about a 15% increase in display ad capacity without impacting the user experience.',
+  AD_OPTIMIZATIONS__DESC: 'While implementing display ads on the new Pandora.com, I recognized an important optimization: By toggling display ad impressions between two alternating iframes, we have the ability to invisibly preload the next display ad while the current one is still active. Once the next display ad iframe has fired its onload event, we can perform an elegant cross-fade between ads, and remove the old one from the DOM once its fadeout animation ends. This design decision ensures a display ad is always visible, because no impression time is spent waiting for ad assets to load. The result has been about a 15% increase in display ad capacity without impacting the user experience. This video highlights the transition between display ads as the user interacts with the site.',
   AD_OPTIMIZATIONS__VIDEOPATH: 'https://player.vimeo.com/video/226793914',
   AD_OPTIMIZATIONS__WEBVIDEORATIO: 39.2,
   AD_OPTIMIZATIONS__MOBILEVIDEORATIO: 60
@@ -112,7 +112,6 @@ export const Layout = React.createClass({
 
 
         <Block3d
-          cssClass='ProjectView__picCol__pic'
           width='100%'
           depth='16'
           z='0'
