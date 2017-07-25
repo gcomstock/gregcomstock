@@ -65,7 +65,7 @@
 
 .ProjectView__row__mobilePic {
   margin-right: 3rem;
-  margin-bottom: 4.5rem;
+  margin-bottom: 6rem;
   width: 16rem;
 
   &:nth-child(3) {
@@ -76,4 +76,36 @@
     width: 22.5rem;
     margin-right: 0;
   }
+}
+
+
+.ProjectView__fact {
+  width: 19rem;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    width: 100%;
+  }
+}
+
+
+.ProjectView__factPic {
+  margin-bottom: 6rem;
+
+  .Block3d__content {
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 2px;
+      width: calc(100% - 19rem + 2px); // fact + border width
+    }
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      &:after {
+        display: none;
+      }
+    }
+  }
+
 }

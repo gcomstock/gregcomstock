@@ -54,3 +54,35 @@
     );
   }
 }
+
+
+
+
+
+.ProjectView__fact .Block3d__content {
+  background: map-get($properties, 'ProjectView__fact--background');
+  box-shadow: map-get($properties, 'ProjectView__fact--boxShadow');
+
+  h2 {
+    @extend .title--ProjectView__fact__title--#{$name};
+  }
+}
+
+.ProjectView__factPic .Block3d__content {
+  background: map-get($properties, 'ProjectView__factPic--background');
+  box-shadow: map-get($properties, 'ProjectView__factPic--boxShadow');
+
+  &:after {
+    background: map-get($properties, 'ProjectView__factPic--topBorder');
+  }
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    @include mobileBox(
+        2.25rem,
+        $side--mobile,
+        $bottom--mobile,
+        $sideShadow--mobile,
+        $bottomShadow--mobile
+    );
+  }
+}

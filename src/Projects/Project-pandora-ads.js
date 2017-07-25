@@ -112,6 +112,22 @@ export const Layout = React.createClass({
 
 
         <Block3d
+          cssClass='ProjectView__fact'
+          height='auto'
+          depth='2'
+          z='0'
+          noLeft={true}
+          noBottom={true}
+          shadow={true}
+          shadowDepth={-16}
+          padding={[1.5,1.5,0,1.5]}
+          isMobile={this.props.isMobile}
+        >
+          <p>Wireframes I produced that explore the pros and cons of possible layouts for display ads, shown at different screen resolutions with different resizing behaviors for the Pandora.com UI.</p>
+        </Block3d>
+
+        <Block3d
+          cssClass='ProjectView__factPic'
           width='100%'
           depth='16'
           z='0'

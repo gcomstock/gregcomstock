@@ -12,10 +12,12 @@ $buttonBackground: #370030;
 
 $webBlockSide--boxShadow: inset 0 2px 0 0 $activeColor--low;
 $webBlockBottom--boxShadow: inset -2px 0 0 0 $activeColor--low, inset 2px 0 0 0 $activeColor--mid;
-$fact--boxShadow: inset 0 2px 0 0 $borderColor, inset 2px 0 0 0 $borderColor, inset -2px 0 0 0 $borderColor;
-$factPic--boxShadow: inset 0 -2px 0 0 $borderColor, inset 2px 0 0 0 $borderColor, inset -2px 0 0 0 $borderColor;
 $mobileBlockSide--boxShadow: inset -1px 0 0 0 $borderColor, inset 0 1px 0 0 $borderColor;
 $mobileBlockBottom--boxShadow: inset 1px 0 0 0 $borderColor, inset 0 -1px 0 0 $borderColor, inset -1px 0 0 0 $borderColor;
+
+
+$fact--boxShadow: inset 0 2px 0 0 $borderColor, inset 2px 0 0 0 $borderColor, inset -2px 0 0 0 $borderColor;
+$factPic--boxShadow: inset 0 -2px 0 0 $borderColor, inset 2px 0 0 0 $borderColor, inset -2px 0 0 0 $borderColor;
 $mobileFact--boxShadow: inset 0 1px 0 0 $borderColor, inset 1px 0 0 0 $borderColor, inset -1px 0 0 0 $borderColor;
 $mobileFactPic--boxShadow: inset 1px 0 0 0 $borderColor, inset 0 -1px 0 0 $borderColor, inset -1px 0 0 0 $borderColor;
 
@@ -109,10 +111,24 @@ $theme--tech: (
   ProjectView__title--boxShadow: inset 0 0 0 2px $borderColor,
   ProjectView__picCol__pic--background: rgba(0,0,0,0.5),
   ProjectView__picCol__pic--boxShadow: inset 0 0 0 2px $borderColor,
+  ProjectView__fact--background: rgba(0,0,0,0.5),
+  ProjectView__fact--boxShadow: $fact--boxShadow,
+  ProjectView__fact--boxShadow--mobile: $mobileFact--boxShadow,
+  ProjectView__factPic--background: rgba(0,0,0,0.5),
+  ProjectView__factPic--boxShadow: $factPic--boxShadow,
+  ProjectView__factPic--topBorder: $borderColor, // web only, hidden for mobile
+  ProjectView__factPic--boxShadow--mobile: $mobileFactPic--boxShadow,
+
+
+
   ProjectNugget__subhead--background: url(../themes/tech/bg-diagonal.png) top left / 4px,
   //ProjectNugget__subhead__subhead--boxShadow: inset 0 0 0 2px $borderColor,
   //ProjectNugget__text--background: rgba(0,0,0,0.5),
   //ProjectNugget__text--boxShadow: inset 0 0 0 2px $borderColor,
+
+
+
+
 
   ProjectGroup__leftCol__subhead--background: url(../themes/tech/bg-diagonal.png) top left / 4px
 );
