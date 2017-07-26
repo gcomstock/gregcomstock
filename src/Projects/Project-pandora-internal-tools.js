@@ -6,13 +6,11 @@ import ProjectGroup from '../ProjectGroup/ProjectGroup';
 
 export const Content = Object.freeze({
   ROUTE: '/project/pandora-internal-tools',
+  TITLE: 'Pandora Internal Tools & Sites',
   EXTERNAL_URL: '',
 
-  PREVIEW_TITLE: 'Pandora Internal Tools & Sites',
   PREVIEW_SNIPPET: 'At Pandora, I’ve had the opportunity to design and develop both internal tools and external sites for different internal organizations. The challenges are different from working on a company’s flagship product, but the sense of ownership and satisfaction of making your co-worker’s lives easier can be more fulfilling.',
   PREVIEW_THUMBNAILPATH: 'work/pandora-internal-tools/tn.png',
-
-  TITLE: 'Pandora Internal Tools & Sites',
 
   NUGGET1__SUBHEAD: 'Synopsis',
   NUGGET1__TEXT: 'When working on a large, public-facing product, design iteration usually requires scrutinizing over analytics, focus group sessions, A/B testing, and sometimes just plain intuition. By contrast, internal tools can be a delight to work on, because you have the luxury of meeting directly with your users and understanding exactly what they need! At Pandora, I’ve had the pleasure of contributing to several internal tools, as well as public-facing sites for internal organizations. Seeing your co-workers light up when presenting or implementing new designs to make their work easier is deeply rewarding.',

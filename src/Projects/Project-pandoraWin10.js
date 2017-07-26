@@ -2,28 +2,9 @@ import React from 'react';
 import Block3d from '../Block3d/Block3d';
 
 
-export const PandoraWin10Layout = React.createClass({
-  render() {
-    return (
-      <div className='ProjectView'>
-        <Block3d cssClass='ProjectView__pic' width='100%' height='auto' depth='14' z='0'>
-          <img width='100%' src='work/pandora-windows10/pandora-windows10-1.jpg' alt='portfolio'/>
-        </Block3d>
-
-        <Block3d cssClass='ProjectView__pic' width='100%' height='auto' depth='14' z='0'>
-          <img width='100%' src='work/pandora-windows10/pandora-windows10-2.jpg' alt='portfolio'/>
-        </Block3d>
-
-        <Block3d cssClass='ProjectView__pic' width='100%' height='auto' depth='14' z='0'>
-          <img width='100%' src='work/pandora-windows10/pandora-windows10-3.jpg' alt='portfolio'/>
-        </Block3d>
-      </div>
-    );
-  }
-});
 
 
-export const PandoraWin10Consts = Object.freeze({
+export const Content = Object.freeze({
   ROUTE: '/project/pandora-windows10',
   TITLE: 'Pandora for Windows 10',
   EXTERNAL_URL: 'https://www.microsoft.com/en-us/store/p/pandora/9wzdncrfj46v',
@@ -42,4 +23,25 @@ export const PandoraWin10Consts = Object.freeze({
     'Moushtache templating',
     'CSS/SASS'
   ]
+});
+
+
+export const Layout = React.createClass({
+  render() {
+    return (
+      <div className='ProjectView'>
+        <Block3d cssClass='ProjectView__pic' width='100%' height='auto' depth='14' z='0'>
+          <img width='100%' src='work/pandora-windows10/pandora-windows10-1.jpg' alt='portfolio'/>
+        </Block3d>
+
+        <Block3d cssClass='ProjectView__pic' width='100%' height='auto' depth='14' z='0'>
+          <img width='100%' src='work/pandora-windows10/pandora-windows10-2.jpg' alt='portfolio'/>
+        </Block3d>
+
+        <Block3d cssClass='ProjectView__pic' width='100%' height='auto' depth='14' z='0'>
+          <img width='100%' src='work/pandora-windows10/pandora-windows10-3.jpg' alt='portfolio'/>
+        </Block3d>
+      </div>
+    );
+  }
 });

@@ -6,13 +6,11 @@ import ProjectGroup from '../ProjectGroup/ProjectGroup';
 
 export const Content = Object.freeze({
   ROUTE: '/project/pandora-display-ads',
+  TITLE: 'Pandora Display Ad Architecture',
   EXTERNAL_URL: '',
 
-  PREVIEW_TITLE: 'Pandora Display Ad Architecture',
   PREVIEW_SNIPPET: 'I have been closely tied to the display ad workflow during my tenure at Pandora. On Pandora.com, we had a unique opportunity to do things that have never been done before with display advertising.',
   PREVIEW_THUMBNAILPATH: 'work/pandora-ads/tn.jpg',
-
-  TITLE: 'Pandora Display Ad Architecture',
 
   NUGGET1__SUBHEAD: 'Synopsis',
   NUGGET1__TEXT: 'Although Pandora is an audio product, display advertising remains an invaluable complement to its video and audio ad counterparts. Display advertising allows a brand to reach a receptive listener, giving them an opportunity to follow-through on an audio ad’s message by engaging with the brand. Product designer Aaron Drath and I ideated on tasteful ways to allow the advertiser to seamlessly integrate with the core Pandora UI. What we arrived at is a thing of beauty, and its effectiveness is backed by higher engagement and conversion rates than standard display advertisements.',
