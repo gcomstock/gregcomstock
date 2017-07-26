@@ -193,61 +193,6 @@
 }
 
 
-.App__body__scrollable__footer {
-  width: 100%;
-  background-color: #f8f8f8;
-  border-top: 1px solid #666;
-  position: relative;
-
-  padding: 3rem;
-
-  min-height: 12rem;
-  margin-top: -12rem;
-
-  @media screen and (max-width: $breakpoint-mobile) {
-    padding: 0.75rem;
-  }
-}
-
-
-
-
-
-.App__body__scrollable__footer__content {
-  margin: 0 auto;
-  max-width: 40rem;
-}
-
-.App__body__scrollable__footer__content__title {
-  margin-left: 0.75rem;
-  margin-bottom: 0.5rem;
-  text-shadow: -0.05rem -0.05rem 0 #f8f8f8, 0.05rem -0.05rem 0 #f8f8f8, -0.05rem 0.05rem 0 #f8f8f8, 0.05rem 0.05rem 0 #f8f8f8;
-
-  @media screen and (max-width: $breakpoint-mobile) {
-    padding-left: 1rem;
-    margin-left: 0.5rem;
-  }
-}
-
-.App__body__scrollable__footer__contentWrap {
-  background-color: #f8f8f8;
-  border: 1px solid #d6d6d6;
-}
-
-.App__body__scrollable__footer__content__col {
-  display: inline-block;
-  width: 50%;
-  padding: 0.75rem;
-  vertical-align: top;
-
-  @media screen and (max-width: $breakpoint-mobile) {
-    padding: 1.5rem;
-    width: 100%;
-  }
-}
-
-
-
 
 
 .App__body__scrollable__wrapper__floor {
@@ -262,7 +207,6 @@
   transform: translate3d(0,0,-16rem);
   transform-style: preserve-3d;
 }
-
 
 
 

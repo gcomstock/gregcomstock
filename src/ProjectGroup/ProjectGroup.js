@@ -64,8 +64,6 @@ const ProjectGroup = React.createClass({
   render() {
     return (
       <div className='ProjectGroup'>
-
-
         <div className='ProjectGroup__leftCol'>
           <Block3d
             cssClass='ProjectGroup__leftCol__subhead'

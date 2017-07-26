@@ -8,14 +8,14 @@ export const Content = Object.freeze({
   ROUTE: '/project/pandora-display-ads',
   EXTERNAL_URL: '',
 
-  PREVIEW_TITLE: 'Pandora.com Display Ad Architecture',
+  PREVIEW_TITLE: 'Pandora Display Ad Architecture',
   PREVIEW_SNIPPET: 'I have been closely tied to the display ad workflow during my tenure at Pandora. On Pandora.com, we had a unique opportunity to do things that have never been done before with display advertising.',
   PREVIEW_THUMBNAILPATH: 'work/pandora-ads/tn.jpg',
 
-  TITLE: 'Pandora.com Display Ad Architecture',
+  TITLE: 'Pandora Display Ad Architecture',
 
   NUGGET1__SUBHEAD: 'Synopsis',
-  NUGGET1__TEXT: 'Although Pandora is an audio product, display advertising remains an invaluable complement to its video and audio counterparts. Display advertising allows a brand to reach a receptive listener, giving them an opportunity to follow-through on an audio ad’s message by engaging with the brand. To make this strategy as effective as possible, fellow designer Aaron Drath and I ideated on tasteful ways to allow the advertiser to seamlessly integrate with the core Pandora UI. What we arrived at is a thing of beauty, and its effectiveness is backed by higher engagement and conversion rates than standard display advertisements.',
+  NUGGET1__TEXT: 'Although Pandora is an audio product, display advertising remains an invaluable complement to its video and audio ad counterparts. Display advertising allows a brand to reach a receptive listener, giving them an opportunity to follow-through on an audio ad’s message by engaging with the brand. Product designer Aaron Drath and I ideated on tasteful ways to allow the advertiser to seamlessly integrate with the core Pandora UI. What we arrived at is a thing of beauty, and its effectiveness is backed by higher engagement and conversion rates than standard display advertisements.',
   NUGGET2__SUBHEAD: 'Role',
   NUGGET2__TEXT: '<b>Product Designer</b> - Ad layout, display animation, customization options<br/><b>Front-end Engineer</b> - Pandora.com integration, tool development<br/>',
   NUGGET3__SUBHEAD: 'Technologies',
@@ -23,7 +23,7 @@ export const Content = Object.freeze({
 
 
   ADSKIN_BUILDER__SUBHEAD: 'Display Ad Production Tool',
-  ADSKIN_BUILDER__DESC: 'With freedom comes responsibility! Because Pandora\'s new display ads have the ability to do so much with the pandora.com UI, there’s an inherent possibility for human error, or even exploitation from an advertiser. To solve this, I designed and developed an internal tool that Pandora\'s in-house ad design team uses to generate the CSS file for a corresponding display ad. The predefined form fields and live preview ensures visual consistency with no syntax errors.',
+  ADSKIN_BUILDER__DESC: 'With freedom comes responsibility! Because Pandora\'s new display ads have the ability to do so much with the Pandora.com UI, there’s an inherent possibility for human error, or even exploitation from an advertiser. To solve this, I designed and developed an internal tool that Pandora\'s in-house ad design team uses to generate the CSS file for a corresponding display ad. The predefined form fields and live preview ensures visual consistency with no syntax errors.',
   ADSKIN_BUILDER__VIDEOPATH: 'https://player.vimeo.com/video/226793914',
   ADSKIN_BUILDER__WEBVIDEORATIO: 39.2,
   ADSKIN_BUILDER__MOBILEVIDEORATIO: 60,
@@ -123,7 +123,7 @@ export const Layout = React.createClass({
           padding={[1.5,1.5,0,1.5]}
           isMobile={this.props.isMobile}
         >
-          <p>Wireframes I produced that explore the pros and cons of possible layouts for display ads, shown at different screen resolutions with different resizing behaviors for the Pandora.com UI.</p>
+          <p>Wireframes I produced that explore the pros and cons of possible layouts for display ads, showing different screen resolutions with different resizing behaviors for the Pandora.com UI.</p>
         </Block3d>
 
         <Block3d

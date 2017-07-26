@@ -24,7 +24,7 @@ export const Content = Object.freeze({
   ICONS__MOBILEVIDEORATIO: 60,
 
   CAREERS__SUBHEAD: 'Pandora Careers',
-  CAREERS__DESC: 'Working with our employee experience team, I designed and developed our original careers page to provide a look into Pandora’s employee culture and job opportunities. Using Jobvite’s API, the job postings stay up to date and are sortable through javascript that I authored. Since its launch in 2013, this page has evolved and improved under fellow product design Joyce Lau, however the original design I created can be seen in this video.',
+  CAREERS__DESC: 'Working with our employee experience team, I designed and developed our original careers page to provide a look into Pandora’s employee culture and job opportunities. Using Jobvite’s API, the job postings stay up to date and are sortable through javascript that I authored. Since its launch in 2013, this page has evolved and improved under fellow product designer Joyce Lau. The original design I created can be seen in this video.',
   CAREERS__VIDEOPATH: 'https://player.vimeo.com/video/226922020',
   CAREERS__WEBVIDEORATIO: 39.2,
   CAREERS__MOBILEVIDEORATIO: 60,

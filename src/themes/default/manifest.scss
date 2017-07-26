@@ -18,6 +18,8 @@ $bg-ipad: url(../themes/default/siteIntro__bg.png) top left fixed / 900px, url(.
 $bg-watch: url(../themes/default/siteIntro__bg.png) top left fixed / 900px, url(../themes/default/siteIntro--onScreen.png), linear-gradient($bg-intro-start, $bg-intro-end);
 
 
+$SiteFooter__content__h2--textShadow: -0.05rem -0.05rem 0 #f8f8f8, 0.05rem -0.05rem 0 #f8f8f8, -0.05rem 0.05rem 0 #f8f8f8, 0.05rem 0.05rem 0 #f8f8f8;
+
 $theme--default: (
   // TITLE
   title--font: '../themes/default/goku.woff',
@@ -79,6 +81,13 @@ $theme--default: (
   SiteIntro__device--iphone--background: $bg-iphone,
   SiteIntro__device--ipad--background: $bg-ipad,
   SiteIntro__device--watch--background: $bg-watch,
+
+  // SITE FOOTER
+  SiteFooter--background: url(../themes/default/siteIntro__bg.png) top left / 900px #f8f8f8,
+  SiteFooter--boxShadow: inset 0 0 0 1px rgb(190,190,190),
+  SiteFooter__content__h2--textShadow: $SiteFooter__content__h2--textShadow,
+  SiteFooter__content__h2--background: -webkit-linear-gradient($title--colorGradient--startColor, $title--colorGradient--endColor),
+  SiteFooter__content__h2--color: $title--colorGradient--startColor,
 
   // PROJECT PREVIEW
   ProjectPreview__leftCol__title--background: rgb(245, 245, 245),

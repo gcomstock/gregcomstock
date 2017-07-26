@@ -23,7 +23,8 @@
 }
 
 
-.Block3d__content img {
+.Block3d__content img,
+iframe {
   outline: map-get($properties, 'Block3d__content--outline');
 }
 

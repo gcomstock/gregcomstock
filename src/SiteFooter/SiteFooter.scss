@@ -1,0 +1,48 @@
+.SiteFooter {
+  width: 100%;
+  position: relative;
+  padding: 3rem;
+
+  min-height: 12rem;
+  margin-top: -12rem;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    padding: 0.75rem;
+  }
+}
+
+
+.SiteFooter__content {
+  margin: 0 auto;
+  max-width: 40rem;
+  padding-bottom: 10rem;
+
+  h2 {
+    margin-left: 0.75rem;
+    margin-bottom: 1.5rem;
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      padding-left: 1rem;
+      margin-left: 0.5rem;
+      padding-top: 3rem;
+    }
+  }
+}
+
+
+.SiteFooter__contentWrap {
+  background-color: #f8f8f8;
+  border: 1px solid #d6d6d6;
+}
+
+.SiteFooter__content__col {
+  display: inline-block;
+  width: 50%;
+  padding: 0.75rem;
+  vertical-align: top;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    padding: 1.5rem;
+    width: 100%;
+  }
+}

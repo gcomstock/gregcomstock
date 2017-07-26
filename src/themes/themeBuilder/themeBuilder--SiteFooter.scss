@@ -1,0 +1,18 @@
+.SiteFooter {
+  background: map-get($properties, 'SiteFooter--background');
+  box-shadow: map-get($properties, 'SiteFooter--boxShadow');
+}
+
+.SiteFooter__content h2 {
+  @extend .title--head--#{$name};
+
+
+  text-shadow: map-get($properties, 'SiteFooter__content__h2--textShadow');
+  color:  map-get($properties, 'SiteFooter__content__h2--color');
+
+  //background: map-get($properties, 'SiteFooter__content__h2--background');
+  //-webkit-background-clip: text;
+  //-webkit-text-fill-color: transparent;
+
+  font-size: 3rem;
+}

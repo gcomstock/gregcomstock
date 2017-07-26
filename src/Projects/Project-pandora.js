@@ -9,13 +9,13 @@ export const Content = Object.freeze({
   EXTERNAL_URL: 'https://pandora.com',
 
   PREVIEW_TITLE: 'Pandora.com',
-  PREVIEW_SNIPPET: 'In preparation for on-demand listening, the new Pandora.com has been re-written from the ground up using the latest front-end technologies to address complex asynchronous use cases between audio playback and advertising.',
+  PREVIEW_SNIPPET: 'In 2016-17, we re-wrote Pandora.com from the ground up using the latest front-end technologies. The project, process, and team collaboration made for an unforgettable professional experience.',
   PREVIEW_THUMBNAILPATH: 'work/pandora/tn.jpg',
 
   TITLE: 'Pandora.com',
 
   NUGGET1__SUBHEAD: 'Synopsis',
-  NUGGET1__TEXT: 'Pandora allows a user to listen to the music they love, and help them discover their next favorite song. In 2016-17, we rewrote the web client from the ground up, rethinking what Pandora.com could mean on the modern web. I collaborated closely with the product design team to author and commit core UI decisions for several areas of the web app, including the main "now playing" view. Some of my other responsibilities included designing and implementing the display ad layout and lifecycle, and most of the site\'s interaction animation.',
+  NUGGET1__TEXT: 'In 2016-17, we rewrote Pandora.com from the ground up, rethinking what Pandora.com could be on the modern web. Though my official involvement was front-end development throughout the project, I collaborated closely with the product design team to author and commit core UI decisions for several areas of the web app, including the main “now playing” view. I strive to straddle the divide between product design and engineering, and love the opportunity to bring technical know-how to the design conversation. Some of my other responsibilities included co-designing and implementing the display ad layout and lifecycle, and most of the site’s interaction animation.',
   NUGGET2__SUBHEAD: 'Role',
   NUGGET2__TEXT: '<b>Front-end Engineer</b> - UI, display ads, animation<br/><b>Product Designer</b> - display ads<br/><b>UX Prototyping</b>',
   NUGGET3__SUBHEAD: 'Technologies',
