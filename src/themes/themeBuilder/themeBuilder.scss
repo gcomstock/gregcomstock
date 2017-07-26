@@ -16,6 +16,9 @@
 
 
 
+
+
+
   // generate name-spaced classes for theme
   @font-face {
     font-family:   'title--#{$name}';
@@ -24,8 +27,6 @@
     font-weight:    normal;
     font-style:     normal;
   }
-
-
 
   .title--head--#{$name} {
     font-family:   'title--#{$name}';
@@ -48,7 +49,6 @@
     background:     map-get($properties, 'title--background');
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    //text-rendering: optimizeLegibility;
 
     @media screen and (max-width: $breakpoint-mobile) {
       font-size: map-get($properties, 'title--fontSize--mobile');
@@ -114,6 +114,7 @@
 
   // generate styles for theme
   .theme--#{$name} {
+    @import 'themeBuilder--shared';
     @import 'themeBuilder--button';
     @import 'themeBuilder--App';
     @import 'themeBuilder--SiteIntro';

@@ -6,10 +6,6 @@
     background: map-get($properties, 'mobileBlock--background');
     box-shadow: map-get($properties, 'mobileBlock--boxShadow');
   }
-
-  p {
-    color: map-get($properties, 'text--color');
-  }
 }
 
 .Block3d__face--bottom {

@@ -4,15 +4,11 @@
 }
 
 .SiteFooter__content h2 {
-  @extend .title--head--#{$name};
+  @extend .title--subhead--#{$name};
 
+  //-webket-text-stroke: map_get($properties, 'SiteFooter__content__h2--textStroke');
+  //text-shadow: map-get($properties, 'SiteFooter__content__h2--textShadow');
+  //color:  map-get($properties, 'SiteFooter__content__h2--color');
 
-  text-shadow: map-get($properties, 'SiteFooter__content__h2--textShadow');
-  color:  map-get($properties, 'SiteFooter__content__h2--color');
-
-  //background: map-get($properties, 'SiteFooter__content__h2--background');
-  //-webkit-background-clip: text;
-  //-webkit-text-fill-color: transparent;
-
-  font-size: 3rem;
+  font-size: 6rem;
 }

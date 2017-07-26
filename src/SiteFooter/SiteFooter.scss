@@ -4,7 +4,7 @@
   padding: 3rem;
 
   min-height: 12rem;
-  margin-top: -12rem;
+  margin-top: -12rem; // to cover up the 3d bottom
 
   @media screen and (max-width: $breakpoint-mobile) {
     padding: 0.75rem;
@@ -14,12 +14,13 @@
 
 .SiteFooter__content {
   margin: 0 auto;
-  max-width: 40rem;
-  padding-bottom: 10rem;
+  max-width: 48.5rem;
+  padding-bottom: 6rem;
+
 
   h2 {
-    margin-left: 0.75rem;
-    margin-bottom: 1.5rem;
+    margin-left: 1.25rem;
+    margin-bottom: 0.5rem;
 
     @media screen and (max-width: $breakpoint-mobile) {
       padding-left: 1rem;
@@ -38,8 +39,12 @@
 .SiteFooter__content__col {
   display: inline-block;
   width: 50%;
-  padding: 0.75rem;
+  padding: 1.5rem;
   vertical-align: top;
+
+  &:nth-child(even) {
+    padding-left: 0;
+  }
 
   @media screen and (max-width: $breakpoint-mobile) {
     padding: 1.5rem;
