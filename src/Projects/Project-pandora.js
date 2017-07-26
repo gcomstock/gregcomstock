@@ -25,7 +25,7 @@ export const Content = Object.freeze({
   INTERACTION_DESIGN__DESC: 'Elegant animations and meaningful interaction design is a challenge that requires both an eye for design and an understanding of technical implementation. In a React application, where direct DOM manipulation is avoided, this can be especially difficult. The journey was exciting, though, and by iterating closely with our other product designers, I believe we arrived at some effective solutions. Take a look!',
   INTERACTION_DESIGN__VIDEOPATH: 'https://player.vimeo.com/video/226796136',
   INTERACTION_DESIGN__WEBVIDEORATIO: 39.2,
-  INTERACTION_DESIGN__MOBILEVIDEORATIO: 60,
+  INTERACTION_DESIGN__MOBILEVIDEORATIO: 60
 });
 
 
@@ -82,6 +82,19 @@ export const Layout = React.createClass({
             isMobile={this.props.isMobile}
           >
             <img width='100%' src='work/pandora/pandora-2.jpg' alt='portfolio'/>
+          </Block3d>
+
+          <Block3d
+            cssClass='ProjectView__picCol__pic'
+            width='100%'
+            height='auto'
+            depth='16'
+            z='0'
+            noLeft={true}
+            noRight={true}
+            isMobile={this.props.isMobile}
+          >
+            <img width='100%' src='work/pandora/pandora-3.jpg' alt='portfolio'/>
           </Block3d>
         </div>
 

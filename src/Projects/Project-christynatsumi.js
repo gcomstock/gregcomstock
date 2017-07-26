@@ -9,13 +9,13 @@ export const Content = Object.freeze({
   EXTERNAL_URL: 'https://christynatsumi.com',
 
   PREVIEW_TITLE: 'Christy Natsumi',
-  PREVIEW_SNIPPET: 'A San Francisco based independent design studio that creates modern jewelry essentials. I design, build, and maintain all of the site\'s front-end, adding updates regularly in my spare time. I also shoot most of the photography.',
+  PREVIEW_SNIPPET: 'A San Francisco based independent design studio that creates modern jewelry essentials. I design, build, and maintain all of the site\'s front-end, adding updates regularly. I also shoot most of the photography.',
   PREVIEW_THUMBNAILPATH: 'work/christynatsumi/tn.jpg',
 
   TITLE: 'Christy Natsumi',
 
   NUGGET1__SUBHEAD: 'Synopsis',
-  NUGGET1__TEXT: 'I collaborate closely with founder and jewelry designer Christy Natsumi to help showcase her work in the most effective way. Because it\'s a small business, I touch every part of the process, from sketching wireframes to implementing the final layout and photos.',
+  NUGGET1__TEXT: 'A San Francisco based independent design studio that creates modern jewelry essentials. I collaborate closely with founder and jewelry designer Christy Natsumi to help showcase her work in the most effective way. Because it\'s a small business, I touch every part of the process, from sketching wireframes to implementing the final layout and photos.',
   NUGGET2__SUBHEAD: 'Role',
   NUGGET2__TEXT: '<b>Front-end Engineer</b> - UI, Squarespace API integration<br/><b>Designer</b> - Site, branding, promotionals<br/><b>Photographer</b> - product, model',
   NUGGET3__SUBHEAD: 'Technologies',

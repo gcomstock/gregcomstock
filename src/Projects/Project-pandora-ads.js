@@ -29,10 +29,10 @@ export const Content = Object.freeze({
   ADSKIN_BUILDER__MOBILEVIDEORATIO: 60,
 
 
-  AD_OPTIMIZATIONS__SUBHEAD: 'Optimizing the<br/>Ad Impression',
+  AD_OPTIMIZATIONS__SUBHEAD: 'The UX of<br/>Ad Impressions',
   AD_OPTIMIZATIONS__DESC: 'While implementing display ads on the new Pandora.com, I recognized an important optimization: By toggling display ad impressions between two alternating iframes, we have the ability to invisibly preload the next display ad while the current one is still active. Once the next display ad iframe has fired its onload event, we can perform an elegant cross-fade between ads, and remove the old one from the DOM once its fadeout animation ends. This design decision ensures a display ad is always visible, because no impression time is spent waiting for ad assets to load. The result has been about a 15% increase in display ad capacity without impacting the user experience. This video highlights the transition between display ads as the user interacts with the site.',
-  AD_OPTIMIZATIONS__VIDEOPATH: 'https://player.vimeo.com/video/226793914',
-  AD_OPTIMIZATIONS__WEBVIDEORATIO: 39.2,
+  AD_OPTIMIZATIONS__VIDEOPATH: 'https://player.vimeo.com/video/227131626',
+  AD_OPTIMIZATIONS__WEBVIDEORATIO: 41,
   AD_OPTIMIZATIONS__MOBILEVIDEORATIO: 60
 });
 
@@ -78,7 +78,6 @@ export const Layout = React.createClass({
             <img width='100%' src='work/pandora-ads/pandora-ads-1.jpg' alt='portfolio'/>
           </Block3d>
 
-
           <Block3d
             cssClass='ProjectView__picCol__pic'
             width='100%'
@@ -89,6 +88,18 @@ export const Layout = React.createClass({
             isMobile={this.props.isMobile}
           >
             <img width='100%' src='work/pandora-ads/pandora-ads-2.jpg' alt='portfolio'/>
+          </Block3d>
+
+          <Block3d
+            cssClass='ProjectView__picCol__pic'
+            width='100%'
+            depth='16'
+            z='0'
+            noLeft={true}
+            noRight={true}
+            isMobile={this.props.isMobile}
+          >
+            <img width='100%' src='work/pandora-ads/pandora-ads-3.jpg' alt='portfolio'/>
           </Block3d>
         </div>
 
