@@ -14,12 +14,12 @@
 
 .SiteFooter__content {
   margin: 0 auto;
-  max-width: 48.5rem;
+  max-width: 48.8rem;
   padding-bottom: 6rem;
 
 
   h2 {
-    margin-left: 1.25rem;
+    //margin-left: 1.25rem;
     margin-bottom: 0.5rem;
 
     @media screen and (max-width: $breakpoint-mobile) {
@@ -30,11 +30,6 @@
   }
 }
 
-
-.SiteFooter__contentWrap {
-  background-color: #f8f8f8;
-  border: 1px solid #d6d6d6;
-}
 
 .SiteFooter__content__col {
   display: inline-block;
@@ -49,5 +44,10 @@
   @media screen and (max-width: $breakpoint-mobile) {
     padding: 1.5rem;
     width: 100%;
+
+    &:nth-child(even) {
+      padding-left: 1.5rem;
+      padding-top: 0;
+    }
   }
 }

@@ -1,3 +1,7 @@
 p {
   color: map-get($properties, 'text--color');
 }
+
+a {
+  color: map-get($properties, 'link--color');
+}

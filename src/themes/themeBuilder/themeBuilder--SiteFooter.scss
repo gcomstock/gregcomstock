@@ -3,6 +3,11 @@
   box-shadow: map-get($properties, 'SiteFooter--boxShadow');
 }
 
+.SiteFooter__contentWrap {
+  background: map-get($properties, 'SiteFooter__contentWrap--background');
+  box-shadow: map-get($properties, 'SiteFooter__contentWrap--boxShadow');
+}
+
 .SiteFooter__content h2 {
   @extend .title--subhead--#{$name};
 

@@ -33,6 +33,7 @@ $theme--tech: (
   title--color: rgb(260, 60, 60),
   title--background: -webkit-linear-gradient($title--colorGradient--startColor, $title--colorGradient--endColor),
   text--color: rgb(255, 255, 255),
+  link--color: $borderColor,
 
 
   // BUTTONS
@@ -119,6 +120,14 @@ $theme--tech: (
   ProjectView__factPic--topBorder: $borderColor, // web only, hidden for mobile
   ProjectView__factPic--boxShadow--mobile: $mobileFactPic--boxShadow,
 
+
+
+
+  // SITE FOOTER
+  SiteFooter--background: url(../themes/tech/bg-diagonal.png) top left / 4px,
+  SiteFooter--boxShadow: inset 0 2px 0 0 $borderColor,
+  SiteFooter__contentWrap--background: rgba(0,0,0,0.5),
+  SiteFooter__contentWrap--boxShadow: inset 0 0 0 2px $borderColor,
 
 
   ProjectNugget__subhead--background: url(../themes/tech/bg-diagonal.png) top left / 4px,
