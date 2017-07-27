@@ -25,8 +25,6 @@ export const Layout = React.createClass({
   render() {
     return (
       <div className='ProjectView'>
-
-
         <div className='wrapper wrapper--centered'>
           <Block3d
             cssClass='ProjectView__title'

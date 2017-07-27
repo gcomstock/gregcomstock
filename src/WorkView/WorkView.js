@@ -13,12 +13,11 @@ import { Content as PandoraContent } from '../Projects/Project-pandora';
 import { Content as PandoraAdsContent } from '../Projects/Project-pandora-ads';
 import { Content as PandoraInternalToolsContent } from '../Projects/Project-pandora-internal-tools';
 import { Content as PandoraWin10Content } from '../Projects/Project-pandoraWin10';
+import { Content as DADContent } from '../Projects/Project-display-ad-design';
 
 import { Content as ChristyNatsumiContent } from '../Projects/Project-christynatsumi';
 import { Content as RiddickartContent } from '../Projects/Project-riddickart';
-
-
-//import { ScreensimConsts } from '../Projects/Project-screensim';
+import { Content as ScreensimContent } from '../Projects/Project-screensim';
 
 
 
@@ -151,26 +150,21 @@ const WorkView = React.createClass({
           isMobile={this.props.isMobile}
         />
 
-{/*
-
-
         <ProjectPreview
-          route={RiddickartConsts.ROUTE}
-          title={RiddickartConsts.TITLE}
-          snippet={RiddickartConsts.SNIPPET}
-          thumbnailPath={RiddickartConsts.THUMBNAIL_PATH}
+          route={DADContent.ROUTE}
+          title={DADContent.TITLE}
+          snippet={DADContent.PREVIEW_SNIPPET}
+          thumbnailPath={DADContent.PREVIEW_THUMBNAILPATH}
           isMobile={this.props.isMobile}
         />
 
         <ProjectPreview
-          route={ScreensimConsts.ROUTE}
-          title={ScreensimConsts.TITLE}
-          snippet={ScreensimConsts.SNIPPET}
-          thumbnailPath={ScreensimConsts.THUMBNAIL_PATH}
+          route={ScreensimContent.ROUTE}
+          title={ScreensimContent.TITLE}
+          snippet={ScreensimContent.PREVIEW_SNIPPET}
+          thumbnailPath={ScreensimContent.PREVIEW_THUMBNAILPATH}
           isMobile={this.props.isMobile}
         />
-
-*/}
 
       </div>
     )

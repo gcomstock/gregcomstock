@@ -12,6 +12,7 @@ import { Layout as PandoraLayout, Content as PandoraContent } from './Projects/P
 import { Layout as PandoraAdsLayout, Content as PandoraAdsContent } from './Projects/Project-pandora-ads';
 import { Layout as PandoraInternalToolsLayout, Content as PandoraInternalToolsContent } from './Projects/Project-pandora-internal-tools';
 import { Layout as PandoraWin10Layout, Content as PandoraWin10Content } from './Projects/Project-pandoraWin10';
+import { Layout as DADLayout, Content as DADContent } from './Projects/Project-display-ad-design';
 
 import { Layout as ChristyNatsumiLayout, Content as ChristyNatsumiContent } from './Projects/Project-christynatsumi';
 import { Layout as RiddickartLayout, Content as RiddickartContent } from './Projects/Project-riddickart';
@@ -26,6 +27,7 @@ ReactDOM.render(
       <Route path="/project/pandora-display-ads"    component={projectViewFactory(PandoraAdsLayout, PandoraAdsContent)}/>
       <Route path="/project/pandora-internal-tools" component={projectViewFactory(PandoraInternalToolsLayout, PandoraInternalToolsContent)}/>
       <Route path="/project/pandora-windows10"      component={projectViewFactory(PandoraWin10Layout, PandoraWin10Content)}/>
+      <Route path="/project/display-ad-design"      component={projectViewFactory(DADLayout, DADContent)}/>
 
       <Route path="/project/christynatsumi"         component={projectViewFactory(ChristyNatsumiLayout, ChristyNatsumiContent)}/>
       <Route path="/project/riddickart"             component={projectViewFactory(RiddickartLayout, RiddickartContent)}/>

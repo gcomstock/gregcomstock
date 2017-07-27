@@ -19,6 +19,7 @@
 
   h2 {
     @extend .title--subhead--#{$name};
+    padding: 0.2rem 0;
   }
 
   @media screen and (max-width: $breakpoint-mobile) {

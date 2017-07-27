@@ -57,7 +57,7 @@
 
   .title--ProjectView--#{$name} {
     font-family:   'title--#{$name}';
-    font-size:      5rem; //map-get($properties, 'title--fontSize');
+    font-size:      5rem;
     letter-spacing: map-get($properties, 'title--fontSpacing');
     color:          map-get($properties, 'title--color');
     text-transform: map-get($properties, 'title--textTransform');
