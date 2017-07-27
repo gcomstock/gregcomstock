@@ -1,11 +1,11 @@
 .WorkView {
-  transform-style: inherit; // firefox
+  //transform-style: inherit; // firefox
 }
 
 
 // SiteIntro is position absolute
 .WorkView__SiteIntroSpacer {
-  @extend .wrapper;
+  //@extend .wrapper;
 
   height: $siteIntroHeight;
   min-height: $siteIntroMinHeight;
@@ -15,8 +15,9 @@
     height: $siteIntroHeight--mobile;
   }
 }
+
 .WorkView__wrapper {
-  @extend .wrapper;
+  //@extend .wrapper;
 
   padding-top: 12rem;
   position: relative;

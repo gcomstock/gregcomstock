@@ -5,7 +5,7 @@
   display: inline-block;
   text-align: left;
   vertical-align: top;
-  transform-style: inherit; // firefox
+  //transform-style: inherit; // firefox
 
   @media screen and (max-width: $breakpoint-mobile) {
     width: 100%;
@@ -34,7 +34,7 @@
   display: inline-block;
   width: 33rem;
   margin-right: 3rem;
-  transform-style: inherit; // firefox
+  //transform-style: inherit; // firefox
 
   @media screen and (max-width: $breakpoint-mobile) {
     width: 100%;
@@ -50,7 +50,7 @@
   vertical-align: top;
   display: inline-block;
   width: 18rem;
-  transform-style: inherit; // firefox
+  //transform-style: inherit; // firefox
 
   @media screen and (max-width: $breakpoint-mobile) {
     width: 100%;

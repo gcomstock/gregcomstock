@@ -177,7 +177,7 @@
   opacity: 0.1;
   z-index: -999;
   pointer-events: none;
-  transform-style: inherit; // firefox
+  //transform-style: inherit; // firefox
 
   @media screen and (max-width: $breakpoint-mobile){
     top: 1.5rem;

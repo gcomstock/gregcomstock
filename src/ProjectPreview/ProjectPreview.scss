@@ -2,7 +2,7 @@
 
 .ProjectPreview {
   margin-bottom: 8rem;
-  transform-style: inherit; // firefox
+  //transform-style: inherit; // firefox
 
   @media screen and (max-width: $breakpoint-mobile){
     margin-bottom: 4rem;
@@ -16,7 +16,7 @@
   display: inline-block;
   text-align: left;
   vertical-align: top;
-  transform-style: inherit; // firefox
+  //transform-style: inherit; // firefox
 
   @media screen and (max-width: $breakpoint-mobile){
     width: 100%;
@@ -29,7 +29,7 @@
   margin-right: 2rem;
   display: inline-block;
   vertical-align: top;
-  transform-style: inherit; // firefox
+  //transform-style: inherit; // firefox
 
   @media screen and (max-width: $breakpoint-mobile){
     width: 100%;
@@ -84,7 +84,7 @@
 // BEGIN ROUTE BUTTON STYLES
 .ProjectPreview__leftCol__routeWrapper {
   text-align: right;
-  transform-style: inherit; // firefox
+  //transform-style: inherit; // firefox
 
   @media screen and (max-width: $breakpoint-mobile){
     position: relative; // so it floats above text on mobile
