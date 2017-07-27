@@ -38,10 +38,24 @@
 }
 
 
-.ProjectView__row__mobilePic .Block3d__content {
-  //background: map-get($properties, 'ProjectView__picCol__pic--background');
-  //box-shadow: map-get($properties, 'ProjectView__picCol__pic--boxShadow');
 
+.ProjectView__textCol__button .Block3d__content {
+  @media screen and (max-width: $breakpoint-mobile) {
+    box-shadow: $boxShadow--mobile;
+    margin-left: 0.75rem;
+
+    @include mobileBox(
+      0.25rem,
+      $side--mobile,
+      $bottom--mobile,
+      $sideShadow--mobile,
+      $bottomShadow--mobile
+    );
+  }
+}
+
+
+.ProjectView__row__mobilePic .Block3d__content {
   @media screen and (max-width: $breakpoint-mobile) {
     box-shadow: $boxShadow--mobile;
 

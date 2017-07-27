@@ -102,6 +102,20 @@ export const Layout = React.createClass({
             subhead={Content.NUGGET3__SUBHEAD}
             text={Content.NUGGET3__TEXT}
           />
+
+          <Block3d
+            cssClass='ProjectView__textCol__button button'
+            externalUrl={Content.EXTERNAL_URL}
+            depth='1'
+            z='0'
+            noRight={true}
+            shadow={true}
+            shadowDepth={-15.99}
+            isMobile={this.props.isMobile}
+            padding={[1]}
+          >
+            <div className='button__text button__text--arrowRight'>Visit Screensim.com</div>
+          </Block3d>
         </div>
 
 
