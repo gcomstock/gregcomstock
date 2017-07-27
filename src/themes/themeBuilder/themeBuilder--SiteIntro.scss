@@ -2,6 +2,16 @@
   h1 {
     @extend .title--subhead--#{$name};
   }
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    @include mobileBox(
+        1.5rem,
+        $side--mobile,
+        $bottom--mobile,
+        $sideShadow--mobile,
+        $bottomShadow--mobile
+    );
+  }
 }
 
 .SiteIntro__viewWork .Block3d__content {

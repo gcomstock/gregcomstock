@@ -67,15 +67,13 @@
 }
 
 
+//TODO: maybe wrap this so we can align right for tablet screens
 .ProjectPreview__leftCol__snippet {
   display: block;
   text-align: left;
 
   @media screen and (max-width: $breakpoint-mobile){
     margin: 0.75rem;
-    //TODO: maybe wrap this so we can align right for tablet screens
-    //display: inline-block;
-    //max-width: 600px;
     z-index: 1 !important; //to override Block3d inline styles
   }
 }

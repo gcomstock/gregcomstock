@@ -235,15 +235,6 @@
 }
 
 
-.yerp {
-  height: $siteIntroHeight;
-  min-height: $siteIntroMinHeight;
-}
-.yerpDerp {
-  padding-top: 12rem;
-  position: relative;
-  height: calc(100% - #{$siteIntroHeight});
-}
 
 
 .App__body__scrollable__wrapper__leftFrame--WorkView,

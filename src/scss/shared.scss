@@ -7,12 +7,13 @@ $breakpoint-mobile: 1020px;
 
 $siteIntroHeight: calc(100vh - 5rem);
 $siteIntroMinHeight: 24rem;
+$siteIntroHeight--mobile: calc(100vh - 4rem); //60vh;
 
-$siteIntroHeight--mobile: 60vh;
 $mobileMinSize: 2.5rem;
 $headerHeight: 2rem;
 $headerHeight--mobile: 44px;
 $bodyWidth: 54rem;
+
 
 
 @mixin rightArrow($size, $color) {
@@ -136,11 +137,13 @@ $bodyWidth: 54rem;
   .Block3d__content {
     padding: 0.6rem;
     transition: $buttonHoverTransition;
+  }
 
-    //@media screen and (max-width: $breakpoint-mobile){
-    //  @include mobileBox(0.25rem, rgb(200,200,200), rgb(160,160,160));
-    //  padding: 1rem 1.4rem 1rem 1rem;
-    //}
+  @media screen and (max-width: $breakpoint-mobile){
+    .Block3d--shadow {
+      top: 2.25rem;
+      left: 2.25rem;
+    }
   }
 }
 .button__text {

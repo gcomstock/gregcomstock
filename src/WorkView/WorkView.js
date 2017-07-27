@@ -58,10 +58,10 @@ const WorkView = React.createClass({
 
   renderContent() {
     return (
-      <div>
-        <div className='yerp wrapper'>
+      <div className='WorkView'>
+        <div className='WorkView__SiteIntroSpacer'>
         </div>
-        <div className='yerpDerp wrapper'>
+        <div className='WorkView__wrapper'>
           { this.renderProjectPreviews() }
           { this.renderSideFrames() }
         </div>
@@ -186,10 +186,9 @@ const WorkView = React.createClass({
           <div className='App__body__scrollable__wrapper App__body__scrollable__wrapper--WorkView'>
 
             <SiteIntro isMobile={this.props.isMobile} scrollY={this.props.scrollY}/>
-
             { this.renderContent() }
-          </div>
 
+          </div>
           <SiteFooter/>
         </div>
       </div>
