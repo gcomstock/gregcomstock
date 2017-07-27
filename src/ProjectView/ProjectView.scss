@@ -18,7 +18,7 @@
   position: relative;
   text-align: center;
   max-width: 46rem;
-  transform-style: inherit; // firefox
+  //transform-style: inherit; // firefox
 
   @media screen and (max-width: $breakpoint-mobile) {
     .Block3d--shadow {

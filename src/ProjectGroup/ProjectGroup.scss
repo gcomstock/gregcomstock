@@ -1,12 +1,14 @@
 .ProjectGroup {
   position: relative;
   margin-bottom: 6rem;
+  transform-style: inherit; // firefox
 }
 
 
 .ProjectGroup__leftCol {
   display: inline-block;
   width: 18rem;
+  transform-style: inherit; // firefox
 
   @media screen and (max-width: $breakpoint-mobile) {
     width: 100%;
@@ -34,6 +36,7 @@
   vertical-align: top;
   display: inline-block;
   width: 36rem;
+  transform-style: inherit; // firefox
 
   & iframe {
     border: none;

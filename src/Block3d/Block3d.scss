@@ -18,7 +18,7 @@
   pointer-events: none;
   transform-origin: 0 0;
   transition: transform 200ms cubic-bezier(0.86, 0, 0.07, 1);
-  transform-style: inherit; // firefox
+  //transform-style: inherit; // firefox
 }
 
 .Block3d__content {
