@@ -20,10 +20,10 @@ export const Content = Object.freeze({
   NUGGET3__TEXT: 'Javascript, backbone.js, WinJS<br/>CSS, SASS<br/>Moustache templating',
 
   RESPONSIVE_DESIGN__SUBHEAD: 'Building a Responsive Desktop App',
-  RESPONSIVE_DESIGN__DESC: 'Creating a responsive, touch-enabled desktop application was a unique set of challenges and opportunities. Because the UI is touch-enabled, most of the animations are based on javascript values being set in-line as the user\'s hand performs the gesture, rather than on simply applying an animation to a set destination on a click event. This creatively-technical process required close collaboration with lead product designer Simon O\'Shea. Together, we also made quick decisions around the responsive nature of the UI, often times during development.',
+  RESPONSIVE_DESIGN__DESC: 'Creating the UI for a responsive, touch-enabled desktop application was a new challenge for me, and I welcomed the opportunity to learn from it. Because the UI is touch-enabled, most of the animations are based on coordinate values being set at different rates as the user\'s hand performs the gesture, rather than on simply applying an animation to a set destination on a click event. This creatively-technical process required close collaboration with lead product designer Simon O\'Shea. Together, we also made quick decisions around the responsive nature of the UI, often times during development.',
   RESPONSIVE_DESIGN__VIDEOPATH: 'https://player.vimeo.com/video/226602543',
-  RESPONSIVE_DESIGN__WEBVIDEORATIO: 39.2,
-  RESPONSIVE_DESIGN__MOBILEVIDEORATIO: 60
+  RESPONSIVE_DESIGN__WEBVIDEORATIO: 46.5,
+  RESPONSIVE_DESIGN__MOBILEVIDEORATIO: 70
 });
 
 
@@ -77,19 +77,6 @@ export const Layout = React.createClass({
           >
             <img width='100%' src='work/pandora-windows10/pandora-windows10-2.jpg' alt='portfolio'/>
           </Block3d>
-
-          <Block3d
-            cssClass='ProjectView__picCol__pic'
-            width='100%'
-            height='auto'
-            depth='16'
-            z='0'
-            noLeft={true}
-            noRight={true}
-            isMobile={this.props.isMobile}
-          >
-            <img width='100%' src='work/pandora-windows10/pandora-windows10-3.jpg' alt='portfolio'/>
-          </Block3d>
         </div>
 
 
@@ -108,6 +95,47 @@ export const Layout = React.createClass({
             subhead={Content.NUGGET3__SUBHEAD}
             text={Content.NUGGET3__TEXT}
           />
+        </div>
+
+
+
+        <div className='ProjectView__row'>
+          <Block3d
+            cssClass='ProjectView__row__mobilePic'
+            depth='3'
+            z='0'
+            shadow={true}
+            shadowDepth={-16}
+            noLeft={true}
+            isMobile={this.props.isMobile}
+          >
+            <img width='100%' src='work/pandora-windows10/pandora-windows10-1m.jpg' alt='portfolio'/>
+          </Block3d>
+
+          <Block3d
+            cssClass='ProjectView__row__mobilePic'
+            depth='3'
+            z='0'
+            shadow={true}
+            shadowDepth={-16}
+            noLeft={true}
+            noRight={true}
+            isMobile={this.props.isMobile}
+          >
+            <img width='100%' src='work/pandora-windows10/pandora-windows10-2m.jpg' alt='portfolio'/>
+          </Block3d>
+
+          <Block3d
+            cssClass='ProjectView__row__mobilePic'
+            depth='3'
+            z='0'
+            shadow={true}
+            shadowDepth={-16}
+            noRight={true}
+            isMobile={this.props.isMobile}
+          >
+            <img width='100%' src='work/pandora-windows10/pandora-windows10-3m.jpg' alt='portfolio'/>
+          </Block3d>
         </div>
 
 
