@@ -46,6 +46,14 @@ export const SiteIntro = React.createClass({
     return initialYRem * htmlFontSize + this.props.scrollY * multiplier + 'px';
   },
 
+
+  renderWord() {
+    if (this.props.isMobile) {
+      return <h1>Design,<br/>UX,<br/>Web Dev,<br/>Fun!</h1>;
+    }
+    return <h1>Design, UX, Web Dev, Fun!</h1>;
+  },
+
   render() {
     if (this.props.scrollY > 1200) {
       return null; //memory cleanup
@@ -67,7 +75,7 @@ export const SiteIntro = React.createClass({
             shadowDepth={-24}
             isMobile={this.props.isMobile}
           >
-            <h1>Design, UX, Web Dev, Fun!</h1>
+            {this.renderWord()}
           </Block3d>
         </div>
 

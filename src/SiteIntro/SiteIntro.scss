@@ -12,9 +12,10 @@ $deviceBoxShadow: inset 0 0 0 1px rgba(160,160,160,1);
   height: $siteIntroHeight;
   min-height: $siteIntroMinHeight;
   position: absolute;
+  text-align: center;
 
   @media screen and (max-width: $breakpoint-mobile){
-    min-height: auto;
+    min-height: 152vw;
     height: $siteIntroHeight--mobile;
   }
 }
@@ -49,7 +50,10 @@ $deviceBoxShadow: inset 0 0 0 1px rgba(160,160,160,1);
   z-index: 9999;
 
   @media screen and (max-width: $breakpoint-mobile){
-    bottom: 3rem;
+    position: initial;
+    display: inline-block;
+    margin: 3rem 0;
+    transform: none;
   }
 
   .Block3d {
