@@ -13,6 +13,13 @@
   &:after {
     @include backArrow(0.22, map-get($properties, 'App__header__x--color'));
   }
+
+  @media screen and (max-width: $breakpoint-mobile){
+    &:after {
+      @include backArrow(0.4, map-get($properties, 'App__header__x--color'));
+    }
+  }
+
 }
 
 .App__header__title {

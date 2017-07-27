@@ -48,6 +48,26 @@ const App = React.createClass({
     this.setState({theme});
   },
 
+  renderThemeButtons() {
+    // make smarter when more themes are added
+
+    if (this.state.theme == 'default') {
+      return (
+        <div className='App__header__themes'>
+          <div className='App__header__theme App__header__theme--active' onClick={() => this.setTheme('default')}></div>
+          <div className='App__header__theme' onClick={() => this.setTheme('tech')}></div>
+        </div>
+      )
+    }
+
+    return (
+      <div className='App__header__themes'>
+        <div className='App__header__theme' onClick={() => this.setTheme('default')}></div>
+        <div className='App__header__theme App__header__theme--active' onClick={() => this.setTheme('tech')}></div>
+      </div>
+    );
+  },
+
   render() {
     return (
       <div className={`App theme--${this.state.theme}`}>
@@ -71,11 +91,8 @@ const App = React.createClass({
             </div>
           </div>
           */}
+          {this.renderThemeButtons()}
 
-          <div className='App__header__themes'>
-            <div className='App__header__theme' onClick={() => this.setTheme('default')}></div>
-            <div className='App__header__theme App__header__theme--tech' onClick={() => this.setTheme('tech')}></div>
-          </div>
         </div>
 
         <ReactTransitionGroup>

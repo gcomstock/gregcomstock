@@ -12,6 +12,7 @@
   width: 100%;
   z-index: 99999;
 
+  // bottom colored borders
   &:before {
     position: absolute;
     bottom: 0;
@@ -67,7 +68,7 @@
   display: inline-block;
   margin-top: 4px;
   margin-right: 4px;
-  background-color: rgba(150,150,150,0.3);
+  box-shadow: inset 0 0 0 1px rgba(150,150,150,0.4);
 
   cursor: pointer;
   vertical-align: top;
@@ -80,8 +81,9 @@
   }
 }
 
-.App__header__theme--tech {
-  //background: url(../themes/tech/stars3.png) top left / 20px, #000;
+.App__header__theme--active {
+  background-color: rgba(150,150,150,0.2);
+  //box-shadow: none;
 }
 
 .App__header__menu {
