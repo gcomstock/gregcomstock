@@ -26,13 +26,16 @@ iframe {
 
 
 // gives visual depth to border. not needed on mobile
-.Block3d__face--bottom__border {
+.Block3d__face--bottom--extraBorderLeft,
+.Block3d__face--bottom--extraBorderRight,
+.Block3d__face--bottom--extraBorderBottom {
   background: map-get($properties, 'webBlock--borderColor');
-
-  @media screen and (max-width: $breakpoint-mobile) {
-    display: none;
-  }
 }
+
+
+
+
+
 // these pseudo elements are applied to help increase visibility of the box shadow borders
 .Block3d__face--left,
 .Block3d__face--right,

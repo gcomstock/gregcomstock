@@ -53,23 +53,10 @@
   top: 100%;
   transform: rotateX(-90deg);
 
-  // bottom border
-  &:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: calc(100% - 1px);
-    width: 1px;
-    height: 100%;
-    transform: rotate3d(0,1,0,-90deg);
-
-    @media screen and (max-width: $breakpoint-mobile) {
-      display: none;
-    }
-  }
-
   // left border
   &:before {
+    display: none;
+
     content: '';
     position: absolute;
     bottom: 0;
@@ -77,22 +64,36 @@
     width: 1px;
     height: 100%;
     transform: rotate3d(0,1,0,90deg);
-
-    @media screen and (max-width: $breakpoint-mobile) {
-      display: none;
-    }
   }
+
 }
 
-// extra DOM element to give a crisp border to the bottom of the Block3d
-.Block3d__face--bottom__border {
-  position: absolute;
+
+
+// extra DOM elements to give crisp borders around boxes
+
+
+.Block3d__face--bottom--extraBorderBottom {
+  top: auto;
   bottom: 0;
-  left: 0;
   width: 100%;
   height: 1px;
-  transform: rotate3d(1,0,0,90deg);
 }
+.Block3d__face--bottom--extraBorderLeft {
+  top: 100%;
+  width: 1px;
+  transform-origin: top left;
+  transform: rotate3d(1,0,0,-90deg);
+}
+.Block3d__face--bottom--extraBorderRight {
+  top: 100%;
+  left: 100%;
+  width: 1px;
+  transform-origin: top left;
+  transform: rotate3d(1,0,0,-90deg);
+}
+
+
 
 .Block3d__face--left {
   transform-origin: left;
@@ -100,6 +101,8 @@
 
   //bottom border
   &:after {
+    display: none;
+
     content: '';
     position: absolute;
     left: 0;
@@ -114,6 +117,8 @@
 
   //back border
   &:before {
+    display: none;
+
     content: '';
     position: absolute;
     top: 0;
