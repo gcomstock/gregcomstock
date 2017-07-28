@@ -25,23 +25,13 @@ iframe {
 }
 
 
-// gives visual depth to border. not needed on mobile
+// gives visual depth to border, does not render on mobile
+.Block3d__face--left--extraBorderLeft,
+.Block3d__face--left--extraBorderBottom,
+.Block3d__face--right--extraBorderRight,
+.Block3d__face--right--extraBorderBottom,
 .Block3d__face--bottom--extraBorderLeft,
 .Block3d__face--bottom--extraBorderRight,
 .Block3d__face--bottom--extraBorderBottom {
   background: map-get($properties, 'webBlock--borderColor');
-}
-
-
-
-
-
-// these pseudo elements are applied to help increase visibility of the box shadow borders
-.Block3d__face--left,
-.Block3d__face--right,
-.Block3d__face--bottom {
-  &:after,
-  &:before {
-    background: map-get($properties, 'webBlock--borderColor');
-  }
 }

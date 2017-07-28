@@ -1,8 +1,6 @@
 @import '../scss/shared.scss';
 
 .Block3d--wrapper {
-  //background-color: rgba(255,0,0,0.1);
-  //box-shadow: inset 0 0 1px 0 black;
 }
 
 .Block3d, .Block3d--wrapper {
@@ -32,6 +30,7 @@
   top: 0;
   left: 0;
   transform-style: preserve-3d;
+  transform-origin: top left;
 }
 
 
@@ -46,126 +45,21 @@
   height: 100%;
   z-index: -2;
 }
-
-
-
-.Block3d__face--bottom {
-  top: 100%;
-  transform: rotateX(-90deg);
-
-  // left border
-  &:before {
-    display: none;
-
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 1px;
-    height: 100%;
-    transform: rotate3d(0,1,0,90deg);
-  }
-
-}
-
-
-
-// extra DOM elements to give crisp borders around boxes
-
-
-.Block3d__face--bottom--extraBorderBottom {
-  top: auto;
-  bottom: 0;
-  width: 100%;
-  height: 1px;
-}
-.Block3d__face--bottom--extraBorderLeft {
-  top: 100%;
-  width: 1px;
-  transform-origin: top left;
-  transform: rotate3d(1,0,0,-90deg);
-}
-.Block3d__face--bottom--extraBorderRight {
-  top: 100%;
-  left: 100%;
-  width: 1px;
-  transform-origin: top left;
-  transform: rotate3d(1,0,0,-90deg);
-}
-
-
-
 .Block3d__face--left {
   transform-origin: left;
   transform: rotateY(-90deg) translateX(-100%) translateZ(0);
-
-  //bottom border
-  &:after {
-    display: none;
-
-    content: '';
-    position: absolute;
-    left: 0;
-    height: 100%;
-    width: 1px;
-    transform: rotate3d(0,1,0,90deg);
-
-    @media screen and (max-width: $breakpoint-mobile) {
-      display: none;
-    }
-  }
-
-  //back border
-  &:before {
-    display: none;
-
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 1px;
-    width: 100%;
-    transform: rotate3d(1,0,0,90deg);
-
-    @media screen and (max-width: $breakpoint-mobile) {
-      display: none;
-    }
-  }
 }
 .Block3d__face--right {
   left: auto;
   right: 0;
   transform-origin: right;
   transform: rotateY(90deg) translateX(100%) translateZ(0);
+}
 
-  //bottom border
-  &:after {
-    content: '';
-    position: absolute;
-    left: 100%;
-    height: 100%;
-    width: 1px;
-    transform: rotate3d(0,1,0,90deg);
 
-    @media screen and (max-width: $breakpoint-mobile) {
-      display: none;
-    }
-  }
-
-  //back border
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 1px;
-    width: 100%;
-    transform: rotate3d(1,0,0,90deg);
-  
-    @media screen and (max-width: $breakpoint-mobile) {
-      display: none;
-    }
-  }
+.Block3d__face--bottom {
+  top: 100%;
+  transform: rotateX(-90deg);
 }
 
 
@@ -185,4 +79,48 @@
     top: 1.5rem;
     left: 1.5rem;
   }
+}
+
+
+
+
+// extra DOM elements to give crisp borders around boxes
+.Block3d__face--left--extraBorderLeft {
+  width: 1px;
+  transform: rotate3d(1,0,0,-90deg);
+}
+.Block3d__face--left--extraBorderBottom {
+  width: 1px;
+  height: 100%;
+}
+.Block3d__face--right--extraBorderRight {
+  left: auto;
+  right: 0;
+  width: 1px;
+  transform: rotate3d(1,0,0,-90deg);
+}
+.Block3d__face--right--extraBorderBottom {
+  left: auto;
+  right: 0;
+  width: 1px;
+  height: 100%;
+}
+.Block3d__face--bottom--extraBorderLeft {
+  top: 100%;
+  width: 1px;
+  transform-origin: top left;
+  transform: rotate3d(1,0,0,-90deg);
+}
+.Block3d__face--bottom--extraBorderRight {
+  top: 100%;
+  left: auto;
+  right: 0;
+  width: 1px;
+  transform: rotate3d(1,0,0,-90deg);
+}
+.Block3d__face--bottom--extraBorderBottom {
+  top: auto;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
 }

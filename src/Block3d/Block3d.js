@@ -159,6 +159,10 @@ const Block3d = React.createClass({
           { !this.props.isMobile && !this.props.noRight && <div className='Block3d__face Block3d__face--right' style={{width: this.applyDepth() + 'rem'}}></div> }
           { !this.props.isMobile && !this.props.noBottom && <div className='Block3d__face Block3d__face--bottom' style={{height: this.applyDepth() + 'rem'}}></div> }
 
+          { !this.props.isMobile && !this.props.noLeft && <div className='Block3d__face Block3d__face--left--extraBorderLeft' style={{height: this.applyDepth() + 'rem'}}></div> }
+          { !this.props.isMobile && !this.props.noLeft && <div className='Block3d__face Block3d__face--left--extraBorderBottom' style={{transform: 'translate3d(0, 0, -' + this.applyDepth() + 'rem'}}></div> }
+          { !this.props.isMobile && !this.props.noRight && <div className='Block3d__face Block3d__face--right--extraBorderRight' style={{height: this.applyDepth() + 'rem'}}></div> }
+          { !this.props.isMobile && !this.props.noRight && <div className='Block3d__face Block3d__face--right--extraBorderBottom' style={{transform: 'translate3d(0, 0, -' + this.applyDepth() + 'rem'}}></div> }
           { !this.props.isMobile && !this.props.noBottom && <div className='Block3d__face Block3d__face--bottom--extraBorderLeft' style={{height: this.applyDepth() + 'rem'}}></div> }
           { !this.props.isMobile && !this.props.noBottom && <div className='Block3d__face Block3d__face--bottom--extraBorderRight' style={{height: this.applyDepth() + 'rem'}}></div> }
           { !this.props.isMobile && !this.props.noBottom && <div className='Block3d__face Block3d__face--bottom--extraBorderBottom' style={{transform: 'translate3d(0, 0, -' + this.applyDepth() + 'rem'}}></div> }
