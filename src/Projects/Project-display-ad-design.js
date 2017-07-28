@@ -11,7 +11,9 @@ export const Content = Object.freeze({
   PREVIEW_THUMBNAILPATH: 'work/display-ad-design/tn.jpg',
 
   NUGGET1__SUBHEAD: 'Synopsis',
-  NUGGET1__TEXT: 'Before I was a product designer and front-end developer, I designed and produced hundreds of display ads that ran on the old, OLD Pandora.com. The process usually involved taking advertiser-provided assets, and making a cohesive layout that integrated with the Pandora product and brand. Often times I needed to produce additional or substitute assets in Photoshop. Occasionally, I also designed and developed landing pages, promoting artist interviews or new album and music video releases. For a trip down memory lane, check some of my favorite work from the early days of Pandora!'
+  NUGGET1__TEXT: 'Before I was a product designer and front-end developer, I designed and produced hundreds of display ads that ran on the old, OLD Pandora.com. The process usually involved taking advertiser-provided assets, and making a cohesive layout that integrated with the Pandora product and brand. Often times I needed to produce additional or substitute assets in Photoshop. Occasionally, I also designed and developed landing pages, promoting artist interviews or new album and music video releases. For a trip down memory lane, check some of my favorite work from the early days of Pandora!',
+
+  FACT_TEXT: 'Pandora.com used to have a collection of artsy skins that could be shown behind the UI for paid listeners. I designed "cosmic rift," a favorite among listeners and around the office. Thanks for the free assets, NASA!'
 });
 
 
@@ -109,7 +111,7 @@ export const Layout = React.createClass({
           padding={[1.5,1.5,0,1.5]}
           isMobile={this.props.isMobile}
         >
-          <p>Pandora.com used to have a collection of artsy skins that could be shown behind the UI for paid listeners. I designed "cosmic rift," a favorite around the office. Thanks for the free assets, NASA!</p>
+          <p>{Content.FACT_TEXT}</p>
         </Block3d>
 
         <Block3d

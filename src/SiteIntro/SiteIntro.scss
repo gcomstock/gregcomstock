@@ -13,7 +13,6 @@ $deviceBoxShadow: inset 0 0 0 1px rgba(160,160,160,1);
   min-height: $siteIntroMinHeight;
   position: absolute;
   text-align: center;
-  //transform-style: inherit; // firefox
 
   @media screen and (max-width: $breakpoint-mobile){
     min-height: 152vw;

@@ -5,7 +5,6 @@
   display: inline-block;
   text-align: left;
   vertical-align: top;
-  //transform-style: inherit; // firefox
 
   @media screen and (max-width: $breakpoint-mobile) {
     width: 100%;
@@ -18,7 +17,6 @@
   position: relative;
   text-align: center;
   max-width: 46rem;
-  //transform-style: inherit; // firefox
 
   @media screen and (max-width: $breakpoint-mobile) {
     .Block3d--shadow {
@@ -34,7 +32,6 @@
   display: inline-block;
   width: 33rem;
   margin-right: 3rem;
-  //transform-style: inherit; // firefox
 
   @media screen and (max-width: $breakpoint-mobile) {
     width: 100%;
@@ -50,7 +47,6 @@
   vertical-align: top;
   display: inline-block;
   width: 18rem;
-  //transform-style: inherit; // firefox
 
   @media screen and (max-width: $breakpoint-mobile) {
     width: 100%;
