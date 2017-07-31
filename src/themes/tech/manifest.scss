@@ -81,6 +81,11 @@ $theme--tech: (
   App__header__menu__option--borderColor: $borderColor,
 
 
+  // SITE INTRO
+  SiteIntro__header--fontSize: 6rem,
+  SiteIntro__header--fontSize--mobile: 16vw,
+
+
   App__body--background: url(../themes/tech/stars1.png) top left / 50px rgb(20, 20, 20),
   App__body--mobile--background: url(../themes/tech/stars1.png) top left / 50px rgb(20, 20, 20),
   App__body__scrollable__wrapper__outerFrame--background: url(../themes/tech/stars3.png) top left / 100px,
@@ -88,6 +93,7 @@ $theme--tech: (
   App__body__scrollable__wrapper__outerFrame__side--boxShadow: inset 0 0 0 2px $activeColor--xLow,
   App__body__scrollable__wrapper__outerFrame__sidePsuedo--background: $activeColor--xLow,
   App__body__scrollable__wrapper__floor--background: url(../themes/tech/stars2.png) top left / 140px,
+  App__body__scrollable__wrapper__floor--boxShadow: inset 0 1px 0 0 $borderColor,
 
 
 

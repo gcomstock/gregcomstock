@@ -11,13 +11,6 @@ $bg-intro-end: #b7f2ff;
 $bg-intro-start: #a8e3ff;
 
 
-$bg-monitor: url(../themes/default/siteIntro__bg.png) top left fixed / 900px, url(../themes/default/siteIntro--onScreen.png), linear-gradient($bg-intro-start, $bg-intro-end);
-$bg-macbook: url(../themes/default/siteIntro__bg.png) top left fixed / 900px, url(../themes/default/siteIntro--onScreen.png), linear-gradient($bg-intro-start, $bg-intro-end);
-$bg-iphone: url(../themes/default/siteIntro__bg.png) top left fixed / 900px, url(../themes/default/siteIntro--onScreen.png), linear-gradient($bg-intro-start, $bg-intro-end);
-$bg-ipad: url(../themes/default/siteIntro__bg.png) top left fixed / 900px, url(../themes/default/siteIntro--onScreen.png), linear-gradient($bg-intro-start, $bg-intro-end);
-$bg-watch: url(../themes/default/siteIntro__bg.png) top left fixed / 900px, url(../themes/default/siteIntro--onScreen.png), linear-gradient($bg-intro-start, $bg-intro-end);
-
-
 //$SiteFooter__content__h2--textShadow: -0.1rem -0.1rem 0 #f8f8f8, 0.1rem -0.1rem 0 #f8f8f8, -0.1rem 0.1rem 0 #f8f8f8, 0.1rem 0.1rem 0 #f8f8f8;
 
 $theme--default: (
@@ -56,7 +49,7 @@ $theme--default: (
   webBlockSide--background: rgb(225,225,225),
   webBlockBottom--background: rgb(210,210,210),
   mobileBlock--background: rgb(255,255,255),
-  mobileBlockSide--background: rgb(215,215,215),
+  mobileBlockSide--background: rgb(225,225,225),
   mobileBlockBottom--background: rgb(195,195,195),
   Block3d__content--outline: 1px solid $borderColor,
 
@@ -70,21 +63,22 @@ $theme--default: (
   App__header__menu__option--borderColor: #93d6e6, //$borderColor,
 
 
-  App__body--background: url(../themes/default/siteIntro__bg.png) top left / 900px rgb(190, 190, 190),
-  App__body--mobile--background: url(../themes/default/siteIntro__bg.png) top left / 600px rgb(190, 190, 190),
+  //App__body--background: url(../themes/default/bg-operators.png) top left / 600px rgb(190, 190, 190),
+  App__body--background: url(../themes/default/bg-operators.png) top left / 600px rgb(210, 210, 210),
+  App__body--mobile--background: url(../themes/default/bg-operators.png) top left / 400px rgb(210, 210, 210),
   App__body__scrollable__wrapper__outerFrame--background: url(../themes/default/bg-8x8--back.png) top left / 4px rgb(250, 250, 250),
   //App__body__scrollable__wrapper__outerFrame--boxShadow: inset 0 0 0 2px $borderColor,
   App__body__scrollable__wrapper__floor--background: url(../themes/default/bg-10x10.png) top left / 5px rgb(215,215,215),
+  App__body__scrollable__wrapper__floor--boxShadow: inset 0 1px 0 0 rgb(170,170,170),
+
 
   // SITE INTRO
-  //SiteIntro__device--monitor--background: $bg-monitor,
-  //SiteIntro__device--macbook--background: $bg-macbook,
-  //SiteIntro__device--iphone--background: $bg-iphone,
-  //SiteIntro__device--ipad--background: $bg-ipad,
-  //SiteIntro__device--watch--background: $bg-watch,
+  SiteIntro__header--fontSize: 6rem,
+  SiteIntro__header--fontSize--mobile: 16vw,
+
 
   // SITE FOOTER
-  SiteFooter--background: url(../themes/default/siteIntro__bg.png) top left / 900px rgb(245,245,245),
+  SiteFooter--background: url(../themes/default/bg-operators.png) top left / 600px rgb(245,245,245),
   SiteFooter--boxShadow: inset 0 0 0 1px rgb(190,190,190),
   SiteFooter__contentWrap--background: #f8f8f8,
   SiteFooter__contentWrap--boxShadow: inset 0 0 0 1px rgb(190,190,190),

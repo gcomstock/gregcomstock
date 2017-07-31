@@ -1,12 +1,10 @@
 import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
-
 import Block3d from '../Block3d/Block3d';
 import { SiteIntro } from '../SiteIntro/SiteIntro';
 import { SiteFooter } from '../SiteFooter/SiteFooter';
 import { ProjectPreview } from '../ProjectPreview/ProjectPreview';
-
 
 
 import { Content as PandoraContent } from '../Projects/Project-pandora';
@@ -14,11 +12,9 @@ import { Content as PandoraAdsContent } from '../Projects/Project-pandora-ads';
 import { Content as PandoraInternalToolsContent } from '../Projects/Project-pandora-internal-tools';
 import { Content as PandoraWin10Content } from '../Projects/Project-pandoraWin10';
 import { Content as DADContent } from '../Projects/Project-display-ad-design';
-
 import { Content as ChristyNatsumiContent } from '../Projects/Project-christynatsumi';
 import { Content as RiddickartContent } from '../Projects/Project-riddickart';
 import { Content as ScreensimContent } from '../Projects/Project-screensim';
-
 
 
 const WorkView = React.createClass({
@@ -26,7 +22,8 @@ const WorkView = React.createClass({
     params: PropTypes.object.isRequired,
     handleScroll: PropTypes.func,
     scrollY: PropTypes.number,
-    isMobile: PropTypes.bool.isRequired
+    isMobile: PropTypes.bool.isRequired,
+    theme: PropTypes.string.isRequired
   },
 
   getInitialState() {
@@ -185,7 +182,7 @@ const WorkView = React.createClass({
         <div className='App__body__scrollable' ref={(scrollableWrapper) => { this.scrollableWrapper = scrollableWrapper; }} onScroll={this.props.handleScroll}>
           <div className='App__body__scrollable__wrapper App__body__scrollable__wrapper--WorkView'>
 
-            <SiteIntro isMobile={this.props.isMobile} scrollY={this.props.scrollY}/>
+            <SiteIntro isMobile={this.props.isMobile} scrollY={this.props.scrollY} theme={this.props.theme}/>
             { this.renderContent() }
 
           </div>

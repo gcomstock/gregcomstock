@@ -5,7 +5,8 @@ import Block3d from '../Block3d/Block3d';
 export const SiteIntro = React.createClass({
   propTypes: {
     isMobile: PropTypes.bool.isRequired,
-    scrollY: PropTypes.number.isRequired
+    scrollY: PropTypes.number.isRequired,
+    theme: PropTypes.string.isRequired
   },
 
   onViewWorkClick() {
@@ -47,37 +48,67 @@ export const SiteIntro = React.createClass({
   },
 
 
-  renderWord() {
+  renderTitle(className) {
     if (this.props.isMobile) {
-      return <h1>Design,<br/>UX,<br/>Web Dev,<br/>Fun!</h1>;
+      return <h1 className={className}>Design,<br/>UX,<br/>Web Dev,<br/>Fun!</h1>;
     }
-    return <h1>Design, UX, Web Dev, Fun!</h1>;
+    return <h1 className={className}>Design, UX,<br/>Web Dev, Fun!</h1>;
   },
 
-  render() {
-    if (this.props.scrollY > 1200) {
-      return null; //memory cleanup
-    }
-    return (
-      <div className='SiteIntro'>
+  renderThemedIntro() {
+    {/*
+    if (this.props.theme === 'tech') {
+      return (
+        <div className='SiteIntro SiteIntro--tech'>
 
-        {/* <div className='wrapper wrapper--centered' style={{transformStyle: 'preserve-3d', transform: 'rotate3d(1,0,0,' + this.props.scrollY/10 +'deg)'}}> */}
+          <div className='SiteIntro__titleContainer'>
+            <h1>Design, UX,<br/>Web Dev, Fun!</h1>
+            <h1>Design, UX,<br/>Web Dev, Fun!</h1>
+            <h1>Design, UX,<br/>Web Dev, Fun!</h1>
+            <h1>Design, UX,<br/>Web Dev, Fun!</h1>
+            <h1>Design, UX,<br/>Web Dev, Fun!</h1>
+            <h1>Design, UX,<br/>Web Dev, Fun!</h1>
+          </div>
 
-        <div className='wrapper wrapper--centered'>
+
+          <br/>
+
           <Block3d
-            cssClass='SiteIntro__word'
-            depth='6'
+            cssClass='SiteIntro__viewWork button'
+            depth='1'
             z='0'
-            padding={[1.5,1.25,1.5,1.5]}
+            shadow={true}
+            shadowDepth={-16}
             noRight={true}
             noLeft={true}
-            shadow={true}
-            shadowDepth={-24}
+            clickHandler={this.onViewWorkClick}
             isMobile={this.props.isMobile}
           >
-            {this.renderWord()}
+            <div className='button__text button__text--arrowBottom'>View Work</div>
           </Block3d>
         </div>
+      )
+    }
+    */}
+
+    return (
+      <div className='SiteIntro SiteIntro--default'>
+
+        <Block3d
+          cssClass='SiteIntro__titleBlock'
+          depth='3'
+          z='0'
+          padding={[2,2.5,2,2.5]}
+          shadow={true}
+          shadowDepth={-16}
+          noRight={true}
+          noLeft={true}
+          isMobile={this.props.isMobile}
+        >
+          {this.renderTitle('SiteIntro__header')}
+        </Block3d>
+
+        <br/>
 
         <Block3d
           cssClass='SiteIntro__viewWork button'
@@ -95,5 +126,12 @@ export const SiteIntro = React.createClass({
 
       </div>
     )
+  },
+
+  render() {
+    if (this.props.scrollY > 1200 && !this.props.isMobile) {
+      return null; // once scrolled off screen, dont render it
+    }
+    return this.renderThemedIntro();
   }
 });

@@ -159,7 +159,9 @@
   position: relative;
   height: 100vh;
 
+  // these origin points ensure that the top of the box is never shown, so we dont have to draw it
   perspective-origin: 50% calc(100% - #{$headerHeight}); // x-center y-top
+
   perspective: $bodyWidth; // should match width of body for best cube appearance
   overflow-y: scroll;
   overflow-x: hidden;
@@ -201,10 +203,9 @@
   position: absolute !important;
   z-index: -2;
   top: -10rem;
-  left: 0;
-  right: 0;
+  left: -20rem;
   display: block;
-  width: 100%;
+  width: calc(100% + 40rem);
   height: calc(100% + 10rem);
   transform: translate3d(0,0,-16rem);
   transform-style: preserve-3d;
@@ -238,12 +239,14 @@
 
 
 
-
 .App__body__scrollable__wrapper__leftFrame--WorkView,
-.App__body__scrollable__wrapper__rightFrame--WorkView,
+.App__body__scrollable__wrapper__rightFrame--WorkView {
+  top: 4rem;
+}
+
+
 .App__body__scrollable__wrapper__floor--WorkView {
-  top: 0; //$siteIntroHeight;
-  //height: calc(100% - #{$siteIntroHeight});
+  top: 0;
 
   @media screen and (max-width: $breakpoint-mobile){
     top: $siteIntroHeight--mobile;

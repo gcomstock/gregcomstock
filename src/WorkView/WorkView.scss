@@ -8,15 +8,15 @@
   min-height: $siteIntroMinHeight;
 
   @media screen and (max-width: $breakpoint-mobile){
-    min-height: auto;
-    height: $siteIntroHeight--mobile;
+    // we hide this for mobile because SiteIntro returns to the doc flow
+    display: none;
   }
 }
 
 .WorkView__wrapper {
   padding-top: 12rem;
   position: relative;
-  height: calc(100% - #{$siteIntroHeight});
+  //height: calc(100% - #{$siteIntroHeight});
 
   @media screen and (max-width: $breakpoint-mobile){
     padding-top: 6rem;

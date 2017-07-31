@@ -1,12 +1,6 @@
 @import '../scss/shared.scss';
 
 
-$deviceBackground: rgba(255,255,255,1);
-$deviceBorder: 0.125rem solid rgba(160,160,160,1);
-$deviceBoxShadow: inset 0 0 0 1px rgba(160,160,160,1);
-
-
-
 .SiteIntro {
   width: 100%;
   height: $siteIntroHeight;
@@ -15,57 +9,138 @@ $deviceBoxShadow: inset 0 0 0 1px rgba(160,160,160,1);
   text-align: center;
 
   @media screen and (max-width: $breakpoint-mobile){
-    min-height: 152vw;
-    height: $siteIntroHeight--mobile;
+    // this returns to the doc flow for mobile
+    position: relative;
+    min-height: 30rem;
+    height: auto;
   }
 }
 
 
-.SiteIntro__word {
-  margin-top: 6rem;
-  font-size: 3.6rem;
 
+
+.SiteIntro--default {
+
+}
+
+
+.SiteIntro--tech {
   h1 {
-    padding: 0.5rem;
-  }
+    position: absolute;
+    width: 100%;
+    top: 4.5rem; //calc(50% - 1.5rem);
 
-  @media screen and (max-width: $breakpoint-mobile){
-    margin: 6rem 0.75rem 0;
-    text-align: left;
-
-    .Block3d--shadow {
-      top: 2.25rem;
-      left: 2.25rem;
+    @media screen and (max-width: $breakpoint-mobile){
+      font-size: 10vw;
     }
   }
+
+
+  .SiteIntro__titleContainer {
+    h1 {
+      background: none !important;
+      -webkit-background-clip: border-box !important;
+      -webkit-text-fill-color: unset !important;
+    }
+    h1:nth-child(1) {
+      transform: translate3d(0, 0, -7.5rem);
+      color: rgb(30, 10, 30) !important;
+    }
+    h1:nth-child(2) {
+      transform: translate3d(0, 0, -6rem);
+      color: rgb(45, 15, 40) !important;
+    }
+    h1:nth-child(3) {
+      transform: translate3d(0, 0, -4.5rem);
+      color: rgb(60, 20, 50) !important;
+    }
+    h1:nth-child(4) {
+      transform: translate3d(0, 0, -3rem);
+      color: rgb(75, 25, 60) !important;
+    }
+    h1:nth-child(5) {
+      transform: translate3d(0, 0, -1.5rem);
+      color: rgb(90, 30, 70) !important;
+    }
+    h1:nth-child(6) {
+      transform: translate3d(-0, 0, 0);
+      color: rgb(255, 100, 200) !important;
+    }
+
+    @media screen and (max-width: $breakpoint-mobile){
+      background-color: rgba(255,0,0,0.2);
+      height: 10rem;
+    }
+  }
+
+
+
 }
 
 
+
+
+
+
+
+.SiteIntro__titleBlock {
+position: absolute;
+left: 50%;
+top: calc(50% - 1.5rem);
+transform: translate3d(-50%, -50%, 0);
+width: 46rem;
+
+@media screen and (max-width: $breakpoint-mobile){
+position: static;
+transform: none;
+margin: 4.5rem 0.75rem 0;
+width: auto;
+text-align: left;
+
+.Block3d--shadow {
+  top: 2.25rem;
+  left: 2.25rem;
+}
+}
+}
+
+
+
+
+
+// this is remaining the same for all themes so far
+
 .SiteIntro__viewWork {
-  position: absolute;
-  bottom: 3rem;
-  left: 50%;
-  transform: translate3d(-50%,0,0);
-  height: auto;
-  z-index: 9999;
+position: absolute;
+bottom: -2rem;
+left: 50%;
+transform: translate3d(-50%, 0, 0);
+height: auto;
+z-index: 9999;
 
-  @media screen and (max-width: $breakpoint-mobile){
-    position: initial;
-    display: inline-block;
-    margin: 3rem 0;
-    transform: none;
-  }
+.Block3d {
+@extend .floatingButton;
+}
 
-  .Block3d {
-    @extend .floatingButton;
-  }
+.Block3d--shadow {
+// shadow is cropped here because it overlaps the edge of SiteIntro
+margin-top: 2rem;
+height: calc(100% - 1.5rem);
+}
 
-  .Block3d--shadow {
-    //margin-top: 1.5rem;
-    //height: calc(100% - 0.75rem);
-  }
+.Block3d__content {
+padding: 0.75rem 1rem 1rem 1rem;
+}
 
-  .Block3d__content {
-    padding: 0.75rem 1rem 1rem 1rem;
-  }
+@media screen and (max-width: $breakpoint-mobile) {
+position: initial;
+display: inline-block;
+margin: 4.5rem 0;
+transform: none;
+
+.Block3d--shadow {
+  margin-top: auto;
+  height: 100%;
+}
+}
 }

@@ -41,8 +41,8 @@
   @media screen and (max-width: $breakpoint-mobile){
     width: auto;
     max-width: calc(100% - 1.5rem);
-    z-index: -1 !important; //to override Block3d inline styles
-    transform: translateZ(-6rem); //TODO: figure out why this works
+    //z-index: -1 !important; //to override Block3d inline styles
+    //transform: translateZ(-6rem); //TODO: figure out why this works
 
     .Block3d--shadow {
       top: 2.25rem;

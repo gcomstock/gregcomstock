@@ -100,7 +100,8 @@ const App = React.createClass({
             key: location.hash,
             isMobile: this.state.isMobile,
             handleScroll: this.handleScroll,
-            scrollY: this.state.scrollY
+            scrollY: this.state.scrollY,
+            theme: this.state.theme
           } )}
         </ReactTransitionGroup>
       </div>

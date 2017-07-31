@@ -5,9 +5,9 @@ $buttonHoverTransition: background-color 150ms linear, color 150ms linear, strok
 
 $breakpoint-mobile: 1020px;
 
-$siteIntroHeight: calc(100vh - 5rem);
-$siteIntroMinHeight: 24rem;
-$siteIntroHeight--mobile: calc(100vh - 8rem); //60vh;
+$siteIntroHeight: calc(100vh - 6rem);
+$siteIntroMinHeight: 20rem;
+$siteIntroHeight--mobile: 100vh; //calc(100vh - 12rem); //60vh;
 
 $mobileMinSize: 2.5rem;
 $headerHeight: 2rem;

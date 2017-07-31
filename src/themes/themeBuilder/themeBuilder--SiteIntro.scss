@@ -1,7 +1,33 @@
-.SiteIntro__word {
+.SiteIntro {
   h1 {
     @extend .title--subhead--#{$name};
+    font-size: map-get($properties, 'SiteIntro__header--fontSize');
+
+    @media screen and (max-width: $breakpoint-mobile) {
+      font-size: map-get($properties, 'SiteIntro__header--fontSize--mobile');
+    }
   }
+}
+
+
+
+
+
+
+.SiteIntro__bg {
+  //background: url(../themes/tech/bg-operators.png) center / 2400px;
+  //position: absolute;
+  //width: calc(100% + 40rem);
+  //height:  calc(100% + 10rem);
+  //top: -10rem;
+  //left: -20rem;
+  //z-index: -50;
+  //transform: translate3d(0,0,-16rem);
+  //box-shadow: inset 0 -1px 0 0 red;
+}
+
+
+.SiteIntro__titleBlock {
 
   @media screen and (max-width: $breakpoint-mobile) {
     @include mobileBox(
@@ -12,11 +38,14 @@
         $bottomShadow--mobile
     );
 
-    h1 {
-      font-size: 16vw;
-    }
+    //h1 {
+    //  font-size: 16vw;
+    //}
   }
 }
+
+
+
 
 .SiteIntro__viewWork .Block3d__content {
   @media screen and (max-width: $breakpoint-mobile) {
