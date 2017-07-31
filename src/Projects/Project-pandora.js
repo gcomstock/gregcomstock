@@ -120,7 +120,7 @@ export const Layout = React.createClass({
             z='0'
             noRight={true}
             shadow={true}
-            shadowDepth={-15.99}
+            shadowDepth={-16}
             isMobile={this.props.isMobile}
             padding={[1]}
           >

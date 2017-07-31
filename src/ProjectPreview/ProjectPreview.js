@@ -63,7 +63,7 @@ export const ProjectPreview = React.createClass({
             z='-4'
             noLeft={true}
             shadow={true}
-            shadowDepth={-15.99}
+            shadowDepth={-16}
             isMobile={this.props.isMobile}
           >
             <h2 dangerouslySetInnerHTML={this.renderTitleHTML()} />
@@ -90,7 +90,7 @@ export const ProjectPreview = React.createClass({
               z='0'
               noLeft={true}
               shadow={true}
-              shadowDepth={-15.99}
+              shadowDepth={-16}
               isMobile={this.props.isMobile}
               padding={[1]}
             >
