@@ -15,11 +15,13 @@
 @import '../themes/themeBuilder/themeBuilder';
 @import "../themes/default/manifest.scss";
 @import "../themes/tech/manifest.scss";
+@import "../themes/glass/manifest.scss";
 
 
 //@include themeBuilder('game', $theme--game);
 @include themeBuilder('default', $theme--default);
 @include themeBuilder('tech', $theme--tech);
+@include themeBuilder('glass', $theme--glass);
 
 
 // import all shared sass files

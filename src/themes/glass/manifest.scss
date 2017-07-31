@@ -1,0 +1,101 @@
+$title--colorGradient--startColor: #1a4f5c;
+$title--colorGradient--endColor: #349cb6;
+
+$activeColor--low: #28788c;
+$activeColor--mid: #349cb6;
+$activeColor--high: #41c4e5;
+$borderColor: #ccc;
+$borderColorBright: rgba(255, 100, 200, 1);
+
+$bg-intro-end: #b7f2ff;
+$bg-intro-start: #a8e3ff;
+
+
+
+
+$theme--glass: (
+  // TITLE
+  title--font: '../themes/glass/goku.woff',
+  title--font2: '../themes/glass/goku.woff2',
+  title--fontSize: 3.4rem,
+  title--lineHeight: 2rem,
+  title--fontSize--mobile: 3rem,
+  title--fontSpacing: 0,
+  title--textTransform: none,
+  title--color: rgb(60, 60, 60),
+  title--background: -webkit-linear-gradient($title--colorGradient--startColor, $title--colorGradient--endColor),
+  text--color: rgb(180, 80, 80),
+  link--color: $title--colorGradient--endColor,
+
+
+  // BUTTONS
+  button--color: rgb(240,240,240),
+  button--arrowColor: rgb(240,240,240),
+  button--background: rgb(40,40,40),
+  button--boxShadow: inset 0 0 0 2px rgb(240,240,240),
+  button--background--mobile: rgb(30,30,30),
+  button--boxShadow--mobile: inset 0 0 0 2px rgb(240,240,240),
+
+  button--hover--background: rgb(30, 30, 30),
+  button--hover--color: $activeColor--high,
+  button--hover--arrowColor: $activeColor--high,
+  button--hover--boxShadow: inset 0 0 0 0.1rem $activeColor--high,
+  button--hover--face--side: $activeColor--mid,
+  button--hover--face--bottom: $activeColor--low,
+
+
+  // DEFAULT BLOCK3D VALUES, INDIVIDUAL STYLES CAN OVERRIDE THESE
+  webBlock--background: rgb(250,250,250),
+  webBlockSide--background: rgb(225,225,225),
+  webBlockBottom--background: rgb(210,210,210),
+  mobileBlock--background: rgb(255,255,255),
+  mobileBlockSide--background: rgb(225,225,225),
+  mobileBlockBottom--background: rgb(195,195,195),
+  Block3d__content--outline: 1px solid $borderColor,
+
+  // APP HEADER
+  App__header--background: #fff,
+  App__headerBefore--background: #93d6e6,
+  App__headerAfter--background: -webkit-linear-gradient($title--colorGradient--startColor, $title--colorGradient--endColor),
+  App__header__x--color: $title--colorGradient--endColor,
+  App__header__title--marginTop: 0.05rem, //visual offset
+  App__header__menu__option--color: #909090,
+  App__header__menu__option--borderColor: #93d6e6, //$borderColor,
+
+
+  //App__body--background: url(../themes/default/bg-operators.png) top left / 600px rgb(190, 190, 190),
+  App__body--background: url(../themes/default/bg-operators.png) top left / 600px rgb(210, 210, 210),
+  App__body--mobile--background: url(../themes/default/bg-operators.png) top left / 400px rgb(210, 210, 210),
+  App__body__scrollable__wrapper__outerFrame--background: url(../themes/default/bg-8x8--back.png) top left / 4px rgb(250, 250, 250),
+  //App__body__scrollable__wrapper__outerFrame--boxShadow: inset 0 0 0 2px $borderColor,
+  App__body__scrollable__wrapper__floor--background: url(../themes/default/bg-10x10.png) top left / 5px rgb(215,215,215),
+  App__body__scrollable__wrapper__floor--boxShadow: inset 0 1px 0 0 rgb(170,170,170),
+
+
+  // SITE INTRO
+  SiteIntro__header--fontSize: 6rem,
+  SiteIntro__header--fontSize--mobile: 16vw,
+
+
+  // SITE FOOTER
+  SiteFooter--background: url(../themes/default/bg-operators.png) top left / 600px rgb(245,245,245),
+  SiteFooter--boxShadow: inset 0 0 0 1px rgb(190,190,190),
+  SiteFooter__contentWrap--background: #f8f8f8,
+  SiteFooter__contentWrap--boxShadow: inset 0 0 0 1px rgb(190,190,190),
+
+  //SiteFooter__content__h2--textShadow: $SiteFooter__content__h2--textShadow,
+  SiteFooter__content__h2--textStroke: 2px #f8f8f8,
+  SiteFooter__content__h2--background: -webkit-linear-gradient($title--colorGradient--startColor, $title--colorGradient--endColor),
+  SiteFooter__content__h2--color: $title--colorGradient--startColor,
+
+
+  // PROJECT PREVIEW
+  ProjectPreview__leftCol__title--background: rgb(245, 245, 245),
+  ProjectPreview__leftCol__snippet--background: rgb(235, 235, 235),
+  ProjectPreview__rightCol--background: rgb(255, 255, 255),
+
+
+  // PROJECT VIEW
+  ProjectView__title--background: rgb(255, 255, 255),
+  ProjectView__textCol__text--background: rgb(245, 245, 245)
+);

@@ -56,16 +56,29 @@ const App = React.createClass({
         <div className='App__header__themes'>
           <div className='App__header__theme App__header__theme--active' onClick={() => this.setTheme('default')}></div>
           <div className='App__header__theme' onClick={() => this.setTheme('tech')}></div>
+          <div className='App__header__theme' onClick={() => this.setTheme('glass')}></div>
         </div>
       )
     }
+    if (this.state.theme == 'tech') {
+      return (
+        <div className='App__header__themes'>
+          <div className='App__header__theme' onClick={() => this.setTheme('default')}></div>
+          <div className='App__header__theme App__header__theme--active' onClick={() => this.setTheme('tech')}></div>
+          <div className='App__header__theme' onClick={() => this.setTheme('glass')}></div>
+        </div>
+      );
+    }
+    if (this.state.theme == 'glass') {
+      return (
+        <div className='App__header__themes'>
+          <div className='App__header__theme' onClick={() => this.setTheme('default')}></div>
+          <div className='App__header__theme' onClick={() => this.setTheme('tech')}></div>
+          <div className='App__header__theme App__header__theme--active' onClick={() => this.setTheme('glass')}></div>
+        </div>
+      );
+    }
 
-    return (
-      <div className='App__header__themes'>
-        <div className='App__header__theme' onClick={() => this.setTheme('default')}></div>
-        <div className='App__header__theme App__header__theme--active' onClick={() => this.setTheme('tech')}></div>
-      </div>
-    );
   },
 
   render() {
