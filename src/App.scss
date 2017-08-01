@@ -82,7 +82,7 @@
 }
 
 .App__header__theme--active {
-  background-color: rgba(150,150,150,0.2);
+  background-color: rgba(150,150,150,0.4);
   //box-shadow: none;
 }
 
@@ -201,7 +201,7 @@
 
 .App__body__scrollable__wrapper__floor {
   position: absolute !important;
-  z-index: -2;
+  z-index: -10;
   top: -10rem;
   left: -20rem;
   display: block;
@@ -209,6 +209,11 @@
   height: calc(100% + 10rem);
   transform: translate3d(0,0,-16.01rem);
   transform-style: preserve-3d;
+
+  @media screen and (max-width: $breakpoint-mobile) {
+    //height: 100%;
+    //top: -12rem;
+  }
 }
 
 
@@ -243,12 +248,6 @@
 .App__body__scrollable__wrapper__rightFrame--WorkView {
   top: 4rem;
 }
-
-
 .App__body__scrollable__wrapper__floor--WorkView {
   top: 0;
-
-  @media screen and (max-width: $breakpoint-mobile){
-    top: $siteIntroHeight--mobile;
-  }
 }

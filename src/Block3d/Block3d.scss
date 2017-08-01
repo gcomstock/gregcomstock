@@ -45,15 +45,17 @@
   height: 100%;
   z-index: -2;
 }
+
+// .01 is to fix a rendering issue on chrome with the outer side walls
 .Block3d__face--left {
   transform-origin: left;
-  transform: rotateY(-90deg) translateX(-100%) translateZ(0);
+  transform: rotateY(-90.01deg) translateX(-100%) translateZ(0);
 }
 .Block3d__face--right {
   left: auto;
   right: 0;
   transform-origin: right;
-  transform: rotateY(90deg) translateX(100%) translateZ(0);
+  transform: rotateY(90.01deg) translateX(100%) translateZ(0);
 }
 
 

@@ -82,9 +82,8 @@
   box-shadow: map-get($properties, 'App__body__scrollable__wrapper__floor--boxShadow');
 
   @media screen and (max-width: $breakpoint-mobile) {
-    background-image: none;
-    background-color: transparent;
-    border-top: 1px solid #555;
+    background: map-get($properties, 'App__body__scrollable__wrapper__floor--background--mobile');
+    box-shadow: map-get($properties, 'App__body__scrollable__wrapper__floor--boxShadow--mobile');
   }
 }
 

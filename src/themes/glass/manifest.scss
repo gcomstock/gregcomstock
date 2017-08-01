@@ -10,13 +10,14 @@ $borderColorBright: rgba(255, 100, 200, 1);
 $bg-intro-end: #b7f2ff;
 $bg-intro-start: #a8e3ff;
 
+$App__header--background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.92)), url(../themes/glass/bg-blur.jpg) top center / cover;
 
 
 
 $theme--glass: (
   // TITLE
-  title--font: '../themes/glass/goku.woff',
-  title--font2: '../themes/glass/goku.woff2',
+  title--font: '../themes/default/goku.woff',
+  title--font2: '../themes/default/goku.woff2',
   title--fontSize: 3.4rem,
   title--lineHeight: 2rem,
   title--fontSize--mobile: 3rem,
@@ -45,33 +46,36 @@ $theme--glass: (
 
 
   // DEFAULT BLOCK3D VALUES, INDIVIDUAL STYLES CAN OVERRIDE THESE
-  //webBlock--background: rgba(255,255,255,0.75),
-  webBlock--background: -webkit-linear-gradient(rgba(255,255,255,0.65), rgba(255,255,255,0.90)),
-  webBlockSide--background: rgba(225,225,225,0.5),
-  //webBlockBottom--background: rgba(210,210,210,0.5),
-  webBlockBottom--background: -webkit-linear-gradient(rgba(210,210,210,0.55), rgba(210,210,210,0.25)),
-  mobileBlock--background: rgb(255,255,255),
-  mobileBlockSide--background: rgb(225,225,225),
-  mobileBlockBottom--background: rgb(195,195,195),
+  webBlock--background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.9)),
+  webBlockSide--background: rgba(225,225,225,0.7),
+  webBlockBottom--background: linear-gradient(rgba(210,210,210,0.65), rgba(210,210,210,0.45)),
+  mobileBlock--background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.9)),
+  mobileBlockSide--background: rgba(255,255,255,0.7),
+  mobileBlockBottom--background: rgba(195,195,195,0.7),
   Block3d__content--outline: 1px solid $borderColor,
 
+
+
   // APP HEADER
-  App__header--background: #fff,
-  App__headerBefore--background: #93d6e6,
-  App__headerAfter--background: -webkit-linear-gradient($title--colorGradient--startColor, $title--colorGradient--endColor),
+  App__header--background: $App__header--background,
+  App__headerBefore--background: #fff,
+  App__headerAfter--background: linear-gradient(rgba(210,210,210,0.85), rgba(210,210,210,0.65)),
   App__header__x--color: $title--colorGradient--endColor,
   App__header__title--marginTop: 0.05rem, //visual offset
   App__header__menu__option--color: #909090,
   App__header__menu__option--borderColor: #93d6e6, //$borderColor,
 
 
-  //App__body--background: url(../themes/default/bg-operators.png) top left / 600px rgb(190, 190, 190),
-  App__body--background: url(../themes/glass/bg.jpg) center / cover,
-  App__body--mobile--background: url(../themes/default/bg-operators.png) top left / 400px rgb(210, 210, 210),
-  App__body__scrollable__wrapper__outerFrame--background: url(../themes/default/bg-8x8--back.png) top left / 4px rgba(255, 255, 255, 0.65),
+  App__body--background: url(../themes/glass/bg-blur.jpg) top center / cover,
+  App__body--mobile--background: url(../themes/glass/bg-blur-mobile.jpg) top center / cover,
+  App__body__scrollable__wrapper__outerFrame--background: url(../themes/glass/bg-8x8--back.png) top left / 4px rgba(255, 255, 255, 0.75),
   //App__body__scrollable__wrapper__outerFrame--boxShadow: inset 0 0 0 2px $borderColor,
-  App__body__scrollable__wrapper__floor--background: url(../themes/default/bg-10x10.png) top left / 5px rgba(215,215,215,0.25),
+
+  App__body__scrollable__wrapper__floor--background: url(../themes/glass/bg-10x10.png) top left / 5px rgba(215,215,215,0.25),
   App__body__scrollable__wrapper__floor--boxShadow: inset 0 1px 0 0 rgb(170,170,170),
+
+  App__body__scrollable__wrapper__floor--background--mobile: url(../themes/glass/bg-8x8.png) top left / 4px rgba(255, 255, 255, 0.2),
+  App__body__scrollable__wrapper__floor--boxShadow--mobile: inset 0 1px 0 0 rgba(255,255,255,0.5),
 
 
   // SITE INTRO
@@ -80,9 +84,9 @@ $theme--glass: (
 
 
   // SITE FOOTER
-  SiteFooter--background: url(../themes/default/bg-operators.png) top left / 600px rgb(245,245,245),
-  SiteFooter--boxShadow: inset 0 0 0 1px rgb(190,190,190),
-  SiteFooter__contentWrap--background: #f8f8f8,
+  SiteFooter--background: url(../themes/glass/bg-8x8.png) top left / 4px rgba(255, 255, 255, 0.6),
+  SiteFooter--boxShadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.8),
+  SiteFooter__contentWrap--background: rgba(255,255,255,0.5),
   SiteFooter__contentWrap--boxShadow: inset 0 0 0 1px rgb(190,190,190),
 
   //SiteFooter__content__h2--textShadow: $SiteFooter__content__h2--textShadow,
@@ -92,12 +96,13 @@ $theme--glass: (
 
 
   // PROJECT PREVIEW
-  ProjectPreview__leftCol__title--background: rgb(245, 245, 245),
-  ProjectPreview__leftCol__snippet--background: rgb(235, 235, 235),
-  ProjectPreview__rightCol--background: rgb(255, 255, 255),
+  //ProjectPreview__leftCol__title--background: rgb(245, 245, 245),
+  //ProjectPreview__leftCol__snippet--background: rgb(235, 235, 235),
+  //ProjectPreview__rightCol--background: rgb(255, 255, 255),
 
 
   // PROJECT VIEW
-  ProjectView__title--background: rgb(255, 255, 255),
-  ProjectView__textCol__text--background: rgb(245, 245, 245)
+  //ProjectView__title--background: rgb(255, 255, 255),
+  //ProjectView__textCol__text--background: rgb(245, 245, 245)
+  ProjectView__fact--background: rgba(255,255,255,0.7)
 );

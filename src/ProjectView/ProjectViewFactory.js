@@ -63,7 +63,6 @@ export default function projectViewFactory(WrappedComponent, projectData) {
       if (!this.props.isMobile) {
         return (
           <div>
-            <div className='App__body__scrollable__wrapper__floor'></div>
             <div className='App__body__scrollable__wrapper__outerFrame App__body__scrollable__wrapper__leftFrame'>
               <Block3d width='20rem' height='100%' depth='12' z='-4'/>
             </div>
@@ -93,6 +92,8 @@ export default function projectViewFactory(WrappedComponent, projectData) {
 
               {/* TODO: pass in props for theme-specific js (maybe?) */}
               <WrappedComponent isMobile={this.props.isMobile} />
+
+              <div className='App__body__scrollable__wrapper__floor'></div>
             </div>
           </div>
         </div>

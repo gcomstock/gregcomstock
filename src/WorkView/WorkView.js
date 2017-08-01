@@ -90,7 +90,6 @@ const WorkView = React.createClass({
               isMobile={this.props.isMobile}
             />
           </div>
-          <div className='App__body__scrollable__wrapper__floor App__body__scrollable__wrapper__floor--WorkView'></div>
         </div>
       )
     }
@@ -163,6 +162,7 @@ const WorkView = React.createClass({
           isMobile={this.props.isMobile}
         />
 
+        <div className='App__body__scrollable__wrapper__floor App__body__scrollable__wrapper__floor--WorkView'></div>
       </div>
     )
   },
@@ -181,10 +181,8 @@ const WorkView = React.createClass({
       <div className={App__body}>
         <div className='App__body__scrollable' ref={(scrollableWrapper) => { this.scrollableWrapper = scrollableWrapper; }} onScroll={this.props.handleScroll}>
           <div className='App__body__scrollable__wrapper App__body__scrollable__wrapper--WorkView'>
-
             <SiteIntro isMobile={this.props.isMobile} scrollY={this.props.scrollY} theme={this.props.theme}/>
             { this.renderContent() }
-
           </div>
           <SiteFooter/>
         </div>

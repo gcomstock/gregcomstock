@@ -92,9 +92,12 @@ $theme--tech: (
   App__body__scrollable__wrapper__outerFrame--boxShadow: inset 0 0 0 2px $activeColor--low,
   App__body__scrollable__wrapper__outerFrame__side--boxShadow: inset 0 0 0 2px $activeColor--xLow,
   App__body__scrollable__wrapper__outerFrame__sidePsuedo--background: $activeColor--xLow,
+
   App__body__scrollable__wrapper__floor--background: url(../themes/tech/stars2.png) top left / 140px,
   App__body__scrollable__wrapper__floor--boxShadow: inset 0 1px 0 0 $borderColor,
 
+  App__body__scrollable__wrapper__floor--background--mobile: url(../themes/tech/stars2.png) top left / 90px,
+  App__body__scrollable__wrapper__floor--boxShadow--mobile: inset 0 1px 0 0 $borderColor,
 
 
   // PROJECT PREVIEW

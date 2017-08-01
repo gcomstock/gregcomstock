@@ -56,23 +56,6 @@ export const SiteIntro = React.createClass({
   },
 
   renderThemedIntro() {
-    {/*
-    if (this.props.theme === 'tech') {
-      return (
-        <div className='SiteIntro SiteIntro--tech'>
-          <div className='SiteIntro__titleContainer'>
-            <h1>Design, UX,<br/>Web Dev, Fun!</h1>
-            <h1>Design, UX,<br/>Web Dev, Fun!</h1>
-            <h1>Design, UX,<br/>Web Dev, Fun!</h1>
-            <h1>Design, UX,<br/>Web Dev, Fun!</h1>
-            <h1>Design, UX,<br/>Web Dev, Fun!</h1>
-            <h1>Design, UX,<br/>Web Dev, Fun!</h1>
-          </div>
-        </div>
-      )
-    }
-    */}
-
     return (
       <div className='SiteIntro'>
 
@@ -91,6 +74,8 @@ export const SiteIntro = React.createClass({
         </Block3d>
 
         <br/>
+
+        {/* <div className='SiteIntro__bg'/> */}
 
         <Block3d
           cssClass='SiteIntro__viewWork button'

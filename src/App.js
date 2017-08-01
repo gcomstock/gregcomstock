@@ -18,7 +18,7 @@ const App = React.createClass({
     return {
       isMobile: window.innerWidth <= BREAKPOINT_MOBILE,
       scrollY: 0,
-      theme: 'default',
+      theme: 'glass',
       rootFontSize: 0
     }
   },
