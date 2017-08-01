@@ -22,7 +22,6 @@
 
 .ProjectView__picCol__pic .Block3d__content {
   background: map-get($properties, 'ProjectView__picCol__pic--background');
-  //box-shadow: map-get($properties, 'ProjectView__picCol__pic--boxShadow');
 
   @media screen and (max-width: $breakpoint-mobile) {
     box-shadow: $boxShadow--mobile;
