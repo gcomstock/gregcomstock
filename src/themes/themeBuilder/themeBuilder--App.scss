@@ -77,6 +77,12 @@
   }
 }
 
+.App__body__scrollable__wrapper__rightFrame {
+  .Block3d__content {
+    background: map-get($properties, 'App__body__scrollable__wrapper__rightFrame--background');
+  }
+}
+
 .App__body__scrollable__wrapper__floor {
   background: map-get($properties, 'App__body__scrollable__wrapper__floor--background');
   box-shadow: map-get($properties, 'App__body__scrollable__wrapper__floor--boxShadow');

@@ -69,7 +69,9 @@ $theme--glass: (
 
   App__body--background: url(../themes/glass/bg-blur.jpg) top center / cover,
   App__body--mobile--background: url(../themes/glass/bg-blur-mobile.jpg) top center / cover,
-  //App__body__scrollable__wrapper__outerFrame--background: url(../themes/glass/bg-8x8.png) top left / 4px rgba(255, 255, 255, 0.55),
+  App__body__scrollable__wrapper__outerFrame--background: linear-gradient(90deg, rgba(255,180,130,0.9), rgba(220,220,220,0.9)),
+  App__body__scrollable__wrapper__rightFrame--background: linear-gradient(-90deg, rgba(255,180,130,0.9), rgba(220,220,220,0.9)),
+
   //App__body__scrollable__wrapper__outerFrame--boxShadow: inset 0 0 0 2px $borderColor,
 
   App__body__scrollable__wrapper__floor--background: url(../themes/glass/bg-8x8.png) top left / 4px,

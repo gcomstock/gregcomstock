@@ -10,7 +10,7 @@ $bg-intro-end: #b7f2ff;
 $bg-intro-start: #a8e3ff;
 
 
-//$SiteFooter__content__h2--textShadow: -0.1rem -0.1rem 0 #f8f8f8, 0.1rem -0.1rem 0 #f8f8f8, -0.1rem 0.1rem 0 #f8f8f8, 0.1rem 0.1rem 0 #f8f8f8;
+
 
 $theme--default: (
   // TITLE
@@ -67,6 +67,7 @@ $theme--default: (
   App__body--mobile--background: url(../themes/default/bg-operators.png) top left / 400px rgb(190, 190, 190),
   App__body__scrollable__wrapper__outerFrame--background: url(../themes/default/bg-8x8--back.png) top left / 4px rgb(250, 250, 250),
   //App__body__scrollable__wrapper__outerFrame--boxShadow: inset 0 0 0 2px $borderColor,
+
   App__body__scrollable__wrapper__floor--background: url(../themes/default/bg-10x10.png) top left / 5px rgb(215,215,215),
   App__body__scrollable__wrapper__floor--boxShadow: inset 0 1px 0 0 rgb(170,170,170),
 

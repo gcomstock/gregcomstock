@@ -28,7 +28,7 @@
 }
 
 
-.SiteIntro__titleBlock {
+.SiteIntro__titleBlock .Block3d__content {
   @media screen and (max-width: $breakpoint-mobile) {
     @include mobileBox(
         1.5rem,
