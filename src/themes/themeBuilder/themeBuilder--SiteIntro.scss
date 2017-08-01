@@ -28,7 +28,6 @@
 
 
 .SiteIntro__titleBlock {
-
   @media screen and (max-width: $breakpoint-mobile) {
     @include mobileBox(
         1.5rem,
@@ -37,10 +36,6 @@
         $sideShadow--mobile,
         $bottomShadow--mobile
     );
-
-    //h1 {
-    //  font-size: 16vw;
-    //}
   }
 }
 

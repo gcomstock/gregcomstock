@@ -9,7 +9,7 @@
 }
 
 .Block3d__face--bottom {
-  background-color: map-get($properties, 'webBlockBottom--background');
+  background: map-get($properties, 'webBlockBottom--background');
   box-shadow: map-get($properties, 'webBlockBottom--boxShadow');
 }
 .Block3d__face--left,

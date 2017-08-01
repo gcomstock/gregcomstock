@@ -60,7 +60,6 @@ export const SiteIntro = React.createClass({
     if (this.props.theme === 'tech') {
       return (
         <div className='SiteIntro SiteIntro--tech'>
-
           <div className='SiteIntro__titleContainer'>
             <h1>Design, UX,<br/>Web Dev, Fun!</h1>
             <h1>Design, UX,<br/>Web Dev, Fun!</h1>
@@ -69,30 +68,13 @@ export const SiteIntro = React.createClass({
             <h1>Design, UX,<br/>Web Dev, Fun!</h1>
             <h1>Design, UX,<br/>Web Dev, Fun!</h1>
           </div>
-
-
-          <br/>
-
-          <Block3d
-            cssClass='SiteIntro__viewWork button'
-            depth='1'
-            z='0'
-            shadow={true}
-            shadowDepth={-16}
-            noRight={true}
-            noLeft={true}
-            clickHandler={this.onViewWorkClick}
-            isMobile={this.props.isMobile}
-          >
-            <div className='button__text button__text--arrowBottom'>View Work</div>
-          </Block3d>
         </div>
       )
     }
     */}
 
     return (
-      <div className='SiteIntro SiteIntro--default'>
+      <div className='SiteIntro'>
 
         <Block3d
           cssClass='SiteIntro__titleBlock'
