@@ -18,6 +18,10 @@
   box-shadow: map-get($properties, 'webBlockSide--boxShadow');
 }
 
+.Block3d__face--right {
+  background: map-get($properties, 'webBlockRightSide--background');
+}
+
 
 .Block3d__content img,
 iframe {

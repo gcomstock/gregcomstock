@@ -20,15 +20,15 @@
     }
     .Block3d__content {
       box-shadow: map-get($properties, 'button--hover--boxShadow');
-      background-color: map-get($properties, 'button--hover--background');
+      background: map-get($properties, 'button--hover--background');
     }
 
     .Block3d__face--bottom {
-      background-color: map-get($properties, 'button--hover--face--bottom');
+      background: map-get($properties, 'button--hover--face--bottom');
     }
     .Block3d__face--left,
     .Block3d__face--right {
-      background-color: map-get($properties, 'button--hover--face--side');
+      background: map-get($properties, 'button--hover--face--side');
     }
 
     .button__text--arrowRight:after {

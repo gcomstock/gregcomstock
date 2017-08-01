@@ -24,20 +24,20 @@ $theme--glass: (
   title--fontSpacing: 0,
   title--textTransform: none,
   title--color: rgb(60, 60, 60),
-  title--background: -webkit-linear-gradient($title--colorGradient--startColor, $title--colorGradient--endColor),
-  text--color: rgb(40, 40, 40),
+  title--background: linear-gradient($title--colorGradient--startColor, $title--colorGradient--endColor),
+  text--color: rgb(30, 20, 0),
   link--color: $title--colorGradient--endColor,
 
 
   // BUTTONS
   button--color: rgb(240,240,240),
   button--arrowColor: rgb(240,240,240),
-  button--background: rgb(40,40,40),
+  button--background: rgb(30,30,30),
   button--boxShadow: inset 0 0 0 2px rgb(240,240,240),
-  button--background--mobile: rgb(30,30,30),
+  button--background--mobile: rgb(20,20,20),
   button--boxShadow--mobile: inset 0 0 0 2px rgb(240,240,240),
 
-  button--hover--background: rgb(30, 30, 30),
+  button--hover--background: rgb(30, 15, 0),
   button--hover--color: $activeColor--high,
   button--hover--arrowColor: $activeColor--high,
   button--hover--boxShadow: inset 0 0 0 0.1rem $activeColor--high,
@@ -47,8 +47,9 @@ $theme--glass: (
 
   // DEFAULT BLOCK3D VALUES, INDIVIDUAL STYLES CAN OVERRIDE THESE
   webBlock--background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.9)),
-  webBlockSide--background: rgba(225,225,225,0.7),
-  webBlockBottom--background: linear-gradient(rgba(210,210,210,0.65), rgba(210,210,210,0.45)),
+  webBlockSide--background: linear-gradient(90deg, rgba(230,180,250,0.25), rgba(210,210,210,0.65)),
+  webBlockRightSide--background: linear-gradient(-90deg, rgba(230,180,250,0.25), rgba(210,210,210,0.65)),
+  webBlockBottom--background: linear-gradient(rgba(210,210,210,0.85), rgba(180,180,250,0.45)),
   mobileBlock--background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.9)),
   mobileBlockSide--background: rgba(255,255,255,0.7),
   mobileBlockBottom--background: rgba(195,195,195,0.7),
@@ -68,13 +69,13 @@ $theme--glass: (
 
   App__body--background: url(../themes/glass/bg-blur.jpg) top center / cover,
   App__body--mobile--background: url(../themes/glass/bg-blur-mobile.jpg) top center / cover,
-  App__body__scrollable__wrapper__outerFrame--background: url(../themes/glass/bg-8x8--back.png) top left / 4px rgba(255, 255, 255, 0.75),
+  //App__body__scrollable__wrapper__outerFrame--background: url(../themes/glass/bg-8x8.png) top left / 4px rgba(255, 255, 255, 0.55),
   //App__body__scrollable__wrapper__outerFrame--boxShadow: inset 0 0 0 2px $borderColor,
 
-  App__body__scrollable__wrapper__floor--background: url(../themes/glass/bg-10x10.png) top left / 5px rgba(215,215,215,0.25),
+  App__body__scrollable__wrapper__floor--background: url(../themes/glass/bg-8x8.png) top left / 4px,
   App__body__scrollable__wrapper__floor--boxShadow: inset 0 1px 0 0 rgb(170,170,170),
 
-  App__body__scrollable__wrapper__floor--background--mobile: url(../themes/glass/bg-8x8.png) top left / 4px rgba(255, 255, 255, 0.2),
+  App__body__scrollable__wrapper__floor--background--mobile: url(../themes/glass/bg-6x6.png) top left / 3px,// rgba(255, 255, 255, 0.2),
   App__body__scrollable__wrapper__floor--boxShadow--mobile: inset 0 1px 0 0 rgba(255,255,255,0.5),
 
 
@@ -84,7 +85,7 @@ $theme--glass: (
 
 
   // SITE FOOTER
-  SiteFooter--background: url(../themes/glass/bg-8x8.png) top left / 4px rgba(255, 255, 255, 0.6),
+  SiteFooter--background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.3)),
   SiteFooter--boxShadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.8),
   SiteFooter__contentWrap--background: rgba(255,255,255,0.5),
   SiteFooter__contentWrap--boxShadow: inset 0 0 0 1px rgb(190,190,190),
