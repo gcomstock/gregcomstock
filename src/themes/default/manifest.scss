@@ -1,11 +1,10 @@
-$title--colorGradient--startColor: #1a4f5c;
-$title--colorGradient--endColor: #349cb6;
+$title--colorGradient--startColor: #252b67;
+$title--colorGradient--endColor: #60439a;
 
-$activeColor--low: #28788c;
-$activeColor--mid: #349cb6;
-$activeColor--high: #41c4e5;
+$activeColor--low: #503283;
+$activeColor--mid: #6f3fa6;
+$activeColor--high: #ae80ff;
 $borderColor: #ccc;
-$borderColorBright: rgba(255, 100, 200, 1);
 
 $bg-intro-end: #b7f2ff;
 $bg-intro-start: #a8e3ff;
@@ -73,6 +72,7 @@ $theme--default: (
 
   App__body__scrollable__wrapper__floor--background--mobile: url(../themes/default/bg-6x6.png) top left / 3px,
   App__body__scrollable__wrapper__floor--boxShadow--mobile: inset 0 1px 0 0 #999,
+
 
   // SITE INTRO
   SiteIntro__header--fontSize: 6rem,
