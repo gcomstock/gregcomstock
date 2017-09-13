@@ -19,13 +19,11 @@ export const Content = Object.freeze({
   NUGGET3__SUBHEAD: 'Technologies',
   NUGGET3__TEXT: 'React + Redux (Javascript ES6)<br/>Webpack, npm, SASS<br/>Photoshop<br/>Sketch',
 
-
   ADSKIN_BUILDER__SUBHEAD: 'Display Ad Production Tool',
   ADSKIN_BUILDER__DESC: 'With freedom comes responsibility! Because Pandora\'s new display ads have the ability to do so much with the Pandora.com UI, there’s an inherent possibility for human error, or even exploitation from an advertiser. To solve this, I designed and developed an internal tool that Pandora\'s in-house ad design team uses to generate the CSS file for a corresponding display ad. The predefined form fields and live preview ensures visual consistency with no syntax errors.',
   ADSKIN_BUILDER__VIDEOPATH: 'https://player.vimeo.com/video/226793914',
   ADSKIN_BUILDER__WEBVIDEORATIO: 39.2,
   ADSKIN_BUILDER__MOBILEVIDEORATIO: 60,
-
 
   AD_OPTIMIZATIONS__SUBHEAD: 'The UX of Ad Impressions',
   AD_OPTIMIZATIONS__DESC: 'While implementing display ads on the new Pandora.com, I recognized an important optimization: By toggling display ad impressions between two alternating iframes, we have the ability to invisibly preload the next display ad while the current one is still active. Once the next display ad iframe has fired its onload event, we can perform an elegant cross-fade between ads, and remove the old one from the DOM once its fadeout animation ends. This design decision ensures a display ad is always visible, because no impression time is spent waiting for ad assets to load. The result has been about a 15% increase in display ad capacity without impacting the user experience. This video highlights the transition between display ads as the user interacts with the site.',

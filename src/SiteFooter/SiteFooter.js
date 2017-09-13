@@ -19,10 +19,9 @@ export const SiteFooter = React.createClass({
             </div>
             <div className='SiteFooter__content__col'>
               <p>
-                However, I don't strive to be a full-time, full-stack software engineer; my passion lies in visual problem
-                solving. If you're looking for an empathetic designer and developer that can bring a user interface to life,
-                always keeps the user experience in mind, and can talk at length with designers about the technical implications of
-                creative decisions, <a href='https://www.linkedin.com/in/gregcomstock/' target='_blank'>we should talk</a>!
+                However, I don't strive to be a full-time, full-stack software engineer. My passion lies in visual problem
+                solving, bringing user interfaces to life, always keeping the user experience in mind, and informing fellow designers
+                about the technical implications of creative decisions.
               </p>
             </div>
           </div>
