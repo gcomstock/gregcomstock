@@ -23,6 +23,14 @@ export const SiteFooter = React.createClass({
                 solving, bringing user interfaces to life, always keeping the user experience in mind, and informing fellow designers
                 about the technical implications of creative decisions.
               </p>
+              <p>
+                <br/>
+                I've recently joined the good people of Netflix and am not looking for other opportunities at this time,
+                but you can always reach me on
+                &nbsp;<a target="_blank" href="https://www.linkedin.com/in/gregcomstock/">Linked In</a>,
+                &nbsp;<a target="_blank" href="https://www.instagram.com/blastronaut">Instagram</a>, or
+                &nbsp;<a target="_blank" href="https://www.facebook.com/gcomstock">Facebook</a>.
+              </p>
             </div>
           </div>
         </div>
