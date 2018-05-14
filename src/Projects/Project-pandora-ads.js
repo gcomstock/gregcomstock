@@ -27,7 +27,7 @@ export const Content = Object.freeze({
 
   AD_OPTIMIZATIONS__SUBHEAD: 'The UX of Ad Impressions',
   AD_OPTIMIZATIONS__DESC: 'While implementing display ads on the new Pandora.com, I recognized an important optimization: By toggling display ad impressions between two alternating iframes, we have the ability to invisibly preload the next display ad while the current one is still active. Once the next display ad iframe has fired its onload event, we can perform an elegant cross-fade between ads, and remove the old one from the DOM once its fadeout animation ends. This design decision ensures a display ad is always visible, because no impression time is spent waiting for ad assets to load. The result has been about a 15% increase in display ad capacity without impacting the user experience. This video highlights the transition between display ads as the user interacts with the site.',
-  AD_OPTIMIZATIONS__VIDEOPATH: 'https://player.vimeo.com/video/227131626',
+  AD_OPTIMIZATIONS__VIDEOPATH: 'https://www.youtube.com/embed/AAAQVXhXaS0',
   AD_OPTIMIZATIONS__WEBVIDEORATIO: 41,
   AD_OPTIMIZATIONS__MOBILEVIDEORATIO: 60
 });
