@@ -17,19 +17,19 @@ export const Content = Object.freeze({
 
   ICONS__SUBHEAD: 'Rhythm Icon Library',
   ICONS__DESC: 'This video walks through an internal tool I designed and developed for Pandora, to ensure that we have a single, evolving source of truth for all of our company’s iconography. It is searchable, and uses a backend script that calls our cloud storage API to keep the design team’s icon folder in sync with the icons surfaced on this page, allowing several designers to contribute to and evolve this library without having to touch any code.',
-  ICONS__VIDEOPATH: 'https://player.vimeo.com/video/226627838',
+  ICONS__VIDEOPATH: 'https://www.youtube.com/embed/NneMZmx3qn8',
   ICONS__WEBVIDEORATIO: 39.2,
   ICONS__MOBILEVIDEORATIO: 60,
 
   CAREERS__SUBHEAD: 'Pandora Careers',
   CAREERS__DESC: 'Working with our employee experience team, I designed and developed our original careers page to provide a look into Pandora’s employee culture and job opportunities. Using Jobvite’s API, the job postings stay up to date and are sortable through javascript that I authored. Since its launch in 2013, this page has evolved and improved under fellow product designer Joyce Lau. The original design I created can be seen in this video.',
-  CAREERS__VIDEOPATH: 'https://player.vimeo.com/video/226922020',
+  CAREERS__VIDEOPATH: 'https://www.youtube.com/embed/Zjn2YZyDn8A',
   CAREERS__WEBVIDEORATIO: 39.2,
   CAREERS__MOBILEVIDEORATIO: 60,
   
   INSIGHTS__SUBHEAD: 'Campaign Insights',
   INSIGHTS__DESC: 'One of Pandora’s premium advertising products are custom, sponsored radio stations with audio content that can only be heard on Pandora. I collaborated with fellow designer Savio Alphonso to create an internal dashboard that our analysts and campaign managers can use to evaluate the success of these stations. We both worked to develop a clean way to present information graphics, and then I introduced interaction animation and UI work into the codebase alongside full-stack engineers. This was my first exposure to version control, code review, and pair programming, so it holds a special place in my heart!',
-  INSIGHTS__VIDEOPATH: 'https://player.vimeo.com/video/226934506',
+  INSIGHTS__VIDEOPATH: 'https://www.youtube.com/embed/Tiz2isqC_U4',
   INSIGHTS__WEBVIDEORATIO: 39.2,
   INSIGHTS__MOBILEVIDEORATIO: 60
 });

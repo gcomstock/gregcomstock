@@ -15,7 +15,7 @@ export const Content = Object.freeze({
   NUGGET1__SUBHEAD: 'Synopsis',
   NUGGET1__TEXT: 'A San Francisco based independent design studio that creates modern jewelry essentials. I collaborate closely with founder and jewelry designer Christy Natsumi to help showcase her work in the most effective way. Because it\'s a small business, I touch every part of the process, from sketching wireframes to implementing the final layout and photos.',
   NUGGET2__SUBHEAD: 'Role',
-  NUGGET2__TEXT: '<b>Front-end Engineer</b> - UI, Squarespace API integration<br/><b>Designer</b> - Site, branding, promotionals<br/><b>Photographer</b> - product, model',
+  NUGGET2__TEXT: '<b>Front-end Engineer</b> - UI, Shopify theme templating<br/><b>Designer</b> - Site, branding, promotionals<br/><b>Photographer</b> - product, model',
   NUGGET3__SUBHEAD: 'Technologies',
   NUGGET3__TEXT: 'Javascript, CSS/LESS, HTML templating<br/>Photoshop<br/>Illustrator<br/>Sony A7 Mirrorless DSLR',
 

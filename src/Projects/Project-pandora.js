@@ -21,7 +21,7 @@ export const Content = Object.freeze({
 
   INTERACTION_DESIGN__SUBHEAD: 'Interaction Design',
   INTERACTION_DESIGN__DESC: 'Elegant animations and meaningful interaction design is a challenge that requires both an eye for design and an understanding of technical implementation. In a React application, where direct DOM manipulation is avoided, this can be especially difficult. The journey was exciting, though, and by iterating closely with our other product designers, I believe we arrived at some effective solutions. Take a look!',
-  INTERACTION_DESIGN__VIDEOPATH: 'https://player.vimeo.com/video/226796136',
+  INTERACTION_DESIGN__VIDEOPATH: 'https://www.youtube.com/embed/SiSP14wmY94',
   INTERACTION_DESIGN__WEBVIDEORATIO: 39.2,
   INTERACTION_DESIGN__MOBILEVIDEORATIO: 60
 });

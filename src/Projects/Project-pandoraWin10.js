@@ -21,7 +21,7 @@ export const Content = Object.freeze({
 
   RESPONSIVE_DESIGN__SUBHEAD: 'Building a Responsive Desktop App',
   RESPONSIVE_DESIGN__DESC: 'Creating the UI for a responsive, touch-enabled desktop application was a new challenge for me, and I welcomed the opportunity to learn from it. Because the UI is touch-enabled, most of the animations are based on coordinate values being set at different rates as the user\'s hand performs the gesture, rather than on simply applying an animation to a set destination on a click event. This creatively-technical process required close collaboration with lead product designer Simon O\'Shea. Together, we also made quick decisions around the responsive nature of the UI, often times during development.',
-  RESPONSIVE_DESIGN__VIDEOPATH: 'https://player.vimeo.com/video/226602543',
+  RESPONSIVE_DESIGN__VIDEOPATH: 'https://www.youtube.com/embed/Lhg9iIj7AE4',
   RESPONSIVE_DESIGN__WEBVIDEORATIO: 46.5,
   RESPONSIVE_DESIGN__MOBILEVIDEORATIO: 70
 });
