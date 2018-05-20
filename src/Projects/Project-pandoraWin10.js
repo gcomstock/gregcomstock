@@ -15,7 +15,7 @@ export const Content = Object.freeze({
   NUGGET1__SUBHEAD: 'Synopsis',
   NUGGET1__TEXT: 'As part of an arrangement with Microsoft, we assembled a small team to work under a tight deadline to be one of the first apps available for the Windows 10 ecosystem. I was pulled off of my current work to implement key parts of the UI, including the "now playing" main application screen, along with most of the apps\' transitions and animations.',
   NUGGET2__SUBHEAD: 'Role',
-  NUGGET2__TEXT: '<b>Front-end Engineer</b> - UI, animation<br/><b>Product Designer</b> - interaction design, responsive layout</b>',
+  NUGGET2__TEXT: '<b>Front-end Engineer</b> - UI, animation, responsive layout</b>',
   NUGGET3__SUBHEAD: 'Technologies',
   NUGGET3__TEXT: 'Javascript, backbone.js, WinJS<br/>CSS, SASS<br/>Moustache templating',
 
