@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://gcomstock.github.io/",
   "devDependencies": {
-    "gh-pages": "^0.12.0",
+    "gh-pages": "^4.0.0",
     "node-sass": "^4.5.0",
     "npm-run-all": "^4.0.1",
     "react-scripts": "0.8.5"
